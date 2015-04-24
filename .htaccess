@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www.)?m.junto.link$
+RewriteRule ^(/)?$ m [L]
