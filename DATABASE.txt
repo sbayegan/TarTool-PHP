@@ -44,6 +44,14 @@ RESOURCEID	INTEGER
 CATEGORY	VARCHAR(10)
 SUB		VARCHAR(10)
 
+*LASTUSERID*
+LAST int
+
+*LASTRESOURCEID*
+LAST int
+
+*LASTRESOURCEID*
+
 //CONNECTION INFORMATION
 servername = 'locations.cnesdpnjh1yy.us-west-2.rds.amazonaws.com'
 usernames  = 'yell'
