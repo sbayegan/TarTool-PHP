@@ -1,0 +1,40 @@
+The database schema was created to help us keep track of the following information:
+1- The information of users (e.g name, username, password)
+2- Users votes
+3- Users favourite objects.
+
+Here are the attributes and datatypes of each table:
+
+*USERS*
+USERID		INTEGER		// PRIMARY-KEY
+USERNAME	VARCHAR(15)
+PASSWORD	VARCHAR(15)
+NAME		VARCHAR(20)
+EMAIL		VARCHAR(30)
+COMPANY		VARCHAR(30)
+DATE		DATE
+TYPE		VARCHAR(10)
+
+
+*RESOURCES*
+RESOURCEID	INTEGER		// PRIMARY-KEY
+TITLE		VARCHAR(200)
+DESCRIPTION	VARCHAR(300)
+MEDIUM		VARCHAR(5)
+URL		VARCHAR(300)
+PRIME-CAT	VARCHAR(10)
+SECOND-ONE	VARCHAR(10)
+SECOND-TWO	VARCHAR(10)
+SECOND-THREE	VARCHAR(10)
+
+// This table is used to keep track of the users favourited resources
+*FAVOURITES*
+USERID
+RESOURCEID
+DATE
+
+// The table is used to keep track of votes
+*VOTES*
+USERID
+RESOURCEID
+DATE
