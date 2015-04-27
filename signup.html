@@ -1,2 +1,69 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+      body {
+ font-family:Arial, Helvetica, sans-serif
+}
+#availability_status {
+ font-size:11px;
+ margin-left:10px;
+}
+input.form_element {
+ width: 221px;
+ background: transparent url('bg.jpg') no-repeat;
+ color : #747862;
+ height:20px;
+ border:0;
+ padding:4px 8px;
+ margin-bottom:0px;
+}
+label {
+ width: 125px;
+ float: left;
+ text-align: left;
+ margin-right: 0.5em;
+ display: block;
+}
+.style_form {
+ margin:3px;
+}
+#content {
+ margin-left: auto;
+ margin-right: auto;
+ width: 600px;
+ margin-top:200px;
+}
+#submit_btn {
+ margin-left:133px;
+ height:30px;
+ width: 221px;
+}
+  </style>
+</head>
 
+
+<body>
+<div id="content">
+ <form action="user_check.html" method="get">
+ <div>
+ <label for="username">Username :</label>
+ <input type="text" name="username" id="username"/>
+ <span id="availability_status"></span> </div>
+ <div>
+ <label for="full_name">Full Name :</label>
+ <input type="text" name="full_name" id="full_name"/>
+ </div>
+ <div>
+ <label for="email">Email  :</label>
+ <input type="text" name="email" id="email"/>
+ </div>
+ <div>
+ <input name="submit" type="submit" value="submit" id="submit_btn" />
+ </div>
+ </form>
+</div>
+
+
+</body>
+</html>
