@@ -74,12 +74,12 @@ $("#username").change(function()
 var username = $("#username").val();//Get the value in the username textbox
 if(username.length > 3)//if the lenght greater than 3 characters
 {
-$("#availability_status").html('<img src="loader.gif" align="absmiddle">&nbsp;Checking availability...');
+$("#availability_status").html('<img src="http://www1.gnb.ca/0601/images/public_yellow_high.gif" align="absmiddle">&nbsp;Checking availability...');
 //Add a loading image in the span id="availability_status"
 
 $.ajax({  //Make the Ajax Request
  type: "POST",
- url: "ajax_check_username.php",  //file name
+ url: "usernamecheck.php",  //file name
  data: "username="+ username,  //data
  success: function(server_response){
 
@@ -87,12 +87,12 @@ $.ajax({  //Make the Ajax Request
 
  if(server_response == '0')//if ajax_check_username.php return value "0"
  {
- $("#availability_status").html('<img src="available.png" align="absmiddle"> <font color="Green"> Available </font>  ');
+ $("#availability_status").html('<img src="https://doaj.org/static/doaj/images/tick_short.png" align="absmiddle"> <font color="Green"> Available </font>  ');
  //add this image to the span with id "availability_status"
  }
  else  if(server_response == '1')//if it returns "1"
  {
- $("#availability_status").html('<img src="not_available.png" align="absmiddle"> <font color="red">Not Available </font>');
+ $("#availability_status").html('<img src="http://store.storeimages.cdn-apple.com/4552/as-images.apple.com/is/image/AppleInc/aos/published/images/2/01/2012/ipodshuffle/2012-ipodshuffle-swatch-red?wid=30&hei=30&fmt=png-alpha&qlt=95&.v=1400631278198" align="absmiddle"> <font color="red">Not Available </font>');
  }
 
  });
