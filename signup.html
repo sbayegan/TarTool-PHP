@@ -19,7 +19,7 @@ function available(str) {
                 }
             }
         }
-        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.open("POST", "usernamecheck.php?username=" + str, true);
         xmlhttp.send();
     }
 }
