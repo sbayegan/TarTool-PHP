@@ -70,6 +70,7 @@ function passmatch(a,b){
 								}
 						}
 	xmlhttp.open("POST","passwordmatch.php",true);
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	xmlhttp.send("pass1="+a+"&pass2="+b);
 			}						
 
