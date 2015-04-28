@@ -2,80 +2,7 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-function available(str) {
-    if (str.length < 4) { 
-        document.getElementById("user-status").innerHTML = "too short";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-                  document.getElementById("user-status").innerHTML = "okay";
-                }
-                if(xmlhttp.responseText == 0){
-                  document.getElementById("user-status").innerHTML = "taken";
-                }
-            }
-        }
-        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
-        xmlhttp.send();
-    }
-}
-function valid(str) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-                  document.getElementById("email-status").innerHTML = "well formed :-)";
-                }
-                if(xmlhttp.responseText == 0){
-                  document.getElementById("email-status").innerHTML = "ill-formed email address";
-                }
-            }
-        }
-        
-        xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
-        xmlhttp.send();
-}
-function passcheck(str) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-                  document.getElementById("pass-status").innerHTML = "good";
-                }
-                if(xmlhttp.responseText == 0){
-                  document.getElementById("pass-status").innerHTML = "too short";
-                }
-            }
-        }
-        xmlhttp.open("POST", "passwordcheck.php", true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("pass="+str);
-}
 
-function passmatch(a,b){
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function(){
-		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			if(xmlhttp.responseText == 1){
-				document.getElementById("pass1-status").innerHTML = "matched";
-							}
-			if(xmlhttp.responseText == 0){
-				document.getElementById("pass1-status").innterHTML = "not mached";
-							}
-
-
-								}
-						}
-	xmlhttp.open("POST","passwordmatch.php",true);
-	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send("pass1="+a+"&pass2="+b);
-			}						
-
-</script>
 <style type="text/css">
 
 body {
@@ -163,4 +90,78 @@ Who are you?
 </div>
 
 </body>
+<script>
+function available(str) {
+    if (str.length < 4) { 
+        document.getElementById("user-status").innerHTML = "too short";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("user-status").innerHTML = "okay";
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("user-status").innerHTML = "taken";
+                }
+            }
+        }
+        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.send();
+    }
+}
+function valid(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("email-status").innerHTML = "well formed :-)";
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("email-status").innerHTML = "ill-formed email address";
+                }
+            }
+        }
+        
+        xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
+        xmlhttp.send();
+}
+function passcheck(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("pass-status").innerHTML = "good";
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("pass-status").innerHTML = "too short";
+                }
+            }
+        }
+        xmlhttp.open("POST", "passwordcheck.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("pass="+str);
+}
+
+function passmatch(a,b){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function(){
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			if(xmlhttp.responseText == 1){
+				document.getElementById("pass1-status").innerHTML = "matched";
+							}
+			if(xmlhttp.responseText == 0){
+				document.getElementById("pass1-status").innterHTML = "not mached";
+							}
+
+
+								}
+						}
+	xmlhttp.open("POST","passwordmatch.php",true);
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xmlhttp.send("pass1="+a+"&pass2="+b);
+			}						
+
+</script>
 </html>
