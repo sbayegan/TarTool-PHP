@@ -63,9 +63,10 @@ function passmatch(a,b){
 			if(xmlhttp.responseText == 1){
 				document.getElementById("pass1-status").innerHTML = "matched";
 							}
-			if(xmlhttp.responseText == 0){
+			else if(xmlhttp.responseText == 0){
 				document.getElementById("pass1-status").innterHTML = "not mached";
 							}
+			else {document.getElementById("user-status").innterHTML = b;}
 
 								}
 						}
