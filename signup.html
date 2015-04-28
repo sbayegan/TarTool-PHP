@@ -3,6 +3,11 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
+
+var username = 0;
+var email = 0;
+var pass = 0;
+var repass = 0;
 function available(str) {
     if (str.length < 4) { 
         document.getElementById("user-status").innerHTML = "too short";
@@ -13,9 +18,14 @@ function available(str) {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
                   document.getElementById("user-status").innerHTML = "okay";
+                  username = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
                 }
                 if(xmlhttp.responseText == 0){
                   document.getElementById("user-status").innerHTML = "taken";
+                  username = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
                 }
             }
         }
@@ -29,9 +39,14 @@ function valid(str) {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
                   document.getElementById("email-status").innerHTML = "well formed :-)";
+                  email = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
                 }
                 if(xmlhttp.responseText == 0){
                   document.getElementById("email-status").innerHTML = "ill-formed email address";
+                  email = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
                 }
             }
         }
@@ -45,9 +60,14 @@ function passcheck(str) {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
                   document.getElementById("pass-status").innerHTML = "good";
+                  pass = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
                 }
                 if(xmlhttp.responseText == 0){
                   document.getElementById("pass-status").innerHTML = "too short";
+                  pass = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
                 }
             }
         }
@@ -59,9 +79,14 @@ function passcheck(str) {
 function passmatch(){
 			if(document.getElementById("password").value == document.getElementById("password1").value){
 				document.getElementById("pass1-status").innerHTML = "matched";
+				repass = 1;
+                  		if(username ==1 && email ==1 && pass == 1 && repass ==1)
+        			{document.getElementById("submit_btn").disabled = false;}
 							}
 			if(document.getElementById("password").value != document.getElementById("password1").value){
 				document.getElementById("pass1-status").innerHTML = "not mached";
+				repass = 0;
+				{document.getElementById("submit_btn").disabled = true;}
 							}
 
 			}						
