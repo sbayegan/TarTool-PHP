@@ -6,19 +6,15 @@
 
 if(isset($_POST['pass'])) //If a username has been submitted
 {
+$pass = $_POST['pass'];  
 
-function valid_pass($pwd) {
-    if (preg_match('/^(?=[a-z])(?=[A-Z])[a-zA-Z]{8,}$/', $password))
-{
-    return true;
-}
-else return false;
-}  
-
-    
-$pass = $_POST['pass'];   
-if(valid_pass($pass)){echo '1';}
-else echo '0';
+    if(strlen(trim($pass)) > 8)
+   {
+   echo "1";
+   }
+   else
+   echo "0";
+   
 }
 
 
