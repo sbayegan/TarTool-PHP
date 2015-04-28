@@ -43,31 +43,17 @@ function passcheck(str) {
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-                  document.getElementById("pass-status").innerHTML = "bad";
+                  document.getElementById("pass-status").innerHTML = "good";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("pass-status").innerHTML = "good";
+                  document.getElementById("pass-status").innerHTML = "bad";
                 }
             }
         }
         xmlhttp.open("POST", "passwordcheck.php?pass=" + str, true);
         xmlhttp.send();
 }
-function passcheck(str) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-                  document.getElementById("pass-status").innerHTML = "well formed :-)";
-                }
-                if(xmlhttp.responseText == 0){
-                  document.getElementById("pass-status").innerHTML = "rejected password";
-                }
-            }
-        }
-        xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
-        xmlhttp.send();
-}
+
 </script>
 <style type="text/css">
 
