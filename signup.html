@@ -51,11 +51,10 @@ function passcheck(str) {
                 }
             }
         }
-        var data = new FormData();
-        data.append('pass', str);
+        var inputData = encodeURIComponent(str);
         xmlhttp.open("POST", "passwordcheck.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send(data);
+        xmlhttp.send("pass="+inputData);
 }
 
 </script>
