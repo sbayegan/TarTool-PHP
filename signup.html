@@ -23,7 +23,7 @@ function available(str) {
         xmlhttp.send();
     }
 }
-function valid(str,str2) {
+function valid(str) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -39,7 +39,7 @@ function valid(str,str2) {
         xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
         xmlhttp.send();
 }
-function passcheck(str) {
+function passcheck(str,str2) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
