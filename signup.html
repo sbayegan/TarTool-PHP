@@ -133,7 +133,7 @@ body {
 
  <div>
  <label for="password">Password :</label>
- <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value,this.value)"/>
+ <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value , document.getElementById('password1').value)"/>
  <span id="pass-status"> </span> 
  </div>
 
