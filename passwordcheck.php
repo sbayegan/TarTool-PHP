@@ -4,7 +4,7 @@
  * PHP PCRE - How to validate complex passwords using regular expressions
  */
 
-if(isset($_GET['pass'])) //If a username has been submitted
+if(isset($_POST['pass'])) //If a username has been submitted
 {
 
 function valid_pass($candidate) {
@@ -14,7 +14,7 @@ function valid_pass($candidate) {
 }  
 
     
-$pass = $_GET['pass']    
+$pass = $_POST['pass']    
 if(valid_pass($pass)){echo '1';}
 else echo '0';
 }
