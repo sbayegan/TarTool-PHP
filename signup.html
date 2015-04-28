@@ -58,10 +58,10 @@ function passcheck(str) {
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-                  document.getElementById("email-status").innerHTML = "well formed :-)";
+                  document.getElementById("pass-status").innerHTML = "well formed :-)";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("email-status").innerHTML = "ill-formed email address";
+                  document.getElementById("pass-status").innerHTML = "ill-formed email address";
                 }
             }
         }
