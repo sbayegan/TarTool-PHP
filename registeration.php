@@ -9,6 +9,17 @@ $username = mysqli_real_escape_string($conn,$_POST['username']);
 $pass = mysqli_real_escape_string($conn,$_POST['password']);
 $type = mysqli_real_escape_string($conn,$_POST['type']);
 $userid;
+
+// Here I should make sure that the username or the email
+// have not been registered in the database so far
+// This should be done to prevent users to add duplicates
+// if they resubmit the form by refreshing
+$resultone = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
+$resulttwo = $conn->query("SELECT * FROM USERS WHERE EMAIL='$email'");
+
+if($resultone->num_rows == 0 && $resulttwo->num_rows == 0){
+
+
 echo $name;
 echo "<html><br></html>";
 echo $email;
@@ -32,17 +43,14 @@ $next = $userid + 1;					//Set the next available user id
 $query = "UPDATE LAST SET USER='$next' WHERE ONE=1";
 $conn->query($query);
 echo "<html><br></html>";
-							// Here I should make sure that the username or the email
-							// have not been registered in the database so far
-							// This should be done to prevent users to add duplicates
-							// if they resubmit the form by refreshing
-$resultone = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
-$resulttwo = $conn->query("SELECT * FROM USERS WHERE EMAIL='$email'");
+
 
 $query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash')";
 $conn->query($query);
 echo $query;
-
+}
+else if(){}// If the user name has been registered before
+else if(){}// If the email has been already registered!
 
 $conn->close();
 ?>
