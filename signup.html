@@ -39,7 +39,7 @@ function valid(str) {
         xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
         xmlhttp.send();
 }
-function passcheck(str,str2) {
+function passcheck(str) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -63,10 +63,10 @@ function passmatch(a,b){
 			if(xmlhttp.responseText == 1){
 				document.getElementById("pass1-status").innerHTML = "matched";
 							}
-			else if(xmlhttp.responseText == 0){
+			if(xmlhttp.responseText == 0){
 				document.getElementById("pass1-status").innterHTML = "not mached";
 							}
-			else {document.getElementById("user-status").innterHTML = "LOL";}
+
 
 								}
 						}
@@ -134,7 +134,7 @@ body {
 
  <div>
  <label for="password">Password :</label>
- <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value , this.value)"/>
+ <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value)"/>
  <span id="pass-status"> </span> 
  </div>
 
