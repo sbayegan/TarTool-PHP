@@ -8,10 +8,11 @@ if(isset($_POST['pass'])) //If a username has been submitted
 {
 
 function valid_pass($pwd) {
-    if (preg_match("/^[a-zA-Z][0-9a-zA-Z_!$@#^&]{5,20}$/", $pwd))
-        return true;
-    else
-        return false;
+    if (preg_match('/^(?=[a-z])(?=[A-Z])[a-zA-Z]{8,}$/', $password))
+{
+    return true;
+}
+else return false;
 }  
 
     
