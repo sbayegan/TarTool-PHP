@@ -86,10 +86,6 @@ label {
 <div id="content">
  <form action="register.php" method="POST" id="form">
  <div>
- <label for="username">Username :</label>
- <input type="text" name="username" id="username" onkeyup="available(this.value)"/>
- <span id="user-status"> </span> </div>
- <div>
  <label for="full_name">Full Name :</label>
  <input type="text" name="full_name" id="full_name" />
  </div>
@@ -98,6 +94,17 @@ label {
  <input type="text" name="email" id="email" onkeyup="valid(this.value)"/>
  <span id="email-status"></span>
  </div>
+ <div>
+ <label for="username">Username :</label>
+ <input type="text" name="username" id="username" onkeyup="available(this.value)"/>
+ <span id="user-status"> </span> 
+ </div>
+ <div>
+ <label for="password">Password :</label>
+ <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value)"/>
+ <span id="pass-status"> </span> 
+ </div>
+ 
  <div>
 Who are you? &#09;&#09;
  <select name="type" form="form" >
