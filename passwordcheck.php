@@ -14,7 +14,7 @@ function valid_pass($candidate) {
 }  
 
     
-$pass = $_POST['pass']    
+$pass = $_POST['pass'];   
 if(valid_pass($pass)){echo '1';}
 else echo '0';
 }
