@@ -23,7 +23,7 @@ function available(str) {
         xmlhttp.send();
     }
 }
-function valid(str) {
+function valid(str,str2) {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -133,7 +133,7 @@ body {
 
  <div>
  <label for="password">Password :</label>
- <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value)"/>
+ <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value,this.value)"/>
  <span id="pass-status"> </span> 
  </div>
 
