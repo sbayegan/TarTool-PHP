@@ -50,7 +50,7 @@ function passcheck(str) {
                 }
             }
         }
-        xmlhttp.open("POST", "passwordcheck.php?pass=" + str, true);
+        xmlhttp.open("GET", "passwordcheck.php?pass=" + str, true);
         xmlhttp.send();
 }
 
