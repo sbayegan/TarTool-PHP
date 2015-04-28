@@ -59,14 +59,14 @@ function passcheck(str,str2) {
 function passmatch(a,b){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function(){
-		if(xmlhttp.readystate == 4 && xmlhttp.status == 200){
+		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			if(xmlhttp.responseText == 1){
 				document.getElementById("pass1-status").innerHTML = "matched";
 							}
 			else if(xmlhttp.responseText == 0){
 				document.getElementById("pass1-status").innterHTML = "not mached";
 							}
-			else {document.getElementById("user-status").innterHTML = b;}
+			else {document.getElementById("user-status").innterHTML = "LOL";}
 
 								}
 						}
