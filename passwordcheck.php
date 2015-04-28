@@ -10,10 +10,10 @@ $pass = $_POST['pass'];
 
     if(strlen(trim($pass)) > 8)
    {
-   echo "1";
+   echo '1';
    }
    else
-   echo "0";
+   echo '0';
    
 }
 
