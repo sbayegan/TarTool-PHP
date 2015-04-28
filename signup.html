@@ -61,7 +61,7 @@ function passcheck(str) {
                   document.getElementById("pass-status").innerHTML = "well formed :-)";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("pass-status").innerHTML = "ill-formed email address";
+                  document.getElementById("pass-status").innerHTML = "rejected password";
                 }
             }
         }
