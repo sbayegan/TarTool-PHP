@@ -67,7 +67,7 @@ body {
 
  <div>
  <label for="password1">Retype Password :</label>
- <input type="password" length="25" name="retype password" id="password" onkeyup="passmatch(this.value,document.getElementById('password').value)"/>
+ <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch(this.value,document.getElementById('password').value)"/>
  <span id="pass1-status"> </span> 
  </div>
  <br>
@@ -144,23 +144,14 @@ function passcheck(str) {
         xmlhttp.send("pass="+str);
 }
 
-function passmatch(a,b){
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function(){
-		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			if(xmlhttp.responseText == 1){
+function passmatch(){
+			if(document.getElementById("password").value == document.getElementById("password1").){
 				document.getElementById("pass1-status").innerHTML = "matched";
 							}
-			if(xmlhttp.responseText == 0){
+			else {
 				document.getElementById("pass1-status").innterHTML = "not mached";
 							}
 
-
-								}
-						}
-	xmlhttp.open("POST","passwordmatch.php",true);
-	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send("pass1="+a+"&pass2="+b);
 			}						
 
 </script>
