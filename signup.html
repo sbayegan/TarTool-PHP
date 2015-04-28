@@ -11,6 +11,8 @@ var repass = 0;
 function available(str) {
     if (str.length < 4) { 
         document.getElementById("user-status").innerHTML = "too short";
+        username = 0;
+        {document.getElementById("submit_btn").disabled = true;}
         return;
     } else {
         var xmlhttp = new XMLHttpRequest();
