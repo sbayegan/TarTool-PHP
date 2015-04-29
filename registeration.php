@@ -60,27 +60,34 @@ $subject = "Junto - Activate your account";
 $header = "From: general@junto.link \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1\r\n";
 $message = "
+
 <!DOCTYPE html>
 <html>
+<head>
+<title>
+activate
+</title>
+</head>
 <body>
-
-<h><b>Just one more step ...</b></h>
+<p><b>Just one more step ...</b></p>
 <br>
 <p>$name
 <br>
 Please click on the link below to activate you Junto account.
 <br>
-<a href='http://junto.link/verify?code=$hash&id=$userid'> Activate Your Account </a>
+<a href="http://junto.link/verify?code='.$hash.'&id='.$userid.'" > Activate Your Account </a>
 <br>
 <br>
 Cheers,
 <br>
 Saeid Bayeganeh, co-founder
 <br>
-<img src='http://junto.link/pictures/logo.png' />
+<img src='http://junto.link/pictures/logo.png' alt='logo'/>
 </p>
 </body>
 </html>
+
+
 ";
 
 mail($to,$subject,$message, $header);
