@@ -75,21 +75,20 @@ activate
 <br>
 Please click on the link below to activate you Junto account.
 <br>
-<a href="http://junto.link/verify?code='.$hash.'&id='.$userid.'" > Activate Your Account </a>
+
 <br>
 <br>
 Cheers,
 <br>
 Saeid Bayeganeh, co-founder
 <br>
-<img src='http://junto.link/pictures/logo.png' alt='logo'/>
+
 </p>
 </body>
 </html>
-
-
 ";
-
+//<img src='http://junto.link/pictures/logo.png' alt='logo'/>
+//<a href='http://junto.link/verify.php?code='.$hash.'&id='.$userid.'' > Activate Your Account </a>
 mail($to,$subject,$message, $header);
 echo "Confirmation E-mail sent successfully. You will receive our e-mail in a few minutes.";
 }
