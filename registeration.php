@@ -56,9 +56,9 @@ $conn->query($query);
 //echo $query;
 // send an email to the client
 $to = $email;
-$subject = "Junto - Activate your account";
+$subject = "Activate your account";
 $header = "From: general@junto.link \r\n";
-$header .="Content-Type: text/html; charset=ISO-8859-1\r\n";
+$header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 
 <!DOCTYPE html>
@@ -71,24 +71,23 @@ activate
 <body>
 <p><b>Just one more step ...</b></p>
 <br>
-<p>$name
+<p>Welcome $name
 <br>
-Please click on the link below to activate you Junto account.
+Click on the link below to activate your Junto account.
 <br>
-
+<a href='http://junto.link/verify.php?code=$hash&id=$userid' > Activate Your Account </a>
 <br>
 <br>
 Cheers,
 <br>
-Saeid Bayeganeh, co-founder
+Saeid, co-founder
 <br>
-
+<img src='http://junto.link/pictures/logo.png' alt='logo'/>
 </p>
 </body>
 </html>
 ";
-//<img src='http://junto.link/pictures/logo.png' alt='logo'/>
-//<a href='http://junto.link/verify.php?code='.$hash.'&id='.$userid.'' > Activate Your Account </a>
+
 mail($to,$subject,$message, $header);
 echo "Confirmation E-mail sent successfully. You will receive our e-mail in a few minutes.";
 }

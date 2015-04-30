@@ -45,12 +45,18 @@ function valid(str) {
                   if(username ==1 && email ==1 && pass == 1 && repass ==1)
                   {document.getElementById("submit_btn").disabled = false;}
                 }
-                if(xmlhttp.responseText == 0){
+                 if(xmlhttp.responseText == 0){
                   document.getElementById("email-status").innerHTML = "ill-formed email address";
                   email = 0;
                   {document.getElementById("submit_btn").disabled = true;}
                 }
-            }
+		if(xmlhttp.responseText == 2){
+                  document.getElementById("email-status").innerHTML = "already registered";
+                  email = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+
+           }
         }
         
         xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
