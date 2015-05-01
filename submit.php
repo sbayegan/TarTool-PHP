@@ -46,14 +46,31 @@ $conn->query($query);
 $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0)";
 $conn->query($query);
 $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);
-if(isset($_GET['subcat2'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat2')";$conn->query($query);}
-if(isset($_GET['subcat3'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);}
-if(isset($_GET['subcat4'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);}
-if(isset($_GET['subcat5'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat5')";$conn->query($query);}
-
-
-
-
-
-
-
+if(isset($_GET['subcat2'])){
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat2'"
+  $result = $conn->($query);
+  if($result->num_rows == 0){
+  $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat2')";$conn->query($query);
+  }
+}
+if(isset($_GET['subcat3'])){
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat3'"
+  $result = $conn->($query);
+  if($result->num_rows == 0){
+  $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);
+  }
+}
+if(isset($_GET['subcat4'])){
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat4'"
+  $result = $conn->($query);
+  if($result->num_rows == 0){
+  $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);
+  }
+}
+if(isset($_GET['subcat5'])){
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat5'"
+  $result = $conn->($query);
+  if($result->num_rows == 0){
+  $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat5')";$conn->query($query);
+  }
+}
