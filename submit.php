@@ -46,8 +46,10 @@ $conn->query($query);
 $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0)";
 $conn->query($query);
 $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);
-
-
+if(isset($_GET['subcat2'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat2')";$conn->query($query);}
+if(isset($_GET['subcat3'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);}
+if(isset($_GET['subcat4'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);}
+if(isset($_GET['subcat5'])){$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat5')";$conn->query($query);}
 
 
 
