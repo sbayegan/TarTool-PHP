@@ -43,34 +43,113 @@ echo "id=$resourceid";echo "<html><br></html>";
 $next = $resourceid + 1;					//Set the next available user id
 $query = "UPDATE LAST SET RESOURCE='$next' WHERE ONE=1";
 $conn->query($query);
-$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0)";
+$hash = rand(0,10000000000);
+$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash')";
 $conn->query($query);
 $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);
+
 if(isset($_GET['subcat2'])){
-  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat2'"
-  $result = $conn->($query);
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid AND CAT='$cat' AND SUB='$subcat2'";
+  $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat2')";$conn->query($query);
   }
 }
+
 if(isset($_GET['subcat3'])){
-  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat3'"
-  $result = $conn->($query);
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat3'";
+  $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);
   }
 }
 if(isset($_GET['subcat4'])){
-  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat4'"
-  $result = $conn->($query);
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat4'";
+  $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);
   }
 }
 if(isset($_GET['subcat5'])){
-  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat5'"
-  $result = $conn->($query);
+  $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat5'";
+  $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat5')";$conn->query($query);
   }
 }
+
+$to = "saeidjobs@gmail.com";
+$subject = "Approve Submitted Resource";
+$header = "From: submittion@junto.link \r\n";
+$header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
+$message = "
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Submition
+</title>
+</head>
+<body>
+<p>
+Hi Barney <br>
+<br>
+<br>
+A new resource has been submitted with the following information:<br>
+Title:$title<br>
+Description:$description<br>
+Medium:$type<br>
+URL:$url<br>
+Category:$cat<br>
+Subcat1:$subcat1<br>
+Subcat2:$subcat2<br>
+Subcat3:$subcat3<br>
+Subcat4:$subcat4<br>
+Subcat5:$subcat5<br>
+Plese note that duplicates subcategories are already removed by the code<br>
+You can activate and de-activate the resource using the following two links<br>
+<br>
+<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=active' > Approve this submition </a><br>
+<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Block this submition </a><br>
+<br>
+Cheers, <br>
+Junto team<br>
+<img src='http://junto.link/pictures/logo.png' alt='logo'/> <br>
+</p>
+</body>
+</html>
+";
+mail($to,$subject,$message, $header);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$conn->close();
+?>
