@@ -148,25 +148,25 @@ body {
 
  <div>
  <label for="email">Email  :</label>
- <input type="text" name="email" id="email" onkeyup="valid(this.value)"/>
+ <input type="text" name="email" id="email" onchange="valid(this.value)"/>
  <span id="email-status"></span>
  </div>
  
  <div>
  <label for="username">Username :</label>
- <input type="text" name="username" id="username" onkeyup="available(this.value)"/>
+ <input type="text" name="username" id="username" onchange="available(this.value)"/>
  <span id="user-status"> </span> 
  </div>
 
  <div>
  <label for="password">Password :</label>
- <input type="password" length="25" name="password" id="password" onkeyup="passcheck(this.value)"/>
+ <input type="password" length="25" name="password" id="password" onchange="passcheck(this.value)"/>
  <span id="pass-status"> </span> 
  </div>
 
  <div>
  <label for="password1">Retype Password :</label>
- <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()"/>
+ <input type="password" length="25" name="retype password" id="password1" onchange="passmatch()"/>
  <span id="pass1-status"> </span> 
  </div>
  <br>

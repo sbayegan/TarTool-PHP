@@ -9,6 +9,13 @@ Submit a resource
 <script>
 var lastused = 2;
 var currentcat = "BD"
+
+function activate(str){
+if(str.length > 5){document.getElementById("submit_btn").disabled = false;}
+else {document.getElementById("submit_btn").disabled = true;}
+//document.getElementById("submit_btn").disabled = false;
+}
+
 function update(str){
 lastused = 2;
 document.getElementById("adderbutton").disabled = false;
@@ -83,7 +90,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 }
 function add() {
 var FE = ' Sub-category ' +
-	'<select name="subcat" form="form" id=lastused>'+
+	'<select name="subcat' + lastused + '" form="form" id=lastused>'+
         '<option value="video">Design</option>'+
         '<option value="website">Design</option>'+
         '<option value="influencer">Design</option>'+
@@ -96,7 +103,7 @@ var FE = ' Sub-category ' +
 	'</select>';
 
 var BE = ' Sub-category ' +
-	'<select name="subcat" form="form" id=lastused>'+
+	'<select name="subcat'+ lastused +'" form="form" id=lastused>'+
         '<option value="video">Technology</option>'+
         '<option value="website">Technology</option>'+
         '<option value="influencer">Technology</option>'+
@@ -109,7 +116,7 @@ var BE = ' Sub-category ' +
 	'</select>';
 
 var BD = ' Sub-category '  +
- 	'<select name="subcat" form="form" id=lastused>'+
+ 	'<select name="subcat'+ lastused + '" form="form" id=lastused>'+
         '<option value="video">Analytics</option>'+
         '<option value="website">SEO</option>'+
         '<option value="influencer">Social Media</option>'+
@@ -163,7 +170,7 @@ document.getElementById("adderbutton").disabled = true;
 </head>
 <body>
 
- <form action="submit.php" method="post" id="form" autocomplete="off">
+ <form action="submit.php" method="get" id="form" autocomplete="off">
  <div>
  <label for="title">Title :</label>
  <input type="text" name="title" id="title" size="45"/>
@@ -190,7 +197,7 @@ document.getElementById("adderbutton").disabled = true;
 <br>
 <div>
  <label for="url">URL :</label>
- <input type="text" name="url" id="url" size="45" onkeyup="url(this.value)"/>
+ <input type="text" name="url" id="url" size="45" onchange="activate(this.value)"/>
  <span id="url-status"> </span> 
 </div>
 <br>
@@ -204,7 +211,7 @@ Category
     </select>
 <br>
 Sub-category 
- <select name="subcat" form="form" id="D1"> 
+ <select name="subcat1" form="form" id="D1"> 
         <option value="video">Analytics</option>
         <option value="website">SEO</option>
         <option value="influencer">Social Media</option>
