@@ -78,16 +78,16 @@ if(isset($_GET['subcat5'])){
   }
 }
 
-$to = "saeidjobs@gmail.com";
+$to = "btong21@gmail.com,saeidjobs@gmail.com";
 $subject = "Approve Submitted Resource";
-$header = "From: submittion@junto.link \r\n";
+$header = "From: submission@junto.link \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 <!DOCTYPE html>
 <html>
 <head>
 <title>
-Submition
+Submission
 </title>
 </head>
 <body>
@@ -95,22 +95,22 @@ Submition
 Hi Barney <br>
 <br>
 <br>
-A new resource has been submitted with the following information:<br>
-Title:$title<br>
-Description:$description<br>
-Medium:$type<br>
-URL:$url<br>
-Category:$cat<br>
-Subcat1:$subcat1<br>
-Subcat2:$subcat2<br>
-Subcat3:$subcat3<br>
-Subcat4:$subcat4<br>
-Subcat5:$subcat5<br>
+A new resource has been submitted with the following information:<br><br>
+<b>Title:</b>$title<br>
+<b>Description:</b>$description<br>
+<b>Medium:</b>$type<br>
+<b>URL:</b>$url<br>
+<b>Category:</b>$cat<br>
+<b>Subcat1:</b>$subcat1<br>
+<b>Subcat2:</b>$subcat2<br>
+<b>Subcat3:</b>$subcat3<br>
+<b>Subcat4:</b>$subcat4<br>
+<b>Subcat5:</b>$subcat5<br>
 Plese note that duplicates subcategories are already removed by the code<br>
 You can activate and de-activate the resource using the following two links<br>
 <br>
-<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=active' > Approve this submition </a><br>
-<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Block this submition </a><br>
+<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=active' > Approve this submition </a><br><br><br>
+<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Undo Approval </a><br>
 <br>
 Cheers, <br>
 Junto team<br>
@@ -121,7 +121,7 @@ Junto team<br>
 ";
 mail($to,$subject,$message, $header);
 
-
+// And then redirect them to the home page
 
 
 
