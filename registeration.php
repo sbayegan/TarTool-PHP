@@ -69,20 +69,21 @@ activate
 </title>
 </head>
 <body>
-<p><b>Just one more step ...</b></p>
+<p>
+
+Welcome $name <br>
 <br>
-<p>Welcome $name
+
+<b>Just one more step ...</b> <br>
 <br>
-Click on the link below to activate your Junto account.
+Click on the link below to activate your Junto account.<br>
 <br>
 <a href='http://junto.link/verify.php?code=$hash&id=$userid' > Activate Your Account </a>
 <br>
 <br>
-Cheers,
-<br>
-Saeid, co-founder
-<br>
-<img src='http://junto.link/pictures/logo.png' alt='logo'/>
+Cheers, <br>
+Junto team<br>
+<img src='http://junto.link/pictures/logo.png' alt='logo'/> <br>
 </p>
 </body>
 </html>

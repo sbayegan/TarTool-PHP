@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Submit a resource
+</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+var lastused = 2;
+var currentcat = "BD"
+function update(str){
+lastused = 2;
+document.getElementById("adderbutton").disabled = false;
+if (document.getElementById("D5")){var element = document.getElementById("D5");element.parentNode.removeChild(element);}
+if (document.getElementById("D4")){var element = document.getElementById("D4");element.parentNode.removeChild(element);}
+if (document.getElementById("D3")){var element = document.getElementById("D3");element.parentNode.removeChild(element);}
+if (document.getElementById("D2")){var element = document.getElementById("D2");element.parentNode.removeChild(element);}
+
+currentcat = str;
+
+if(str == "FE"){document.getElementById("D1").innerHTML = 
+        '<option value="video">Design</option>'+
+        '<option value="website">Design</option>'+
+        '<option value="influencer">Design</option>'+
+        '<option value="blog">Design</option>'+
+        '<option value="book">Design</option>'+
+		'<option value="podcast">Design</option>'+
+		'<option value="video">Design</option>'+
+        '<option value="website">Design</option>'+
+        '<option value="influencer">Design</option>';
+}
+
+if(str == "BE"){document.getElementById("D1").innerHTML = 
+        '<option value="video">Technology</option>'+
+        '<option value="website">Technology</option>'+
+        '<option value="influencer">Technology</option>'+
+        '<option value="blog">Technology</option>'+
+        '<option value="book">Technology</option>'+
+		'<option value="podcast">Technology</option>'+
+		'<option value="video">Technology</option>'+
+        '<option value="website">Technology</option>'+
+        '<option value="influencer">Technology</option>';
+}
+if(str == "BD"){document.getElementById("D1").innerHTML = 
+        '<option value="video">Analytics</option>'+
+        '<option value="website">SEO</option>'+
+        '<option value="influencer">Social Media</option>'+
+        '<option value="blog">Presentations</option>'+
+        '<option value="book">Advertising</option>'+
+	'<option value="podcast">Mockups and Wireframing</option>'+
+	'<option value="video">Landing Page</option>'+
+        '<option value="website">Idea Generation</option>'+
+        '<option value="influencer">Naming</option>'+
+        '<option value="blog">Domain Names</option>'+
+        '<option value="book">Lean Startup</option>'+
+	'<option value="podcast">A/B Testing</option> '+
+	'<option value="video">Copywrite</option>'+
+        '<option value="website">Finance</option>'+
+        '<option value="influencer">Accounting</option>'+
+        '<option value="blog">Legal</option>'+
+        '<option value="book">HR</option>'+
+	'<option value="podcast">Forms and Surveys</option>'+
+	'<option value="video">Market Research</option>'+
+        '<option value="website">User Feedback</option>'+
+        '<option value="influencer">Customer Support</option>'+
+        '<option value="blog">CRM</option>'+
+        '<option value="book">Project Management</option>'+
+	'<option value="podcast">Communication</option>'+
+	'<option value="video">E-mail Management</option>'+
+        '<option value="website">Payments</option>'+
+        '<option value="influencer">Inventory</option>'+
+        '<option value="blog">Outsourcing</option>'+
+        '<option value="book">Online Sites</option>'+
+	'<option value="podcast">Accelerators</option> '+
+	'<option value="video">Incubators</option>'+
+        '<option value="website">Conferences</option>'+
+        '<option value="influencer">Investor Relations</option>'+
+        '<option value="blog">Funding</option>'+
+        '<option value="book">Presentations</option>'+
+	'<option value="podcast">E-commerce</option>';
+}
+}
+function add() {
+var FE = ' Sub-category ' +
+	'<select name="subcat" form="form" id=lastused>'+
+        '<option value="video">Design</option>'+
+        '<option value="website">Design</option>'+
+        '<option value="influencer">Design</option>'+
+        '<option value="blog">Design</option>'+
+        '<option value="book">Design</option>'+
+	'<option value="podcast">Design</option>'+
+	'<option value="video">Design</option>'+
+        '<option value="website">Design</option>'+
+        '<option value="influencer">Design</option>'+
+	'</select>';
+
+var BE = ' Sub-category ' +
+	'<select name="subcat" form="form" id=lastused>'+
+        '<option value="video">Technology</option>'+
+        '<option value="website">Technology</option>'+
+        '<option value="influencer">Technology</option>'+
+        '<option value="blog">Technology</option>'+
+        '<option value="book">Technology</option>'+
+	'<option value="podcast">Technology</option>'+
+	'<option value="video">Technology</option>'+
+        '<option value="website">Technology</option>'+
+        '<option value="influencer">Technology</option>'+
+	'</select>';
+
+var BD = ' Sub-category '  +
+ 	'<select name="subcat" form="form" id=lastused>'+
+        '<option value="video">Analytics</option>'+
+        '<option value="website">SEO</option>'+
+        '<option value="influencer">Social Media</option>'+
+        '<option value="blog">Presentations</option>'+
+        '<option value="book">Advertising</option>'+
+	'<option value="podcast">Mockups and Wireframing</option>'+
+	'<option value="video">Landing Page</option>'+
+        '<option value="website">Idea Generation</option>'+
+        '<option value="influencer">Naming</option>'+
+        '<option value="blog">Domain Names</option>'+
+        '<option value="book">Lean Startup</option>'+
+	'<option value="podcast">A/B Testing</option> '+
+	'<option value="video">Copywrite</option>'+
+        '<option value="website">Finance</option>'+
+        '<option value="influencer">Accounting</option>'+
+        '<option value="blog">Legal</option>'+
+        '<option value="book">HR</option>'+
+	'<option value="podcast">Forms and Surveys</option>'+
+	'<option value="video">Market Research</option>'+
+        '<option value="website">User Feedback</option>'+
+        '<option value="influencer">Customer Support</option>'+
+        '<option value="blog">CRM</option>'+
+        '<option value="book">Project Management</option>'+
+	'<option value="podcast">Communication</option>'+
+	'<option value="video">E-mail Management</option>'+
+        '<option value="website">Payments</option>'+
+        '<option value="influencer">Inventory</option>'+
+        '<option value="blog">Outsourcing</option>'+
+        '<option value="book">Online Sites</option>'+
+	'<option value="podcast">Accelerators</option> '+
+	'<option value="video">Incubators</option>'+
+        '<option value="website">Conferences</option>'+
+        '<option value="influencer">Investor Relations</option>'+
+        '<option value="blog">Funding</option>'+
+        '<option value="book">Presentations</option>'+
+	'<option value="podcast">E-commerce</option>'+
+'</select>' ;
+
+var node = document.createElement("DIV");
+node.setAttribute("id", "D"+lastused);
+document.getElementById("adder").appendChild(node);              
+if(currentcat == "BE"){document.getElementById("D"+lastused).innerHTML = BE;}
+if(currentcat == "BD"){document.getElementById("D"+lastused).innerHTML = BD;}
+if(currentcat == "FE"){document.getElementById("D"+lastused).innerHTML = FE;}
+lastused = lastused + 1;
+if (lastused == 6){
+document.getElementById("adderbutton").disabled = true;
+}
+}
+</script>
+</head>
+<body>
+
+ <form action="submit.php" method="post" id="form" autocomplete="off">
+ <div>
+ <label for="title">Title :</label>
+ <input type="text" name="title" id="title" size="45"/>
+ <span id="title-status"></span> 
+</div>
+
+ <div>
+ <label for="description">Description  :</label><br>
+ <textarea rows="4" cols="50" name="description" id="description"></textarea>
+ <span id="description-status"></span>
+ </div>
+ 
+ Medium 
+ <select name="type" form="form">
+        <option value="video">Video</option>
+        <option value="website">Website/Tool</option>
+        <option value="influencer">Twitter influencer</option>
+         <option value="blog">Blog</option>
+        <option value="book">Book</option>
+	<option value="podcast">Podcast</option>
+    </select>
+</div>
+ <br>
+<br>
+<div>
+ <label for="url">URL :</label>
+ <input type="text" name="url" id="url" size="45" onkeyup="url(this.value)"/>
+ <span id="url-status"> </span> 
+</div>
+<br>
+<span id="adder">
+<div>
+Category 
+ <select name="cat" form="form" onchange="update(this.value)">
+        <option value="BD">Business development</option>
+        <option value="FE">Front-end development/Design</option>
+        <option value="BE">Back-end development</option>
+    </select>
+<br>
+Sub-category 
+ <select name="subcat" form="form" id="D1"> 
+        <option value="video">Analytics</option>
+        <option value="website">SEO</option>
+        <option value="influencer">Social Media</option>
+        <option value="blog">Presentations</option>
+        <option value="book">Advertising</option>
+	<option value="podcast">Mockups and Wireframing</option>
+	<option value="video">Landing Page</option>
+        <option value="website">Idea Generation</option>
+        <option value="influencer">Naming</option>
+        <option value="blog">Domain Names</option>
+        <option value="book">Lean Startup</option>
+	<option value="podcast">A/B Testing</option> 
+	<option value="video">Copywrite</option>
+        <option value="website">Finance</option>
+        <option value="influencer">Accounting</option>
+        <option value="blog">Legal</option>
+        <option value="book">HR</option>
+	<option value="podcast">Forms and Surveys</option>
+	<option value="video">Market Research</option>
+        <option value="website">User Feedback</option>
+        <option value="influencer">Customer Support</option>
+        <option value="blog">CRM</option>
+        <option value="book">Project Management</option>
+	<option value="podcast">Communication</option>
+	<option value="video">E-mail Management</option>
+        <option value="website">Payments</option>
+        <option value="influencer">Inventory</option>
+        <option value="blog">Outsourcing</option>
+        <option value="book">Online Sites</option>
+	<option value="podcast">Accelerators</option> 
+	<option value="video">Incubators</option>
+        <option value="website">Conferences</option>
+        <option value="influencer">Investor Relations</option>
+        <option value="blog">Funding</option>
+        <option value="book">Presentations</option>
+	<option value="podcast">E-commerce</option>
+</select>
+</div>
+</span>
+<br>
+<button type="button" id="adderbutton" onclick="add()">add another category</button>
+<br>
+<br>
+<br>
+<div><input name="submit" type="submit" value="submit" id="submit_btn" disabled /></div>
+
+</form>
+</body>
+
+</html>
+
