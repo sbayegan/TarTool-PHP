@@ -71,7 +71,6 @@ echo '</span>';
 echo'<div class="middle-bottom-box">';
 
 echo'<div class="box">';
-
 echo '<div class="sticker"></div>';
 echo '<div class="profile-picture"></div>';
 echo '<div class="box-stats"></div>';
@@ -79,17 +78,62 @@ echo '<div class="description"></div>';
 echo '</div>';
 
 
-echo'<div class="box"></div>';
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
 
-echo'<div class="box"></div>';
-echo'<div class="box"></div>';
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
 
-echo'<div class="box"></div>';
-echo'<div class="box"></div>';
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
 
-echo'<div class="box"></div>';
-echo'<div class="box"></div>';
-echo'<div class="box"></div>';
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
+
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
+
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
+
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
+
+echo'<div class="box">';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
+
 echo'</div>';
 
 echo '</body>';
