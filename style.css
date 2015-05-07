@@ -1,7 +1,106 @@
-body {
-    background-color: linen;
+/* 	This is the source file for all of the cascading styles that are used in the website,
+ *  	These classes will be grouped by the pages they are used by. We wil also detect duplicate
+ *  	styles (e.g styles of the submit and signup/login forms)and will put them under a designated page 
+ *  	called SHARED STYLES.		REVIZE THE FORMAT OF CLASSES TO  BE ASSOCIATED WITH SPECIFIC HTML ELEMENTS
+ */
+
+
+/*
+ * 		SHARED STYES classes
+*/
+.stick-to-top{
+box-shadow: 0px 1px 8px grey;
+height: 50px;
+position: fixed;
+top: 0px;
+right: 0px;
+left: 0px;
+width: 100%;
+z-index: 100;
+background-color: #FEFEFE;
 }
-h1 {
-    color: navy;
-    margin-left: 20px;
+.top-left{
+float: left;
+position: absolute;
+top:3px;
+left:10px;
+}
+.top-right{
+position: absolute;
+top: 1px;
+right : 40px;
+}
+.menu{
+font-size: 90%;
+font-family:"Arial";
+color: #4D4D4D;
+padding-left:2em;
+}
+
+/*
+ *		HOME PAGE classes
+ */
+.middle-box{
+position: relative;
+background-color: #E5E5E5;
+border: 1px solid #CCCCE0;
+height: 300px;
+width: 100%;
+top:50px;
+
+margin-left: auto;
+margin-right: auto;
+//border-radius: 10px;
+overflow:hidden;
+}
+
+.middle-bottom-box{
+position: relative;
+background-color:white;
+//border: 1px solid #CCCCE0;
+height: 950px;
+width: 1000px;
+top:70px;
+bottom:555px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.box{
+//overflow: hidden;
+border-radius: 10px;
+display:inline-block;
+position: relative;
+border: .5px solid red;
+background-color: #E8E8E8;
+height: 300px;
+width: 300px;
+margin: 10px 16px 0px 16px; 
+}
+
+/*
+ *		FOOTER classes
+ */
+.footer-line{
+
+background-color: #E8E8E8;
+    position: relative;
+    margin-left:0px;
+top : 80px;
+    height: 50px;
+//bottom:0px;
+    //margin-top: -3em;
+/*
+position: relative;
+background-color: #7575A3;
+height: 100px;
+width: 100%;
+top: 60px;
+margin-left: 0px;
+right: 0px;
+bottom: 0px;
+float: right;
+*/
 }

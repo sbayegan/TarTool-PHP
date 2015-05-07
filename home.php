@@ -40,13 +40,14 @@ Here is the overview of the actions that the script will take to generate conten
 echo "<head>";
 echo "<title>";
 echo "</title>";
-echo '<link rel="stylesheet" type="text/css" href="styles.css">';
+echo '<link rel="stylesheet" type="text/css" href="style.css">';
 echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
 echo "<body>";
 echo '<div class="stick-to-top">';
+
 echo '<span class="top-left"> <img src="http://junto.link/pictures/logo.png" alt="logo" height="45" width="100"/>  </span>';
 echo '<span class="top-right">
 <p> 
@@ -55,16 +56,45 @@ echo '<span class="top-right">
 <span class="menu">Contribute</span>
 <span class="menu">Feedback</span>
 <span class="menu">login / signup</span> </p>  </span>';
+
 echo '</div>';
 // HEADER----------------------------------------------------------------------------
+
 // BODY
 echo'<div class="middle-box">';
-echo'<img src="http://s30.postimg.org/efm5yobz5/landing_prev3.png" >';
+echo '<img src="http://www.tourismportfolio.com.au/cmsAdmin/uploads/top20.jpg" >';
+echo'</div>';
+echo'<div class="middle-bottom-box">';
+
+echo'<div class="box">1</div>';
+echo'<div class="box">2</div>';
+
+echo'<div class="box">3</div>';
+echo'<div class="box">4</div>';
+
+echo'<div class="box">5</div>';
+echo'<div class="box">6</div>';
+
+echo'<div class="box">7</div>';
+echo'<div class="box">8</div>';
+echo'<div class="box">9</div>';
 echo'</div>';
 
 echo '</body>';
+echo '<footer>';
+
+
+echo'<div class="footer-line">';
+
+echo'</div>';
+
+
+
+
+
+echo '</footer>';
 echo '</html>';
 echo "<html><br></html>";
-echo "second last line";
+
 $conn->close();
 ?>
