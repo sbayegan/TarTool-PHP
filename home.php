@@ -48,7 +48,7 @@ echo "</head>";
 echo "<body>";
 echo '<div class="stick-to-top">';
 
-echo '<span class="top-left"> <img src="http://junto.link/pictures/logo.png" alt="logo" height="45" width="100"/>  </span>';
+echo '<span class="top-left"> <img src="/pictures/logo.png" alt="logo" height="50" width="109"/>  </span>';
 echo '<span class="top-right">
 <p> 
 <span class="menu">Streams</span>
@@ -61,23 +61,35 @@ echo '</div>';
 // HEADER----------------------------------------------------------------------------
 
 // BODY
-echo'<div class="middle-box">';
-echo '<img src="http://www.tourismportfolio.com.au/cmsAdmin/uploads/top20.jpg" >';
-echo'</div>';
+
+echo '<img class="slider" src="/pictures/slider.png">';
+echo '<span class="top3">';
+echo "This Week's Top 3";
+echo '</span>';
+
+
 echo'<div class="middle-bottom-box">';
 
-echo'<div class="box">1</div>';
-echo'<div class="box">2</div>';
+echo'<div class="box">';
 
-echo'<div class="box">3</div>';
-echo'<div class="box">4</div>';
+echo '<div class="sticker"></div>';
+echo '<div class="profile-picture"></div>';
+echo '<div class="box-stats"></div>';
+echo '<div class="description"></div>';
+echo '</div>';
 
-echo'<div class="box">5</div>';
-echo'<div class="box">6</div>';
 
-echo'<div class="box">7</div>';
-echo'<div class="box">8</div>';
-echo'<div class="box">9</div>';
+echo'<div class="box"></div>';
+
+echo'<div class="box"></div>';
+echo'<div class="box"></div>';
+
+echo'<div class="box"></div>';
+echo'<div class="box"></div>';
+
+echo'<div class="box"></div>';
+echo'<div class="box"></div>';
+echo'<div class="box"></div>';
 echo'</div>';
 
 echo '</body>';
