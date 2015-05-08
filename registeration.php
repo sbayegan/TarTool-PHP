@@ -37,18 +37,23 @@ echo "<html><br></html>";
 echo $type;
 echo "<html><br></html>";
 */
-$hashedpassword = password_hash( $pass , PASSWORD_DEFAULT );
+$hashedpassword = password_hash( $pass , PASSWORD_BCRYPT );
+
+
+
+
+
 $hash = rand(0,1000000000);
 $query = "SELECT USER FROM LAST WHERE ONE=1";		// Get the available
 $result = $conn->query($query);
 $temp = mysqli_fetch_assoc($result);
-echo $temp["USER"];
+//echo $temp["USER"];
 $userid = $temp["USER"];
-echo $userid;
+//echo $userid;
 $next = $userid + 1;					//Set the next available user id
 $query = "UPDATE LAST SET USER='$next' WHERE ONE=1";
 $conn->query($query);
-echo "<html><br></html>";
+//echo "<html><br></html>";
 
 
 $query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash')";
@@ -101,5 +106,16 @@ Try again
 //else if(){}// If the user name has been registered before
 //else if(){}// If the email has been already registered!
 
+echo'<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+<!--
+   window.location="home.php?sign=1";
+//-->
+</script>
+</head>
+</html>
+';
 $conn->close();
 ?>
