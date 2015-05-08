@@ -169,88 +169,84 @@ document.getElementById("adderbutton").disabled = true;
 </script>
 </head>
 <body>
-
  <form action="submit.php" method="get" id="form" autocomplete="off">
- <div>
- <label for="title">Title :</label>
- <input type="text" name="title" id="title" size="45"/>
- <span id="title-status"></span> 
-</div>
+  <div>
+   <label for="title">Title :</label>
+   <input type="text" name="title" id="title" size="45"/>
+   <span id="title-status"></span> 
+  </div>
 
- <div>
- <label for="description">Description  :</label><br>
- <textarea rows="4" cols="50" name="description" id="description"></textarea>
- <span id="description-status"></span>
- </div>
+  <div>
+   <label for="description">Description  :</label><br>
+   <textarea rows="4" cols="50" name="description" id="description"></textarea>
+   <span id="description-status"></span>
+  </div>
  
  Medium 
- <select name="type" form="form">
-        <option value="video">Video</option>
-        <option value="website">Website/Tool</option>
-        <option value="influencer">Twitter influencer</option>
-         <option value="blog">Blog</option>
-        <option value="book">Book</option>
-	<option value="podcast">Podcast</option>
-    </select>
-</div>
+  <select name="type" form="form">
+    <option value="video">Video</option>
+    <option value="website">Website/Tool</option>
+    <option value="influencer">Twitter influencer</option>
+    <option value="blog">Blog</option>
+    <option value="book">Book</option>
+    <option value="podcast">Podcast</option>
+  </select>
+
  <br>
-<br>
-<div>
- <label for="url">URL :</label>
- <input type="text" name="url" id="url" size="45" onchange="activate(this.value)"/>
- <span id="url-status"> </span> 
-</div>
-<br>
-<span id="adder">
-<div>
-Category 
- <select name="cat" form="form" onchange="update(this.value)">
-        <option value="BD">Business development</option>
-        <option value="FE">Front-end development/Design</option>
-        <option value="BE">Back-end development</option>
-    </select>
-<br>
-Sub-category 
- <select name="subcat1" form="form" id="D1"> 
-        <option value="analytics">Analytics</option>
-        <option value="seo">SEO</option>
-        <option value="social media">Social Media</option>
-        <option value="presentations">Presentations</option>
-        <option value="advertising">Advertising</option>
-	<option value="mockupsandwireframing">Mockups and Wireframing</option>
-        <option value="idea generation">Idea Generation</option>
-        <option value="naming">Naming</option>
-        <option value="domain names">Domain Names</option>
-        <option value="lean startup">Lean Startup</option>
-	<option value="ab testing">A/B Testing</option> 
-	<option value="copywrite">Copywrite</option>
-        <option value="finance">Finance</option>
-        <option value="accounting">Accounting</option>
-        <option value="legal">Legal</option>
-        <option value="book">HR</option>
-	<option value="podcast">Forms and Surveys</option>
-	<option value="video">Market Research</option>
-        <option value="website">User Feedback</option>
-        <option value="influencer">Customer Support</option>
-        <option value="blog">CRM</option>
-        <option value="book">Project Management</option>
-	<option value="podcast">Communication</option>
-	<option value="video">E-mail Management</option>
-        <option value="website">Payments</option>
-        <option value="influencer">Inventory</option>
-        <option value="blog">Outsourcing</option>
-        <option value="book">Online Sites</option>
-	<option value="podcast">Accelerators</option> 
-	<option value="video">Incubators</option>
-        <option value="website">Conferences</option>
-        <option value="influencer">Investor Relations</option>
-        <option value="blog">Funding</option>
-        <option value="book">Presentations</option>
-	<option value="podcast">E-commerce</option>
-</select>
-</div>
-</span>
-<br>
+ <br>
+  <div>
+   <label for="url">URL :</label>
+   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)"/>
+   <span id="url-status"> </span> 
+  </div>
+ <br>
+     <span id="adder">
+      <div>
+      Category 
+        <select name="cat" form="form" onchange="update(this.value)">
+          <option value="BD">Business development</option>
+          <option value="FE">Front-end development/Design</option>
+          <option value="BE">Back-end development</option>
+        </select>
+     <br>
+      Sub-category 
+        <select name="subcat1" form="form" id="D1"> 
+          <option value="analytics">Analytics</option>
+          <option value="seo">SEO</option>
+          <option value="social media">Social Media</option>
+          <option value="presentations">Presentations</option>
+          <option value="advertising">Advertising</option>
+          <option value="mockups and wireframing">Mockups and Wireframing</option>
+          <option value="idea generation">Idea Generation</option>
+          <option value="naming">Naming</option>
+          <option value="domain names">Domain Names</option>
+          <option value="lean startup">Lean Startup</option>
+          <option value="ab testing">A/B Testing</option> 
+          <option value="copywrite">Copywrite</option>
+          <option value="finance">Finance</option>
+          <option value="accounting">Accounting</option>
+          <option value="legal">Legal</option>
+          <option value="hr">HR</option>
+	  <option value="forms and surveys">Forms and Surveys</option>
+	  <option value="market research">Market Research</option>
+          <option value="user feedback">User Feedback</option>
+          <option value="customer support">Customer Support</option>
+          <option value="crm">CRM</option>
+          <option value="project management">Project Management</option>
+	  <option value="communication">Communication</option>
+          <option value="payments">Payments</option>
+          <option value="inventory">Inventory</option>
+          <option value="outsourcing">Outsourcing</option>
+          <option value="accelerators">Accelerators</option> 
+          <option value="incubators">Incubators</option>
+          <option value="confrences">Conferences</option>
+          <option value="investors relations">Investor Relations</option>
+          <option value="funding">Funding</option>
+          <option value="podcast">E-commerce</option>
+        </select>
+       </div>
+      </span>
+      <br>
 <button type="button" id="adderbutton" onclick="add()">add another category</button>
 <br>
 <br>
