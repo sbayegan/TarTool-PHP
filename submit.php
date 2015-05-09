@@ -46,9 +46,9 @@ $conn->query($query);
 $hash = rand(0,10000000000);
 $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash')";
 $conn->query($query);
-$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);
+ if(!empty($_GET['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
 
-if(isset($_GET['subcat2'])){
+if(isset($_GET['subcat2']) && !empty($_GET['subcat2'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid AND CAT='$cat' AND SUB='$subcat2'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
@@ -56,21 +56,21 @@ if(isset($_GET['subcat2'])){
   }
 }
 
-if(isset($_GET['subcat3'])){
+if(isset($_GET['subcat3']) && !empty($_GET['subcat3'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat3'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);
   }
 }
-if(isset($_GET['subcat4'])){
+if(isset($_GET['subcat4']) && !empty($_GET['subcat4'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat4'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);
   }
 }
-if(isset($_GET['subcat5'])){
+if(isset($_GET['subcat5']) && !empty($_GET['subcat5'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat5'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
@@ -122,31 +122,6 @@ Junto team<br>
 mail($to,$subject,$message, $header);
 
 // And then redirect them to the home page
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
