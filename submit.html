@@ -27,6 +27,7 @@ if (document.getElementById("D2")){var element = document.getElementById("D2");e
 currentcat = str;
 
 if(str == "FE"){document.getElementById("D1").innerHTML = 
+	'<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
         '<option value="MockupsAndWireframing">Mockups & Wireframing</option>'+
@@ -48,6 +49,7 @@ if(str == "FE"){document.getElementById("D1").innerHTML =
 }
 
 if(str == "BE"){document.getElementById("D1").innerHTML = 
+	'<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
         '<option value="Hosting">Hosting</option>'+
@@ -67,6 +69,7 @@ if(str == "BE"){document.getElementById("D1").innerHTML =
         '<option value="Debugging Tools">Debugging</option>';
 }
 if(str == "BD"){document.getElementById("D1").innerHTML = 
+	'<option value="">Choose One</option>'+
 	'<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
         '<option value="Naming">Naming</option>'+
@@ -92,6 +95,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 function add() {
 var FE = ' Sub-category ' +
 	'<select name="subcat' + lastused + '" form="form" id=lastused>'+
+	'<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
         '<option value="MockupsAndWireframing">Mockups & Wireframing</option>'+
@@ -114,6 +118,7 @@ var FE = ' Sub-category ' +
 
 var BE = ' Sub-category ' +
 	'<select name="subcat'+ lastused +'" form="form" id=lastused>'+
+	'<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
         '<option value="Hosting">Hosting</option>'+
@@ -134,7 +139,8 @@ var BE = ' Sub-category ' +
 	'</select>';
 
 var BD = ' Sub-category '  +
- 	'<select name="subcat'+ lastused + '" form="form" id=lastused>'+
+ 	'<select name="subcat'+ lastused + '" form="form" id=lastused
+ 	'<option value="">Choose One</option>'+
         '<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
         '<option value="Naming">Naming</option>'+
@@ -213,6 +219,7 @@ document.getElementById("adderbutton").disabled = true;
      <br>
       Sub-category 
        <select name="subcat1" form="form" id="D1"> 
+        <option value="">Choose One</option>
         <option value="LeanStartup">Lean Startup</option>
         <option value="MarketingAndResearch">Marketing & Research</option>
         <option value="Naming">Naming</option>
