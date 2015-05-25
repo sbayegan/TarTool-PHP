@@ -113,10 +113,10 @@ margin-left:35px;
 .slider{
 position: relative;
 display: block;
-background-color: red;
-height: 500px;
+background-color: #FCFCFC;
+height: 220px;
 width: 100%;
-top: 50px;
+top: 80px;
 
 margin-left: auto;
 margin-right: auto;
@@ -129,8 +129,8 @@ text-align: center;
 color: white;
 position: relative;
 display: block;
-background-color: #0099FF;
-top: 90px;
+background-color: blue;
+top: 100px;
 height: 20px;
 width: 150px;
 margin-left:auto;
