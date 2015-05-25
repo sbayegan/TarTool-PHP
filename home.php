@@ -122,31 +122,35 @@ echo '</div>';
 // BODY
 
 echo '<div class="slider">
-<div style="z-index:11;width:600px;height:60px;position:relative;margin-right:auto;margin-left:auto;top:10px;padding:10px;border:1px dashed white">
+<div style="width:600px;height:60px;position:relative;margin-right:auto;margin-left:auto;top:10px;padding:10px;border:1px dashed white">
 <p style="font-family:Arial;font-size:180%;text-align:center">';
 $temp = $conn->query("SELECT COUNT(*) as total FROM USERS");
 $tem = mysqli_fetch_assoc($temp);
 echo '<span style="color:red">'.$tem['total'].'</span>'; 
-echo ' enthisiastists playing with ';
+echo ' enthusiasts playing with ';
 $temp = $conn->query("SELECT COUNT(*) as total FROM RESOURCES");
 $temp = mysqli_fetch_assoc($temp);
 echo '<span style="color:red">'.$temp['total'].'</span>';
 echo ' resource cards
 </p>
 </div>
-
-<div style="z-index:10;position:relative;width:600px;height:200px;margin-left:auto;margin-right:auto;top:80px;border:1px dashed black">
-<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:200px;top:0px">
-<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:300px;top:0px">
-<img src="http://junto.link/pictures/basic.png" height="70" width="70" style="position:absolute;left:430px;top:30px">
-<img src="http://junto.link/pictures/pin.png" height="80" width="80" style="position:absolute;left:500px;top:20px">
+<div style="position:relative;width:370px;height:105px;margin-left:auto;margin-right:auto;top:10px;border:1px dashed white">
+<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:0px;top:0px">
+<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:100px;top:0px">
+<img src="http://junto.link/pictures/basic.png" height="70" width="70" style="position:absolute;left:230px;top:30px">
+<img src="http://junto.link/pictures/pin.png" height="80" width="80" style="position:absolute;left:300px;top:20px">
+</div>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:370px;height:20px;top:25px;border:1px dashed grey">
+</div>
+</div>
+<div style="position:relative;width:100%;height:50px;background-color:#A0A0A0;top:80px;color:#FCFCFC;text-align:center;text-align:center;font-size:180%;
+text-family:Arial">
+<p style="position:relative;top:5px">This Week\'s Top 9</p>
 </div>
 
 
-</div>';
-echo '<span class="top3">';
-echo "";
-echo '</span>';
+';
+
 
 echo'<div class="middle-bottom-box">';
 

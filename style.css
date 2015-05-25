@@ -114,7 +114,7 @@ margin-left:35px;
 position: relative;
 display: block;
 background-color: #FCFCFC;
-height: 220px;
+height: 250px;
 width: 100%;
 top: 80px;
 
@@ -123,26 +123,12 @@ margin-right: auto;
 //border-radius: 10px;
 overflow:hidden
 }
-.top3{
-font-family: "Arial";
-text-align: center;
-color: white;
-position: relative;
-display: block;
-background-color: blue;
-top: 100px;
-height: 20px;
-width: 150px;
-margin-left:auto;
-margin-right:auto;
 
-
-}
 .middle-bottom-box{
 position: relative;
 background-color:white;
-//border: 1px solid #CCCCE0;
-height: 950px;
+border: 1px solid #CCCCE0;
+height: 980px;
 width: 1000px;
 top:130px;
 margin-left: auto;
