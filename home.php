@@ -121,13 +121,7 @@ echo '</div>';
 
 // BODY
 
-echo '<span class="slider">
-<div style="z-index:10;position:relative;width:600px;height:200px;margin-left:auto;margin-right:auto;top:80px;border:1px dashed black">
-<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:200px;top:0px">
-<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:300px;top:0px">
-<img src="http://junto.link/pictures/basic.png" height="70" width="70" style="position:absolute;left:430px;top:30px">
-<img src="http://junto.link/pictures/pin.png" height="80" width="80" style="position:absolute;left:500px;top:20px">
-</div>
+echo '<div class="slider">
 <div style="z-index:11;width:600px;height:60px;position:relative;margin-right:auto;margin-left:auto;top:10px;padding:10px;border:1px dashed white">
 <p style="font-family:Arial;font-size:180%;text-align:center">';
 $temp = $conn->query("SELECT COUNT(*) as total FROM USERS");
@@ -141,7 +135,15 @@ echo ' resource cards
 </p>
 </div>
 
-</span>';
+<div style="z-index:10;position:relative;width:600px;height:200px;margin-left:auto;margin-right:auto;top:80px;border:1px dashed black">
+<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:200px;top:0px">
+<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:300px;top:0px">
+<img src="http://junto.link/pictures/basic.png" height="70" width="70" style="position:absolute;left:430px;top:30px">
+<img src="http://junto.link/pictures/pin.png" height="80" width="80" style="position:absolute;left:500px;top:20px">
+</div>
+
+
+</div>';
 echo '<span class="top3">';
 echo "";
 echo '</span>';
