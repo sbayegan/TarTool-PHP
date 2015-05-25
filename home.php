@@ -73,10 +73,10 @@ echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php?r"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
-echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://www.iconmay.com/thumbnails/detail/1/play%20play%20button%20start%20black%20play%20icon.png" height="65" width="65"></span>';
-echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://www.iconmay.com/thumbnails/detail/1/pause%20break%20intermission%20interval%20black%20pause%20icon.png" height="65" width="65"></span>';
-echo '<span style="position:absolute;right:150px;top:10px;"> <img src="http://www.iconmay.com/thumbnails/detail/1/resume%20cv%20profile%20user%20info%20black%20resume%20icon.png" height="65" width="65"></span>';
-echo '<span style="position:absolute;right:50px;top:10px;"> <img src="http://www.iconmay.com/thumbnails/detail/1/eject%20eject%20button%20open%20open%20button%20black%20eject%20icon.png" height="65" width="65"></span>';
+//echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+//echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+echo '<span style="position:absolute;right:150px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <img src="http://junto.link/pictures/power.png" height="45" width="45"></span>';
 //echo '<div class="top-right"><div class="menu"><a href="home.php?feed"></a></div>';
 
 if(isset($_COOKIE['junto'])){
@@ -121,7 +121,7 @@ echo '</div>';
 
 // BODY
 
-echo '<img class="slider" src="/pictures/slider.png">';
+echo '<span class="slider"></span>';
 echo '<span class="top3">';
 echo "This Week's Top 3";
 echo '</span>';
