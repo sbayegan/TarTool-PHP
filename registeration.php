@@ -8,6 +8,8 @@ $email = mysqli_real_escape_string($conn,$_POST['email']);
 $username = mysqli_real_escape_string($conn,$_POST['username']);
 $pass = mysqli_real_escape_string($conn,$_POST['password']);
 $type = mysqli_real_escape_string($conn,$_POST['type']);
+$ipone = $_SERVER['REMOTE_ADDR'];
+$iptwo = $_SERVER['HTTP_X_FORWARDED_FOR'];
 $userid;
 
 // Here I should make sure that the username or the email
@@ -56,7 +58,7 @@ $conn->query($query);
 //echo "<html><br></html>";
 
 
-$query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash')";
+$query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash','$ipone','$iptwo')";
 $conn->query($query);
 //echo $query;
 // send an email to the client
