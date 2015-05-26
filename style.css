@@ -42,31 +42,51 @@ padding-left:2em;
 
 .box{
 //overflow: hidden;
+//float:top;
+position:relative;
+margin-left:auto;
+margin-right:auto;
 border-radius: 1px;
-display:inline-block;
-position: relative;
-border: .5px solid red;
+//display:block;
+border: 0px solid red;
 background-color: #E8E8E8;
-height: 300px;
-width: 300px;
-margin: 16px 16px 0px 16px; 
+height: 500px;
+width: 500px;
+margin-bottom: 100px; 
 }
 .box:hover, .box:focus, .box:active {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.6);
 }
 
 .sticker{
 position:absolute;
 background-color: red;
 left:0px;
-top:0px;
-height: 30px;
-width: 90px;
+top:15px;
+height: 27px;
+width: 210px;
 z-index: 2;
+color:white;
+font-size: 130%;
+padding-left: 10px;
 }
+
+.subcats{
+position:absolute;
+left:0px;
+top:50px;
+height:30px;
+width:75%;
+font-size: 110%;
+color:grey;
+padding-left: 10px;
+border: 1px dashed white;
+z-index:2;
+}
+
 .profile-picture{
-position:relative;
-background-color: blue;
+position:absolute;
+background-color: white;
 top:0px;
 width: 100%;
 z-index:1;
@@ -75,19 +95,19 @@ height: 100px;
 .box-stats{
 position: absolute;
 bottom: 0px;
-height:40px;
+height:60px;
 width: 100%;
-background-color: red;
+background-color: lightblue;
 }
 .description{
 position: absolute;
 background-color:white;
-top:110px;
+margin-bottom:20px;
 left:10px;
 right: 10px;
 bottom: 50px;
-width:280px;
-height: 140px;
+width:480px;
+height: 320px;
 
 }
 
@@ -124,12 +144,12 @@ margin-right: auto;
 overflow:hidden
 }
 
-.middle-bottom-box{
+.feed-column{
 position: relative;
 background-color:white;
-border: 1px solid #CCCCE0;
-height: 980px;
-width: 1000px;
+border: 1px dashed white;
+//height: 980px;
+width: 550px;
 top:130px;
 margin-left: auto;
 margin-right: auto;
