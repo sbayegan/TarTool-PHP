@@ -1,5 +1,4 @@
 <?php
-session_start(); 
-session_destroy(); 
-header( 'Location: http://www.yoursite.com/' );
+setcookie("junto","NULL",time());
+header( 'Location: http://junto.link/home.php' );
 ?>

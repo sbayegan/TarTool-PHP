@@ -54,7 +54,10 @@ Here is the overview of the actions that the script will take to generate conten
 */
 // HEAD ------------------------------------------------------------------------------------------------------------------------
 
+if(isset($_COOKIE['junto'])){
+header('Location: http://junto.link/home.php');
 
+}
 
 echo "<head>";
 echo "<title>";
