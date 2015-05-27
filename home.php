@@ -75,23 +75,18 @@ echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
+if(isset($_COOKIE['junto'])){
+
+
+}
+else{
 //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
 echo '<span style="position:absolute;right:50px;top:20px;"> <a href="authentication.php"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
-//echo '<div class="top-right"><div class="menu"><a href="home.php?feed"></a></div>';
-
-if(isset($_COOKIE['junto'])){
-//echo '<div class="menu"><a href="home.php?library">.</a></div><div class="menu"><a href="home.php?interests">.</a></div>';
 }
 
-//echo '<div class="menu"><a href="home.php?community">.</a></div>';
-//setcookie("junto","example", time()-2222,"/");
-if(!isset($_COOKIE['junto'])){
-//echo '<div class="menu">login |signup</span> </p>  </div>';
-}
-
-else{ 
+ 
 /*
 echo '
 
@@ -104,19 +99,10 @@ $result = mysqli_fetch_assoc($result);
 $result = $result["NAME"];
 
 //echo 'Hello, '.$result;
-
-echo
-    '<span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" >
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account Setting</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Log Out</a></li>
-    </ul>
-  </div>
 */
 echo '</div>'; 
 
- }
+ 
 
 echo '</div>';
 // HEADER----------------------------------------------------------------------------
@@ -157,15 +143,10 @@ text-family:Arial">
 
 echo'<div class="feed-column">';
 
-echo'<div class="box">';
-echo '<div class="sticker"> Business Development</div>';
-echo '<div class="subcats">Finance, Accounting, Analytics, Social Media & Community </div>';
-echo '<div class="profile-picture">
- <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Dell_Logo.png/1027px-Dell_Logo.png" width="100" height="100" style="margin-top:0px;float:right"> 
-</div>';
-echo '<div class="box-stats"></div>';
-echo '<div class="description"></div>';
-echo '</div>';
+
+card(6);
+
+card(6);
 
 card(6);
 

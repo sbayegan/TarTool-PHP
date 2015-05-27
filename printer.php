@@ -26,17 +26,23 @@ echo '<div class="box">';
     echo $result['PROFILEPICTURE'];
     echo '" width="100" height="100" style="margin-top:0px;float:right"> 
           </div>';
-    echo '<div class="box-stats"></div>';
-    echo '<div class="description"></div>';
+    echo '<a href="'.$result['URL'].'" target="_blank">'.'<div class="description">';
+    echo '<b>'.$result['TITLE'].'</b><br><br>';
+    echo $result['DESCRIPTION'];
+    echo'</div></a>';
+    echo '<div class="score">';
+    echo '<img src="http://junto.link/pictures/facebook.png" width="45" height="45" style="float:right;margin-right:5px">';
+    echo '<img src="http://junto.link/pictures/twitter.png" width="45" height="45" style="float:right;margin-right:20px">';
+    echo '<img src="http://junto.link/pictures/linkedin.png" width="45" height="45" style="float:right;margin-right:25px">';
+    echo '</div>';
+    echo '<div class="box-stats">';
+    echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
+    echo '<img src="http://junto.link/pictures/pin.png" width="60" height="55" style="float:right;margin-right:10px;margin-top:7px">';
+    echo '</div>';
 
 
 echo '</div>';
 }
 
-
-
-function familyName($fname) {
-     echo "$fname Refsnes.<br>";
-}
 
 ?>
