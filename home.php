@@ -167,7 +167,7 @@ echo '<div class="box-stats"></div>';
 echo '<div class="description"></div>';
 echo '</div>';
 
-
+card(6);
 
 
 echo'</div>';
