@@ -139,7 +139,7 @@ one = document.getElementById("loginusername").value;
 
                 if(xmlhttp.responseText == 1){
                   document.getElementById("condition").innerHTML = "good, lets go";
-		  window.location.replace("home.php");
+		  window.location.replace("feed.php");
 
                 }
                 if(xmlhttp.responseText == 0){
@@ -179,13 +179,9 @@ echo "</head>";
 echo "<body>";
 echo '<div class="stick-to-top">';
 
-echo '<div class="top-left"> <img src="/pictures/logo.png" alt="logo" height="85" width="185"/>  </div>';
-echo '<div class="top-right">';
+echo '<div class="top-left"><a href="http://junto.link/home.php"> <img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </div>';
+echo '<span style="position:absolute;right:50px;top:10px;"> <a href="feed.php"><img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
 
-
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="feed.php"><img src="http://junto.link/pictures/glasses.png" height="45" width="45"></a></span>';
-
-echo '</div>';
 echo '</div>';
 
 

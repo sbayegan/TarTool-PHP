@@ -25,11 +25,7 @@ position: absolute;
 top:0px;
 left:10px;
 }
-.top-right{
-position: absolute;
-top: 7px;
-right : 40px;
-}
+
 .menu{
 top: 2px;
 float:left;
@@ -48,8 +44,8 @@ margin-left:auto;
 margin-right:auto;
 border-radius: 1px;
 //display:block;
-border: 0px solid red;
-background-color: #EBFFEB;
+border: 0px solid #E6E6E6;
+background-color: #FCFCFC;
 height: 500px;
 width: 500px;
 margin-bottom: 100px; 
@@ -99,17 +95,28 @@ height:70px;
 width: 100%;
 background-color: #33CC33;
 }
+.title{
+overflow:scroll;
+position: absolute;
+padding-left:10px;
+left:10px;
+right:10px;
+width:480px;
+height:30px;
+top:110px;
+border: 0px dashed grey;
+}
 .description{
 overflow: scroll;
 position: absolute;
-background-color:white;
+background-color:#FCFCFC;
 margin-bottom:20px;
 padding:10px;
 left:10px;
 right: 10px;
-top: 110px;
+top: 150px;
 width:480px;
-height: 220px;
+height: 190px;
 }
 .box a:link,.box a:visited{color:#474747;}
 .box a:hover{color:black;}
@@ -155,11 +162,44 @@ margin-right: auto;
 //border-radius: 10px;
 overflow:hidden
 }
-
+.navigator{
+position: fixed;
+left: 30px;
+top:120px;
+width: 200px;
+height: 500px;
+border: 1px dashed grey;
+}
+.submit{
+position: fixed;
+top:120px;
+right:30px;
+width: 200px;
+height: 100px;
+border:1px dashed grey;
+}
+.feedback{
+position: fixed;
+top: 240px;
+right:30px;
+width:200px;
+height:100px;
+border:1px dashed grey;
+}
+.tab{
+position:relative;
+margin-bottom: 10px;
+margin-left:auto;
+margin-right:auto;
+top:120px;
+height: 40px;
+width: 500px;
+border: 1px dashed grey;
+}
 .feed-column{
 position: relative;
-background-color:white;
-border: 1px dashed white;
+//background-color:grey;
+//border: 1px dashed white;
 //height: 980px;
 width: 550px;
 top:130px;
