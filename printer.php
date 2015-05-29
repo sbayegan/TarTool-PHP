@@ -37,11 +37,30 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo $result['DESCRIPTION'];
     echo'</div></a>';
     echo '<div class="score">';
-    echo '<img src="http://junto.link/pictures/facebook.png" width="45" height="45" style="float:right;margin-right:5px">';
-    echo '<img src="http://junto.link/pictures/twitter.png" width="45" height="45" style="float:right;margin-right:20px">';
-    echo '<img src="http://junto.link/pictures/linkedin.png" width="45" height="45" style="float:right;margin-right:25px">';
-    echo '</div>';
-    echo '<div class="box-stats" style="background-color:';
+    echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:37px;margin-top:15px">';
+    echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="float:right;margin-right:20px;margin-top:17px">';
+    echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
+    echo '<img src="http://junto.link/pictures/basic.png" width="30" height="30" style="float:right;margin-right:22px;margin-top:19px">';
+    echo '<div style="position:absolute;left:4px;font-size:250%;margin-top:15px">'.'Score: '.$result['TOTALSCORE'].'</div>';
+
+    echo '</div>';    
+
+    echo '<div class="numbers">';
+    //echo '<div style="position:absolute;left:4px;font-size:120%">'.'Score: <b>'.$result['TOTALSCORE'].'</b></div>';
+    echo '<div style="position:absolute;left:264px;font-size:110%">'.$result['LIKES'].'</div>';
+    echo '<div style="position:absolute;left:307px;font-size:110%">'.$result['LINKEDIN'].'</div>';
+    echo '<div style="position:absolute;left:365px;font-size:110%">'.$result['TWITTER'].'</div>';
+    echo '<div style="position:absolute;margin-left:424px;font-size:110%">'.$result['FACEBOOK'].'</div>';
+    
+    
+   
+
+
+     echo '</div>';
+
+
+
+echo '<div class="box-stats" style="background-color:';
      if($medium == 'video')     {echo '#CCFF33;';}
      if($medium == 'website')   {echo '#CC00FF;';}
      if($medium == 'blog')      {echo '#FF9933;';}
@@ -50,8 +69,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
      else{echo 'red';}
 
     echo'">';
-    echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
-    echo '<img src="http://junto.link/pictures/pin.png" width="60" height="55" style="float:right;margin-right:10px;margin-top:7px">';
+    
+    //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
+    //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
     echo '</div>';
 
 

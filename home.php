@@ -20,7 +20,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo "<body>";
+echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -95,16 +95,17 @@ text-family:Arial">
 
 
 echo'<div class="feed-column">';
-
+card(13);
+card(12);
+card(6);
 card(10);
-
 card(9);
-
-card(8);
 
 card(7);
 
-card(6);
+card(8);
+
+
 
 
 echo'</div>';
