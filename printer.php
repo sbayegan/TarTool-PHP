@@ -69,7 +69,7 @@ echo '<div class="box-stats" style="background-color:';
      else{echo 'red';}
 
     echo'">';
-    
+    echo '<div style="position:absolute;left:4px;font-size:200%;margin-top:0px">'.'Score: '.$result['TOTALSCORE'].'</div>';
     //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
     echo '</div>';
