@@ -8,6 +8,83 @@
 /*
  * 		SHARED STYES classes
 */
+.checklist{
+position :relative;
+top : 100px;
+left : 30px;
+right: 30px;
+height: 600px;
+//width: 600px;
+//border: 1px dashed black;
+//background-color: blue;
+z-index: 1;
+//overflow:scroll;
+}
+.checklist-left-title{
+position: absolute;
+left:1%;
+width:32%;
+top: 10%;
+height: 5%;
+border: 1px dashed grey;
+}
+.checklist-center-title{
+position: absolute;
+left:34%;
+width:32%;
+top: 10%;
+height: 5%;
+border: 1px dashed grey;
+}
+
+.checklist-right-title{
+position: absolute;
+left:67%;
+width:32%;
+top: 10%;
+height: 5%;
+border: 1px dashed grey;
+}
+
+.checklist-left{
+background-color: #FEFEFE;
+position: absolute;
+left:1%;
+width:32%;
+top: 15%;
+height: 70%;
+//border: 1px dotted grey;
+overflow: scroll;
+//z-index: 2;
+}
+.checklist-center{
+background-color: #FEFEFE;
+position: absolute;
+left:34%;
+width:32%;
+top: 15%;
+height: 70%;
+//border: 1px dashed grey;
+overflow: scroll;
+}
+.checklist-right{
+background-color: #FEFEFE;
+position: absolute;
+left:67%;
+width:32%;
+top: 15%;
+height: 70%;
+//border: 1px dashed grey;
+overflow: scroll;
+}
+.check-button{
+position : absolute;
+top: 90%;
+left: 45%;
+right: 45%;
+height: 5%;
+//border: 1px dashed grey;
+}
 .stick-to-top{
 box-shadow: 0px 1px 8px grey;
 height: 85px;
@@ -16,7 +93,7 @@ top: 0px;
 right: 0px;
 left: 0px;
 width: 100%;
-z-index: 100;
+//z-index:0;
 background-color: #FEFEFE;
 }
 .top-left{
