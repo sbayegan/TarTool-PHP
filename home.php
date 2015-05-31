@@ -20,7 +20,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo '<body style="background-color:white;">';
+echo '<body style="background-color:#E0CEC1;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -85,7 +85,7 @@ echo ' resource cards
 <span style="margin-left:30px">Select</span> <span style="margin-left:60px">Discover</span><span style="margin-left:50px">Approve</span><span style="margin-left:40px">Pin</span>
 </div>
 </div>
-<div style="position:relative;width:100%;height:50px;background-color:white;top:80px;color:black;text-align:center;text-align:center;font-size:180%;
+<div style="position:relative;width:100%;height:100px;background-color:white;top:80px;color:black;text-align:center;text-align:center;font-size:180%;
 text-family:Arial">
 <p style="position:relative;top:30px">Trending Cards</p>
 </div>

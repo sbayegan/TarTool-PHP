@@ -44,7 +44,7 @@ margin-left:auto;
 margin-right:auto;
 border-radius: 1px;
 //display:block;
-border: 1px solid #E6E6E6;
+//border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
 height: 500px;
 width: 500px;
@@ -83,6 +83,7 @@ z-index:2;
 .profile-picture{
 position:absolute;
 background-color: white;
+
 top:0px;
 width: 100%;
 z-index:1;
