@@ -20,7 +20,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo "<body>";
+echo '<body style="background-color:#E0CEC1;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -57,6 +57,55 @@ $result = $result["NAME"];
 echo '</div>';
 
 echo '<div class="navigator">';
+echo '
+<a href="http://junto.link/feed.php?cat=BD"><b>Business Development</b></a><br>
+<a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
+<a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
+<a href="http://junto.link/feed.php?subcat=Naming">Naming</a><br>
+<a href="http://junto.link/feed.php?subcat=CopyWriting">Copywriting</a><br>
+<a href="http://junto.link/feed.php?subcat=Analytics">Analytics</a><br>
+<a href="http://junto.link/feed.php?subcat=Launching">Launching</a><br>
+<a href="http://junto.link/feed.php?subcat=UserFeedback">User Feedback</a><br>
+<a href="http://junto.link/feed.php?subcat=SEO">SEO</a><br>
+<a href="http://junto.link/feed.php?subcat=SocialMediaCommunity">Social Media & Community</a><br>
+<a href="http://junto.link/feed.php?subcat=ProjectManagement">Project Management</a><br>
+<a href="http://junto.link/feed.php?subcat=CustomerService">Customer Service</a><br>
+<a href="http://junto.link/feed.php?subcat=InventoryManagement">Inventory Management</a><br>
+<a href="http://junto.link/feed.php?subcat=Sales">Sales</a><br>
+<a href="http://junto.link/feed.php?subcat=Funding">Funding </a><br>
+<a href="http://junto.link/feed.php?subcat=Administration">Administration</a><br>
+<a href="http://junto.link/feed.php?subcat=Productivity">Productivity</a><br>
+<a href="http://junto.link/feed.php?subcat=Outsourcing">Outsourcing</a><br>
+<a href="http://junto.link/feed.php?subcat=E-commerce">E-commerce</a><br>
+<a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators">Accelerators & Incubators </a><br>
+<a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
+<br>
+<a href="http://junto.link/feed.php?cat=FE"><b>Front-End Development</b></a><br>
+<a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
+<a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
+<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
+<a href="http://junto.link/feed.php?subcat=HTML">HTML</a><br>
+<a href="http://junto.link/feed.php?subcat=CSS">CSS</a><br>
+<a href="http://junto.link/feed.php?subcat=JavaScript">JavaScript</a><br>
+<a href="http://junto.link/feed.php?subcat=Themes">Themes</a><br>
+<a href="http://junto.link/feed.php?subcat=Mobile">Mobile</a><br>
+<a href="http://junto.link/feed.php?subcat=FrontEndiOS">iOS</a><br>
+<a href="http://junto.link/feed.php?subcat=FrontEndAndroid">Android</a><br>
+<a href="http://junto.link/feed.php?subcat=Bootstrap">Bootstrap</a><br>
+<a href="http://junto.link/feed.php?subcat=XML">XML</a><br>
+<a href="http://junto.link/feed.php?subcat=JQuery">JQuery</a><br>
+<a href="http://junto.link/feed.php?subcat=Angular">Angular</a><br>
+<a href="http://junto.link/feed.php?subcat=Canvas">Canvas</a><br>
+<a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
+<a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
+<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
+<br>
+<a href="http://junto.link/feed.php?cat=BE"><b>Back-End Development</b></a><br>
+
+
+
+
+     ';
 echo '</div>';
 
 echo '<div class="submit">';
@@ -80,8 +129,8 @@ card(6);
 echo'</div>';
 echo '</body>';
 echo '<footer>';
-echo'<div class="footer-line">';
-echo'</div>';
+//echo'<div class="footer-line">';
+//echo'</div>';
 
 
 

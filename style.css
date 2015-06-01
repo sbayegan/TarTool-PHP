@@ -8,8 +8,9 @@
 /*
  * 		SHARED STYES classes
 */
+
 .checklist{
-position :relative;
+position :absolute;
 top : 100px;
 left : 30px;
 right: 30px;
@@ -26,7 +27,7 @@ left:1%;
 width:32%;
 top: 10%;
 height: 5%;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 }
 .checklist-center-title{
 position: absolute;
@@ -34,7 +35,7 @@ left:34%;
 width:32%;
 top: 10%;
 height: 5%;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 }
 
 .checklist-right-title{
@@ -43,10 +44,11 @@ left:67%;
 width:32%;
 top: 10%;
 height: 5%;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 }
 
 .checklist-left{
+padding:20px;
 background-color: #FEFEFE;
 position: absolute;
 left:1%;
@@ -58,6 +60,7 @@ overflow: scroll;
 //z-index: 2;
 }
 .checklist-center{
+padding:20px;
 background-color: #FEFEFE;
 position: absolute;
 left:34%;
@@ -68,6 +71,7 @@ height: 70%;
 overflow: scroll;
 }
 .checklist-right{
+padding:20px;
 background-color: #FEFEFE;
 position: absolute;
 left:67%;
@@ -93,7 +97,7 @@ top: 0px;
 right: 0px;
 left: 0px;
 width: 100%;
-//z-index:0;
+z-index:55;
 background-color: #FEFEFE;
 }
 .top-left{
@@ -257,7 +261,10 @@ left: 30px;
 top:120px;
 width: 200px;
 height: 500px;
-border: 1px dashed grey;
+//border: 1px dashed grey;
+background-color:#FEFEFE;
+overflow:scroll;
+padding:5px;
 }
 .submit{
 position: fixed;

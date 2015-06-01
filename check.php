@@ -34,7 +34,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo "<body style='overflow:scroll;'>";
+echo "<body style='background-color:#E0CEC1;'>";
 echo '<div class="stick-to-top">';
 
 echo '<div class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a>';
@@ -50,7 +50,7 @@ echo '</div>';
 
 
 echo '<div class="checklist">';
-echo '<form action="checklist.php" method="get">';
+echo '<form action="checklist.php" method="post">';
 echo '<div class="checklist-left-title">';
 echo '</div>';
 echo '<div class="checklist-center-title">';
@@ -67,6 +67,7 @@ echo '> SEO';
 echo'<br><input type="checkbox" name="Sales" value="1"';
 if(interested($userid,"Sales")==1){echo ' checked';};
 echo'> Sales <br>';
+
 
 echo '<input type="checkbox" name="Naming" value="1"';
 if(interested($userid,"Naming")==1){echo ' checked';}
