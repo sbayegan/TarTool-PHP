@@ -57,7 +57,7 @@ if($input == 'Ruby'){echo '<a href="http://junto.link/feed.php?subcat=Ruby">Ruby
 if($input == 'Objective-C'){echo '<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a>';}
 if($input == 'Swift'){echo '<a href="http://junto.link/feed.php?subcat=Swift">Swift</a>';}
 if($input == 'C#'){echo '<a href="http://junto.link/feed.php?subcat=C#">C#</a>';}
-if($input == 'Debugging'){echo '<a href="http://junto.link/feed.php?subcat=Debugging">Debugging</a>';}
+if($input == 'Debugging'){echo '<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a>';}
 
 }
 

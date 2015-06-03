@@ -259,13 +259,17 @@ overflow:hidden
 position: fixed;
 left: 30px;
 top:120px;
-width: 200px;
-height: 500px;
+width: 230px;
+height: 700px;
 //border: 1px dashed grey;
-background-color:#FEFEFE;
+background-color:#FFD1B2;
 overflow:scroll;
 padding:5px;
+font-size:80%;
 }
+.navigator a:link,.navigator a:visited{color:#474747;}
+.navigator a:hover{color:black;text-decoration:none;}
+
 .submit{
 position: fixed;
 top:120px;
@@ -273,6 +277,7 @@ right:30px;
 width: 200px;
 height: 100px;
 border:1px dashed grey;
+background-color: #FEFEFE;
 }
 .feedback{
 position: fixed;
@@ -281,6 +286,7 @@ right:30px;
 width:200px;
 height:100px;
 border:1px dashed grey;
+background-color:#FEFEFE;
 }
 .tab{
 position:relative;

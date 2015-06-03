@@ -16,11 +16,28 @@ echo '<link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 ';
+echo '
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#accordion" ).accordion(
+{
+active:false,
+collapsible:true,
+heightStyle: "content"
+}
+
+);
+});
+  </script>';
 echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo '<body style="background-color:#E0CEC1;">';
+echo '<body style="background-color:#FFD1B2;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -58,7 +75,11 @@ echo '</div>';
 
 echo '<div class="navigator">';
 echo '
-<a href="http://junto.link/feed.php?cat=BD"><b>Business Development</b></a><br>
+<div id="accordion">
+<h3>
+<a href="http://junto.link/feed.php?cat=BD"><b style="color:red;">Business Development</b></a><br>
+</h3>
+<div>
 <a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
 <a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
 <a href="http://junto.link/feed.php?subcat=Naming">Naming</a><br>
@@ -79,8 +100,11 @@ echo '
 <a href="http://junto.link/feed.php?subcat=E-commerce">E-commerce</a><br>
 <a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators">Accelerators & Incubators </a><br>
 <a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
-<br>
-<a href="http://junto.link/feed.php?cat=FE"><b>Front-End Development</b></a><br>
+</div>
+<h3>
+<a href="http://junto.link/feed.php?cat=FE"><b style="color:red;">Front-End Development</b></a>
+</h3>
+<div>
 <a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
 <a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
 <a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
@@ -99,11 +123,31 @@ echo '
 <a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
 <a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
 <a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
-<br>
-<a href="http://junto.link/feed.php?cat=BE"><b>Back-End Development</b></a><br>
+</div>
 
+<h3>
+<a href="http://junto.link/feed.php?cat=BE"><b style="color:red;">Back-End Development</b></a><br>
+</h3>
+<div>
+<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
+<a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
+<a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
+<a href="http://junto.link/feed.php?subcat=PHP">PHP</a><br>
+<a href="http://junto.link/feed.php?subcat=Python">Python</a><br>
+<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a><br>
+<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a><br>
+<a href="http://junto.link/feed.php?subcat=SQL">SQL</a><br>
+<a href="http://junto.link/feed.php?subcat=C">C</a><br>
+<a href="http://junto.link/feed.php?subcat=C++">C++</a><br>
+<a href="http://junto.link/feed.php?subcat=Shell">Shell</a><br>
+<a href="http://junto.link/feed.php?subcat=Java">Java</a><br>
+<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a><br>
+<a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
+<a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
+<a href="http://junto.link/feed.php?subcat=Debugging"></a>Debugging Tools<br>
+</div>
 
-
+</div>
 
      ';
 echo '</div>';
@@ -115,8 +159,8 @@ echo '</div>';
 echo '<div class="feedback">';
 echo '</div>';
 
-echo '<div class="tab">';
-echo '</div>';
+//echo '<div class="tab">';
+//echo '</div>';
 
 echo '<div class="feed-column">';
 
