@@ -740,7 +740,7 @@ echo '
 			 <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
 			 <span id="email-status"></span>
  			<label for="username">Username:</label>
- 			<input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control/>
+ 			<input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
  			<span id="user-status"> </span> 
  			
 			<label for="password">Password:</label>
