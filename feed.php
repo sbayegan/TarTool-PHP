@@ -338,7 +338,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 }
 }
 function add() {
-var FE = \' Sub-category \' +
+var FE = //\' Sub-category \' +
 	\'<select name="subcat\' + lastused + \'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="UserInterface">User Interface</option>\'+
@@ -360,7 +360,7 @@ var FE = \' Sub-category \' +
 	\'<option value="JSON">JSON</option>\'+
         \'<option value="Ajax">Ajax</option>\'+
 	\'</select>\';
-var BE = \' Sub-category \' +
+var BE = //\' Sub-category \' +
 	\'<select name="subcat\'+ lastused +\'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="Security">Security</option>\'+
@@ -381,7 +381,7 @@ var BE = \' Sub-category \' +
         \'<option value="C#">C#</option>\'+
         \'<option value="Debugging Tools">Debugging</option>\'+
 	\'</select>\';
-var BD = \' Sub-category \'  +
+var BD = //\' Sub-category \'  +
  	\'<select name="subcat\'+ lastused + \'" form="form" class="form-control" id=lastused>\'+
  	\'<option value="">Choose One</option>\'+
         \'<option value="LeanStartup">Lean Startup</option>\'+
