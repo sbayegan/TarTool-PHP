@@ -486,7 +486,7 @@ document.getElementById("adderbutton").disabled = true;
 	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
 	<option value="Events">Events</option>
        </select>
-       
+       </form>
        </div>
       </div>
 
@@ -500,10 +500,10 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
-                
+                <form><button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
+                </form>
             </div>
-            </form>
+            
 	</div>
         </div>
     </div>
