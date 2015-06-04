@@ -501,8 +501,18 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" disabled>
-     </form>
+                <div class="form-group">
+                <label for="title">Subject:</label>
+                <input type="text" name="title" id="title"  size="45" class="form-control"/>
+                <span id="title-status"></span> 
+                </div>
+
+                <div class="form-group">
+                <label for="description">Your Feedback!</label><br>
+                <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
+                <span id="description-status"></span>
+                </div>
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
                 </form>
             </div>
             
@@ -520,7 +530,9 @@ document.getElementById("adderbutton").disabled = true;
                 <h4 class="modal-title">Leave Your Feedback</h4>
             </div>
             <div class="modal-body">
-                <p>A feedback form will be put here!</p>
+                <form  class="form-asd" role="form" action="submit.php" method="get">
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+                 </form>
                 <p class="text-warning"><small></small></p>
             </div>
             <div class="modal-footer">
