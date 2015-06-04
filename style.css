@@ -9,7 +9,7 @@
  * 		SHARED STYES classes
 */
 .modal .modal-body {
-   // max-height: 420px;
+    max-height: 500px;
     overflow-y: auto;
 }
 .checklist{
