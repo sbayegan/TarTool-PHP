@@ -8,7 +8,10 @@
 /*
  * 		SHARED STYES classes
 */
-
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
 .checklist{
 position :absolute;
 top : 100px;
