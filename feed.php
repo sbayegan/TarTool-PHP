@@ -171,7 +171,7 @@ echo '
     <ul class="nav">
 
 		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
-			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
 				<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
 <a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
 <a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
