@@ -260,9 +260,9 @@ echo '
 var lastused = 2;
 var currentcat = "BD"
 function activate(str){
-if(str.length > 5){document.getElementById("submit_btn").disabled = false;}
-else {document.getElementById("submit_btn").disabled = true;}
-//document.getElementById("submit_btn").disabled = false;
+if(str.length > 5){document.getElementById("submit_bt").disabled = false;}
+else {document.getElementById("submit_bt").disabled = true;}
+//document.getElementById("submit_bt").disabled = false;
 }
 function update(str){
 lastused = 2;
@@ -498,7 +498,7 @@ document.getElementById("adderbutton").disabled = true;
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal" id="submit_btn" disabled>Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
             </div>
 
         </div>
