@@ -419,22 +419,22 @@ document.getElementById("adderbutton").disabled = true;
 </script>
                  <form action="submit.php" method="get" id="form" autocomplete="off">
   <div class="form-group">
-   <label for="title">Title :</label>
+   <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
   </div>
   <div class="form-group">
-   <label for="description">Description  :</label><br>
+   <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
   </div>
   <div class="form-group">
-   <label for="url">URL :</label>
+   <label for="url">URL:</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
   </div>
   <div class="form-group">
- Medium 
+   <label for="type">Medium: </label> 
   <select name="type" form="form" class="form-control">
     <option value="Video/Audio">Video</option>
     <option value="Website">Website/Tool</option>
