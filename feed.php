@@ -339,7 +339,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 }
 function add() {
 var FE = \' Sub-category \' +
-	\'<select name="subcat\' + lastused + \'" form="form" id=lastused>\'+
+	\'<select name="subcat\' + lastused + \'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="UserInterface">User Interface</option>\'+
         \'<option value="UserExperience">User Experience</option>\'+
@@ -361,7 +361,7 @@ var FE = \' Sub-category \' +
         \'<option value="Ajax">Ajax</option>\'+
 	\'</select>\';
 var BE = \' Sub-category \' +
-	\'<select name="subcat\'+ lastused +\'" form="form" id=lastused>\'+
+	\'<select name="subcat\'+ lastused +\'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="Security">Security</option>\'+
         \'<option value="DataManagement">Data Management</option>\'+
@@ -382,7 +382,7 @@ var BE = \' Sub-category \' +
         \'<option value="Debugging Tools">Debugging</option>\'+
 	\'</select>\';
 var BD = \' Sub-category \'  +
- 	\'<select name="subcat\'+ lastused + \'" form="form" id=lastused>\'+
+ 	\'<select name="subcat\'+ lastused + \'" form="form" class="form-control" id=lastused>\'+
  	\'<option value="">Choose One</option>\'+
         \'<option value="LeanStartup">Lean Startup</option>\'+
         \'<option value="MarketingAndResearch">Marketing & Research</option>\'+
@@ -454,8 +454,9 @@ document.getElementById("adderbutton").disabled = true;
         </select>
         </div>
      <br>
-      Sub-category 
-       <select name="subcat1" form="form" id="D1" class="selectpicker"> 
+     <div class="form-group">
+     <label > Sub-category: </label>  
+       <select name="subcat1" form="form" id="D1" class="form-control"> 
         <option value="">Choose One</option>
         <option value="LeanStartup">Lean Startup</option>
         <option value="MarketingAndResearch">Marketing & Research</option>
@@ -478,6 +479,7 @@ document.getElementById("adderbutton").disabled = true;
 	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
 	<option value="Events">Events</option>
        </select>
+       </div>
        </div>
       </div>
 
