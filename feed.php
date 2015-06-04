@@ -492,7 +492,7 @@ document.getElementById("adderbutton").disabled = true;
 <button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
 
 
-</form>
+
                 
                 
                 <p class="text-warning"><small></small></p>
@@ -500,6 +500,7 @@ document.getElementById("adderbutton").disabled = true;
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
+                </form>
             </div>
 
         </div>
