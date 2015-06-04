@@ -447,6 +447,7 @@ document.getElementById("adderbutton").disabled = true;
     <option value="Book">Book</option>
   </select>
   </div>
+  
   <label>Thumbnail: </label>
    <input type="file" name="fileToUpload" id="fileToUpload" class="btn btn-default">
   
@@ -502,7 +503,8 @@ document.getElementById("adderbutton").disabled = true;
                 <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
                 
             </div>
-	</form>
+            </form>
+	</div>
         </div>
     </div>
 </div>
