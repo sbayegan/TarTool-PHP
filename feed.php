@@ -427,8 +427,8 @@ Last name:<br>
 <input type="submit" value="Submit">
 </form> 
 
-<form action="submit.php" autocomplete="off">
-   <input type="button" type="submit" value="submit" class="btn btn-danger">
+<form action="submit.php" >
+   <input type="button" value="submit" class="btn btn-danger">
      </form>
 
    <div class="form-group">
