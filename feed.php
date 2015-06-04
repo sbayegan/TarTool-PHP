@@ -732,12 +732,53 @@ echo '
 <img style="margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
 </a>
 <hr>
-
+<form action="registeration.php" method="post" id="form" autocomplete="off">
+ <div class="form">
+ <label for="full_name">Name :</label>
+ <input type="text" name="full_name" placeholder="your name" id="full_name" />
+ </div>
+ <div class="form">
+ <label for="email">Email  :</label>
+ <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)"/>
+ <span id="email-status"></span>
+ </div>
+ 
+ <div class="form">
+ <label for="username">Username :</label>
+ <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)"/>
+ <span id="user-status"> </span> 
+ </div>
+ <div class="form">
+ <label for="password">Password :</label>
+ <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)"/>
+ <span id="pass-status"> </span> 
+ </div>
+</b>
+  <div class="form">
+ <label for="password1">Retype Password :</label>
+ <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()"/>
+ <span id="pass1-status"> </span> 
+ </div>
+<div class="form">
+Who are you? 
+ <select name="type" form="form" id="dropdown">
+        <option value="NULL">choose one</option>
+        <option value="one">a founder</option>
+        <option value="two">working at a startup</option>
+         <option value="three">I just like strartups</option>
+        <option value="four">None of your business!</option>
+    </select>
+ </div>
+ <div>
+ <input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
+ </div>
+    
+ </form>
                 
                 <p class="text-warning"><small></small></p>
             </div>
             <div class="modal-footer">
-                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+
                  </form>
             </div>
 
