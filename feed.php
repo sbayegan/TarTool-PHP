@@ -69,7 +69,7 @@ else{
 //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#submit"  data-toggle="modal"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
 }
 
  
@@ -513,6 +513,39 @@ document.getElementById("adderbutton").disabled = true;
 
 
 <div id="feedback" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Leave Your Feedback</h4>
+            </div>
+            <div class="modal-body">
+                <form  class="form-asd" role="form" action="submit.php" method="get">
+                <div class="form-group">
+                <label for="title">Subject:</label>
+                <input type="text" name="title" id="title"  size="45" class="form-control"/>
+                <span id="title-status"></span> 
+                </div>
+
+                <div class="form-group">
+                <label for="description">Your Feedback!</label><br>
+                <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
+                <span id="description-status"></span>
+                </div>
+                
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+                 </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="sign" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
