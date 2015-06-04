@@ -420,13 +420,13 @@ document.getElementById("adderbutton").disabled = true;
                  <form action="submit.php" method="get" id="form" autocomplete="off">
   <div class="form-group">
    <label for="title">Title :</label>
-   <input type="text" name="title" id="title" class="form-control" size="45"/>
+   <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
   </div>
 
-  <div>
+  <div class="form-group">
    <label for="description">Description  :</label><br>
-   <textarea rows="4" cols="50" name="description" id="description"></textarea>
+   <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
   </div>
  
@@ -441,9 +441,9 @@ document.getElementById("adderbutton").disabled = true;
 
  <br>
  <br>
-  <div>
+  <div class="form-group">
    <label for="url">URL :</label>
-   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)"/>
+   <input type="text" name="url" id="url" size="45" onchange="activate(this.value) class="form-control""/>
    <span id="url-status"> </span> 
   </div>
  <br>
@@ -483,11 +483,8 @@ document.getElementById("adderbutton").disabled = true;
        </div>
       </div>
 
-<button type="button" id="adderbutton" onclick="add()">add another category</button>
-<br>
-<br>
-<br>
-<div><input name="submit" type="submit" value="submit" id="submit_btn" disabled /></div>
+<button type="button" id="adderbutton" class="btn btn-default btn-sm" onclick="add()">add another category</button>
+<div><input name="submit" type="submit" value="submit" id="submit_btn" class="btn btn-default btn-lg"disabled /></div>
 
 </form>
                 
