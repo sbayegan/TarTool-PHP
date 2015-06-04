@@ -729,7 +729,7 @@ echo '
 		</div>
 		<br>
 <a href="twitter/login_to_twitter.php">
-<img style="margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
+<img style="display:block;margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
 </a>
 <hr>
 <form action="registeration.php" method="post" id="form" autocomplete="off">
