@@ -338,7 +338,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 }
 }
 function add() {
-var FE = //\' Sub-category \' +
+var FE = 
 	\'<select name="subcat\' + lastused + \'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="UserInterface">User Interface</option>\'+
@@ -360,7 +360,7 @@ var FE = //\' Sub-category \' +
 	\'<option value="JSON">JSON</option>\'+
         \'<option value="Ajax">Ajax</option>\'+
 	\'</select>\';
-var BE = //\' Sub-category \' +
+var BE = 
 	\'<select name="subcat\'+ lastused +\'" form="form" class="form-control" id=lastused>\'+
 	\'<option value="">Choose One</option>\'+
         \'<option value="Security">Security</option>\'+
@@ -423,19 +423,22 @@ document.getElementById("adderbutton").disabled = true;
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
   </div>
+  
   <div class="form-group">
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
   </div>
+  
   <div class="form-group">
    <label for="url">URL:</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
   </div>
+  
   <div class="form-group">
    <label for="type">Medium: </label> 
-  <select name="type" form="form" class="form-control">
+   <select name="type" form="form" class="form-control">
     <option value="Video/Audio">Video</option>
     <option value="Website">Website/Tool</option>
     <option value="Influencer">Twitter influencer</option>
@@ -443,18 +446,18 @@ document.getElementById("adderbutton").disabled = true;
     <option value="Book">Book</option>
   </select>
   </div>
-     <div id="adder">
+  
+     <div id="adder" class="form-group">
       <div>
-      <div class="form-group">
      <label for="cat"> Category: </label> 
         <select name="cat" form="form" onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
         </select>
-        </div>
+        
      <br>
-     <div class="form-group">
+
      <label > Sub-category: </label>  
        <select name="subcat1" form="form" id="D1" class="form-control"> 
         <option value="">Choose One</option>
@@ -479,7 +482,7 @@ document.getElementById("adderbutton").disabled = true;
 	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
 	<option value="Events">Events</option>
        </select>
-       </div>
+       
        </div>
       </div>
 
