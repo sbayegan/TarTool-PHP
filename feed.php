@@ -418,13 +418,14 @@ document.getElementById("adderbutton").disabled = true;
 }
 </script>
 <form class="form-asd" role="form" action="submit.php" method="get" id="form" autocomplete="off">
+   <button type="button" type="submit" value="submit" class="btn btn-danger"  id="submit_bt" >Submit</button>
+     </form>
    <div class="form-group">
    <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
    </div>
-<button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
-     </form>
+
    <div class="form-group">
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
