@@ -28,6 +28,7 @@ width:32%;
 top: 10%;
 height: 5%;
 //border: 1px dashed grey;
+ text-align: center;
 }
 .checklist-center-title{
 position: absolute;
@@ -36,6 +37,7 @@ width:32%;
 top: 10%;
 height: 5%;
 //border: 1px dashed grey;
+ text-align: center;
 }
 
 .checklist-right-title{
@@ -45,6 +47,7 @@ width:32%;
 top: 10%;
 height: 5%;
 //border: 1px dashed grey;
+ text-align: center;
 }
 
 .checklist-left{
@@ -58,6 +61,7 @@ height: 70%;
 //border: 1px dotted grey;
 overflow: scroll;
 //z-index: 2;
+
 }
 .checklist-center{
 padding:20px;
@@ -272,21 +276,21 @@ font-size:80%;
 
 .submit{
 position: fixed;
-top:120px;
+top:130px;
 right:30px;
 width: 200px;
 height: 100px;
-border:1px dashed grey;
-background-color: #FEFEFE;
+//border:1px dashed grey;
+//background-color: #FEFEFE;
 }
 .feedback{
 position: fixed;
-top: 240px;
+top: 190px;
 right:30px;
 width:200px;
 height:100px;
-border:1px dashed grey;
-background-color:#FEFEFE;
+//border:1px dashed grey;
+//background-color:#FEFEFE;
 }
 .tab{
 position:relative;

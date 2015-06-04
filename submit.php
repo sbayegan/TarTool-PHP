@@ -78,7 +78,7 @@ if(isset($_GET['subcat5']) && !empty($_GET['subcat5'])){
   }
 }
 
-$to = "btong21@gmail.com,saeidjobs@gmail.com";
+$to = "saeidjobs@gmail.com";
 $subject = "Approve Submitted Resource";
 $header = "From: submission@junto.link \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
@@ -92,7 +92,7 @@ Submission
 </head>
 <body>
 <p>
-Hi Barney <br>
+Hello Boss! <br>
 <br>
 <br>
 A new resource has been submitted with the following information:<br><br>

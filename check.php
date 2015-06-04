@@ -52,10 +52,13 @@ echo '</div>';
 echo '<div class="checklist">';
 echo '<form action="checklist.php" method="post">';
 echo '<div class="checklist-left-title">';
+echo '<h4>Business Development</h4>';
 echo '</div>';
 echo '<div class="checklist-center-title">';
+echo '<h4>Front-End Development</h4>';
 echo '</div>';
 echo '<div class="checklist-right-title">';
+echo '<h4>Back-End Development</h4>';
 echo '</div>';
 
 

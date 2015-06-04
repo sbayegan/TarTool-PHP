@@ -11,10 +11,21 @@ echo "<head>";
 echo "<title>";
 echo "Junto Home";
 echo "</title>";
-echo '<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+echo '
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#myModal").modal(\'show\');
+	});
+</script>
+
+
 ';
 echo '
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -32,7 +43,11 @@ heightStyle: "content"
 
 );
 });
-  </script>';
+</script>
+
+
+
+ ';
 echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
@@ -77,7 +92,7 @@ echo '<div class="navigator">';
 echo '
 <div id="accordion">
 <h3>
-<a href="http://junto.link/feed.php?cat=BD"><b style="color:red;">Business Development</b></a><br>
+<a href="http://junto.link/feed.php?cat=BD"><b style="">Business Development</b></a><br>
 </h3>
 <div>
 <a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
@@ -102,7 +117,7 @@ echo '
 <a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
 </div>
 <h3>
-<a href="http://junto.link/feed.php?cat=FE"><b style="color:red;">Front-End Development</b></a>
+<a href="http://junto.link/feed.php?cat=FE"><b style="">Front-End Development</b></a>
 </h3>
 <div>
 <a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
@@ -126,7 +141,7 @@ echo '
 </div>
 
 <h3>
-<a href="http://junto.link/feed.php?cat=BE"><b style="color:red;">Back-End Development</b></a><br>
+<a href="http://junto.link/feed.php?cat=BE"><b style="">Back-End Development</b></a><br>
 </h3>
 <div>
 <a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
@@ -144,19 +159,75 @@ echo '
 <a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a><br>
 <a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
 <a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
-<a href="http://junto.link/feed.php?subcat=Debugging"></a>Debugging Tools<br>
+<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
 </div>
 
 </div>
+
+
 
      ';
 echo '</div>';
 
-echo '<div class="submit">';
-echo '</div>';
+
+echo '
+
+<div id="submit" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Submit a card</h4>
+            </div>
+            <div class="modal-body">
+                <p>Here I should put the form so the users can fill</p>
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="feedback" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Leave Your Feedback</h4>
+            </div>
+            <div class="modal-body">
+                <p>A feedback form will be put here!</p>
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+';
+
+
+
+
+echo '<div class="submit" >';
+
+echo '<a href="#submit" class="btn btn-lg btn-primary" data-toggle="modal">Submit a Card</a>';
+
+
+echo '</div>'; 
 
 
 echo '<div class="feedback">';
+echo '<a href="#feedback" class="btn btn-lg btn-primary" data-toggle="modal">Leave Feedback</a>';
 echo '</div>';
 
 //echo '<div class="tab">';
@@ -164,11 +235,20 @@ echo '</div>';
 
 echo '<div class="feed-column">';
 
+echo '
+
+
+';
+
+
+
+
 card(10);
 card(9);
 card(8);
 card(7);
 card(6);
+
 
 echo'</div>';
 echo '</body>';
