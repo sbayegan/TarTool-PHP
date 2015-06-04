@@ -445,12 +445,14 @@ document.getElementById("adderbutton").disabled = true;
   </div>
      <div id="adder">
       <div>
-      Category 
-        <select name="cat" form="form" onchange="update(this.value)" class="selectpicker">
+      <div class="form-group">
+     <label for="cat"> Category: </label> 
+        <select name="cat" form="form" onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
         </select>
+        </div>
      <br>
       Sub-category 
        <select name="subcat1" form="form" id="D1" class="selectpicker"> 
