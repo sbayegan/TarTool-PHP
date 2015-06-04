@@ -205,8 +205,8 @@ top: 140px;
 width:480px;
 height: 220px;
 }
-.box a:link,.box a:visited{color:#474747;}
-.box a:hover{color:black;}
+.box a:link,.box a:visited{color:#474747;text-decoration: none;}
+.box a:hover{color:black;text-decoration: none;}
 .score{
 position: absolute;
 //border:1px dashed grey;
