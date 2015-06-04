@@ -486,8 +486,8 @@ document.getElementById("adderbutton").disabled = true;
        </div>
       </div>
 
-<button type="button" id="adderbutton" class="btn btn-default btn-sm" onclick="add()">add another category</button>
-<div><input name="submit" type="submit" value="submit" id="submit_btn" class="btn btn-default btn-lg"disabled /></div>
+<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
+
 
 </form>
                 
@@ -496,7 +496,7 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" id="submit_btn" class="btn btn-danger" disabled>Submit</button>
             </div>
 
         </div>
