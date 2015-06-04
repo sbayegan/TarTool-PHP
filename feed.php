@@ -429,6 +429,11 @@ document.getElementById("adderbutton").disabled = true;
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
   </div>
+  <div class="form-group">
+   <label for="description">Description:</label><br>
+   <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
+   <span id="description-status"></span>
+  </div>
   
   <div class="form-group">
    <label for="url">URL:</label>
@@ -496,7 +501,7 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" id="submit_btn" class="btn btn-danger" data-dismiss="modal" disabled>Submit</button>
+                <button type="button" id="submit_btn" class="btn btn-danger" data-dismiss="modal" >Submit</button>
             </div>
 
         </div>
