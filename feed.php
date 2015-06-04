@@ -180,7 +180,83 @@ echo '
                 <h4 class="modal-title">Submit a card</h4>
             </div>
             <div class="modal-body">
-                <p>Here I should put the form so the users can fill</p>
+                
+                
+                 <form action="submit.php" method="get" id="form" autocomplete="off">
+  <div>
+   <label for="title">Title :</label>
+   <input type="text" name="title" id="title" size="45"/>
+   <span id="title-status"></span> 
+  </div>
+
+  <div>
+   <label for="description">Description  :</label><br>
+   <textarea rows="4" cols="50" name="description" id="description"></textarea>
+   <span id="description-status"></span>
+  </div>
+ 
+ Medium 
+  <select name="type" form="form">
+    <option value="Video/Audio">Video</option>
+    <option value="Website">Website/Tool</option>
+    <option value="Influencer">Twitter influencer</option>
+    <option value="Blog">Blog</option>
+    <option value="Book">Book</option>
+  </select>
+
+ <br>
+ <br>
+  <div>
+   <label for="url">URL :</label>
+   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)"/>
+   <span id="url-status"> </span> 
+  </div>
+ <br>
+     <span id="adder">
+      <div>
+      Category 
+        <select name="cat" form="form" onchange="update(this.value)">
+          <option value="BD">Business development</option>
+          <option value="FE">Front-end development/Design</option>
+          <option value="BE">Back-end development</option>
+        </select>
+     <br>
+      Sub-category 
+       <select name="subcat1" form="form" id="D1"> 
+        <option value="">Choose One</option>
+        <option value="LeanStartup">Lean Startup</option>
+        <option value="MarketingAndResearch">Marketing & Research</option>
+        <option value="Naming">Naming</option>
+        <option value="CopyWriting">Copywriting</option>
+        <option value="Analytics">Analytics</option> 
+        <option value="Launching">Launching</option>
+	<option value="UserFeedback">User Feedback</option>  
+        <option value="SEO">SEO</option>
+        <option value="SocialMediaCommunity">Social Media & Community</option>
+        <option value="ProjectManagement">Project Management</option>
+        <option value="CustomerService">Customer Service</option>
+        <option value="InventoryManagement">Inventory Management</option>
+        <option value="Sales">Sales</option>
+	<option value="Funding">Funding</option>
+	<option value="Administration">Administration</option>
+	<option value="Productivity">Productivity</option>
+        <option value="Outsourcing">Outsourcing</option>
+        <option value="E-commerce">E-commerce</option>
+	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
+	<option value="Events">Events</option>
+       </select>
+       </div>
+      </span>
+      <br>
+<button type="button" id="adderbutton" onclick="add()">add another category</button>
+<br>
+<br>
+<br>
+<div><input name="submit" type="submit" value="submit" id="submit_btn" disabled /></div>
+
+</form>
+                
+                
                 <p class="text-warning"><small></small></p>
             </div>
             <div class="modal-footer">
