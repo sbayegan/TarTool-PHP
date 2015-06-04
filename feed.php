@@ -424,7 +424,7 @@ First name:<br>
 Last name:<br>
 <input type="text" name="lastname" value="Mouse">
 <br><br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" class="btn btn-danger">
 </form> 
 
 <form action="submit.php" >
