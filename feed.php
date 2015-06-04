@@ -417,6 +417,15 @@ document.getElementById("adderbutton").disabled = true;
 }
 }
 </script>
+<form action="action_page.php">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</form> 
 <form class="form-asd" role="form" action="submit.php" method="get" id="form" autocomplete="off">
    <button type="button" type="submit" value="submit" class="btn btn-danger"  id="submit_bt" >Submit</button>
      </form>
@@ -499,7 +508,7 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <form><button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
+        
                 </form>
             </div>
             
