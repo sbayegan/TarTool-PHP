@@ -486,6 +486,7 @@ document.getElementById("adderbutton").disabled = true;
 	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
 	<option value="Events">Events</option>
        </select>
+       <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
        </form>
        </div>
       </div>
