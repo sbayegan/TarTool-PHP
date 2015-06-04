@@ -372,7 +372,7 @@ document.getElementById("adderbutton").disabled = true;
    <span id="url-status"> </span> 
   </div>
  <br>
-     <span id="adder">
+     <div id="adder">
       <div>
       Category 
         <select name="cat" form="form" onchange="update(this.value)">
@@ -406,8 +406,8 @@ document.getElementById("adderbutton").disabled = true;
 	<option value="Events">Events</option>
        </select>
        </div>
-      </span>
-      <br>
+      </div>
+
 <button type="button" id="adderbutton" onclick="add()">add another category</button>
 <br>
 <br>
