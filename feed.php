@@ -758,7 +758,7 @@ echo '
 			 <span id="pass1-status"> </span> 
  			</div>
  			 	<div class="form-group">
-				<label for="dropdown"> Who are you? </label>
+				<label for="dropdown">Who are you?</label>
 				<select name="type" form="form" id="dropdown" class="form-control" >
 				<option value="NULL">choose one</option>
 				<option value="one">a founder</option>
