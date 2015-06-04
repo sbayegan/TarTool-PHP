@@ -205,7 +205,168 @@ if (lastused == 6){
 document.getElementById("adderbutton").disabled = true;
 }
 }
-</script>';
+</script>
+
+<script>
+var username = 0;
+var email = 0;
+var pass = 0;
+var repass = 0;
+function available(str) {
+    if (str.length < 4) { 
+        document.getElementById("user-status").innerHTML = "too short";
+        username = 0;
+        {document.getElementById("submit_btn").disabled = true;}
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("user-status").innerHTML = "okay";
+                  username = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("user-status").innerHTML = "taken";
+                  username = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+            }
+        }
+        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.send();
+    }
+}
+
+function userlogin(str) {
+    if (str.length < 4) { 
+        document.getElementById("welcome-message").innerHTML = "too short";
+        {document.getElementById("login-password").disabled = true;}
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                   document.getElementById("welcome-message").innerHTML = "Doesnt exist";
+                  {document.getElementById("login-password").disabled = true;}
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("welcome-message").innerHTML = "Okay";
+                  {document.getElementById("login-password").disabled = false;}
+                }
+            }
+        }
+        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.send();
+    }
+}
+
+function valid(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("email-status").innerHTML = "well formed :-)";
+                  email = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
+                }
+                 if(xmlhttp.responseText == 0){
+                  document.getElementById("email-status").innerHTML = "ill-formed email address";
+                  email = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+		if(xmlhttp.responseText == 2){
+                  document.getElementById("email-status").innerHTML = "already registered";
+                  email = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+           }
+        }
+        
+        xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
+        xmlhttp.send();
+}
+
+
+
+function passcheck(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("pass-status").innerHTML = "good";
+                  pass = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("pass-status").innerHTML = "too short";
+                  pass = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+            }
+        }
+        xmlhttp.open("POST", "passwordcheck.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("pass="+str);
+}
+
+
+
+
+
+
+
+
+function login(two) {
+one = document.getElementById("loginusername").value;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+		 document.getElementById("condition").innerHTML =  xmlhttp.responseText;
+
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("condition").innerHTML = "good, lets go";
+		  window.location.replace("feed.php");
+
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("condition").innerHTML = "Waiting for the correct password";
+                 
+                }
+ 		if(xmlhttp.responseText == -1){
+                  document.getElementById("condition").innerHTML = "Not activated, Please verify your email address and retype your password";
+                 
+                }
+            }
+	
+        }
+        xmlhttp.open("POST", "login.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("user="+one+"&pass="+two);
+}
+
+function passmatch(){
+			if(document.getElementById("password").value == document.getElementById("password1").value){
+				document.getElementById("pass1-status").innerHTML = "matched";
+				repass = 1;
+                  		if(username ==1 && email ==1 && pass == 1 && repass ==1)
+        			{document.getElementById("submit_btn").disabled = false;}
+							}
+			if(document.getElementById("password").value != document.getElementById("password1").value){
+				document.getElementById("pass1-status").innerHTML = "not mached";
+				repass = 0;
+				{document.getElementById("submit_btn").disabled = true;}
+							}
+			}						
+</script>
+
+';
 
 
  
