@@ -722,18 +722,17 @@ echo '
 <input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)"/>
 <span id="welcome-message"></span>
 </div>
-<li class="divider"></li>
+<hr>
  <div class="form">
  <label for="password1">Password :</label>
  <input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" disabled/>
 </div>
 
 <span id="condition"></span>
-<div style="position:absolute;margin-left:50px;padding-top:60px;">
 <a href="twitter/login_to_twitter.php">
 <img src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
 </a>
-</div>
+
                 
                 <p class="text-warning"><small></small></p>
             </div>
