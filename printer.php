@@ -88,7 +88,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     
     linky($firsttag['SUB']);
     //echo '<a href="google.com">'.$firsttag['SUB'].'</a>';
-     while($firsttag = mysqli_fetch_assoc($tags)){echo ', ';linky($firsttag['SUB']);}
+     while($firsttag = mysqli_fetch_assoc($tags)){echo ' ';linky($firsttag['SUB']);}
     echo '</div>';
     echo '<div class="profile-picture">';
     echo ' <img src="';
