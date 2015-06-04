@@ -41,23 +41,23 @@ if($input == 'SVG'){echo '<a href="http://junto.link/feed.php?subcat=SVG">Scalab
 if($input == 'JSON'){echo '<a href="http://junto.link/feed.php?subcat=JSON">JSON</a>';}
 if($input == 'Ajax'){echo '<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a>';}
 
-if($input == 'Security'){echo '<a href="http://junto.link/feed.php?subcat=Security">Security</a>';}
-if($input == 'DataManagement'){echo '<a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a>';}
-if($input == 'Hosting'){echo '<a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a>';}
-if($input == 'PHP'){echo '<a href="http://junto.link/feed.php?subcat=PHP">PHP</a>';}
-if($input == 'Python'){echo '<a href="http://junto.link/feed.php?subcat=Python">Python</a>';}
-if($input == 'ASP.NET'){echo '<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a>';}
-if($input == 'VBScript'){echo '<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a>';}
-if($input == 'SQL'){echo '<a href="http://junto.link/feed.php?subcat=SQL">SQL</a>';}
+if($input == 'Security'){echo '<a href="http://junto.link/feed.php?subcat=Security"><span class="label label-default">Security</span></a>';}
+if($input == 'DataManagement'){echo '<a href="http://junto.link/feed.php?subcat=DataManagement"><span class="label label-default">Data Management</span></a>';}
+if($input == 'Hosting'){echo '<a href="http://junto.link/feed.php?subcat=Hosting"><span class="label label-default">Hosting</span></a>';}
+if($input == 'PHP'){echo '<a href="http://junto.link/feed.php?subcat=PHP"><span class="label label-default">PHP</span></a>';}
+if($input == 'Python'){echo '<a href="http://junto.link/feed.php?subcat=Python"><span class="label label-default">Python</span></a>';}
+if($input == 'ASP.NET'){echo '<a href="http://junto.link/feed.php?subcat=ASP.NET"><span class="label label-default">ASP.NET</span></a>';}
+if($input == 'VBScript'){echo '<a href="http://junto.link/feed.php?subcat=VBScript"><span class="label label-default">Visual Basic Script</span></a>';}
+if($input == 'SQL'){echo '<a href="http://junto.link/feed.php?subcat=SQL"><span class="label label-default">SQL</span></a>';}
 if($input == 'C'){echo '<a  href="http://junto.link/feed.php?subcat=C"><span class="label label-default">C</span></a>';}
-if($input == 'C++'){echo '<a href="http://junto.link/feed.php?subcat=C++">C++</a>';}
-if($input == 'Shell'){echo '<a href="http://junto.link/feed.php?subcat=Shell">Shell</a>';}
-if($input == 'Java'){echo '<a href="http://junto.link/feed.php?subcat=Java">Java</a>';}
-if($input == 'Ruby'){echo '<a href="http://junto.link/feed.php?subcat=Ruby">Ruby</a>';}
-if($input == 'Objective-C'){echo '<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a>';}
-if($input == 'Swift'){echo '<a href="http://junto.link/feed.php?subcat=Swift">Swift</a>';}
-if($input == 'C#'){echo '<a href="http://junto.link/feed.php?subcat=C#">C#</a>';}
-if($input == 'Debugging'){echo '<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a>';}
+if($input == 'C++'){echo '<a href="http://junto.link/feed.php?subcat=C++"><span class="label label-default">C++</span></a>';}
+if($input == 'Shell'){echo '<a href="http://junto.link/feed.php?subcat=Shell"><span class="label label-default">Shell</span></a>';}
+if($input == 'Java'){echo '<a href="http://junto.link/feed.php?subcat=Java"><span class="label label-default">Java</span></a>';}
+if($input == 'Ruby'){echo '<a href="http://junto.link/feed.php?subcat=Ruby"><span class="label label-default">Ruby</span></a>';}
+if($input == 'Objective-C'){echo '<a href="http://junto.link/feed.php?subcat=Objective-C"><span class="label label-default">Objective-C</span></a>';}
+if($input == 'Swift'){echo '<a href="http://junto.link/feed.php?subcat=Swift"><span class="label label-default">Swift</span></a>';}
+if($input == 'C#'){echo '<a href="http://junto.link/feed.php?subcat=C#"><span class="label label-default">C#</span></a>';}
+if($input == 'Debugging'){echo '<a href="http://junto.link/feed.php?subcat=Debugging"><span class="label label-default">Debugging Tools</span></a>';}
 
 }
 
