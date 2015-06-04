@@ -417,27 +417,27 @@ document.getElementById("adderbutton").disabled = true;
 }
 }
 </script>
-                 <form action="submit.php" method="get" id="form" autocomplete="off">
-  <div class="form-group">
+<form action="submit.php" method="get" id="form" autocomplete="off">
+   <div class="form-group">
    <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
-  </div>
+   </div>
   
-  <div class="form-group">
+   <div class="form-group">
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
-  </div>
+   </div>
 
   
-  <div class="form-group">
+   <div class="form-group">
    <label for="url">URL:</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
-  </div>
+   </div>
   
-  <div class="form-group">
+   <div class="form-group">
    <label for="type">Medium: </label> 
    <select name="type" form="form" class="form-control">
     <option value="Video/Audio">Video</option>
@@ -445,51 +445,48 @@ document.getElementById("adderbutton").disabled = true;
     <option value="Influencer">Twitter influencer</option>
     <option value="Blog">Blog</option>
     <option value="Book">Book</option>
-  </select>
-  </div>
+   </select>
+   </div>
   
-  <label>Thumbnail: </label>
-   <input type="file" name="fileToUpload" id="fileToUpload" class="btn btn-default">
-  
+     
      <div id="adder" class="form-group">
-      <div>
-     <label for="cat"> Category: </label> 
-        <select name="cat" form="form" onchange="update(this.value)" class="form-control">
+       <div>
+       <label for="cat"> Category: </label> 
+          <select name="cat" form="form" onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
-        </select>
-        
-     <br>
+          </select>
 
-     <label > Sub-category: </label>  
-       <select name="subcat1" form="form" id="D1" class="form-control"> 
-        <option value="">Choose One</option>
-        <option value="LeanStartup">Lean Startup</option>
-        <option value="MarketingAndResearch">Marketing & Research</option>
-        <option value="Naming">Naming</option>
-        <option value="CopyWriting">Copywriting</option>
-        <option value="Analytics">Analytics</option> 
-        <option value="Launching">Launching</option>
-	<option value="UserFeedback">User Feedback</option>  
-        <option value="SEO">SEO</option>
-        <option value="SocialMediaCommunity">Social Media & Community</option>
-        <option value="ProjectManagement">Project Management</option>
-        <option value="CustomerService">Customer Service</option>
-        <option value="InventoryManagement">Inventory Management</option>
-        <option value="Sales">Sales</option>
-	<option value="Funding">Funding</option>
-	<option value="Administration">Administration</option>
-	<option value="Productivity">Productivity</option>
-        <option value="Outsourcing">Outsourcing</option>
-        <option value="E-commerce">E-commerce</option>
-	<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
-	<option value="Events">Events</option>
-       </select>
-       <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
-       </form>
-       </div>
+          <label > Sub-category: </label>  
+          <select name="subcat1" form="form" id="D1" class="form-control"> 
+          <option value="">Choose One</option>
+          <option value="LeanStartup">Lean Startup</option>
+          <option value="MarketingAndResearch">Marketing & Research</option>
+          <option value="Naming">Naming</option>
+          <option value="CopyWriting">Copywriting</option>
+          <option value="Analytics">Analytics</option> 
+          <option value="Launching">Launching</option>
+	  <option value="UserFeedback">User Feedback</option>  
+          <option value="SEO">SEO</option>
+          <option value="SocialMediaCommunity">Social Media & Community</option>
+          <option value="ProjectManagement">Project Management</option>
+          <option value="CustomerService">Customer Service</option>
+          <option value="InventoryManagement">Inventory Management</option>
+          <option value="Sales">Sales</option>
+          <option value="Funding">Funding</option>
+	  <option value="Administration">Administration</option>
+	  <option value="Productivity">Productivity</option>
+          <option value="Outsourcing">Outsourcing</option>
+          <option value="E-commerce">E-commerce</option>
+	  <option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
+	  <option value="Events">Events</option>
+          </select>
+        </div>
       </div>
+     
+      <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
+     </form>
 
 <button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
 
