@@ -418,17 +418,11 @@ document.getElementById("adderbutton").disabled = true;
 }
 </script>
 <form action="action_page.php">
-First name:<br>
-<input type="text" name="firstname" value="Mickey">
-<br>
-Last name:<br>
-<input type="text" name="lastname" value="Mouse">
-<br><br>
 <input type="submit" value="Submit" class="btn btn-danger">
 </form> 
 
-<form action="submit.php" >
-   <input type="button" value="submit" class="btn btn-danger">
+<form action="submit.php">
+   <input type="submit" value="submit" class="btn btn-danger">
      </form>
 
    <div class="form-group">
