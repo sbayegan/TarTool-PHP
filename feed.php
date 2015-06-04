@@ -45,10 +45,170 @@ heightStyle: "content"
 );
 });
 </script>
+                <script>
+var lastused = 2;
+var currentcat = "BD"
+function activate(str){
+if(str.length > 5){document.getElementById("submit_bt").disabled = false;}
+else {document.getElementById("submit_bt").disabled = true;}
+//document.getElementById("submit_bt").disabled = false;
+}
+function update(str){
+lastused = 2;
+document.getElementById("adderbutton").disabled = false;
+if (document.getElementById("D5")){var element = document.getElementById("D5");element.parentNode.removeChild(element);}
+if (document.getElementById("D4")){var element = document.getElementById("D4");element.parentNode.removeChild(element);}
+if (document.getElementById("D3")){var element = document.getElementById("D3");element.parentNode.removeChild(element);}
+if (document.getElementById("D2")){var element = document.getElementById("D2");element.parentNode.removeChild(element);}
+currentcat = str;
+if(str == "FE"){document.getElementById("D1").innerHTML = 
+	\'<option value="">Choose One</option>\'+
+        \'<option value="UserInterface">User Interface</option>\'+
+        \'<option value="UserExperience">User Experience</option>\'+
+        \'<option value="MockupsAndWireframing">Mockups & Wireframing</option>\'+
+        \'<option value="HTML">HTML</option>\'+
+        \'<option value="CSS">CSS</option>\'+
+        \'<option value="JavaScript">JavaScript</option>\'+
+        \'<option value="Themes">Themes</option>\'+
+        \'<option value="Mobile">Mobile</option>\'+
+        \'<option value="FrontEndiOS">iOS</option>\'+
+        \'<option value="FrontEndAndroid">Android</option>\'+
+        \'<option value="Bootstrap">Bootstrap</option>\'+
+        \'<option value="XML">XML</option>\'+
+	\'<option value="JQuery">jQuery</option>\'+
+	\'<option value="Angular">Angular</option>\'+
+	\'<option value="Canvas">Canvas</option>\'+
+	\'<option value="SVG">Scalable Vector Graphics</option>\'+
+	\'<option value="JSON">JSON</option>\'+
+        \'<option value="Ajax">Ajax</option>\';
+}
+if(str == "BE"){document.getElementById("D1").innerHTML = 
+	\'<option value="">Choose One</option>\'+
+        \'<option value="Security">Security</option>\'+
+        \'<option value="DataManagement">Data Management</option>\'+
+        \'<option value="Hosting">Hosting</option>\'+
+        \'<option value="PHP">PHP</option>\'+
+        \'<option value="Python">Python</option>\'+
+	\'<option value="ASP.NET">ASP.NET</option>\'+
+	\'<option value="VBScript">Visual Basic Script</option>\'+
+	\'<option value="SQL">SQL</option>\'+
+	\'<option value="C">C</option>\'+
+	\'<option value="C++">C++</option>\'+
+	\'<option value="Shell">Shell</option>\'+
+	\'<option value="Java">Java</option>\'+
+	\'<option value="Ruby">Ruby</option>\'+
+	\'<option value="Objective-C">Objective-C</option>\'+
+	\'<option value="Swift">Swift</option>\'+
+        \'<option value="C#">C#</option>\'+
+        \'<option value="Debugging Tools">Debugging</option>\';
+}
+if(str == "BD"){document.getElementById("D1").innerHTML = 
+	\'<option value="">Choose One</option>\'+
+	\'<option value="LeanStartup">Lean Startup</option>\'+
+        \'<option value="MarketingAndResearch">Marketing & Research</option>\'+
+        \'<option value="Naming">Naming</option>\'+
+        \'<option value="CopyWriting">Copywriting</option>\'+
+        \'<option value="Analytics">Analytics</option> \'+
+        \'<option value="Launching">Launching</option>\'+
+	\'<option value="UserFeedback">User Feedback</option>\'+        
+        \'<option value="SEO">SEO</option>\'+
+        \'<option value="SocialMediaCommunity">Social Media & Community</option>\'+
+        \'<option value="ProjectManagement">Project Management</option>\'+
+        \'<option value="CustomerService">Customer Service</option>\'+
+        \'<option value="InventoryManagement">Inventory Management</option>\'+
+        \'<option value="Sales">Sales</option>\'+
+	\'<option value="Funding">Funding</option>\'+
+	\'<option value="Administration">Administration</option>\'+
+	\'<option value="Productivity">Productivity</option>\'+
+        \'<option value="Outsourcing">Outsourcing</option>\'+
+        \'<option value="E-commerce">E-commerce</option>\'+
+	\'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>\'+
+	\'<option value="Events">Events</option>\';
+}
+}
+function add() {
+var FE = 
+	\'<select name="subcat\' + lastused + \'" form="form" class="form-control" id=lastused>\'+
+	\'<option value="">Choose One</option>\'+
+        \'<option value="UserInterface">User Interface</option>\'+
+        \'<option value="UserExperience">User Experience</option>\'+
+        \'<option value="MockupsAndWireframing">Mockups & Wireframing</option>\'+
+        \'<option value="HTML">HTML</option>\'+
+        \'<option value="CSS">CSS</option>\'+
+        \'<option value="JavaScript">JavaScript</option>\'+
+        \'<option value="Themes">Themes</option>\'+
+        \'<option value="Mobile">Mobile</option>\'+
+        \'<option value="FrontEndiOS">iOS</option>\'+
+        \'<option value="FrontEndAndroid">Android</option>\'+
+        \'<option value="Bootstrap">Bootstrap</option>\'+
+        \'<option value="XML">XML</option>\'+
+	\'<option value="JQuery">jQuery</option>\'+
+	\'<option value="Angular">Angular</option>\'+
+	\'<option value="Canvas">Canvas</option>\'+
+	\'<option value="SVG">Scalable Vector Graphics</option>\'+
+	\'<option value="JSON">JSON</option>\'+
+        \'<option value="Ajax">Ajax</option>\'+
+	\'</select>\';
+var BE = 
+	\'<select name="subcat\'+ lastused +\'" form="form" class="form-control" id=lastused>\'+
+	\'<option value="">Choose One</option>\'+
+        \'<option value="Security">Security</option>\'+
+        \'<option value="DataManagement">Data Management</option>\'+
+        \'<option value="Hosting">Hosting</option>\'+
+        \'<option value="PHP">PHP</option>\'+
+        \'<option value="Python">Python</option>\'+
+	\'<option value="ASP.NET">ASP.NET</option>\'+
+	\'<option value="VBScript">Visual Basic Script</option>\'+
+	\'<option value="SQL">SQL</option>\'+
+	\'<option value="C">C</option>\'+
+	\'<option value="C++">C++</option>\'+
+	\'<option value="Shell">Shell</option>\'+
+	\'<option value="Java">Java</option>\'+
+	\'<option value="Ruby">Ruby</option>\'+
+	\'<option value="Objective-C">Objective-C</option>\'+
+	\'<option value="Swift">Swift</option>\'+
+        \'<option value="C#">C#</option>\'+
+        \'<option value="Debugging Tools">Debugging</option>\'+
+	\'</select>\';
+var BD = 
+ 	\'<select name="subcat\'+ lastused + \'" form="form" class="form-control" id=lastused>\'+
+ 	\'<option value="">Choose One</option>\'+
+        \'<option value="LeanStartup">Lean Startup</option>\'+
+        \'<option value="MarketingAndResearch">Marketing & Research</option>\'+
+        \'<option value="Naming">Naming</option>\'+
+        \'<option value="CopyWriting">Copywriting</option>\'+
+        \'<option value="Analytics">Analytics</option> \'+
+        \'<option value="Launching">Launching</option>\'+
+	\'<option value="UserFeedback">User Feedback</option>\'+        
+        \'<option value="SEO">SEO</option>\'+
+        \'<option value="SocialMediaCommunity">Social Media & Community</option>\'+
+        \'<option value="ProjectManagement">Project Management</option>\'+
+        \'<option value="CustomerService">Customer Service</option>\'+
+        \'<option value="InventoryManagement">Inventory Management</option>\'+
+        \'<option value="Sales">Sales</option>\'+
+	\'<option value="Funding">Funding</option>\'+
+	\'<option value="Administration">Administration</option>\'+
+	\'<option value="Productivity">Productivity</option>\'+
+        \'<option value="Outsourcing">Outsourcing</option>\'+
+        \'<option value="E-commerce">E-commerce</option>\'+
+	\'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>\'+
+	\'<option value="Events">Events</option>\'+
+\'</select>\' ;
+var node = document.createElement("DIV");
+node.setAttribute("id", "D"+lastused);
+document.getElementById("adder").appendChild(node);              
+if(currentcat == "BE"){document.getElementById("D"+lastused).innerHTML = BE;}
+if(currentcat == "BD"){document.getElementById("D"+lastused).innerHTML = BD;}
+if(currentcat == "FE"){document.getElementById("D"+lastused).innerHTML = FE;}
+lastused = lastused + 1;
+if (lastused == 6){
+document.getElementById("adderbutton").disabled = true;
+}
+}
+</script>';
 
 
-
- ';
+ 
 echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
@@ -256,167 +416,7 @@ echo '
             </div>
             <div class="modal-body">
                 
-                <script>
-var lastused = 2;
-var currentcat = "BD"
-function activate(str){
-if(str.length > 5){document.getElementById("submit_bt").disabled = false;}
-else {document.getElementById("submit_bt").disabled = true;}
-//document.getElementById("submit_bt").disabled = false;
-}
-function update(str){
-lastused = 2;
-document.getElementById("adderbutton").disabled = false;
-if (document.getElementById("D5")){var element = document.getElementById("D5");element.parentNode.removeChild(element);}
-if (document.getElementById("D4")){var element = document.getElementById("D4");element.parentNode.removeChild(element);}
-if (document.getElementById("D3")){var element = document.getElementById("D3");element.parentNode.removeChild(element);}
-if (document.getElementById("D2")){var element = document.getElementById("D2");element.parentNode.removeChild(element);}
-currentcat = str;
-if(str == "FE"){document.getElementById("D1").innerHTML = 
-	\'<option value="">Choose One</option>\'+
-        \'<option value="UserInterface">User Interface</option>\'+
-        \'<option value="UserExperience">User Experience</option>\'+
-        \'<option value="MockupsAndWireframing">Mockups & Wireframing</option>\'+
-        \'<option value="HTML">HTML</option>\'+
-        \'<option value="CSS">CSS</option>\'+
-        \'<option value="JavaScript">JavaScript</option>\'+
-        \'<option value="Themes">Themes</option>\'+
-        \'<option value="Mobile">Mobile</option>\'+
-        \'<option value="FrontEndiOS">iOS</option>\'+
-        \'<option value="FrontEndAndroid">Android</option>\'+
-        \'<option value="Bootstrap">Bootstrap</option>\'+
-        \'<option value="XML">XML</option>\'+
-	\'<option value="JQuery">jQuery</option>\'+
-	\'<option value="Angular">Angular</option>\'+
-	\'<option value="Canvas">Canvas</option>\'+
-	\'<option value="SVG">Scalable Vector Graphics</option>\'+
-	\'<option value="JSON">JSON</option>\'+
-        \'<option value="Ajax">Ajax</option>\';
-}
-if(str == "BE"){document.getElementById("D1").innerHTML = 
-	\'<option value="">Choose One</option>\'+
-        \'<option value="Security">Security</option>\'+
-        \'<option value="DataManagement">Data Management</option>\'+
-        \'<option value="Hosting">Hosting</option>\'+
-        \'<option value="PHP">PHP</option>\'+
-        \'<option value="Python">Python</option>\'+
-	\'<option value="ASP.NET">ASP.NET</option>\'+
-	\'<option value="VBScript">Visual Basic Script</option>\'+
-	\'<option value="SQL">SQL</option>\'+
-	\'<option value="C">C</option>\'+
-	\'<option value="C++">C++</option>\'+
-	\'<option value="Shell">Shell</option>\'+
-	\'<option value="Java">Java</option>\'+
-	\'<option value="Ruby">Ruby</option>\'+
-	\'<option value="Objective-C">Objective-C</option>\'+
-	\'<option value="Swift">Swift</option>\'+
-        \'<option value="C#">C#</option>\'+
-        \'<option value="Debugging Tools">Debugging</option>\';
-}
-if(str == "BD"){document.getElementById("D1").innerHTML = 
-	\'<option value="">Choose One</option>\'+
-	\'<option value="LeanStartup">Lean Startup</option>\'+
-        \'<option value="MarketingAndResearch">Marketing & Research</option>\'+
-        \'<option value="Naming">Naming</option>\'+
-        \'<option value="CopyWriting">Copywriting</option>\'+
-        \'<option value="Analytics">Analytics</option> \'+
-        \'<option value="Launching">Launching</option>\'+
-	\'<option value="UserFeedback">User Feedback</option>\'+        
-        \'<option value="SEO">SEO</option>\'+
-        \'<option value="SocialMediaCommunity">Social Media & Community</option>\'+
-        \'<option value="ProjectManagement">Project Management</option>\'+
-        \'<option value="CustomerService">Customer Service</option>\'+
-        \'<option value="InventoryManagement">Inventory Management</option>\'+
-        \'<option value="Sales">Sales</option>\'+
-	\'<option value="Funding">Funding</option>\'+
-	\'<option value="Administration">Administration</option>\'+
-	\'<option value="Productivity">Productivity</option>\'+
-        \'<option value="Outsourcing">Outsourcing</option>\'+
-        \'<option value="E-commerce">E-commerce</option>\'+
-	\'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>\'+
-	\'<option value="Events">Events</option>\';
-}
-}
-function add() {
-var FE = 
-	\'<select name="subcat\' + lastused + \'" form="form" class="form-control" id=lastused>\'+
-	\'<option value="">Choose One</option>\'+
-        \'<option value="UserInterface">User Interface</option>\'+
-        \'<option value="UserExperience">User Experience</option>\'+
-        \'<option value="MockupsAndWireframing">Mockups & Wireframing</option>\'+
-        \'<option value="HTML">HTML</option>\'+
-        \'<option value="CSS">CSS</option>\'+
-        \'<option value="JavaScript">JavaScript</option>\'+
-        \'<option value="Themes">Themes</option>\'+
-        \'<option value="Mobile">Mobile</option>\'+
-        \'<option value="FrontEndiOS">iOS</option>\'+
-        \'<option value="FrontEndAndroid">Android</option>\'+
-        \'<option value="Bootstrap">Bootstrap</option>\'+
-        \'<option value="XML">XML</option>\'+
-	\'<option value="JQuery">jQuery</option>\'+
-	\'<option value="Angular">Angular</option>\'+
-	\'<option value="Canvas">Canvas</option>\'+
-	\'<option value="SVG">Scalable Vector Graphics</option>\'+
-	\'<option value="JSON">JSON</option>\'+
-        \'<option value="Ajax">Ajax</option>\'+
-	\'</select>\';
-var BE = 
-	\'<select name="subcat\'+ lastused +\'" form="form" class="form-control" id=lastused>\'+
-	\'<option value="">Choose One</option>\'+
-        \'<option value="Security">Security</option>\'+
-        \'<option value="DataManagement">Data Management</option>\'+
-        \'<option value="Hosting">Hosting</option>\'+
-        \'<option value="PHP">PHP</option>\'+
-        \'<option value="Python">Python</option>\'+
-	\'<option value="ASP.NET">ASP.NET</option>\'+
-	\'<option value="VBScript">Visual Basic Script</option>\'+
-	\'<option value="SQL">SQL</option>\'+
-	\'<option value="C">C</option>\'+
-	\'<option value="C++">C++</option>\'+
-	\'<option value="Shell">Shell</option>\'+
-	\'<option value="Java">Java</option>\'+
-	\'<option value="Ruby">Ruby</option>\'+
-	\'<option value="Objective-C">Objective-C</option>\'+
-	\'<option value="Swift">Swift</option>\'+
-        \'<option value="C#">C#</option>\'+
-        \'<option value="Debugging Tools">Debugging</option>\'+
-	\'</select>\';
-var BD = 
- 	\'<select name="subcat\'+ lastused + \'" form="form" class="form-control" id=lastused>\'+
- 	\'<option value="">Choose One</option>\'+
-        \'<option value="LeanStartup">Lean Startup</option>\'+
-        \'<option value="MarketingAndResearch">Marketing & Research</option>\'+
-        \'<option value="Naming">Naming</option>\'+
-        \'<option value="CopyWriting">Copywriting</option>\'+
-        \'<option value="Analytics">Analytics</option> \'+
-        \'<option value="Launching">Launching</option>\'+
-	\'<option value="UserFeedback">User Feedback</option>\'+        
-        \'<option value="SEO">SEO</option>\'+
-        \'<option value="SocialMediaCommunity">Social Media & Community</option>\'+
-        \'<option value="ProjectManagement">Project Management</option>\'+
-        \'<option value="CustomerService">Customer Service</option>\'+
-        \'<option value="InventoryManagement">Inventory Management</option>\'+
-        \'<option value="Sales">Sales</option>\'+
-	\'<option value="Funding">Funding</option>\'+
-	\'<option value="Administration">Administration</option>\'+
-	\'<option value="Productivity">Productivity</option>\'+
-        \'<option value="Outsourcing">Outsourcing</option>\'+
-        \'<option value="E-commerce">E-commerce</option>\'+
-	\'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>\'+
-	\'<option value="Events">Events</option>\'+
-\'</select>\' ;
-var node = document.createElement("DIV");
-node.setAttribute("id", "D"+lastused);
-document.getElementById("adder").appendChild(node);              
-if(currentcat == "BE"){document.getElementById("D"+lastused).innerHTML = BE;}
-if(currentcat == "BD"){document.getElementById("D"+lastused).innerHTML = BD;}
-if(currentcat == "FE"){document.getElementById("D"+lastused).innerHTML = FE;}
-lastused = lastused + 1;
-if (lastused == 6){
-document.getElementById("adderbutton").disabled = true;
-}
-}
-</script>
+
 
 
 <form  class="form-asd" role="form" action="submit.php" method="get">
