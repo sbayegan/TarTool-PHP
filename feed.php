@@ -15,7 +15,7 @@ echo '
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
-
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -90,6 +90,7 @@ $result = $result["NAME"];
 echo '</div>';
 
 echo '<div class="navigator">';
+/*
 echo '
 <div id="accordion">
 <h3>
@@ -163,11 +164,12 @@ echo '
 <a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
 </div>
 
-</div>
-
+</div>';
+*/
+echo '
 <nav class="navbar navbar-default" style="padding:10px;" role="navigation">
    <div class="navbar-header">
-      <a class="navbar-brand" href="#">TutorialsPoint</a>
+      <a class="navbar-brand" href="#">Full Directory</a>
    </div>
    <div>
       <ul class="nav navbar-nav">
