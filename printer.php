@@ -49,7 +49,7 @@ if($input == 'Python'){echo '<a href="http://junto.link/feed.php?subcat=Python">
 if($input == 'ASP.NET'){echo '<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a>';}
 if($input == 'VBScript'){echo '<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a>';}
 if($input == 'SQL'){echo '<a href="http://junto.link/feed.php?subcat=SQL">SQL</a>';}
-if($input == 'C'){echo '<a href="http://junto.link/feed.php?subcat=C"><span class="label label-default">C</span></a>';}
+if($input == 'C'){echo '<span class="label label-default" href="http://junto.link/feed.php?subcat=C">C</span>';}
 if($input == 'C++'){echo '<a href="http://junto.link/feed.php?subcat=C++">C++</a>';}
 if($input == 'Shell'){echo '<a href="http://junto.link/feed.php?subcat=Shell">Shell</a>';}
 if($input == 'Java'){echo '<a href="http://junto.link/feed.php?subcat=Java">Java</a>';}
