@@ -417,7 +417,7 @@ document.getElementById("adderbutton").disabled = true;
 }
 }
 </script>
-<form action="submit.php" method="get" id="form" autocomplete="off">
+<form class="form-asd" role="form" action="submit.php" method="get" id="form" autocomplete="off">
    <div class="form-group">
    <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
