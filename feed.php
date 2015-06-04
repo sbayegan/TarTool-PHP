@@ -170,9 +170,56 @@ echo '
 <nav>
     <ul class="nav">
 
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Business Development</a>
 			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
-				<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
+<a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
+<a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
+<a href="http://junto.link/feed.php?subcat=Naming">Naming</a><br>
+<a href="http://junto.link/feed.php?subcat=CopyWriting">Copywriting</a><br>
+<a href="http://junto.link/feed.php?subcat=Analytics">Analytics</a><br>
+<a href="http://junto.link/feed.php?subcat=Launching">Launching</a><br>
+<a href="http://junto.link/feed.php?subcat=UserFeedback">User Feedback</a><br>
+<a href="http://junto.link/feed.php?subcat=SEO">SEO</a><br>
+<a href="http://junto.link/feed.php?subcat=SocialMediaCommunity">Social Media & Community</a><br>
+<a href="http://junto.link/feed.php?subcat=ProjectManagement">Project Management</a><br>
+<a href="http://junto.link/feed.php?subcat=CustomerService">Customer Service</a><br>
+<a href="http://junto.link/feed.php?subcat=InventoryManagement">Inventory Management</a><br>
+<a href="http://junto.link/feed.php?subcat=Sales">Sales</a><br>
+<a href="http://junto.link/feed.php?subcat=Funding">Funding </a><br>
+<a href="http://junto.link/feed.php?subcat=Administration">Administration</a><br>
+<a href="http://junto.link/feed.php?subcat=Productivity">Productivity</a><br>
+<a href="http://junto.link/feed.php?subcat=Outsourcing">Outsourcing</a><br>
+<a href="http://junto.link/feed.php?subcat=E-commerce">E-commerce</a><br>
+<a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators">Accelerators & Incubators </a><br>
+<a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
+			</ul>
+		</li>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Front-End Development</a>
+			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
+<a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
+<a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
+<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
+<a href="http://junto.link/feed.php?subcat=HTML">HTML</a><br>
+<a href="http://junto.link/feed.php?subcat=CSS">CSS</a><br>
+<a href="http://junto.link/feed.php?subcat=JavaScript">JavaScript</a><br>
+<a href="http://junto.link/feed.php?subcat=Themes">Themes</a><br>
+<a href="http://junto.link/feed.php?subcat=Mobile">Mobile</a><br>
+<a href="http://junto.link/feed.php?subcat=FrontEndiOS">iOS</a><br>
+<a href="http://junto.link/feed.php?subcat=FrontEndAndroid">Android</a><br>
+<a href="http://junto.link/feed.php?subcat=Bootstrap">Bootstrap</a><br>
+<a href="http://junto.link/feed.php?subcat=XML">XML</a><br>
+<a href="http://junto.link/feed.php?subcat=JQuery">JQuery</a><br>
+<a href="http://junto.link/feed.php?subcat=Angular">Angular</a><br>
+<a href="http://junto.link/feed.php?subcat=Canvas">Canvas</a><br>
+<a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
+<a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
+<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
+			</ul>
+		</li>
+		</li>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Back-End Development</a>
+			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
+<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
 <a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
 <a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
 <a href="http://junto.link/feed.php?subcat=PHP">PHP</a><br>
@@ -188,13 +235,6 @@ echo '
 <a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
 <a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
 <a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
-			</ul>
-		</li>
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
-			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
 			</ul>
 		</li>
 
