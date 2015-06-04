@@ -172,30 +172,22 @@ echo '
 
 		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
 			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
-				<li><a href="#">Link 2.1</a></li>
-				<li><a href="#">Link 2.2</a></li>
-				<li><a href="#">Link 2.3</a></li>
+				<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
+<a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
+<a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
+<a href="http://junto.link/feed.php?subcat=PHP">PHP</a><br>
+<a href="http://junto.link/feed.php?subcat=Python">Python</a><br>
+<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a><br>
+<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a><br>
+<a href="http://junto.link/feed.php?subcat=SQL">SQL</a><br>
+<a href="http://junto.link/feed.php?subcat=C">C</a><br>
+<a href="http://junto.link/feed.php?subcat=C++">C++</a><br>
+<a href="http://junto.link/feed.php?subcat=Shell">Shell</a><br>
+<a href="http://junto.link/feed.php?subcat=Java">Java</a><br>
+<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a><br>
+<a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
+<a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
+<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
 			</ul>
 		</li>
 		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
