@@ -184,24 +184,26 @@ echo '
                <li><a href="#">Jasper Report</a></li>
                <li><a href="#">Separated link</a></li>
                <li><a href="#">One more separated link</a></li>
-               <a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
-<a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
-<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
-<a href="http://junto.link/feed.php?subcat=HTML">HTML</a><br>
-<a href="http://junto.link/feed.php?subcat=CSS">CSS</a><br>
-<a href="http://junto.link/feed.php?subcat=JavaScript">JavaScript</a><br>
-<a href="http://junto.link/feed.php?subcat=Themes">Themes</a><br>
-<a href="http://junto.link/feed.php?subcat=Mobile">Mobile</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndiOS">iOS</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndAndroid">Android</a><br>
-<a href="http://junto.link/feed.php?subcat=Bootstrap">Bootstrap</a><br>
-<a href="http://junto.link/feed.php?subcat=XML">XML</a><br>
-<a href="http://junto.link/feed.php?subcat=JQuery">JQuery</a><br>
-<a href="http://junto.link/feed.php?subcat=Angular">Angular</a><br>
-<a href="http://junto.link/feed.php?subcat=Canvas">Canvas</a><br>
-<a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
-<a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
-<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
             </ul>
          </li>
       </ul>
