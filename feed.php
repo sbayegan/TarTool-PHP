@@ -167,48 +167,24 @@ echo '
 </div>';
 */
 echo '
-<nav class="navbar navbar-default" style="padding:10px;" role="navigation">
-   <div class="navbar-header">
-      <a class="navbar-brand" href="#">Full Directory</a>
-   </div>
-   <div>
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               Business Development
-               <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-               <li><a href="#">jmeter</a></li>
-               <li><a href="#">EJB</a></li>
-               <li><a href="#">Jasper Report</a></li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-               <li><a href="#">jmeter</a></li>
-               <li><a href="#">EJB</a></li>
-               <li><a href="#">Jasper Report</a></li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-               <li><a href="#">jmeter</a></li>
-               <li><a href="#">EJB</a></li>
-               <li><a href="#">Jasper Report</a></li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-               <li><a href="#">jmeter</a></li>
-               <li><a href="#">EJB</a></li>
-               <li><a href="#">Jasper Report</a></li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-               <li><a href="#">jmeter</a></li>
-               <li><a href="#">EJB</a></li>
-               <li><a href="#">Jasper Report</a></li>
-               <li><a href="#">Separated link</a></li>
-               <li><a href="#">One more separated link</a></li>
-            </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
+<div class="navbar navbar-fixed-top visible-phone">
+  <div class="navbar-inner">
+    <div class="container"> 
+    
+    <!--Button to collapse the Navigation--> 
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><img src="/images/collapsible-btn.png" ></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
 
      ';
 echo '</div>';
