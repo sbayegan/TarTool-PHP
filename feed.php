@@ -711,17 +711,18 @@ echo '
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Leave Your Feedback</h4>
+                <h4 class="modal-title">Authentication</h4>
             </div>
+            
             <div class="modal-body">
-                <form  class="form-asd" role="form" action="submit.php" method="get">
-                <form autocomplete="off">
+                
 
 <div class="form">
 <label for="username">User name :</label>
 <input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)"/>
 <span id="welcome-message"></span>
 </div>
+<li class="divider"></li>
  <div class="form">
  <label for="password1">Password :</label>
  <input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" disabled/>
