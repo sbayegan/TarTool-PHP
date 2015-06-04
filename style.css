@@ -230,22 +230,8 @@ width:480px;
 height:30px;
 
 }
-label {
-  
-  width: 120px;
-  float: left;
-  text-align: left;
-  display: block;
-}
-#submit_btn {
- margin-left:115px;
- height:10px;
- width: 150px;
- margin-top: 20px; 
-}
-#dropdown{
-margin-left:35px;
-}
+
+
 /*
  *		HOME PAGE classes
  */
