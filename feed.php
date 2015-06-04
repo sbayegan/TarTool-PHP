@@ -53,7 +53,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo '<body style="background-color:#FFD1B2;">';
+echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -170,7 +170,7 @@ echo '
 <nav>
     <ul class="nav">
 
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Business Development</a>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false"><b style="font-size:120%">Business Development</b></a>
 			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
 <a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
 <a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
@@ -194,8 +194,8 @@ echo '
 <a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
 			</ul>
 		</li>
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Front-End Development</a>
-			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
+		<li><a href="#" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false"><b style="font-size:120%">Front-End Development</b></a>
+			<ul class="nav collapse" id="submenu2" role="menu" aria-labelledby="btn-2" style="padding:15px;">
 <a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
 <a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
 <a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
@@ -217,8 +217,8 @@ echo '
 			</ul>
 		</li>
 		</li>
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Back-End Development</a>
-			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
+		<li><a href="#" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false"><b style="font-size:120%">Back-End Development</b></a>
+			<ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3" style="padding:15px;">
 <a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
 <a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
 <a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>

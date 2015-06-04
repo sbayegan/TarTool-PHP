@@ -263,10 +263,10 @@ overflow:hidden
 position: fixed;
 left: 30px;
 top:120px;
-width: 230px;
-height: 700px;
+width: 200px;
+height: 500px;
 //border: 1px dashed grey;
-background-color:#FFD1B2;
+//background-color:#FFD1B2;
 overflow:scroll;
 padding:5px;
 font-size:80%;
