@@ -446,8 +446,9 @@ document.getElementById("adderbutton").disabled = true;
     <option value="Blog">Blog</option>
     <option value="Book">Book</option>
   </select>
-  <input type="file" name="fileToUpload" id="fileToUpload" class="btn btn-default">
   </div>
+  <label>Thumbnail: </label>
+   <input type="file" name="fileToUpload" id="fileToUpload" class="btn btn-default">
   
      <div id="adder" class="form-group">
       <div>
