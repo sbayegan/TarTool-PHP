@@ -733,35 +733,35 @@ echo '
 </a>
 <hr>
 <form action="registeration.php" method="post" id="form" autocomplete="off">
- <div class="form">
+ <div class="form-group">
  <label for="full_name">Name :</label>
- <input type="text" name="full_name" placeholder="your name" id="full_name" />
+ <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
  </div>
- <div class="form">
+ <div class="form-group">
  <label for="email">Email  :</label>
- <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)"/>
+ <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
  <span id="email-status"></span>
  </div>
  
- <div class="form">
+ <div class="form-group">
  <label for="username">Username :</label>
- <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)"/>
+ <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value) class="form-control""/>
  <span id="user-status"> </span> 
  </div>
- <div class="form">
+ <div class="form-group">
  <label for="password">Password :</label>
- <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)"/>
+ <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)"class="form-control" />
  <span id="pass-status"> </span> 
  </div>
-</b>
-  <div class="form">
+
+  <div class="form-group">
  <label for="password1">Retype Password :</label>
- <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()"/>
+ <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
  <span id="pass1-status"> </span> 
  </div>
-<div class="form">
+<div class="form-group">
 Who are you? 
- <select name="type" form="form" id="dropdown">
+ <select name="type" form="form" id="dropdown" class="form-control" >
         <option value="NULL">choose one</option>
         <option value="one">a founder</option>
         <option value="two">working at a startup</option>
@@ -769,7 +769,7 @@ Who are you?
         <option value="four">None of your business!</option>
     </select>
  </div>
- <div>
+ <div class="form-group>
  <input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
  </div>
     
