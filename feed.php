@@ -167,24 +167,20 @@ echo '
 </div>';
 */
 echo '
-<div class="navbar navbar-fixed-top visible-phone">
-  <div class="navbar-inner">
-    <div class="container"> 
-    
-    <!--Button to collapse the Navigation--> 
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><img src="/images/collapsible-btn.png" ></a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <!--/.nav-collapse --> 
-    </div>
-  </div>
-</div>
+<nav>
+    <ul class="nav">
+	    <li><a href="#">Link 1</a></li>
+		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+				<li><a href="#">Link 2.1</a></li>
+				<li><a href="#">Link 2.2</a></li>
+				<li><a href="#">Link 2.3</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Link 3</a></li>
+		<li><a href="#">Link 4</a></li>
+	</ul>
+</nav>
 
      ';
 echo '</div>';
