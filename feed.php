@@ -15,6 +15,7 @@ echo '
 
 <link rel="stylesheet" type="text/css" href="style.css">
 
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -141,7 +142,7 @@ echo '
 </div>
 
 <h3>
-<a href="http://junto.link/feed.php?cat=BE"><b style="">Back-End Development</b></a><br>
+<a href="http://junto.link/feed.php?cat=BE" style="font-size:100%;margin-top:30px;">Back-End Development</a><br>
 </h3>
 <div>
 <a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
@@ -164,7 +165,28 @@ echo '
 
 </div>
 
-
+<nav class="navbar navbar-default" style="padding:10px;" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">TutorialsPoint</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Business Development
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li><a href="#">Separated link</a></li>
+               <li><a href="#">One more separated link</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
 
      ';
 echo '</div>';
@@ -442,7 +464,7 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
             </div>
 
         </div>
@@ -456,14 +478,14 @@ document.getElementById("adderbutton").disabled = true;
 
 echo '<div class="submit" >';
 
-echo '<a href="#submit" class="btn btn-lg btn-primary" data-toggle="modal">Submit a Card</a>';
+echo '<a href="#submit" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;left:auto;right:auto;">Submit a Card</a>';
 
 
 echo '</div>'; 
 
 
 echo '<div class="feedback">';
-echo '<a href="#feedback" class="btn btn-lg btn-primary" data-toggle="modal">Leave Feedback</a>';
+echo '<a href="#feedback" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;">Leave Feedback</a>';
 echo '</div>';
 
 //echo '<div class="tab">';
