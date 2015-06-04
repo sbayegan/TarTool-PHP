@@ -717,20 +717,19 @@ echo '
             <div class="modal-body">
                 
 
-<div class="form">
-<div class="form-group">
-<label for="username">User name :</label>
-<input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
-<span id="welcome-message"></span>
-</div>
-<hr>
-<br>
- <div class="form">
- <label for="password1">Password :</label>
- <input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" disabled/>
-</div>
-
-<span id="condition"></span>
+<form autocomplete="off">
+		<div class="form-group">
+		<label for="username">User name :</label>
+		<input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
+		<span id="welcome-message"></span>
+		</div>
+			<hr>
+			<br>
+		 <div class="form-group">
+		 <label for="password1">Password :</label>
+ 		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" disabled/>
+		<span id="condition"></span>
+		</div>
 <a href="twitter/login_to_twitter.php">
 <img src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
 </a>
