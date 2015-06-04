@@ -423,13 +423,11 @@ document.getElementById("adderbutton").disabled = true;
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
   </div>
-
   <div class="form-group">
    <label for="description">Description  :</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
   </div>
- 
  Medium 
   <select name="type" form="form">
     <option value="Video/Audio">Video</option>
@@ -438,26 +436,22 @@ document.getElementById("adderbutton").disabled = true;
     <option value="Blog">Blog</option>
     <option value="Book">Book</option>
   </select>
-
- <br>
- <br>
   <div class="form-group">
    <label for="url">URL :</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value) class="form-control""/>
    <span id="url-status"> </span> 
   </div>
- <br>
      <div id="adder">
       <div>
       Category 
-        <select name="cat" form="form" onchange="update(this.value)">
+        <select name="cat" form="form" onchange="update(this.value)" class="selectpicker">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
         </select>
      <br>
       Sub-category 
-       <select name="subcat1" form="form" id="D1"> 
+       <select name="subcat1" form="form" id="D1" class="selectpicker"> 
         <option value="">Choose One</option>
         <option value="LeanStartup">Lean Startup</option>
         <option value="MarketingAndResearch">Marketing & Research</option>
