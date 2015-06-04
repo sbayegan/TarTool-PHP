@@ -69,7 +69,7 @@ else{
 //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#submit" class="btn btn-lg btn-default" data-toggle="modal"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#submit"  data-toggle="modal"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
 }
 
  
