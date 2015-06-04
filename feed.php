@@ -423,7 +423,8 @@ document.getElementById("adderbutton").disabled = true;
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
    </div>
-  
+<button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
+     </form>
    <div class="form-group">
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
@@ -485,8 +486,7 @@ document.getElementById("adderbutton").disabled = true;
         </div>
       </div>
      
-      <button type="button" type="submit" value="submit" class="btn btn-danger" data-dismiss="modal" id="submit_bt" disabled>Submit</button>
-     </form>
+      
 
 <button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
 
