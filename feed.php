@@ -433,15 +433,16 @@ document.getElementById("adderbutton").disabled = true;
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
   </div>
+  <div class="form-group">
  Medium 
-  <select name="type" form="form">
+  <select name="type" form="form" class="form-control">
     <option value="Video/Audio">Video</option>
     <option value="Website">Website/Tool</option>
     <option value="Influencer">Twitter influencer</option>
     <option value="Blog">Blog</option>
     <option value="Book">Book</option>
   </select>
-  
+  </div>
      <div id="adder">
       <div>
       Category 
