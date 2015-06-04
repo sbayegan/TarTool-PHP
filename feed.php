@@ -430,7 +430,7 @@ document.getElementById("adderbutton").disabled = true;
   </div>
   <div class="form-group">
    <label for="url">URL :</label>
-   <input type="text" name="url" id="url" size="45" onchange="activate(this.value) class="form-control""/>
+   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
   </div>
  Medium 
