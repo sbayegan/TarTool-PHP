@@ -417,13 +417,10 @@ document.getElementById("adderbutton").disabled = true;
 }
 }
 </script>
-<form action="action_page.php">
-<input type="submit" value="Submit" class="btn btn-danger">
-</form> 
 
-<form action="submit.php">
-   <input type="submit" value="submit" class="btn btn-danger">
-     </form>
+
+<form  class="form-asd" role="form" action="submit.php" method="get">
+   
 
    <div class="form-group">
    <label for="title">Title:</label>
@@ -504,7 +501,8 @@ document.getElementById("adderbutton").disabled = true;
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" disabled>
+     </form>
                 </form>
             </div>
             
