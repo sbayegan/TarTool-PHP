@@ -427,7 +427,7 @@ Last name:<br>
 <input type="submit" value="Submit">
 </form> 
 <form class="form-asd" role="form" action="submit.php" method="get" id="form" autocomplete="off">
-   <button type="button" type="submit" value="submit" class="btn btn-danger"  id="submit_bt" >Submit</button>
+   <input type="button" type="submit" value="submit" class="btn btn-danger"  id="submit_bt" >Submit</button>
      </form>
    <div class="form-group">
    <label for="title">Title:</label>
