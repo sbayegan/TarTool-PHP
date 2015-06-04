@@ -739,9 +739,6 @@ echo '
  			 <label for="email">Email  :</label>
 			 <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
 			 <span id="email-status"></span>
-			 </div>
- 
- 		<div class="form-group">
  			<label for="username">Username:</label>
  			<input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control/>
  			<span id="user-status"> </span> 
@@ -754,7 +751,7 @@ echo '
 			 <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
 			 <span id="pass1-status"> </span> 
  	
-Who are you? 
+<label for="dropdown"> Who are you? </label>
  <select name="type" form="form" id="dropdown" class="form-control" >
         <option value="NULL">choose one</option>
         <option value="one">a founder</option>
