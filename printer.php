@@ -137,7 +137,7 @@ echo '<div class="box-stats" style="background-color:';
      else{echo 'red';}
 
     echo'">';
-    echo '<div style="position:absolute;right:50px;font-size:150%;margin-top:4px;color:#636363">'.'Social score: '.$result['TOTALSCORE'].'</div>';
+    echo '<div style="position:absolute;right:50px;font-size:150%;margin-top:4px;color:#636363">'.'social score: <span class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</span></div>';
     echo '<div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">'.''.$result['MEDIUM'].'</div>';
 //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
