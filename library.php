@@ -1,6 +1,9 @@
 <?php
 include('datalogin.php');
 include('printer.php');
+if(!isset($_COOKIE['junto'])){
+header('Location: http://junto.link/home.php');
+}
 echo "<!DOCTYPE html>";
 echo "<html>";
 
@@ -9,7 +12,7 @@ echo "<html>";
 echo "<head>";
 
 echo "<title>";
-echo "Junto Home";
+echo "Junto Library";
 echo "</title>";
 echo '
 
@@ -196,15 +199,7 @@ var BD =
 \'</select>\' ;
 var node = document.createElement("DIV");
 node.setAttribute("id", "D"+lastused);
-document.getElementById("adder").appendChild(node);              
-if(currentcat == "BE"){document.getElementById("D"+lastused).innerHTML = BE;}
-if(currentcat == "BD"){document.getElementById("D"+lastused).innerHTML = BD;}
-if(currentcat == "FE"){document.getElementById("D"+lastused).innerHTML = FE;}
-lastused = lastused + 1;
-if (lastused == 6){
-document.getElementById("adderbutton").disabled = true;
-}
-}
+document.getElementBy
 </script>
 
 <script>
