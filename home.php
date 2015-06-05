@@ -568,12 +568,12 @@ if(!isset($_COOKIE['junto']))
 {
 echo '
 
-<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:10px;top:10px">
-<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:0px;top:130px">
-<img src="http://junto.link/pictures/save.png" height="80" width="80" style="position:absolute;left:20px;top:260px">
-</div>
-<div style="position:relative;left:105px;width:70px;height:380px;top:110px;border:0px dashed black;z-index:0;">
-<span style="display:block;margin-top:65px"><b>Personalize</span> <span style="display:block;margin-top:110px">Discover</span><span style="display:block;margin-top:83px">Save</b></span>
+<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:10px;top:210px">
+<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:0px;top:330px">
+<img src="http://junto.link/pictures/save.png" height="80" width="80" style="position:absolute;left:20px;top:460px">
+
+<div style="position:relative;left:105px;width:70px;height:380px;top:200px;border:0px dashed black;z-index:0;">
+<span style="display:block;margin-top:55px">Personalize</span> <span style="display:block;margin-top:110px">Discover</span><span style="display:block;margin-top:83px">Save</span>
 </div>
 </div>';
 }
@@ -620,7 +620,7 @@ echo '
 <b>Account Settings</b>
 </div>
 </a>
-
+</div>
 
 
 ';

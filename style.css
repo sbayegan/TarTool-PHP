@@ -241,7 +241,7 @@ height:30px;
  *		HOME PAGE classes
  */
 .slider{
-position: relative;
+position: fixed;
 float: left;
 //display: block;
 background-color: #FCFCFC;
@@ -310,6 +310,7 @@ border: 0px dashed grey;
 width: 550px;
 top:120px;
 margin: 0 auto;
+left:100px;
 //margin-left:auto;
 //margin-right: auto;
 border-radius: 10px;
