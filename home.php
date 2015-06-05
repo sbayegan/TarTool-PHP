@@ -22,7 +22,7 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
-echo '<body style="background-color:#E0CEC1;">';
+echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
 
 echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
@@ -64,8 +64,9 @@ echo '</div>';
 
 // BODY
 
-echo '<div class="slider">
-<div style="width:600px;height:60px;position:relative;margin-right:auto;margin-left:auto;top:10px;padding:10px;border:0px dashed white">
+echo '<div class="slider">';
+/*echo'
+<div style="width:600px;height:60px;position:relative;margin-right:auto;margin-left:auto;top:10px;padding:10px;border:0px dashed black">
 <p style="font-family:\'Open Sans\',sans-serif;font-size:180%;text-align:center">';
 $temp = $conn->query("SELECT COUNT(*) as total FROM USERS");
 $tem = mysqli_fetch_assoc($temp);
@@ -77,16 +78,20 @@ echo '<span style="color:red">'.$temp['total'].'</span>';
 echo ' resource cards
 </p>
 </div>
-<div style="position:relative;width:370px;height:105px;margin-left:auto;margin-right:auto;top:20px;border:0px dashed white">
-<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:0px;top:0px">
-<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:100px;top:0px">
-<img src="http://junto.link/pictures/basic.png" height="70" width="70" style="position:absolute;left:230px;top:30px">
-<img src="http://junto.link/pictures/pin.png" height="80" width="80" style="position:absolute;left:300px;top:20px">
+';
+*/
+echo '
+<div style="position:absolute;width:200px;height:105px;top:20px;left:0px;border: 0px dashed black;">
+<img src="http://junto.link/pictures/check.png" height="100" width="100" style="position:absolute;left:20px;top:0px">
+<img src="http://junto.link/pictures/reader.png" height="100" width="100" style="position:absolute;left:10px;top:130px">
+<img src="http://junto.link/pictures/pin.png" height="100" width="100" style="position:absolute;left:20px;top:260px">
 </div>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:370px;height:20px;top:25px;border:0px dashed white">
-<span style="margin-left:30px">Select</span> <span style="margin-left:60px">Discover</span><span style="margin-left:50px">Approve</span><span style="margin-left:40px">Pin</span>
+<div style="position:relative;left:120px;width:70px;height:520px;top:10px;border:0px dashed black;z-index:0;">
+<span style="display:block;margin-top:55px">Select</span> <span style="display:block;margin-top:115px">Discover</span><span style="display:block;margin-top:105px">Pin</span>
 </div>
-</div>
+</div>';
+/*
+echo '
 <div style="position:relative;width:100%;height:100px;background-color:white;top:80px;color:black;text-align:center;text-align:center;font-size:180%;
 text-family:Arial">
 <p style="position:relative;top:30px">Trending Cards</p>
@@ -94,7 +99,7 @@ text-family:Arial">
 
 
 ';
-
+*/
 
 echo'<div class="feed-column">';
 card(13);

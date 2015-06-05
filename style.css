@@ -236,17 +236,17 @@ height:30px;
  *		HOME PAGE classes
  */
 .slider{
-position: relative;
-display: block;
+position: fixed;
+//display: block;
 background-color: #FCFCFC;
-height: 250px;
-width: 100%;
-top: 80px;
-
-margin-left: auto;
-margin-right: auto;
+height: 410px;
+width: 200px;
+top: 120px;
+left:30px;
+//margin-left: auto;
+//margin-right: auto;
 //border-radius: 10px;
-overflow:hidden
+overflow:scroll;
 }
 .navigator{
 position: fixed;

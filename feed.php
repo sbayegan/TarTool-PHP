@@ -410,7 +410,7 @@ $result = $result["NAME"];
 
 echo '</div>';
 
-echo '<div class="navigator">';
+echo '<div class="slider">';
 /*
 echo '
 <div id="accordion">
@@ -487,6 +487,7 @@ echo '
 
 </div>';
 */
+/*
 echo '
 <nav>
     <ul class="nav">
@@ -561,8 +562,10 @@ echo '
 
 	</ul>
 </nav>
-
      ';
+*/
+
+
 echo '</div>';
 
 
