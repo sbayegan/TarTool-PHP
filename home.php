@@ -630,6 +630,54 @@ echo '</div>';
 
 
 
+
+
+
+
+
+//echo '<div class="submit" >';
+
+if(isset($_COOKIE['junto'])){
+//echo '<a href="#submit" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;left:auto;right:auto;">Submit a Card</a>';
+/*
+echo'
+<div style="position:relatiev;margin-left:auto;margin-right:auto;margin-top:40px;width:150px;height:150px;border:0px dashed black;">
+<a href="#submit" data-toggle="modal">
+<div style="display:block;position:relative;margin-left:20px;margin-right:auto;"><img src="http://junto.link/pictures/pencil.png" height="100" width="100">
+</div>
+<div style="position:absolute;top:150px;left:40px">
+<b>Submit Resource</b>
+</div>
+</a>
+</div>';
+*/
+
+
+//echo '<a href="#feedback" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;">Leave Feedback</a>';
+}
+//echo '</div>';
+
+//echo '<div class="tab">';
+//echo '</div>';
+
+echo '<div class="feed-column">';
+
+echo '
+
+
+';
+
+card(13);
+card(12);
+card(6);
+card(10);
+card(9);
+card(8);
+card(7);
+
+
+
+echo'</div>';
 echo '
 <div id="submit" class="modal fade">
     <div class="modal-dialog">
@@ -849,53 +897,6 @@ echo '
 </div>
 
 ';
-
-
-
-
-//echo '<div class="submit" >';
-
-if(isset($_COOKIE['junto'])){
-//echo '<a href="#submit" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;left:auto;right:auto;">Submit a Card</a>';
-/*
-echo'
-<div style="position:relatiev;margin-left:auto;margin-right:auto;margin-top:40px;width:150px;height:150px;border:0px dashed black;">
-<a href="#submit" data-toggle="modal">
-<div style="display:block;position:relative;margin-left:20px;margin-right:auto;"><img src="http://junto.link/pictures/pencil.png" height="100" width="100">
-</div>
-<div style="position:absolute;top:150px;left:40px">
-<b>Submit Resource</b>
-</div>
-</a>
-</div>';
-*/
-
-
-//echo '<a href="#feedback" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;">Leave Feedback</a>';
-}
-//echo '</div>';
-
-//echo '<div class="tab">';
-//echo '</div>';
-
-echo '<div class="feed-column">';
-
-echo '
-
-
-';
-
-card(13);
-card(12);
-card(6);
-card(10);
-card(9);
-card(8);
-card(7);
-
-
-
-echo'</div>';
 echo '</body>';
 echo '<footer>';
 //echo'<div class="footer-line">';
