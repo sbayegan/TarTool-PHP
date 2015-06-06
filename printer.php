@@ -185,12 +185,6 @@ echo '<div class="minicard-tags">';
 
 echo '</div>';
 
-//echo '<div class="minicard-sticker">';
-//    if ($firsttag['CAT'] == 'BD') {echo 'Business';}
-//    if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
-//    if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
-
-//echo '</div>';
 echo '</div>';
 }
 
