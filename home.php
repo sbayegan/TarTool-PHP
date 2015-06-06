@@ -663,17 +663,28 @@ echo'
 echo '<div class="feed-column">';
 
 echo '
-
-
 ';
+$query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
+$result = $conn->query($query);
+while($card = mysqli_fetch_assoc($result)){
+//echo 'select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID'].'----';
+$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
 
-card(13);
-card(12);
-card(6);
-card(10);
-card(9);
-card(8);
-card(7);
+while($temp = mysqli_fetch_assoc($cats)){
+//echo 'select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST='.$temp['SUB'].'----';
+$match = $conn->query('select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST="'.$temp['SUB'].'"');
+
+if($match->num_rows > 0){card($card['RESOURCEID']);break;}
+
+}
+}
+//card(13);
+//card(12);
+//card(6);
+//card(10);
+//card(9);
+//card(8);
+//card(7);
 
 
 

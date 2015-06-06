@@ -44,7 +44,8 @@ $next = $resourceid + 1;					//Set the next available user id
 $query = "UPDATE LAST SET RESOURCE='$next' WHERE ONE=1";
 $conn->query($query);
 $hash = rand(0,10000000000);
-$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash',NULL,0,0,0,0,0)";
+$submitter = $_COOKIE['junto'];
+$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash',NULL,0,0,0,0,0,NOW(),'.$submitter.')";
 $conn->query($query);
  if(!empty($_GET['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
 
