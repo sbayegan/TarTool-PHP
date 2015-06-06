@@ -425,7 +425,35 @@ echo '</div>';
 
 if(isset($_COOKIE['junto'])){
 }
-echo '';
+echo '
+<div style="position:fixed;left:20%;margin-bottom:185px;top:85px;width:100%;height:90%;overflow:scroll;background-color: white">
+	<div class="shelve">
+';
+
+//minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
+minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
+
+
+echo '
+</div>
+	<div class="shelve" style="background-color:#FFDAA3;">';
+minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
+
+echo '</div>';
+echo '<div class="shelve" style="background-color:#FF9933;">';
+//minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
+echo '</div>';
+echo '<div class="shelve" style="background-color:#FFACE3;">';
+//minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
+echo '</div>';
+echo '<div class="shelve" style="background-color:#A3D1FF;">';
+//minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
+echo '</div>';
+
+
+echo '</div>';
+
+
 
 
 

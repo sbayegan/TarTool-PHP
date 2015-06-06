@@ -136,7 +136,7 @@ echo '<div class="box-stats" style="background-color:';
      if($medium == 'Influencer'){echo '#A3D1FF;';}
      else{echo 'red';}
 
-    echo'">';
+    echo')">';
     echo '<div style="position:absolute;right:50px;font-size:150%;margin-top:4px;color:#636363">'.'social score: <span class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</span></div>';
     echo '<div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">'.''.$result['MEDIUM'].'</div>';
 //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
@@ -144,6 +144,53 @@ echo '<div class="box-stats" style="background-color:';
     echo '</div>';
 
 
+echo '</div>';
+}
+function minicard($i){
+include ('datalogin.php');
+$result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
+$tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
+$result = mysqli_fetch_assoc($result);
+$medium = $result['MEDIUM'];
+$firsttag = mysqli_fetch_assoc($tags);
+echo'<div class="minicard">';
+
+echo '<div class="minicard-profile">';
+	echo ' <img src="';   
+	echo $result['PROFILEPICTURE'];
+	echo '" width="180" height="180" > ';
+echo '</div>';
+
+echo '<div class="minicard-delete">';
+	echo '<img src="pictures/cross.png" height="18" width="18">';
+echo '</div>';
+
+echo '<div class="minicard-title">';
+    echo '<b>';
+    echo $result['TITLE']; 
+    echo '</b>';
+echo '</div>';
+
+echo '<div class="minicard-sticker">';
+    if ($firsttag['CAT'] == 'BD') {echo 'Business';}
+    if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
+    if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
+
+echo '</div>';
+
+echo '<div class="minicard-tags">';
+    linky($firsttag['SUB']);
+    
+    while($firsttag = mysqli_fetch_assoc($tags)){echo ' ';linky($firsttag['SUB']);}
+
+echo '</div>';
+
+//echo '<div class="minicard-sticker">';
+//    if ($firsttag['CAT'] == 'BD') {echo 'Business';}
+//    if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
+//    if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
+
+//echo '</div>';
 echo '</div>';
 }
 
