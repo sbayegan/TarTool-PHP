@@ -481,7 +481,7 @@ if(interested($userid, "Productivity")==1){ echo ' checked';}
 echo '> Productivity<br>';
 
 echo'<input type="checkbox" name="Analytics" value="1"';
-if(interested($userid, "Analyrics")==1){echo ' checked';}
+if(interested($userid, "Analytics")==1){echo ' checked';}
 echo '> Analytics<br>';
 
 echo'<input type="checkbox" name="LeanStartup" value="1"';
@@ -599,7 +599,7 @@ if(interested($userid,"Security")==1){echo ' checked';}
 echo '> Security<br>';
 
 echo '<input type="checkbox" name="DataManagement" value="1"';
-if(interested($userid, "DaraManagement")==1){echo ' checked';}
+if(interested($userid, "DataManagement")==1){echo ' checked';}
 echo '> Data Management(Database Design)<br>';
 
 echo'<input type="checkbox" name="Hosting" value="1"';
@@ -614,7 +614,7 @@ echo '<input type="checkbox" name="Python" value="1"';
 if(interested($userid,"Python")==1){echo ' checked';}
 echo '> Python<br>';
 
-echo'<input type="checkbox" name="ASP.NET" value="1"';
+echo'<input type="checkbox" name="ASPNET" value="1"';
 if(interested($userid, "ASP.NET")==1){echo ' checked';}
 echo '> ASP.NET<br>';
 
