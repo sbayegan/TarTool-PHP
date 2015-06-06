@@ -1,26 +1,26 @@
 <?php
 
 function linky($input){
-if($input == 'LeanStartup'){echo '<a href="http://junto.link/feed.php?subcat=LeanStartup"><span class="label label-default">Lean Startup</span></a>';}
-if($input == 'MarketingAndResearch'){echo '<a href="http://junto.link/feed.php?subcat=MarketingAndResearch"><span class="label label-default">Marketing & Research</span></a>';}
-if($input == 'Naming'){echo '<a href="http://junto.link/feed.php?subcat=Naming"><span class="label label-default">Naming</span></a>';}
-if($input == 'CopyWriting'){echo '<a href="http://junto.link/feed.php?subcat=CopyWriting"><span class="label label-default">Copywriting</span></a>';}
-if($input == 'UserFeedback'){echo '<a href="http://junto.link/feed.php?subcat=UserFeedback"><span class="label label-default">User Feedback</span></a>';}
-if($input == 'Analytics'){echo '<a href="http://junto.link/feed.php?subcat=Analytics"><span class="label label-default">Analytics</span></a>';}
-if($input == 'SocialMediaCommunity'){echo '<a href="http://junto.link/feed.php?subcat=SocialMediaCommunity"><span class="label label-default">Social Media & Community</span></a>';}
-if($input == 'Launching'){echo '<a href="http://junto.link/feed.php?subcat=Launching"><span class="label label-default">Launching</span></a>';}
-if($input == 'SEO'){echo '<a href="http://junto.link/feed.php?subcat=SEO"><span class="label label-default">SEO</span></a>';}
-if($input == 'ProjectManagement'){echo '<a href="http://junto.link/feed.php?subcat=ProjectManagement"><span class="label label-default">Project Management</span></a>';}
-if($input == 'CustomerService'){echo '<a href="http://junto.link/feed.php?subcat=CustomerService"><span class="label label-default">Customer Service</span></a>';}
-if($input == 'InventoryManagement'){echo '<a href="http://junto.link/feed.php?subcat=InventoryManagement"><span class="label label-default">Inventory Management</span></a>';}
-if($input == 'Sales'){echo '<a href="http://junto.link/feed.php?subcat=Sales"><span class="label label-default">Sales</span></a>';}
-if($input == 'Funding'){echo '<a href="http://junto.link/feed.php?subcat=Funding"><span class="label label-default">Funding</span></a>';}
-if($input == 'Administration'){echo '<a href="http://junto.link/feed.php?subcat=Administration"><span class="label label-default">Administration</span></a>';}
-if($input == 'Productivity'){echo  '<a href="http://junto.link/feed.php?subcat=Productivity"><span class="label label-default">Productivity</span></a>';}
-if($input == 'Outsourcing'){echo '<a href="http://junto.link/feed.php?subcat=Outsourcing"><span class="label label-default">Outsourcing</span></a>';}
-if($input == 'E-commerce'){echo '<a href="http://junto.link/feed.php?subcat=E-commerce"><span class="label label-default">E-commerce</span></a>';}
-if($input == 'Events'){echo '<a href="http://junto.link/feed.php?subcat=Events"><span class="label label-default">Events</span></a>';}
-if($input == 'AcceleratorsAndIncubators'){echo '<a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators"><span class="label label-default">Accelerators & Incubators</span></a>';}
+if($input == 'LeanStartup'){echo '<a href="http://junto.link/home.php?subcat=LeanStartup"><span class="label label-default">Lean Startup</span></a>';}
+if($input == 'MarketingAndResearch'){echo '<a href="http://junto.link/home.php?subcat=MarketingAndResearch"><span class="label label-default">Marketing & Research</span></a>';}
+if($input == 'Naming'){echo '<a href="http://junto.link/home.php?subcat=Naming"><span class="label label-default">Naming</span></a>';}
+if($input == 'CopyWriting'){echo '<a href="http://junto.link/home.php?subcat=CopyWriting"><span class="label label-default">Copywriting</span></a>';}
+if($input == 'UserFeedback'){echo '<a href="http://junto.link/home.php?subcat=UserFeedback"><span class="label label-default">User Feedback</span></a>';}
+if($input == 'Analytics'){echo '<a href="http://junto.link/home.php?subcat=Analytics"><span class="label label-default">Analytics</span></a>';}
+if($input == 'SocialMediaCommunity'){echo '<a href="http://junto.link/home.php?subcat=SocialMediaCommunity"><span class="label label-default">Social Media & Community</span></a>';}
+if($input == 'Launching'){echo '<a href="http://junto.link/home.php?subcat=Launching"><span class="label label-default">Launching</span></a>';}
+if($input == 'SEO'){echo '<a href="http://junto.link/home.php?subcat=SEO"><span class="label label-default">SEO</span></a>';}
+if($input == 'ProjectManagement'){echo '<a href="http://junto.link/home.php?subcat=ProjectManagement"><span class="label label-default">Project Management</span></a>';}
+if($input == 'CustomerService'){echo '<a href="http://junto.link/home.php?subcat=CustomerService"><span class="label label-default">Customer Service</span></a>';}
+if($input == 'InventoryManagement'){echo '<a href="http://junto.link/home.php?subcat=InventoryManagement"><span class="label label-default">Inventory Management</span></a>';}
+if($input == 'Sales'){echo '<a href="http://junto.link/home.php?subcat=Sales"><span class="label label-default">Sales</span></a>';}
+if($input == 'Funding'){echo '<a href="http://junto.link/home.php?subcat=Funding"><span class="label label-default">Funding</span></a>';}
+if($input == 'Administration'){echo '<a href="http://junto.link/home.php?subcat=Administration"><span class="label label-default">Administration</span></a>';}
+if($input == 'Productivity'){echo  '<a href="http://junto.link/home.php?subcat=Productivity"><span class="label label-default">Productivity</span></a>';}
+if($input == 'Outsourcing'){echo '<a href="http://junto.link/home.php?subcat=Outsourcing"><span class="label label-default">Outsourcing</span></a>';}
+if($input == 'E-commerce'){echo '<a href="http://junto.link/home.php?subcat=E-commerce"><span class="label label-default">E-commerce</span></a>';}
+if($input == 'Events'){echo '<a href="http://junto.link/home.php?subcat=Events"><span class="label label-default">Events</span></a>';}
+if($input == 'AcceleratorsAndIncubators'){echo '<a href="http://junto.link/home.php?subcat=AcceleratorsAndIncubators"><span class="label label-default">Accelerators & Incubators</span></a>';}
 
 if($input == 'UserInterface'){echo '<a href="http://junto.link/feed.php?subcat=UserInterface"><span class="label label-default">User Interface</span></a>';}
 if($input == 'UserExperience'){echo '<a href="http://junto.link/feed.php?subcat=UserExperience"><span class="label label-default">User Experience </span></a>';}
