@@ -61,7 +61,7 @@ if(isset($_POST['DataManagement'])){remove($userid,'DataManagement');add($userid
 if(isset($_POST['Hosting'])){remove($userid,'Hosting');add($userid,'Hosting');}else{remove($userid,'Hosting');}
 if(isset($_POST['PHP'])){remove($userid,'PHP');add($userid,'PHP');}else{remove($userid,'PHP');}
 if(isset($_POST['Python'])){remove($userid,'Python');add($userid,'Python');}else{remove($userid,'Python');}
-if(isset($_POST['ASP.NET'])){remove($userid,'ASP.NET');add($userid,'ASP.NET');}else{remove($userid,'ASP.NET');}
+if(isset($_POST['ASPNET'])){remove($userid,'ASPNET');add($userid,'ASPNET');}else{remove($userid,'ASPNET');}
 if(isset($_POST['VBScript'])){remove($userid,'VBScript');add($userid,'VBScript');}else{remove($userid,'VBScript');}
 if(isset($_POST['SQL'])){remove($userid,'SQL');add($userid,'SQL');}else{remove($userid,'SQL');}
 if(isset($_POST['C'])){remove($userid,'C');add($userid,'C');}else{remove($userid,'C');}
