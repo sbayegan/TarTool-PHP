@@ -615,7 +615,7 @@ if(interested($userid,"Python")==1){echo ' checked';}
 echo '> Python<br>';
 
 echo'<input type="checkbox" name="ASPNET" value="1"';
-if(interested($userid, "ASP.NET")==1){echo ' checked';}
+if(interested($userid, "ASPNET")==1){echo ' checked';}
 echo '> ASP.NET<br>';
 
 echo '<input type="checkbox" name="VBScript" value="1"';
