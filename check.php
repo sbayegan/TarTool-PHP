@@ -47,7 +47,9 @@ echo ' </div>';
 echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="http://junto.link/pictures/power-red.png" height="45" width="45"></a></span>';
 echo '</div>';
 
-echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:30px;width:150px;height:150px;z-index:9999;border:0px dashed black;">
+echo'
+<div class="slider">
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:30px;width:150px;height:150px;z-index:9999;border:0px dashed black;">
 <a href="#submit" data-toggle="modal">
 <div style="position:relative;margin-left:20px;"><img src="http://junto.link/pictures/pencil.png" height="100" width="100">
 </div>
@@ -87,6 +89,8 @@ echo '
 <b>Account settings</b>
 </div>
 </a>
+</div>
+
 </div>
 ';
 
