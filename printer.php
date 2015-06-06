@@ -22,42 +22,42 @@ if($input == 'E-commerce'){echo '<a href="http://junto.link/home.php?subcat=E-co
 if($input == 'Events'){echo '<a href="http://junto.link/home.php?subcat=Events"><span class="label label-default">Events</span></a>';}
 if($input == 'AcceleratorsAndIncubators'){echo '<a href="http://junto.link/home.php?subcat=AcceleratorsAndIncubators"><span class="label label-default">Accelerators & Incubators</span></a>';}
 
-if($input == 'UserInterface'){echo '<a href="http://junto.link/feed.php?subcat=UserInterface"><span class="label label-default">User Interface</span></a>';}
-if($input == 'UserExperience'){echo '<a href="http://junto.link/feed.php?subcat=UserExperience"><span class="label label-default">User Experience </span></a>';}
-if($input == 'MockupsAndWireframing'){echo '<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing"><span class="label label-default">Mockups & Wireframing</span></a>';}
-if($input == 'HTML'){echo '<a href="http://junto.link/feed.php?subcat=HTML"><span class="label label-default">HTML</span></a>';}
-if($input == 'CSS'){echo '<a href="http://junto.link/feed.php?subcat=CSS"><span class="label label-default">CSS</span></a>';}
-if($input == 'JavaScript'){echo '<a href="http://junto.link/feed.php?subcat=JavaScript"><span class="label label-default">JavaScript</span></a>';}
-if($input == 'Themes'){echo '<a href="http://junto.link/feed.php?subcat=Themes"><span class="label label-default">Themes</span></a>';}
-if($input == 'Mobile'){echo '<a href="http://junto.link/feed.php?subcat=Mobile"><span class="label label-default">Mobile</span></a>';}
-if($input == 'FrontEndiOS'){echo '<a href="http://junto.link/feed.php?subcat=FrontEndiOS"><span class="label label-default">iOS</span></a>';}
-if($input == 'FrontEndAndroid'){echo '<a href="http://junto.link/feed.php?subcat=FrontEndAndroid"><span class="label label-default">Android</span></a>';}
-if($input == 'Bootstrap'){echo '<a href="http://junto.link/feed.php?subcat=Bootstrap"><span class="label label-default">Bootstrap</span></a>';}
-if($input == 'XML'){echo '<a href="http://junto.link/feed.php?subcat=XML"><span class="label label-default">XML</span></a>';}
-if($input == 'JQuery'){echo '<a href="http://junto.link/feed.php?subcat=JQuery"><span class="label label-default">JQuery</span></a>';}
-if($input == 'Angular'){echo '<a href="http://junto.link/feed.php?subcat=Angular"><span class="label label-default">Angular</span></a>';}
-if($input == 'Canvas'){echo '<a href="http://junto.link/feed.php?subcat=Canvas"><span class="label label-default">Canvas</span></a>';}
-if($input == 'SVG'){echo '<a href="http://junto.link/feed.php?subcat=SVG"><span class="label label-default">Scalable Vector Graphics</span></a>';}
-if($input == 'JSON'){echo '<a href="http://junto.link/feed.php?subcat=JSON"><span class="label label-default">JSON</span></a>';}
-if($input == 'Ajax'){echo '<a href="http://junto.link/feed.php?subcat=Ajax"><span class="label label-default">Ajax</span></a>';}
+if($input == 'UserInterface'){echo '<a href="http://junto.link/home.php?subcat=UserInterface"><span class="label label-default">User Interface</span></a>';}
+if($input == 'UserExperience'){echo '<a href="http://junto.link/home.php?subcat=UserExperience"><span class="label label-default">User Experience </span></a>';}
+if($input == 'MockupsAndWireframing'){echo '<a href="http://junto.link/home.php?subcat=MockupsAndWireframing"><span class="label label-default">Mockups & Wireframing</span></a>';}
+if($input == 'HTML'){echo '<a href="http://junto.link/home.php?subcat=HTML"><span class="label label-default">HTML</span></a>';}
+if($input == 'CSS'){echo '<a href="http://junto.link/home.php?subcat=CSS"><span class="label label-default">CSS</span></a>';}
+if($input == 'JavaScript'){echo '<a href="http://junto.link/home.php?subcat=JavaScript"><span class="label label-default">JavaScript</span></a>';}
+if($input == 'Themes'){echo '<a href="http://junto.link/home.php?subcat=Themes"><span class="label label-default">Themes</span></a>';}
+if($input == 'Mobile'){echo '<a href="http://junto.link/home.php?subcat=Mobile"><span class="label label-default">Mobile</span></a>';}
+if($input == 'FrontEndiOS'){echo '<a href="http://junto.link/home.php?subcat=FrontEndiOS"><span class="label label-default">iOS</span></a>';}
+if($input == 'FrontEndAndroid'){echo '<a href="http://junto.link/home.php?subcat=FrontEndAndroid"><span class="label label-default">Android</span></a>';}
+if($input == 'Bootstrap'){echo '<a href="http://junto.link/home.php?subcat=Bootstrap"><span class="label label-default">Bootstrap</span></a>';}
+if($input == 'XML'){echo '<a href="http://junto.link/home.php?subcat=XML"><span class="label label-default">XML</span></a>';}
+if($input == 'JQuery'){echo '<a href="http://junto.link/home.php?subcat=JQuery"><span class="label label-default">JQuery</span></a>';}
+if($input == 'Angular'){echo '<a href="http://junto.link/home.php?subcat=Angular"><span class="label label-default">Angular</span></a>';}
+if($input == 'Canvas'){echo '<a href="http://junto.link/home.php?subcat=Canvas"><span class="label label-default">Canvas</span></a>';}
+if($input == 'SVG'){echo '<a href="http://junto.link/home.php?subcat=SVG"><span class="label label-default">Scalable Vector Graphics</span></a>';}
+if($input == 'JSON'){echo '<a href="http://junto.link/home.php?subcat=JSON"><span class="label label-default">JSON</span></a>';}
+if($input == 'Ajax'){echo '<a href="http://junto.link/home.php?subcat=Ajax"><span class="label label-default">Ajax</span></a>';}
 
-if($input == 'Security'){echo '<a href="http://junto.link/feed.php?subcat=Security"><span class="label label-default">Security</span></a>';}
-if($input == 'DataManagement'){echo '<a href="http://junto.link/feed.php?subcat=DataManagement"><span class="label label-default">Data Management</span></a>';}
-if($input == 'Hosting'){echo '<a href="http://junto.link/feed.php?subcat=Hosting"><span class="label label-default">Hosting</span></a>';}
-if($input == 'PHP'){echo '<a href="http://junto.link/feed.php?subcat=PHP"><span class="label label-default">PHP</span></a>';}
-if($input == 'Python'){echo '<a href="http://junto.link/feed.php?subcat=Python"><span class="label label-default">Python</span></a>';}
-if($input == 'ASP.NET'){echo '<a href="http://junto.link/feed.php?subcat=ASP.NET"><span class="label label-default">ASP.NET</span></a>';}
-if($input == 'VBScript'){echo '<a href="http://junto.link/feed.php?subcat=VBScript"><span class="label label-default">Visual Basic Script</span></a>';}
-if($input == 'SQL'){echo '<a href="http://junto.link/feed.php?subcat=SQL"><span class="label label-default">SQL</span></a>';}
-if($input == 'C'){echo '<a  href="http://junto.link/feed.php?subcat=C"><span class="label label-default">C</span></a>';}
-if($input == 'C++'){echo '<a href="http://junto.link/feed.php?subcat=C++"><span class="label label-default">C++</span></a>';}
-if($input == 'Shell'){echo '<a href="http://junto.link/feed.php?subcat=Shell"><span class="label label-default">Shell</span></a>';}
-if($input == 'Java'){echo '<a href="http://junto.link/feed.php?subcat=Java"><span class="label label-default">Java</span></a>';}
-if($input == 'Ruby'){echo '<a href="http://junto.link/feed.php?subcat=Ruby"><span class="label label-default">Ruby</span></a>';}
-if($input == 'Objective-C'){echo '<a href="http://junto.link/feed.php?subcat=Objective-C"><span class="label label-default">Objective-C</span></a>';}
-if($input == 'Swift'){echo '<a href="http://junto.link/feed.php?subcat=Swift"><span class="label label-default">Swift</span></a>';}
-if($input == 'C#'){echo '<a href="http://junto.link/feed.php?subcat=C#"><span class="label label-default">C#</span></a>';}
-if($input == 'Debugging'){echo '<a href="http://junto.link/feed.php?subcat=Debugging"><span class="label label-default">Debugging Tools</span></a>';}
+if($input == 'Security'){echo '<a href="http://junto.link/home.php?subcat=Security"><span class="label label-default">Security</span></a>';}
+if($input == 'DataManagement'){echo '<a href="http://junto.link/home.php?subcat=DataManagement"><span class="label label-default">Data Management</span></a>';}
+if($input == 'Hosting'){echo '<a href="http://junto.link/home.php?subcat=Hosting"><span class="label label-default">Hosting</span></a>';}
+if($input == 'PHP'){echo '<a href="http://junto.link/home.php?subcat=PHP"><span class="label label-default">PHP</span></a>';}
+if($input == 'Python'){echo '<a href="http://junto.link/home.php?subcat=Python"><span class="label label-default">Python</span></a>';}
+if($input == 'ASP.NET'){echo '<a href="http://junto.link/home.php?subcat=ASP.NET"><span class="label label-default">ASP.NET</span></a>';}
+if($input == 'VBScript'){echo '<a href="http://junto.link/home.php?subcat=VBScript"><span class="label label-default">Visual Basic Script</span></a>';}
+if($input == 'SQL'){echo '<a href="http://junto.link/home.php?subcat=SQL"><span class="label label-default">SQL</span></a>';}
+if($input == 'C'){echo '<a  href="http://junto.link/home.php?subcat=C"><span class="label label-default">C</span></a>';}
+if($input == 'C++'){echo '<a href="http://junto.link/home.php?subcat=C++"><span class="label label-default">C++</span></a>';}
+if($input == 'Shell'){echo '<a href="http://junto.link/home.php?subcat=Shell"><span class="label label-default">Shell</span></a>';}
+if($input == 'Java'){echo '<a href="http://junto.link/home.php?subcat=Java"><span class="label label-default">Java</span></a>';}
+if($input == 'Ruby'){echo '<a href="http://junto.link/home.php?subcat=Ruby"><span class="label label-default">Ruby</span></a>';}
+if($input == 'Objective-C'){echo '<a href="http://junto.link/home.php?subcat=Objective-C"><span class="label label-default">Objective-C</span></a>';}
+if($input == 'Swift'){echo '<a href="http://junto.link/home.php?subcat=Swift"><span class="label label-default">Swift</span></a>';}
+if($input == 'C#'){echo '<a href="http://junto.link/home.php?subcat=C#"><span class="label label-default">C#</span></a>';}
+if($input == 'Debugging'){echo '<a href="http://junto.link/home.php?subcat=Debugging"><span class="label label-default">Debugging Tools</span></a>';}
 
 }
 
