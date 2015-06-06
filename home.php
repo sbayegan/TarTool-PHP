@@ -89,7 +89,7 @@ if(str == "BE"){document.getElementById("D1").innerHTML =
         \'<option value="Hosting">Hosting</option>\'+
         \'<option value="PHP">PHP</option>\'+
         \'<option value="Python">Python</option>\'+
-	\'<option value="ASP.NET">ASP.NET</option>\'+
+	\'<option value="ASPNET">ASP.NET</option>\'+
 	\'<option value="VBScript">Visual Basic Script</option>\'+
 	\'<option value="SQL">SQL</option>\'+
 	\'<option value="C">C</option>\'+
@@ -157,7 +157,7 @@ var BE =
         \'<option value="Hosting">Hosting</option>\'+
         \'<option value="PHP">PHP</option>\'+
         \'<option value="Python">Python</option>\'+
-	\'<option value="ASP.NET">ASP.NET</option>\'+
+	\'<option value="ASPNET">ASP.NET</option>\'+
 	\'<option value="VBScript">Visual Basic Script</option>\'+
 	\'<option value="SQL">SQL</option>\'+
 	\'<option value="C">C</option>\'+
