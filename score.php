@@ -2,6 +2,8 @@
 
 function score($i){
 
+echo $i.'---';
+
 include('datalogin.php');
 $result = $conn->query('SELECT * FROM RESOURCES WHERE RESOURCEID='.$i);
 $resource = mysqli_fetch_assoc($result);
