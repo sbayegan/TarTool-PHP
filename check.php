@@ -47,7 +47,48 @@ echo ' </div>';
 echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="http://junto.link/pictures/power-red.png" height="45" width="45"></a></span>';
 echo '</div>';
 
-
+echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:30px;width:150px;height:150px;z-index:9999;border:0px dashed black;">
+<a href="#submit" data-toggle="modal">
+<div style="position:relative;margin-left:20px;"><img src="http://junto.link/pictures/pencil.png" height="100" width="100">
+</div>
+<div style="position:relative;margin-top:10px;margin-left:20px">
+Submit Resource
+</div>
+</a>
+</div>';
+echo '
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:150px;border:0px dashed black;">
+<a href="library.php">
+<div style="position:relative;margin-left:20px;"><img src="http://junto.link/pictures/book.png" height="100" width="100">
+</div>
+<div style="position:relative;margin-top:-10px;margin-left:38px;">
+My library
+</div>
+</a>
+</div>
+';
+echo '
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:150px;border:0px dashed black;">
+<a href="check.php">
+<div style="position:relative;margin-left:20px;margin-right:auto;"><img src="http://junto.link/pictures/check.png" height="100" width="100">
+</div>
+<div style="position:relative;margin-top:10px;left:32px">
+My streams
+</div>
+</a>
+</div>
+';
+echo '
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:150px;border:0px dashed black;">
+<a href="account.php">
+<div style="display:block;position:relative;margin-left:20px;margin-right:auto;"><img src="http://junto.link/pictures/user.png" height="100" width="100">
+</div>
+<div style="position:relative;margin-top:10px;left:15px">
+<b>Account settings</b>
+</div>
+</a>
+</div>
+';
 
 echo '<div class="checklist">';
 echo '<form action="checklist.php" method="post">';
