@@ -108,7 +108,49 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:37px;margin-top:15px">';
     echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="float:right;margin-right:20px;margin-top:17px">';
     echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
-    echo '<img src="http://junto.link/pictures/basic.png" width="30" height="30" style="float:right;margin-right:22px;margin-top:19px">';
+
+    echo '<img src="http://junto.link/pictures/basic.png"  width="30" height="30" style="float:right;margin-right:22px;margin-top:19px">';
+    
+    if(isset($_COOKIE['junto'])){echo '<a href="#sign" data-toggle="modal">';}
+    else{
+    echo '
+<script>
+function favorite(cardid) {
+    id = "save-";
+    id += cardid';
+    //echo $i.'"';
+    echo '
+    document.getElementById("XXX").innerHTML = id;
+    document.getElementById(id).innerHTML = \'';
+    
+    echo '<a onclick="unfavorite('.$i.')" href="#">';
+    
+  
+    echo '<img src="http://junto.link/pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+
+    echo '</a>';
+ 
+    echo '\';
+
+
+
+
+}
+
+</script>
+    ';
+    echo '<div id="save-';
+    echo $i;
+    echo '">';
+
+
+    echo '<a onclick="favorite('.$i.')" href="#">';
+    }
+  
+    echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+
+    echo '</a>';
+    echo '</div>';
     //echo '<div style="position:absolute;left:4px;font-size:250%;margin-top:15px">'.'Score: '.$result['TOTALSCORE'].'</div>';
 
     echo '</div>';    

@@ -573,7 +573,9 @@ echo '
 <img src="http://junto.link/pictures/save.png" height="80" width="80" style="position:absolute;left:20px;top:460px">
 
 <div style="position:relative;left:105px;width:70px;height:380px;top:200px;border:0px dashed black;z-index:0;">
-<span style="display:block;margin-top:55px">Personalize</span> <span style="display:block;margin-top:110px">Discover</span><span style="display:block;margin-top:83px">Save</span>
+<span style="display:block;margin-top:55px" id="XXX">Personalize</span>
+<span style="display:block;margin-top:110px">Discover</span>
+<span style="display:block;margin-top:83px">Save</span>
 </div>
 </div>';
 }
@@ -664,6 +666,7 @@ echo '<div class="feed-column">';
 
 echo '
 ';
+if(isset($_COOKIE['junto'])){
 $query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
 $result = $conn->query($query);
 while($card = mysqli_fetch_assoc($result)){
@@ -675,17 +678,19 @@ while($temp = mysqli_fetch_assoc($cats)){
 $match = $conn->query('select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST="'.$temp['SUB'].'"');
 
 if($match->num_rows > 0){card($card['RESOURCEID']);break;}
+}
 
 }
 }
-//card(13);
-//card(12);
-//card(6);
-//card(10);
-//card(9);
-//card(8);
-//card(7);
-
+else{
+card(13);
+card(12);
+card(6);
+card(10);
+card(9);
+card(8);
+card(7);
+}
 
 
 echo'</div>';
