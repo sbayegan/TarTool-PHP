@@ -113,32 +113,6 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     
     if(isset($_COOKIE['junto'])){echo '<a href="#sign" data-toggle="modal">';}
     else{
-    echo '
-<script>
-function favorite(cardid) {
-    id = "save-";
-    id += cardid';
-    //echo $i.'"';
-    echo '
-    document.getElementById("XXX").innerHTML = id;
-    document.getElementById(id).innerHTML = \'';
-    
-    echo '<a onclick="unfavorite('.$i.')" href="#">';
-    
-  
-    echo '<img src="http://junto.link/pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
-
-    echo '</a>';
- 
-    echo '\';
-
-
-
-
-}
-
-</script>
-    ';
     echo '<div id="save-';
     echo $i;
     echo '">';
