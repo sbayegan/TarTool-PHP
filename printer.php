@@ -109,8 +109,8 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="float:right;margin-right:20px;margin-top:17px">';
     echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
 
-    echo '<img src="http://junto.link/pictures/basic.png"  width="30" height="30" style="float:right;margin-right:22px;margin-top:19px">';
-     echo '<div id="save-';
+    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+     echo '<div style="" id="save-';
     echo $i;
     echo '">';
 
@@ -132,10 +132,10 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     echo '<div class="numbers">';
     //echo '<div style="position:absolute;left:4px;font-size:120%">'.'Score: <b>'.$result['TOTALSCORE'].'</b></div>';
-    echo '<div style="position:absolute;left:264px;font-size:110%">'.$result['LIKES'].'</div>';
-    echo '<div style="position:absolute;left:307px;font-size:110%">'.$result['LINKEDIN'].'</div>';
-    echo '<div style="position:absolute;left:365px;font-size:110%">'.$result['TWITTER'].'</div>';
-    echo '<div style="position:absolute;margin-left:424px;font-size:110%">'.$result['FACEBOOK'].'</div>';
+    //echo '<div style="position:absolute;left:100px;font-size:110%">'.$result['LIKES'].'</div>';
+    echo '<div style="position:absolute;left:100px;font-size:110%">'.$result['LINKEDIN'].'</div>';
+    echo '<div style="position:absolute;left:140px;font-size:110%">'.$result['TWITTER'].'</div>';
+    echo '<div style="position:absolute;margin-left:190px;font-size:110%">'.$result['FACEBOOK'].'</div>';
     
     
    
