@@ -110,20 +110,21 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
 
     echo '<img src="http://junto.link/pictures/basic.png"  width="30" height="30" style="float:right;margin-right:22px;margin-top:19px">';
-    
-    if(isset($_COOKIE['junto'])){echo '<a href="#sign" data-toggle="modal">';}
-    else{
-    echo '<div id="save-';
+     echo '<div id="save-';
     echo $i;
     echo '">';
 
 
-    echo '<a onclick="favorite('.$i.')" href="#">';
+    if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
+    else{
+
+
+    echo '<span onclick="favorite('.$i.')">';
     }
   
     echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
 
-    echo '</a>';
+    echo '</span>';
     echo '</div>';
     //echo '<div style="position:absolute;left:4px;font-size:250%;margin-top:15px">'.'Score: '.$result['TOTALSCORE'].'</div>';
 
@@ -153,7 +154,7 @@ echo '<div class="box-stats" style="background-color:';
      else{echo 'red';}
 
     echo')">';
-    echo '<div style="position:absolute;right:50px;font-size:150%;margin-top:4px;color:#636363">'.'social score: <span class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</span></div>';
+    echo '<div style="position:absolute;right:50px;font-size:150%;margin-top:4px;color:#636363">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';
     echo '<div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">'.''.$result['MEDIUM'].'</div>';
 //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
@@ -178,7 +179,7 @@ echo '<div class="minicard-profile">';
 echo '</div>';
 
 echo '<div class="minicard-delete">';
-	echo '<img src="pictures/cross.png" height="18" width="18">';
+	echo '<img src="pictures/cross-red.png" height="18" width="18">';
 echo '</div>';
 
 echo '<div class="minicard-title">';
