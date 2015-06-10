@@ -427,9 +427,7 @@ echo '
 </a>
 </div>
 ';
-
-</div>
-';
+echo '</div>';
 
 echo '<div class="checklist">';
 echo '<form action="checklist.php" method="post">';
