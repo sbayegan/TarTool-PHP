@@ -426,7 +426,7 @@ echo '</div>';
 if(isset($_COOKIE['junto'])){
 }
 echo '
-<div style="position:fixed;left:20%;margin-bottom:185px;top:85px;width:100%;height:90%;overflow:scroll;background-color: white">
+<div style="position:fixed;left:150px;margin-bottom:185px;top:85px;width:calc(100% - 0px);margin-right:200px;height:90%;overflow:scroll;background-color: white">
 	<div class="shelve">
 ';
 

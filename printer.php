@@ -114,24 +114,45 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '">';
     if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
     else{
+    $query = "SELECT * FROM VOTES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
+    //echo $query;
+    $appd = $conn->query($query);
+      if($appd->num_rows == 0){
     echo '<span onclick="approve('.$i.')">';
+    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+				}
+      else{
+    echo '<span>';
+          }
     }
 
-    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+   
     echo '</span>';
     echo '</div>';
     echo '<div style="" id="save-';
     echo $i;
     echo '">';
 
-    if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
+    if(!isset($_COOKIE['junto'])){
+    echo '<span href="#sign" data-toggle="modal">';
+    echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+
+}
     else{
+    $query = "SELECT * FROM FAVOURITES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
+    $favorited = $conn->query($query);
+      if($favorited->num_rows == 0){
+                   echo '<span onclick="favorite('.$i.')">';
+                   echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+  				}
+       else{
+                   echo '<span onclick="unfavorite('.$i.')">';
+                   echo '<img src="http://junto.link/pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+           }
 
-
-    echo '<span onclick="favorite('.$i.')">';
     }
   
-    echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+    
 
     echo '</span>';
     echo '</div>';
