@@ -108,12 +108,21 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:37px;margin-top:15px">';
     echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="float:right;margin-right:20px;margin-top:17px">';
     echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
-
-    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
-     echo '<div style="" id="save-';
+    
+    echo '<div style="" id="approve-';
     echo $i;
     echo '">';
+    if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
+    else{
+    echo '<span onclick="approve('.$i.')">';
+    }
 
+    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+    echo '</span>';
+    echo '</div>';
+    echo '<div style="" id="save-';
+    echo $i;
+    echo '">';
 
     if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
     else{
