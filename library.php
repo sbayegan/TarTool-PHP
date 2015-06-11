@@ -458,31 +458,81 @@ if(isset($_COOKIE['junto'])){
 echo '
 <div style="position:fixed;left:150px;margin-bottom:185px;top:90px;width:calc(100% - 0px);margin-right:200px;height:90%;overflow:scroll;background-color: white">
 <div class="shelve-title">Website/Tools</div>
-	<div class="shelve">
+	<div class="shelve" style="background-color:#FFDAA3">
 ';
+$query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
+//echo $query;
+$result = $conn->query($query);
+while($item = mysqli_fetch_assoc($result)){
+$query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Website'";
+$bit = $conn->query($query);
+if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
+
+}
+
 
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
-minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
+//minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 
 
 echo '
 </div>
 <div class="shelve-title">Video/Audio</div>
 
-	<div class="shelve" style="background-color:#FFDAA3;">';
-minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
+	<div class="shelve">';
+//minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
+$query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
+//echo $query;
+$result = $conn->query($query);
+while($item = mysqli_fetch_assoc($result)){
+$query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Video/Audio'";
+$bit = $conn->query($query);
+if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
+}
+
 
 echo '</div>';
 echo '<div class="shelve-title">Blogs</div>';
 echo '<div class="shelve" style="background-color:#FF9933;">';
+
+$query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
+//echo $query;
+$result = $conn->query($query);
+while($item = mysqli_fetch_assoc($result)){
+$query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Blog'";
+$bit = $conn->query($query);
+if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
+}
+
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Books</div>';
 echo '<div class="shelve" style="background-color:#FFACE3;">';
+
+
+$query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
+//echo $query;
+$result = $conn->query($query);
+while($item = mysqli_fetch_assoc($result)){
+$query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Book'";
+$bit = $conn->query($query);
+if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
+}
+
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Twitter Influencers</div>';
 echo '<div class="shelve" style="background-color:#A3D1FF;">';
+
+$query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
+//echo $query;
+$result = $conn->query($query);
+while($item = mysqli_fetch_assoc($result)){
+$query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Influencer'";
+$bit = $conn->query($query);
+if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
+}
+
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 
