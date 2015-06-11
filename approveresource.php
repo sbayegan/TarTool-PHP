@@ -26,14 +26,5 @@ $query = "UPDATE RESOURCES SET CONFIRMED=0 WHERE RESOURCEID=$id AND HASH=$hash";
 $conn->query($query); // Execute it
 echo "De-activated"; // Report the result
 }
-
-
-
-
-
-
-
-echo "<html><br></html>";
-echo "HI";
-$conn->close();
+$conn->close(); // close the connection
 ?>
