@@ -26,4 +26,4 @@ to this script, they may in fact abuse their own account on our database.
             echo '1';// return 1 to the caller
                               }//if(isset($_POST['id']))
       }//else
-?>
+?> 
