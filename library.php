@@ -23,6 +23,27 @@ echo '
 		$("#myModal").modal(\'show\');
 	});
 </script>
+<script>
+function removemini(id){
+
+ 	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+ 				var name = "mini-";
+				name += id;
+				var element = document.getElementById(name);
+				element.parentNode.removeChild(element);
+                                            }
+     								}
+   						}
+         
+        xmlhttp.open("POST", "unfavorite.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("id="+id);
+
+			}
+</script>
 ';
 echo '
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -435,7 +456,8 @@ echo '</div>';
 if(isset($_COOKIE['junto'])){
 }
 echo '
-<div style="position:fixed;left:150px;margin-bottom:185px;top:85px;width:calc(100% - 0px);margin-right:200px;height:90%;overflow:scroll;background-color: white">
+<div style="position:fixed;left:150px;margin-bottom:185px;top:90px;width:calc(100% - 0px);margin-right:200px;height:90%;overflow:scroll;background-color: white">
+<div class="shelve-title">Website/Tools</div>
 	<div class="shelve">
 ';
 
@@ -445,16 +467,21 @@ minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 
 echo '
 </div>
+<div class="shelve-title">Video/Audio</div>
+
 	<div class="shelve" style="background-color:#FFDAA3;">';
 minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 
 echo '</div>';
+echo '<div class="shelve-title">Blogs</div>';
 echo '<div class="shelve" style="background-color:#FF9933;">';
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
+echo '<div class="shelve-title">Books</div>';
 echo '<div class="shelve" style="background-color:#FFACE3;">';
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
+echo '<div class="shelve-title">Twitter Influencers</div>';
 echo '<div class="shelve" style="background-color:#A3D1FF;">';
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';

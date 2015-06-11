@@ -200,16 +200,21 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 $firsttag = mysqli_fetch_assoc($tags);
-echo'<div class="minicard">';
+echo'<div class="minicard" id="mini-';echo $i;echo '">';
 
 echo '<div class="minicard-profile">';
-	echo ' <img src="';   
-	echo $result['PROFILEPICTURE'];
-	echo '" width="180" height="180" > ';
+//	echo '<span onclick="removemini(';echo$i;echo ')">';
+		echo ' <img src="';   
+		echo $result['PROFILEPICTURE'];
+		echo '" width="180" height="180" > ';
+//	echo '</span>';
 echo '</div>';
 
 echo '<div class="minicard-delete">';
+	echo '<span onclick="removemini(';echo$i;echo ')">';
+
 	echo '<img src="pictures/cross-red.png" height="18" width="18">';
+	echo '</span>';
 echo '</div>';
 
 echo '<div class="minicard-title">';
