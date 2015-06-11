@@ -13,23 +13,9 @@ echo "Junto Home";
 echo "</title>";
 echo '
 <script src="JS/code.js"></script>
+
 <script>
 
-function approve(cardid) {
-   var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-	              id = "approve-";
-	              id += cardid;
-                      document.getElementById(id).innerHTML= "";
-                    }
-     }
-   }         
-        xmlhttp.open("POST", "approve.php", true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("id="+cardid);
-}
 	</script>';
 echo '
 <script>
