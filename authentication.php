@@ -278,8 +278,6 @@ echo '</div>';
 
 echo '</div>';
 echo '</body>';
-
-
 $conn->close();
 echo' </html>';
 ?>
