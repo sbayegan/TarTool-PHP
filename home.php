@@ -12,6 +12,7 @@ echo "<title>";
 echo "Junto Home";
 echo "</title>";
 echo '
+<script src="JS/code.js"></script>
 <script>
 
 function approve(cardid) {
