@@ -14,7 +14,9 @@ function favorite(cardid) {
                     }
      }
    }         
-        xmlhttp.open("POST", "favorite.php", true);
+
+        document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";
+	xmlhttp.open("POST", "favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
 }
@@ -29,7 +31,9 @@ function approve(cardid) {
                       document.getElementById(id).innerHTML= "";
                     }
      }
-   }         
+   }    
+ 
+	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";    
         xmlhttp.open("POST", "approve.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
@@ -49,7 +53,7 @@ function unfavorite(cardid) {
                 			}
      								}
    					        }         
-
+	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";
         xmlhttp.open("POST", "unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
