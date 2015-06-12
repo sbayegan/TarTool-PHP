@@ -673,8 +673,8 @@ echo '> Debugging Tools';
 echo '</div>';
 
 echo '<div class="check-button">';
-echo '<a href="home.php" class="btn btn-default" style="margin-right:20px">cancel</a>';
-echo '<input type="submit" name="Save and Render" class="btn btn-danger" value="submit">';
+echo '<a href="home.php" class="btn btn-default" style="margin-right:20px">Cancel</a>';
+echo '<input type="submit" name="Save and Render" class="btn btn-danger" value="Submit">';
 echo '</div>';
 
 

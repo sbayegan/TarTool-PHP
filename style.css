@@ -67,7 +67,7 @@ position: absolute;
 left:1%;
 width:32%;
 top: 15%;
-height: 70%;
+height: 75%;
 //border: 1px dotted grey;
 overflow: scroll;
 //z-index: 2;
@@ -139,7 +139,7 @@ margin-left:auto;
 margin-right:auto;
 border-radius: 1px;
 //display:block;
-//border: 1px solid #E6E6E6;
+border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
 height: 500px;
 width: 500px;
@@ -475,7 +475,7 @@ font-size: 100%;
 padding-left: 10px;
 }
 
-
+/*
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     height:5px;
@@ -485,4 +485,4 @@ padding-left: 10px;
     border-radius: 8px;
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.1);
-}
+}*/
