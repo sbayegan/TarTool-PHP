@@ -33,7 +33,7 @@ function approve(cardid) {
      }
    }    
  
-	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";    
+	document.getElementById("approve-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='position:absolute;left:65px;margin-top:15px;'>";    
         xmlhttp.open("POST", "approve.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
