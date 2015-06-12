@@ -98,9 +98,9 @@ overflow: scroll;
 .check-button{
 position : absolute;
 top: 90%;
-left: 45%;
+left: 35%;
 right: 45%;
-height: 5%;
+height: 40px;
 //border: 1px dashed grey;
 }
 .stick-to-top{

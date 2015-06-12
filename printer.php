@@ -105,9 +105,10 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo $result['DESCRIPTION'];
     echo'</div></a>';
     echo '<div class="score">';
-    echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:37px;margin-top:15px">';
-    echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="float:right;margin-right:20px;margin-top:17px">';
-    echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="float:right;margin-right:25px;margin-top:16px">';
+    echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">';
+    echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">';
+    echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">';
+//    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
     echo '<div style="" id="approve-';
     echo $i;
@@ -163,10 +164,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<div class="numbers">';
     //echo '<div style="position:absolute;left:4px;font-size:120%">'.'Score: <b>'.$result['TOTALSCORE'].'</b></div>';
     //echo '<div style="position:absolute;left:100px;font-size:110%">'.$result['LIKES'].'</div>';
-    echo '<div style="position:absolute;left:100px;font-size:110%">'.$result['LINKEDIN'].'</div>';
-    echo '<div style="position:absolute;left:140px;font-size:110%">'.$result['TWITTER'].'</div>';
-    echo '<div style="position:absolute;margin-left:190px;font-size:110%">'.$result['FACEBOOK'].'</div>';
-    
+
+//    echo '<div style="position:absolute;left:20px;width:60px;text-align:center;font-size:110%;border: 0px dashed red;">'.$result['GOOGLEPLUS'].'</div>';
+    echo '<div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['LINKEDIN'].'</div>';
+    echo '<div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['TWITTER'].'</div>';
+    echo '<div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['FACEBOOK'].'</div>';  
     
    
 
@@ -193,6 +195,8 @@ echo '<div class="box-stats" style="background-color:';
 
 echo '</div>';
 }
+
+
 function minicard($i){
 include ('datalogin.php');
 $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
