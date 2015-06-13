@@ -142,10 +142,40 @@ echo '
 </a>
 </div>
 ';
-
-
 echo '</div>';
+$query = "SELECT * FROM USERS WHERE USERID=".$_COOKIE['junto'];
+$result = $conn->query($query);
+$user = mysqli_fetch_assoc($result);
 
+
+echo '<div class="setting">';
+	echo '<form action="account.php" method="post" id="form" autocomplete="off">';
+		echo '<div class="form-group">';
+			echo '<label for="full_name">Name</label>';
+			echo '<input type="text" name="full_name" value="';
+				echo $user['NAME'];
+			echo '" id="full_name" class="form-control">';
+		echo '</div>';
+		echo '<div class="form-group">';
+			echo '<label for="full_name">E-mail</label>';
+			echo '<input type="email" name="full_name" value="';
+				echo $user['EMAIL'];
+			echo '" id="full_name" class="form-control">';
+		echo '</div>';
+		echo '<div class="form-group">';
+			echo '<label for="full_name">Username:</label>';
+			echo '<input type="text" name="full_name" value="';
+				echo $user['USERNAME'];
+			echo '" id="full_name" class="form-control">';
+		echo '</div>';
+		echo '<div class="form-group">';
+			echo '<span  onclick="show-fields" class="btn btn-default btn-sm" style="margin-left:40px;margin-bottom:30px;">Change Password</span>';
+		echo '</div>';
+			echo '<span  onclick="show-fields" class="btn btn-default" style="margin-left:20px;">Cancel</span>';
+			echo '<span  onclick="show-fields" class="btn btn-danger" style="margin-left:30px;">Update</span>';
+
+	echo '</form>';
+echo '</div>';
 
 
 
