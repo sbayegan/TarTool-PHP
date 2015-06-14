@@ -74,11 +74,11 @@ if(isset($_POST['Swift'])){remove($userid,'Swift');add($userid,'Swift');}else{re
 if(isset($_POST['C#'])){remove($userid,'C#');add($userid,'C#');}else{remove($userid,'C#');}
 if(isset($_POST['Debugging'])){remove($userid,'Debugging');add($userid,'Debugging');}else{remove($userid,'Debugging');}
 
-header ('Location: http://junto.link/home.php');
+header ('Location: http://www.tartool.com/home.php');
 
 }
 else{
-header ('Location: http://junto.link/authentication.php');
+header ('Location: http://www.tartool.com/authentication.php');
 }
 
 

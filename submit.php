@@ -81,7 +81,7 @@ if(isset($_GET['subcat5']) && !empty($_GET['subcat5'])){
 
 $to = "saeidjobs@gmail.com";
 $subject = "Approve Submitted Resource";
-$header = "From: submission@junto.link \r\n";
+$header = "From: submission@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 <!DOCTYPE html>
@@ -110,8 +110,8 @@ A new resource has been submitted with the following information:<br><br>
 Plese note that duplicates subcategories are already removed by the code<br>
 You can activate and de-activate the resource using the following two links<br>
 <br>
-<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=active' > Approve this submition </a><br><br><br>
-<a href='http://junto.link/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Undo Approval </a><br>
+<a href='http://www.tartool.com/approveresource.php?hash=$hash&id=$resourceid&status=active' > Approve this submition </a><br><br><br>
+<a href='http://www.tartool.com/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Undo Approval </a><br>
 <br>
 Cheers, <br>
 Junto team<br>

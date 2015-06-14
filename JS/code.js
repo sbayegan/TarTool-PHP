@@ -9,7 +9,7 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img src=\'http://junto.link/pictures/cross-red.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>"
+                      output += ")\'  > <img src=\'pictures/cross-red.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>"
                       document.getElementById(id).innerHTML= output;
                     }
      }
@@ -48,7 +48,7 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img src=\'http://junto.link/pictures/save.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>";
+        		output += ")\'    > <img src=\'pictures/save.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}

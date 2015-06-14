@@ -371,14 +371,14 @@ echo ' </div>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:250px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="http://junto.link/pictures/power-red.png" height="45" width="45"></a></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 echo '</div>';
 
 echo'
 <div class="slider">';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
 <a href="home.php" >
-<div style="position:relative;margin-left:40px;"><img src="http://junto.link/pictures/glasses.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
 Feed
@@ -387,7 +387,7 @@ Feed
 </div>';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
 <a href="#submit" data-toggle="modal">
-<div style="position:relative;margin-left:40px;"><img src="http://junto.link/pictures/pencil.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
 Submit<br> Resource
@@ -397,7 +397,7 @@ Submit<br> Resource
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="library.php">
-<div style="position:relative;margin-left:40px;margin-top:25px"><img src="http://junto.link/pictures/book.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:-10px;text-align:center;">
 My library
@@ -408,7 +408,7 @@ My library
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="check.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="http://junto.link/pictures/check.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;text-align:center">
 My streams
@@ -419,7 +419,7 @@ My streams
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
 <a href="account.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="http://junto.link/pictures/user.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/user.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;text-align:center">
 <b>Account<br>settings</b>
@@ -675,12 +675,21 @@ echo '</div>';
 echo '<div class="check-button">';
 echo '<a href="home.php" class="btn btn-default" style="margin-right:20px">Cancel</a>';
 echo '<input type="submit" name="Save and Render" class="btn btn-danger" value="Submit">';
+
 echo '</div>';
-
-
-
-
-
+	echo '<div style="float:bottom;margin-left:0;height:40px;border:0px dashed red;">';
+		echo '<div class="form-inline">
+			  <div class="form-group">
+			    <label for="exampleInputName2">Name</label>
+			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			  </div>
+			  <div class="form-group" style="margin-left:150px;">
+			    <label for="exampleInputEmail2">Email</label>
+			    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			  </div>
+			  <span href="#password" data-toggle="modal" class="btn btn-danger btn-sm" style="margin-left:20px;">Change Password</span>
+			</div>';
+	echo '</div>';
 echo '</form>';
 echo '</div>';
 
@@ -778,6 +787,40 @@ echo '
         </div>
     </div>
 </div>
+<div id="password" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="text-align:center;">Change Password</h4>
+            </div>
+            <div class="modal-body">
+                <form  class="form-group" role="form" action="updatepassword.php" method="get">
+                	<div class="form-group">
+                		<label for="password1">Old Password:</label>
+                			<input type="Password" name="password1" id="password1"   class="form-control"/>
+                		<span id="title-status"></span> 
+				<br>
+				<label for="password2">New Password:</label>
+                			<input type="Password" name="password2" id="password2"   class="form-control" disabled/>
+                		<span id="title-status"></span> 
+				<label for="password3">Re-type New Password:</label>
+                			<input type="Password" name="password3" id="password3"   class="form-control" disabled/>
+                		<span id="title-status"></span> 
+
+
+                	</div>
+                		<p class="text-warning"><small></small></p>
+            	<div class="modal-footer">
+                <input type="submit" value="update" class="btn btn-danger" id="submit_bt" disabled > 
+            	</div>
+
+            </div>
+                 </form>
+        </div>
+    </div>
+</div>
+
 <div id="feedback" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">

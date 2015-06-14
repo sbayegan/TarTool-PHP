@@ -105,9 +105,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo $result['DESCRIPTION'];
     echo'</div></a>';
     echo '<div class="score">';
-    echo '<img src="http://junto.link/pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">';
-    echo '<img src="http://junto.link/pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">';
-    echo '<img src="http://junto.link/pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">';
+    echo '<img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">';
+    echo '<img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">';
+    echo '<img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">';
 //    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
     echo '<div style="" id="approve-';
@@ -120,7 +120,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     $appd = $conn->query($query);
       if($appd->num_rows == 0){
     echo '<span onclick="approve('.$i.')">';
-    echo '<img src="http://junto.link/pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+    echo '<img src="pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
 				}
       else{
     echo '<span>';
@@ -136,7 +136,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     if(!isset($_COOKIE['junto'])){
     echo '<span href="#sign" data-toggle="modal">';
-    echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+    echo '<img src="pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
 
 }
     else{
@@ -144,11 +144,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     $favorited = $conn->query($query);
       if($favorited->num_rows == 0){
                    echo '<span onclick="favorite('.$i.')">';
-                   echo '<img src="http://junto.link/pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+                   echo '<img src="pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="http://junto.link/pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+                   echo '<img src="pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
            }
 
     }

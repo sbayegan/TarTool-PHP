@@ -64,7 +64,7 @@ $conn->query($query);
 // send an email to the client
 $to = $email;
 $subject = "Activate your account";
-$header = "From: general@junto.link \r\n";
+$header = "From: general@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 
@@ -72,25 +72,25 @@ $message = "
 <html>
 <head>
 <title>
-activate
+Activate Your TarTool Account
 </title>
 </head>
 <body>
 <p>
 
-Welcome $name <br>
+Welome $name <br>
 <br>
 
 <b>Just one more step ...</b> <br>
 <br>
 Click on the link below to activate your Junto account.<br>
 <br>
-<a href='http://junto.link/verify.php?code=$hash&id=$userid' > Activate Your Account </a>
+<a href='http://www.tartool.com/verify.php?code=$hash&id=$userid' > Activate Your Account </a>
 <br>
 <br>
 Cheers, <br>
 Junto team<br>
-<img src='http://junto.link/pictures/logo.png' alt='logo'/> <br>
+<img src='http://www.tartool.com/pictures/logo.png' alt='logo'/> <br>
 </p>
 </body>
 </html>

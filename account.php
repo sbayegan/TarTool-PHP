@@ -171,7 +171,7 @@ echo '<div class="setting">';
 		echo '<div class="form-group">';
 			echo '<span  onclick="show-fields" class="btn btn-default btn-sm" style="margin-left:40px;margin-bottom:30px;">Change Password</span>';
 		echo '</div>';
-			echo '<span  onclick="show-fields" class="btn btn-default" style="margin-left:20px;">Cancel</span>';
+			echo '<a  href="home.php" class="btn btn-default" style="margin-left:20px;">Cancel</a>';
 			echo '<span  onclick="show-fields" class="btn btn-danger" style="margin-left:30px;">Update</span>';
 
 	echo '</form>';
