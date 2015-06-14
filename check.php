@@ -497,7 +497,7 @@ echo '
                 <form  class="form-group" role="form" action="updatepassword.php" method="get">
                 	<div class="form-group">
                 		<label for="password1">Old Password:</label>
-                			<input type="Password" name="password1" id="password1"   class="form-control"/>
+                			<input type="Password" name="password1" id="password1"  class="form-control" onkeyup="check-passcheck(this.value)"/>
                 		<span id="title-status"></span> 
 				<br>
 				<label for="password2">New Password:</label>

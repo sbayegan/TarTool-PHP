@@ -325,8 +325,31 @@ function passcheck(str) {
         xmlhttp.send("pass="+str);
 }
 
+/*
+function check-passcheck(str) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("pass-status").innerHTML = "good";
+                  pass = 1;
+                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                  {document.getElementById("submit_btn").disabled = false;}
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("pass-status").innerHTML = "too short";
+                  pass = 0;
+                  {document.getElementById("submit_btn").disabled = true;}
+                }
+            }
+        }
+        xmlhttp.open("POST", "passwordcheck.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("pass="+str);
+}
 
 
+*/
 
 
 

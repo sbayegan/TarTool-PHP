@@ -1,15 +1,15 @@
 <?php
 
 function linky($input){
-if($input == 'LeanStartup'){echo '<a href="http://junto.link/home.php?subcat=LeanStartup"><span class="label label-default">Lean Startup</span></a>';}
-if($input == 'MarketingAndResearch'){echo '<a href="http://junto.link/home.php?subcat=MarketingAndResearch"><span class="label label-default">Marketing & Research</span></a>';}
-if($input == 'Naming'){echo '<a href="http://junto.link/home.php?subcat=Naming"><span class="label label-default">Naming</span></a>';}
-if($input == 'CopyWriting'){echo '<a href="http://junto.link/home.php?subcat=CopyWriting"><span class="label label-default">Copywriting</span></a>';}
-if($input == 'UserFeedback'){echo '<a href="http://junto.link/home.php?subcat=UserFeedback"><span class="label label-default">User Feedback</span></a>';}
-if($input == 'Analytics'){echo '<a href="http://junto.link/home.php?subcat=Analytics"><span class="label label-default">Analytics</span></a>';}
-if($input == 'SocialMediaCommunity'){echo '<a href="http://junto.link/home.php?subcat=SocialMediaCommunity"><span class="label label-default">Social Media & Community</span></a>';}
-if($input == 'Launching'){echo '<a href="http://junto.link/home.php?subcat=Launching"><span class="label label-default">Launching</span></a>';}
-if($input == 'SEO'){echo '<a href="http://junto.link/home.php?subcat=SEO"><span class="label label-default">SEO</span></a>';}
+if($input == 'LeanStartup'){echo '<a href="http://tartool.com/home.php?subcat=LeanStartup"><span class="label label-default">Lean Startup</span></a>';}
+if($input == 'MarketingAndResearch'){echo '<a href="http://tartool.com/home.php?subcat=MarketingAndResearch"><span class="label label-default">Marketing & Research</span></a>';}
+if($input == 'Naming'){echo '<a href="http://tartool.com/home.php?subcat=Naming"><span class="label label-default">Naming</span></a>';}
+if($input == 'CopyWriting'){echo '<a href="http://tartool.com/home.php?subcat=CopyWriting"><span class="label label-default">Copywriting</span></a>';}
+if($input == 'UserFeedback'){echo '<a href="http://tartool.com/home.php?subcat=UserFeedback"><span class="label label-default">User Feedback</span></a>';}
+if($input == 'Analytics'){echo '<a href="http://tartool.com/home.php?subcat=Analytics"><span class="label label-default">Analytics</span></a>';}
+if($input == 'SocialMediaCommunity'){echo '<a href="http://tartool.com/home.php?subcat=SocialMediaCommunity"><span class="label label-default">Social Media & Community</span></a>';}
+if($input == 'Launching'){echo '<a href="http://tartool.com/home.php?subcat=Launching"><span class="label label-default">Launching</span></a>';}
+if($input == 'SEO'){echo '<a href="http://tartool.com/home.php?subcat=SEO"><span class="label label-default">SEO</span></a>';}
 if($input == 'ProjectManagement'){echo '<a href="http://junto.link/home.php?subcat=ProjectManagement"><span class="label label-default">Project Management</span></a>';}
 if($input == 'CustomerService'){echo '<a href="http://junto.link/home.php?subcat=CustomerService"><span class="label label-default">Customer Service</span></a>';}
 if($input == 'InventoryManagement'){echo '<a href="http://junto.link/home.php?subcat=InventoryManagement"><span class="label label-default">Inventory Management</span></a>';}
@@ -204,6 +204,7 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 $firsttag = mysqli_fetch_assoc($tags);
+
 echo'<div class="minicard" id="mini-';echo $i;echo '">';
 
 echo '<div class="minicard-profile">';
@@ -220,6 +221,7 @@ echo '<div class="minicard-delete">';
 	echo '<img src="pictures/cross-red.png" height="18" width="18">';
 	echo '</span>';
 echo '</div>';
+echo '<a href="'.$result[URL].'" target="_blank">';
 
 echo '<div class="minicard-title">';
     echo '<b>';
@@ -240,8 +242,8 @@ echo '<div class="minicard-tags">';
     while($firsttag = mysqli_fetch_assoc($tags)){echo ' ';linky($firsttag['SUB']);}
 
 echo '</div>';
-
 echo '</div>';
+echo '</a>';
 }
 
 

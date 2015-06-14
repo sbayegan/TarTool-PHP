@@ -375,13 +375,13 @@ if(isset($_COOKIE['junto'])){
 //echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="http://junto.link/pictures/power-red.png" height="45" width="45"></a></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 }
 else{
 //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
+echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
 }
  
 echo '</div>';
@@ -401,7 +401,7 @@ echo '
 else{
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
 <a href="home.php">
-<div style="position:relative;margin-left:40px;"><img src="http://junto.link/pictures/glasses.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
 Feed
@@ -410,7 +410,7 @@ Feed
 </div>';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
 <a href="#submit" data-toggle="modal">
-<div style="position:relative;margin-left:40px;"><img src="http://junto.link/pictures/pencil.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
 Submit<br> Resource
@@ -420,7 +420,7 @@ Submit<br> Resource
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="library.php">
-<div style="position:relative;margin-left:40px;margin-top:25px"><img src="http://junto.link/pictures/book.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:-10px;text-align:center;">
 My library
@@ -431,7 +431,7 @@ My library
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="check.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="http://junto.link/pictures/check.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;text-align:center">
 My streams
@@ -442,7 +442,7 @@ My streams
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
 <a href="account.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="http://junto.link/pictures/user.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/user.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;text-align:center">
 <b>Account<br>settings</b>
