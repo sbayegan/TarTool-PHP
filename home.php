@@ -394,7 +394,7 @@ echo '
 
 
 
-<form  class="form-asd" role="form" action="submit.php" method="get">
+<form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
    
 
    <div class="form-group">
@@ -418,7 +418,7 @@ echo '
   
    <div class="form-group">
    <label for="type">Medium: </label> 
-   <select name="type" form="form" class="form-control">
+   <select name="type"  class="form-control">
     <option value="Video/Audio">Video</option>
     <option value="Website">Website/Tool</option>
     <option value="Influencer">Twitter influencer</option>
@@ -431,14 +431,14 @@ echo '
      <div id="adder" class="form-group">
        <div>
        <label for="cat"> Category: </label> 
-          <select name="cat" form="form" onchange="update(this.value)" class="form-control">
+          <select name="cat"  onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
           </select>
 
           <label > Sub-category: </label>  
-          <select name="subcat1" form="form" id="D1" class="form-control"> 
+          <select name="subcat1"  id="D1" class="form-control"> 
           <option value="">Choose One</option>
           <option value="LeanStartup">Lean Startup</option>
           <option value="MarketingAndResearch">Marketing & Research</option>

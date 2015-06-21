@@ -140,7 +140,7 @@ if(str == "BD"){document.getElementById("D1").innerHTML =
 }
 function add() {
 var FE = 
-	'<select name="subcat' + lastused + '" form="form" class="form-control" id=lastused>'+
+	'<select name="subcat' + lastused + '"  class="form-control" id=lastused>'+
 	'<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
@@ -162,7 +162,7 @@ var FE =
         '<option value="Ajax">Ajax</option>'+
 	'</select>';
 var BE = 
-	'<select name="subcat'+ lastused +'" form="form" class="form-control" id=lastused>'+
+	'<select name="subcat'+ lastused +'"  class="form-control" id=lastused>'+
 	'<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
@@ -183,7 +183,7 @@ var BE =
         '<option value="Debugging Tools">Debugging</option>'+
 	'</select>';
 var BD = 
- 	'<select name="subcat'+ lastused + '" form="form" class="form-control" id=lastused>'+
+ 	'<select name="subcat'+ lastused + '"  class="form-control" id=lastused>'+
  	'<option value="">Choose One</option>'+
         '<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
