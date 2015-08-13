@@ -182,6 +182,7 @@ var Frame = 0;
                           // run our call for pagination
         		  //document.getElementById("test").innerHTML="Things are now changed";        
 	    		  loader(LastCard);
+			  numloader(LastCard);
 		}
             }); 
 

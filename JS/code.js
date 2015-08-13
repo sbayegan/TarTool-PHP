@@ -24,10 +24,8 @@ var xmlhttp = new XMLHttpRequest();
                 }
             }
         }
-        xmlhttp.open("POST", "loader.php", true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("id="+last);
-
+        xmlhttp.open("GET", "loader.php?last=" + last, true);
+        xmlhttp.send();
 }
 
 function favorite(cardid) {
