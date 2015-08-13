@@ -18,13 +18,23 @@ while($card = mysqli_fetch_assoc($result)){
 		//echo 'select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST='.$temp['SUB'].'----';
 			$match = $conn->query('select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST="'.$temp['SUB'].'"');
 			if($match->num_rows > 0){
-				card($card['RESOURCEID']);
+				//card($card['RESOURCEID']);
 				$final = $card['RESOURCEID'];
+				//echo $final;
 				$counter = $counter - 1;
 				break;}
 		}//while
 	}// if statement
 	if($counter == 0){
+		/*
+		echo'
+		<script type="text/javascript">
+		var LastCard=';	
+		//$date = new DateTime();
+		//echo time();
+		echo $final;
+		echo ';</script>';*/	
+		echo $final;
 		break;
 	}// if statement
 }
@@ -32,7 +42,9 @@ while($card = mysqli_fetch_assoc($result)){
 if($counter == 3 ){
 echo 0;
 }
-
+elseif($counter > 0){
+echo $final;
+}
 }
 
 

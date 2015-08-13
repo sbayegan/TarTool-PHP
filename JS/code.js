@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
 
 function loader(last){
 // First check to see if ended was set to 1, if so then do nothing
-document.getElementById("test").innerHTML="Things are now changed";
+if(Ended == 1){return;}
 
 // Else connect the to a file called loader.php, get the results
 // then create another child for feed and then put the results there
@@ -26,7 +26,7 @@ var xmlhttp = new XMLHttpRequest();
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 0){// Set Ended to 1 and then show a flag showing that there
                 // are no more cards to be displayed
-                Ender = 1;
+                Ended = 1;
                 var node = document.createElement("DIV");
 		node.setAttribute("id", "Frame"+Frame);
 		document.getElementById("feed").appendChild(node);

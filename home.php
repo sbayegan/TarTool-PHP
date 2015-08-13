@@ -184,14 +184,18 @@ var Frame = 0;
 	    		  loader(LastCard);
 			  numloader(LastCard);
 		}
-            }); 
+            });
+	    loader(LastCard);
+	    numloader(LastCard); 
 
 </script>';
 echo '
 <div id="test"></div>
 ';
 
+/*
 if(isset($_COOKIE['junto'])){
+
 $query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
 $result = $conn->query($query);
 while($card = mysqli_fetch_assoc($result)){
@@ -206,6 +210,7 @@ if($match->num_rows > 0){card($card['RESOURCEID']);break;}
 }
 
 }
+
 }
 
 
@@ -218,7 +223,7 @@ card(9);
 card(8);
 card(7);
 }
-
+*/
 
 echo'</div>';
 echo '
