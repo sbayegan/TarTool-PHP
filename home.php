@@ -200,6 +200,9 @@ var Ended = 0;
             }); 
 
 </script>';
+echo '
+<div id="test"></div>
+';
 
 if(isset($_COOKIE['junto'])){
 $query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
