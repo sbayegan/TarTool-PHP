@@ -190,7 +190,7 @@ $bigest = mysqli_fetch_assoc($result);
 echo $bigest['RESOURCEID'].';';
 echo'
 var Ended = 0;
-
+var Frame = 0;
             $(window).scroll(function(){
                     if  ($(window).scrollTop() == $(document).height() - $(window).height()){
                           // run our call for pagination
