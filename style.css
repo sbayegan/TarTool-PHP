@@ -26,7 +26,7 @@ left : 200px;
 right: 30px;
 height: 600px;
 //width: 600px;
-//border: 1px dashed red;
+border: 0px dashed red;
 //background-color: blue;
 z-index: 1;
 //overflow:scroll;
@@ -35,7 +35,7 @@ z-index: 1;
 position: absolute;
 left:1%;
 width:32%;
-top: 10%;
+top: 0%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -44,7 +44,7 @@ height: 5%;
 position: absolute;
 left:34%;
 width:32%;
-top: 10%;
+top: 0%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -54,7 +54,7 @@ height: 5%;
 position: absolute;
 left:67%;
 width:32%;
-top: 10%;
+top: 0%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -66,7 +66,7 @@ background-color: #FEFEFE;
 position: absolute;
 left:1%;
 width:32%;
-top: 15%;
+top: 5%;
 height: 75%;
 //border: 1px dotted grey;
 overflow: scroll;
@@ -79,7 +79,7 @@ background-color: #FEFEFE;
 position: absolute;
 left:34%;
 width:32%;
-top: 15%;
+top: 5%;
 height: 70%;
 //border: 1px dashed grey;
 overflow: scroll;
@@ -90,18 +90,18 @@ background-color: #FEFEFE;
 position: absolute;
 left:67%;
 width:32%;
-top: 15%;
+top: 5%;
 height: 70%;
 //border: 1px dashed grey;
 overflow: scroll;
 }
 .check-button{
 position : absolute;
-top: 90%;
-left: 35%;
-right: 45%;
-height: 40px;
-//border: 1px dashed grey;
+bottom: 10px;
+left: 0%;
+right: 0%;
+//height: 40px;
+border: 0px dashed grey;
 }
 .stick-to-top{
 box-shadow: 0px 1px 8px grey;
@@ -484,7 +484,7 @@ height: 500px;
 //border: 1px solid grey;
 padding: 20px;
 }
-
+/*
 ::-webkit-scrollbar {
     -webkit-appearance: none;
   height:5px;
@@ -495,3 +495,4 @@ padding: 20px;
  //   background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.1);
 }
+*/

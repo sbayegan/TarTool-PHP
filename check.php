@@ -370,25 +370,48 @@ if(interested($userid, "Debugging")==1){echo ' checked';}
 echo '> Debugging Tools';
 
 echo '</div>';
+//echo '<hr>';
 
 echo '<div class="check-button">';
-echo '<a href="home.php" class="btn btn-default" style="margin-right:20px">Cancel</a>';
-echo '<input type="submit" name="Save and Render" class="btn btn-danger" value="Submit">';
+echo '<hr>';
+echo '<a href="home.php" class="btn btn-default btn-sm" style="margin-right:4%;width:48%;">Cancel</a>';
+echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="width:48%;" value="Submit">';
 
 echo '</div>';
-	echo '<div style="float:bottom;margin-left:0;height:40px;border:0px dashed red;">';
+
+	echo '<div style="position:absolute;bottom:80px;left:0%;right:0%;border:0px dashed red;">';echo '<hr>';
 		echo '<div class="form-inline">
-			  <div class="form-group">
+			  <div class="form-group" style="margin-left:4%;">
 			    <label for="exampleInputName2">Name</label>
-			    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			    <input type="text" class="form-control" id="exampleInputName2" value="';
+
+$query ="Select NAME from USERS WHERE USERID=".$userid;
+$name = $conn->query($query);
+$name = mysqli_fetch_assoc($name);
+$name = $name['NAME'];
+echo $name;
+
+
+					echo '">
 			  </div>
-			  <div class="form-group" style="margin-left:150px;">
+			  <div class="form-group" style="position:absolute;left:37%;">
 			    <label for="exampleInputEmail2">Email</label>
-			    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			    <input type="email" class="form-control" id="exampleInputEmail2" value="';
+
+$query ="Select EMAIL from USERS WHERE USERID=".$userid;
+$email = $conn->query($query);
+$email = mysqli_fetch_assoc($email);
+$email = $email['EMAIL'];
+echo $email;
+
+
+
+					echo '">
 			  </div>
-			  <span href="#password" data-toggle="modal" class="btn btn-danger btn-sm" style="margin-left:20px;">Change Password</span>
+			  <span href="#password" data-toggle="modal" class="btn btn-warning btn-sm" style="position:absolute;right:10%;width:20%;">Change Password</span>
 			</div>';
 	echo '</div>';
+
 echo '</form>';
 echo '</div>';
 

@@ -1,22 +1,29 @@
 <?php
+// Copyright 2015, Saeid Bayeganeh, All rights reserved
+
+// Include the headers you need
+include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
+
+// Introduce HTML
 echo "<!DOCTYPE html>";
 echo "<html>";
 
-
-
+// HEADER ----------------------------------------------------------------------------------------------------------------
 echo "<head>";
 
+// Set the title of the page
 echo "<title>";
-echo "Junto Home";
+echo $UniversalName;
 echo "</title>";
+
+// Include the JavaScript code
 echo '<script src="JS/code.js"></script>';
 
-echo '
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
+// Include the headers associated wth bootstrap
+echo 
+'<link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -26,11 +33,11 @@ echo '
 	$(document).ready(function(){
 		$("#myModal").modal(\'show\');
 	});
-</script>
-';
+</script>';
 
-echo '
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+// Include the headers associated with jQuery
+echo 
+'<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
@@ -42,222 +49,58 @@ heightStyle: "content"
 }
 );
 });
-</script>
-';
-
-
- 
+</script>';
 echo "</head>";
 
+
 // BODY -----------------------------------------------------------------------------------------------------------------------
-// HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
+
 echo '<div class="stick-to-top">';
+	// LOGO
+	echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
-echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
+	if(isset($_COOKIE['junto'])){
+	//echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
+	//echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
+	//echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
+	echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
+	}
+	else{
+	//echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+	//echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+	//echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
+	echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
+	}
+	// A commented code snippet that gets the name of the user
+	/*
+	$value = $_COOKIE['junto'];
+	$result= $conn->query("SELECT * FROM USERS WHERE USERID=$value");
+	$result = mysqli_fetch_assoc($result);
+	$result = $result["NAME"];
+	*/
+echo '</div>';//stick-to-top
 
-if(isset($_COOKIE['junto'])){
-
-//echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
-//echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
-//echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
-}
-else{
-//echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-//echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-//echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
-}
-
- 
-/*
-echo '
-
-<div class="dropdown" style="position:relative;float:left;padding-left:2em;padding-right:1em" >
-    
-<button  type="button" id="" data-toggle="dropdown">';
-$value = $_COOKIE['junto'];
-$result= $conn->query("SELECT * FROM USERS WHERE USERID=$value");
-$result = mysqli_fetch_assoc($result);
-$result = $result["NAME"];
-
-//echo 'Hello, '.$result;
-*/
-
-echo '</div>';
-
-echo '<div class="slider">';
-/*
-echo '
-<div id="accordion">
-<h3>
-<a href="http://junto.link/feed.php?cat=BD"><b style="">Business Development</b></a><br>
-</h3>
-<div>
-<a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
-<a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
-<a href="http://junto.link/feed.php?subcat=Naming">Naming</a><br>
-<a href="http://junto.link/feed.php?subcat=CopyWriting">Copywriting</a><br>
-<a href="http://junto.link/feed.php?subcat=Analytics">Analytics</a><br>
-<a href="http://junto.link/feed.php?subcat=Launching">Launching</a><br>
-<a href="http://junto.link/feed.php?subcat=UserFeedback">User Feedback</a><br>
-<a href="http://junto.link/feed.php?subcat=SEO">SEO</a><br>
-<a href="http://junto.link/feed.php?subcat=SocialMediaCommunity">Social Media & Community</a><br>
-<a href="http://junto.link/feed.php?subcat=ProjectManagement">Project Management</a><br>
-<a href="http://junto.link/feed.php?subcat=CustomerService">Customer Service</a><br>
-<a href="http://junto.link/feed.php?subcat=InventoryManagement">Inventory Management</a><br>
-<a href="http://junto.link/feed.php?subcat=Sales">Sales</a><br>
-<a href="http://junto.link/feed.php?subcat=Funding">Funding </a><br>
-<a href="http://junto.link/feed.php?subcat=Administration">Administration</a><br>
-<a href="http://junto.link/feed.php?subcat=Productivity">Productivity</a><br>
-<a href="http://junto.link/feed.php?subcat=Outsourcing">Outsourcing</a><br>
-<a href="http://junto.link/feed.php?subcat=E-commerce">E-commerce</a><br>
-<a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators">Accelerators & Incubators </a><br>
-<a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
-</div>
-<h3>
-<a href="http://junto.link/feed.php?cat=FE"><b style="">Front-End Development</b></a>
-</h3>
-<div>
-<a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
-<a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
-<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
-<a href="http://junto.link/feed.php?subcat=HTML">HTML</a><br>
-<a href="http://junto.link/feed.php?subcat=CSS">CSS</a><br>
-<a href="http://junto.link/feed.php?subcat=JavaScript">JavaScript</a><br>
-<a href="http://junto.link/feed.php?subcat=Themes">Themes</a><br>
-<a href="http://junto.link/feed.php?subcat=Mobile">Mobile</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndiOS">iOS</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndAndroid">Android</a><br>
-<a href="http://junto.link/feed.php?subcat=Bootstrap">Bootstrap</a><br>
-<a href="http://junto.link/feed.php?subcat=XML">XML</a><br>
-<a href="http://junto.link/feed.php?subcat=JQuery">JQuery</a><br>
-<a href="http://junto.link/feed.php?subcat=Angular">Angular</a><br>
-<a href="http://junto.link/feed.php?subcat=Canvas">Canvas</a><br>
-<a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
-<a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
-<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
-</div>
-
-<h3>
-<a href="http://junto.link/feed.php?cat=BE" style="font-size:100%;margin-top:30px;">Back-End Development</a><br>
-</h3>
-<div>
-<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
-<a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
-<a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
-<a href="http://junto.link/feed.php?subcat=PHP">PHP</a><br>
-<a href="http://junto.link/feed.php?subcat=Python">Python</a><br>
-<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a><br>
-<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a><br>
-<a href="http://junto.link/feed.php?subcat=SQL">SQL</a><br>
-<a href="http://junto.link/feed.php?subcat=C">C</a><br>
-<a href="http://junto.link/feed.php?subcat=C++">C++</a><br>
-<a href="http://junto.link/feed.php?subcat=Shell">Shell</a><br>
-<a href="http://junto.link/feed.php?subcat=Java">Java</a><br>
-<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a><br>
-<a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
-<a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
-<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
-</div>
-
-</div>';
-*/
-/*
-echo '
-<nav>
-    <ul class="nav">
-
-		<li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false"><b style="font-size:120%">Business Development</b></a>
-			<ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding:15px;">
-<a href="http://junto.link/feed.php?subcat=LeanStartup">Lean Startup</a><br>
-<a href="http://junto.link/feed.php?subcat=MatketingAndResearch">Marketing & Research</a><br>
-<a href="http://junto.link/feed.php?subcat=Naming">Naming</a><br>
-<a href="http://junto.link/feed.php?subcat=CopyWriting">Copywriting</a><br>
-<a href="http://junto.link/feed.php?subcat=Analytics">Analytics</a><br>
-<a href="http://junto.link/feed.php?subcat=Launching">Launching</a><br>
-<a href="http://junto.link/feed.php?subcat=UserFeedback">User Feedback</a><br>
-<a href="http://junto.link/feed.php?subcat=SEO">SEO</a><br>
-<a href="http://junto.link/feed.php?subcat=SocialMediaCommunity">Social Media & Community</a><br>
-<a href="http://junto.link/feed.php?subcat=ProjectManagement">Project Management</a><br>
-<a href="http://junto.link/feed.php?subcat=CustomerService">Customer Service</a><br>
-<a href="http://junto.link/feed.php?subcat=InventoryManagement">Inventory Management</a><br>
-<a href="http://junto.link/feed.php?subcat=Sales">Sales</a><br>
-<a href="http://junto.link/feed.php?subcat=Funding">Funding </a><br>
-<a href="http://junto.link/feed.php?subcat=Administration">Administration</a><br>
-<a href="http://junto.link/feed.php?subcat=Productivity">Productivity</a><br>
-<a href="http://junto.link/feed.php?subcat=Outsourcing">Outsourcing</a><br>
-<a href="http://junto.link/feed.php?subcat=E-commerce">E-commerce</a><br>
-<a href="http://junto.link/feed.php?subcat=AcceleratorsAndIncubators">Accelerators & Incubators </a><br>
-<a href="http://junto.link/feed.php?subcat=Events">Events</a><br>
-			</ul>
-		</li>
-		<li><a href="#" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false"><b style="font-size:120%">Front-End Development</b></a>
-			<ul class="nav collapse" id="submenu2" role="menu" aria-labelledby="btn-2" style="padding:15px;">
-<a href="http://junto.link/feed.php?subcat=UserInterface">User Interface</a><br>
-<a href="http://junto.link/feed.php?subcat=UserExperience">User Experience</a><br>
-<a href="http://junto.link/feed.php?subcat=MockupsAndWireframing">Mockups & Wireframing</a><br>
-<a href="http://junto.link/feed.php?subcat=HTML">HTML</a><br>
-<a href="http://junto.link/feed.php?subcat=CSS">CSS</a><br>
-<a href="http://junto.link/feed.php?subcat=JavaScript">JavaScript</a><br>
-<a href="http://junto.link/feed.php?subcat=Themes">Themes</a><br>
-<a href="http://junto.link/feed.php?subcat=Mobile">Mobile</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndiOS">iOS</a><br>
-<a href="http://junto.link/feed.php?subcat=FrontEndAndroid">Android</a><br>
-<a href="http://junto.link/feed.php?subcat=Bootstrap">Bootstrap</a><br>
-<a href="http://junto.link/feed.php?subcat=XML">XML</a><br>
-<a href="http://junto.link/feed.php?subcat=JQuery">JQuery</a><br>
-<a href="http://junto.link/feed.php?subcat=Angular">Angular</a><br>
-<a href="http://junto.link/feed.php?subcat=Canvas">Canvas</a><br>
-<a href="http://junto.link/feed.php?subcat=SVG">SVG</a><br>
-<a href="http://junto.link/feed.php?subcat=JSON">JSON</a><br>
-<a href="http://junto.link/feed.php?subcat=Ajax">Ajax</a><br>
-			</ul>
-		</li>
-		</li>
-		<li><a href="#" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false"><b style="font-size:120%">Back-End Development</b></a>
-			<ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3" style="padding:15px;">
-<a href="http://junto.link/feed.php?subcat=Security">Security</a><br>
-<a href="http://junto.link/feed.php?subcat=DataManagement">Data Management</a><br>
-<a href="http://junto.link/feed.php?subcat=Hosting">Hosting</a><br>
-<a href="http://junto.link/feed.php?subcat=PHP">PHP</a><br>
-<a href="http://junto.link/feed.php?subcat=Python">Python</a><br>
-<a href="http://junto.link/feed.php?subcat=ASP.NET">ASP.NET</a><br>
-<a href="http://junto.link/feed.php?subcat=VBScript">Visual Basic Script</a><br>
-<a href="http://junto.link/feed.php?subcat=SQL">SQL</a><br>
-<a href="http://junto.link/feed.php?subcat=C">C</a><br>
-<a href="http://junto.link/feed.php?subcat=C++">C++</a><br>
-<a href="http://junto.link/feed.php?subcat=Shell">Shell</a><br>
-<a href="http://junto.link/feed.php?subcat=Java">Java</a><br>
-<a href="http://junto.link/feed.php?subcat=Objective-C">Objective-C</a><br>
-<a href="http://junto.link/feed.php?subcat=Swift">Swift</a><br>
-<a href="http://junto.link/feed.php?subcat=C#">C#</a><br>
-<a href="http://junto.link/feed.php?subcat=Debugging">Debugging Tools</a><br>
-			</ul>
-		</li>
-
-	</ul>
-</nav>
-     ';
-*/
+// Set the slider and its content 
 if(!isset($_COOKIE['junto']))
 {
 echo '
-
-<img src="pictures/check.png" height="100" width="100" style="position:absolute;left:10px;top:210px">
-<img src="pictures/reader.png" height="100" width="100" style="position:absolute;left:0px;top:330px">
-<img src="pictures/save.png" height="80" width="80" style="position:absolute;left:20px;top:460px">
-
-<div style="position:relative;left:105px;width:70px;height:380px;top:200px;border:0px dashed black;z-index:0;">
-<span style="display:block;margin-top:55px" id="XXX">Personalize</span>
-<span style="display:block;margin-top:110px">Discover</span>
-<span style="display:block;margin-top:83px">Save</span>
-</div>
-</div>';
+<div class="slider">
+<img src="pictures/check.png" height="80" width="80" style="position:absolute;left:30px;top:60px">
+<img src="pictures/reader.png" height="80" width="80" style="position:absolute;left:27px;top:195px">
+<img src="pictures/save.png" height="80" width="80" style="position:absolute;left:30px;top:330px">
+<span style="display:block;margin-top:30px;margin-left:20px;font-size:130%" >Personalize</span>
+<span style="display:block;margin-top:110px;margin-left:35px;font-size:130%">Discover</span>
+<span style="display:block;margin-top:105px;margin-left:50px;font-size:130%">Save</span>
+';
 }
 else{
-echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
+
+// Set the slider for the logged in user
+echo'
+<div class="slider">
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
 <a href="home.php" >
 <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
@@ -310,49 +153,64 @@ echo '
 </div>
 </a>
 </div>
-
-
 ';
 
 }
+echo '</div>';// closing the slider
+
+
+
+
+
+
+
+
+echo '<div class="submit" >';
 echo '</div>';
 
-
-
-
-
-
-
-
-//echo '<div class="submit" >';
-
-if(isset($_COOKIE['junto'])){
-//echo '<a href="#submit" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;left:auto;right:auto;">Submit a Card</a>';
+// This is a tab to choose from trending/newest for the feed
 /*
-echo'
-<div style="position:relatiev;margin-left:auto;margin-right:auto;margin-top:40px;width:150px;height:150px;border:0px dashed black;">
-<a href="#submit" data-toggle="modal">
-<div style="display:block;position:relative;margin-left:20px;margin-right:auto;"><img src="http://junto.link/pictures/pencil.png" height="100" width="100">
-</div>
-<div style="position:absolute;top:150px;left:40px">
-<b>Submit Resource</b>
-</div>
-</a>
-</div>';
+echo '<div class="tab">';
+echo '</div>';
 */
 
 
-//echo '<a href="#feedback" class="btn btn-lg btn-default" data-toggle="modal" style="display:block;">Leave Feedback</a>';
+echo '<div class="feed-column" id="feed">';
+
+// This is when Javascript and PHP merge to provide the feed content
+
+// This piece of Javascript code will envoke your function when you reach the end of your page.
+
+echo 
+'<script type="text/javascript">
+var LastCard = ';
+$query = "select max(RESOURCEID) as RESOURCEID from RESOURCES";
+$result = $conn->query($query);
+$bigest = mysqli_fetch_assoc($result);
+echo $bigest['RESOURCEID'].';';
+echo'
+var Ended = 0;
+function loader(last){
+// First check to see if ended was set to 1, if so then do nothing
+
+
+
+// Else connect the to a file called loader.php, get the results
+// then create another child for feed and then put the results there
+
+
+
 }
-//echo '</div>';
+            $(window).scroll(function(){
+                    if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                          // run our call for pagination
+        		  //document.getElementById("test").innerHTML="Things are now changed";        
+	    		  loader(LastCard);
+		}
+            }); 
 
-//echo '<div class="tab">';
-//echo '</div>';
+</script>';
 
-echo '<div class="feed-column">';
-
-echo '
-';
 if(isset($_COOKIE['junto'])){
 $query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
 $result = $conn->query($query);
@@ -369,6 +227,8 @@ if($match->num_rows > 0){card($card['RESOURCEID']);break;}
 
 }
 }
+
+
 else{
 card(13);
 card(12);
