@@ -1,3 +1,10 @@
+function loader(last){
+// First check to see if ended was set to 1, if so then do nothing
+
+
+// Else connect the to a file called loader.php, get the results
+// then create another child for feed and then put the results there
+}
 
 function favorite(cardid) {
    var xmlhttp = new XMLHttpRequest();
