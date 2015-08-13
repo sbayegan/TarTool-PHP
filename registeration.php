@@ -1,6 +1,9 @@
 <?php
 include('datalogin.php');
-
+function putinterest($user,$interest){
+$query = "INSERT INTO INTERESTS VALUES (".$user.",'".$interest."')";
+$conn->query($query);
+}
 
 // Retrieve all of the information from the form to be processed and saved in the database
 $name = mysqli_real_escape_string($conn,$_POST['full_name']);
@@ -60,6 +63,8 @@ $conn->query($query);
 
 $query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash','$ipone','$iptwo')";
 $conn->query($query);
+putinterest($userid,"SEO");
+
 //echo $query;
 // send an email to the client
 $to = $email;
