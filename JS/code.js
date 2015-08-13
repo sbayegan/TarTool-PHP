@@ -4,6 +4,30 @@ document.getElementById("test").innerHTML="Things are now changed";
 
 // Else connect the to a file called loader.php, get the results
 // then create another child for feed and then put the results there
+Frame++;
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 0){// Set Ended to 1 and then show a flag showing that there
+                // are no more cards to be displayed
+                var node = document.createElement("DIV");
+		node.setAttribute("id", "Frame"+Frame);
+		document.getElementById("feed").appendChild(node);
+		document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
+		 
+                }
+                else{// Append the content to the feed
+		var node = document.createElement("DIV");
+		node.setAttribute("id", "Frame"+Frame);
+		document.getElementById("feed").appendChild(node);
+		document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
+                }
+            }
+        }
+        xmlhttp.open("POST", "loader.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("id="+last);
+
 }
 
 function favorite(cardid) {
