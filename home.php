@@ -173,7 +173,7 @@ var LastCard = ';
 $query = "select max(RESOURCEID) as RESOURCEID from RESOURCES";
 $result = $conn->query($query);
 $bigest = mysqli_fetch_assoc($result);
-echo $bigest['RESOURCEID'].';';
+echo ($bigest['RESOURCEID']+1).';';
 echo'
 var Ended = 0;
 var Frame = 0;
