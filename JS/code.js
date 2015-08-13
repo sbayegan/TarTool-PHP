@@ -1,6 +1,6 @@
 function loader(last){
 // First check to see if ended was set to 1, if so then do nothing
-
+document.getElementById("test").innerHTML="Things are now changed";
 
 // Else connect the to a file called loader.php, get the results
 // then create another child for feed and then put the results there
