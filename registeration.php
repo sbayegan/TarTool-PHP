@@ -1,8 +1,10 @@
 <?php
 include('datalogin.php');
 function putinterest($user,$interest){
+include('datalogin.php');
 $query = "INSERT INTO INTERESTS VALUES (".$user.",'".$interest."')";
 $conn->query($query);
+echo $query;
 }
 
 // Retrieve all of the information from the form to be processed and saved in the database
@@ -63,7 +65,64 @@ $conn->query($query);
 
 $query = "INSERT INTO USERS VALUES ($userid,'$username','$hashedpassword','$name','$email',NOW(),'$type',0,'$hash','$ipone','$iptwo')";
 $conn->query($query);
+
 putinterest($userid,"SEO");
+putinterest($userid,"Sales");
+putinterest($userid,"Naming");
+putinterest($userid,"Copywriting");
+putinterest($userid,"MarketingAndResearch");
+putinterest($userid,"UserFeedback");
+putinterest($userid,"ProjectManagement");
+putinterest($userid,"InventoryManagement");
+putinterest($userid,"Outsourcing");
+putinterest($userid,"Funding");
+putinterest($userid,"Productivity");
+putinterest($userid,"Analytics");
+putinterest($userid,"LeanStartup");
+putinterest($userid,"Launching");
+putinterest($userid,"SocialMediaCommunity");
+putinterest($userid,"Administration");
+putinterest($userid,"CustomerService");
+putinterest($userid,"AcceleratorsAndIncubators");
+putinterest($userid,"E-commerce");
+putinterest($userid,"Events");
+putinterest($userid,"UserInterface");
+putinterest($userid,"UserExperience");
+putinterest($userid,"MockupsAndWireframing");
+putinterest($userid,"HTML");
+putinterest($userid,"CSS");
+putinterest($userid,"JavaScript");
+putinterest($userid,"Themes");
+putinterest($userid,"Mobile");
+putinterest($userid,"FrontEndiOS");
+putinterest($userid,"FrontEndAndroid");
+putinterest($userid,"Bootstrap");
+putinterest($userid,"XML");
+putinterest($userid,"JQuery");
+putinterest($userid,"Angular");
+putinterest($userid,"Canvas");
+putinterest($userid,"SVG");
+putinterest($userid,"JSON");
+putinterest($userid,"AJAX");
+putinterest($userid,"Security");
+putinterest($userid,"DataManagement");
+putinterest($userid,"Hosting");
+putinterest($userid,"PHP");
+putinterest($userid,"Python");
+putinterest($userid,"ASPNET");
+putinterest($userid,"VBScript");
+putinterest($userid,"SQL");
+putinterest($userid,"C");
+putinterest($userid,"C++");
+putinterest($userid,"Shell");
+putinterest($userid,"Java");
+putinterest($userid,"Ruby");
+putinterest($userid,"Objective-C");
+putinterest($userid,"Swift");
+putinterest($userid,"C#");
+putinterest($userid,"Debugging");
+
+
 
 //echo $query;
 // send an email to the client

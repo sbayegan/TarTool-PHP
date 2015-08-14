@@ -115,6 +115,7 @@ My streams
 </a>
 </div>
 ';
+/*
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
 <a href="account.php">
@@ -125,10 +126,14 @@ echo '
 </div>
 </a>
 </div>
-';
+';*/
 echo '</div>';
 
+echo '<div class="checktop">';
+echo 'Preferences';
+echo '</div>';
 echo '<div class="checklist">';
+
 echo '<form action="checklist.php" method="post">';
 echo '<div class="checklist-left-title">';
 echo '<h4>Business Development</h4>';
@@ -365,12 +370,15 @@ echo '<input type="checkbox" name="C#" value="1"';
 if(interested($userid, "C#")==1){echo ' checked';}
 echo '> C#<br>';
 
-echo '<input type="checkbox" name="Debugging" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Debugging" name="Debugging" value="1"';
 if(interested($userid, "Debugging")==1){echo ' checked';}
-echo '> Debugging Tools';
+echo '> <label for="Debugging" class="css-label">Debugging</label>';
 
 echo '</div>';
 //echo '<hr>';
+echo '<div class="account-title">';
+echo 'Account Settings';
+echo '</div>';
 
 echo '<div class="check-button">';
 echo '<hr>';

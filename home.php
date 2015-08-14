@@ -140,6 +140,7 @@ My streams
 
 </div>
 ';
+/*
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
 <a href="account.php">
@@ -151,7 +152,7 @@ echo '
 </a>
 </div>
 ';
-
+*/
 }
 echo '</div>';// closing the slider
 

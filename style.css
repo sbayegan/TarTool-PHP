@@ -19,12 +19,87 @@ color:black;
     overflow-y: auto;
 }
 
+input[type=checkbox].css-checkbox {
+	position:absolute;
+	z-index:-1000;
+	left:-1000px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height:1px;
+	width:1px;
+	margin:-1px;
+	padding:0;
+	border:0;
+				}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:37px;
+	height:32px; 
+	display:inline-block;
+	line-height:32px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+						}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -32px;
+						}
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_6fced975b9270f0b001670c362e8a7e3.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checktop{
+position: absolute;
+top: 100px;
+left: 220px;
+width: 400px;
+height: 60px;
+border: 0px dashed red;
+text-align:left;
+font-size:40px;
+}
+.account-title{
+
+position:absolute;
+bottom:120px;
+left: 20px;
+width:400px;
+height:80px;
+border: 0px dashed red;
+text-align:left;
+font-size:35px;
+}
+
+
 .checklist{
 position :absolute;
-top : 120px;
+top : 170px;
 left : 200px;
 right: 30px;
-height: 600px;
+height: 680px;
 //width: 600px;
 border: 0px dashed red;
 //background-color: blue;
