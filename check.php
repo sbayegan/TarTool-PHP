@@ -314,7 +314,7 @@ echo '<input type="checkbox" class="css-checkbox" id="DataManagement" name="Data
 if(interested($userid, "DataManagement")==1){echo ' checked';}
 echo '> <label for="DataManagement" class="css-label">Data Management(Database Design)</label><br>';
 
-echo'<input type="checkbox" class="css-checkbox:" id="Hosting" name="Hosting" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="Hosting" name="Hosting" value="1"';
 if(interested($userid, "Hosting")==1){echo ' checked';}
 echo '> <label for="Hosting" class="css-label">Hosting</label><br>';
 
@@ -362,7 +362,7 @@ echo '<input type="checkbox" class="css-checkbox" id="Objective-C" name="Objecti
 if(interested($userid, "Objective-C")==1){echo ' checked';}
 echo '> <label for="Objective-C" class="css-label">Objective-C</label><br>';
 
-echo '<input type="checkbox" classs="css-checkbox" id="Swift" name="Swift" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Swift" name="Swift" value="1"';
 if(interested($userid, "Swift")==1){echo ' checked';}
 echo '> <label for="Swift" class="css-label">Swift</label><br>';
 
