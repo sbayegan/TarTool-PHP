@@ -149,11 +149,11 @@ echo '</div>';
 echo '<div class="checklist-left">';
 echo '<input type="checkbox" class="css-checkbox" id="SEO" name="SEO" value="1"';
 if(interested($userid,"SEO")==1){echo ' checked';};
-echo '> <label for="Security" class="css-label">SEO</label>';
+echo '> <label for="SEO" class="css-label">SEO</label>';
 
 echo'<br><input type="checkbox" class="css-checkbox" id="Sales" name="Sales" value="1"';
 if(interested($userid,"Sales")==1){echo ' checked';};
-echo'> <label for="Security" class="css-label">Sales</label><br>';
+echo'> <label for="Sales" class="css-label">Sales</label><br>';
 
 
 echo '<input type="checkbox" class="css-checkbox" id="Naming" name="Naming" value="1"';
@@ -164,7 +164,7 @@ echo'<input type="checkbox" class="css-checkbox" id="Copywriting" name="CopyWrit
 if(interested($userid,"CopyWriting")==1){echo ' checked';}
 echo'> <label for="Copywriting" class="css-label">Copywriting</label><br>';
 
-echo'<input type="checkbox" class="css-label" id="MarketingAndResearch" name="MarketingAndResearch" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="MarketingAndResearch" name="MarketingAndResearch" value="1"';
 if(interested($userid,"MarketingAndResearch")==1){echo ' checked';}
 echo '><label for="MarketingAndResearch" class="css-label">Marketing & Research</label><br>';
 
@@ -192,7 +192,7 @@ echo'<input type="checkbox" class="css-checkbox" id="Productivity" name="Product
 if(interested($userid, "Productivity")==1){ echo ' checked';}
 echo '> <label for="Productivity" class="css-label">Productivity</label><br>';
 
-echo'<input type="checkbox" class="css-label" id="Analytics" name="Analytics" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="Analytics" name="Analytics" value="1"';
 if(interested($userid, "Analytics")==1){echo ' checked';}
 echo '> <label for="Analytics" class="css-label">Analytics</label><br>';
 
@@ -202,7 +202,7 @@ echo '> <label for="LeanStartup" class="css-label">Lean Startup</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="Launching" name="Launching" value="1"';
 if(interested($userid, "Launching")==1){echo ' checked';}
-echo '> <label for="Security" class="css-label">Launching</label><br>';
+echo '> <label for="Launching" class="css-label">Launching</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="SocialMediaCommunity" name="SocialMediaCommunity" value="1"'; 
 if(interested($userid, "SocialMediaCommunity")==1){echo ' checked';}
@@ -216,7 +216,7 @@ echo'<input type="checkbox" class="css-checkbox" id="CustomerService" name="Cust
 if(interested($userid,"CustomerService")==1){echo ' checked';}
 echo '> <label for="CustomerService" class="css-label">Customer Service</label><br>';
 
-echo'<input type="checkbox" id="AcceleratorsAndIncubators" name="AcceleratorsAndIncubators" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="AcceleratorsAndIncubators" name="AcceleratorsAndIncubators" value="1"';
 if(interested($userid,"AcceleratorsAndIncubators")==1){echo ' checked';}
 echo '><label for="AcceleratorsAndIncubators" class="css-label">Accelerators & Incubators</label><br>';
 
@@ -237,7 +237,7 @@ echo'> <label for="UserInterface" class="css-label">User Interface</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="UserExperience" name="UserExperience" value="1"';
 if(interested($userid, "UserExperience")==1){echo ' checked';}
-echo'><label for="UserExperience" class="css-label">User Experience</lable><br>';
+echo'><label for="UserExperience" class="css-label">User Experience</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="MockupsAndWireframing" name="MockupsAndWireframing" value="1"';
 if(interested($userid, "MockupsAndWireframing")==1){echo ' checked';}
@@ -245,7 +245,7 @@ echo '> <label for="MockupsAndWireframing" class="css-label">Mockups and Wirefra
 
 echo'<input type="checkbox" class="css-checkbox" id="HTML" name="HTML" value="1"';
 if(interested($userid, "HTML")==1){echo ' checked';}
-echo '> <label for="Security" class="css-label">HTML</label><br>';
+echo '> <label for="HTML" class="css-label">HTML</label><br>';
 
 echo '<input type="checkbox" class="css-checkbox" id="CSS" name="CSS" value="1"';
 if(interested($userid, "CSS")==1){echo ' checked';}
@@ -267,7 +267,7 @@ echo'<input type="checkbox" class="css-checkbox" id="FrontEndiOS" name="FrontEnd
 if(interested($userid, "FrontEndiOS")==1){echo ' checked';}
 echo '> <label for="FrontEndiOS" class="css-label">iOS</label><br>';
 
-echo'<input type="checkbox" class="css-checkbox" class="FrontEndAndroid" name="FrontEndAndroid" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="FrontEndAndroid" name="FrontEndAndroid" value="1"';
 if(interested($userid, "FrontEndAndroid")==1){echo ' checked';}
 echo '> <label for="FrontEndAndroid" class="css-label">Android</label><br>';
 
@@ -275,9 +275,9 @@ echo'<input type="checkbox" class="css-checkbox" id="Bootstrap" name="Bootstrap"
 if(interested($userid, "Bootstrap")==1){echo ' checked';}
 echo '> <label for="Bootstrap" class="css-label">Bootstrap</label> <br>';
 
-echo'<input type="checkbox" class="css-label" id="XML" name="XML" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="XML" name="XML" value="1"';
 if(interested($userid, "XML")==1){echo ' checked';}
-echo '><label for="Security" class="css-label">XML</label><br>';
+echo '><label for="XML" class="css-label">XML</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="JQuery" name="JQuery" value="1"';
 if(interested($userid, "JQuery")==1){echo ' checked';}
@@ -375,18 +375,19 @@ if(interested($userid, "Debugging")==1){echo ' checked';}
 echo '> <label for="Debugging" class="css-label">Debugging</label>';
 
 echo '</div>';
+/*
 //echo '<hr>';
 echo '<div class="account-title">';
 echo 'Account Settings';
 echo '</div>';
-
+*/
 echo '<div class="check-button">';
 echo '<hr>';
 echo '<a href="home.php" class="btn btn-default btn-sm" style="margin-right:4%;width:48%;">Cancel</a>';
 echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="width:48%;" value="Submit">';
 
 echo '</div>';
-
+/*
 	echo '<div style="position:absolute;bottom:80px;left:0%;right:0%;border:0px dashed red;">';echo '<hr>';
 		echo '<div class="form-inline">
 			  <div class="form-group" style="margin-left:4%;">
@@ -419,7 +420,7 @@ echo $email;
 			  <span href="#password" data-toggle="modal" class="btn btn-warning btn-sm" style="position:absolute;right:10%;width:20%;">Change Password</span>
 			</div>';
 	echo '</div>';
-
+*/
 echo '</form>';
 echo '</div>';
 

@@ -201,9 +201,6 @@ var Frame = 0;
 	    numloader(LastCard); 
 
 </script>';
-echo '
-<div id="test"></div>
-';
 
 /*
 if(isset($_COOKIE['junto'])){

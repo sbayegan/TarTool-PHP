@@ -4,14 +4,14 @@ include('printer.php');
 if(isset($_COOKIE['junto'])){
 $userid = $_COOKIE['junto'];
 $last = mysqli_real_escape_string($conn,$_GET['last']);
-$query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
+$query="select * from RESOURCES where CONFIRMED=1 order by ADDED desc";
 $result = $conn->query($query);
 $final;
 $counter = 3;
-
+//echo $query;
 while($card = mysqli_fetch_assoc($result)){
 //echo 'select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID'].'----';
-
+//echo $card['RESOURCEID'];
 	if($card['RESOURCEID'] < $last){
 		$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
 		while($temp = mysqli_fetch_assoc($cats)){

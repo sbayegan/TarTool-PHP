@@ -39,7 +39,7 @@ input[type=checkbox].css-checkbox + label.css-label {
 	line-height:32px;
 	background-repeat:no-repeat;
 	background-position: 0 0;
-	font-size:15px;
+	font-size:13px;
 	vertical-align:middle;
 	cursor:pointer;
 						}
@@ -72,19 +72,21 @@ label.css-label {
 
 
 .checktop{
-position: absolute;
-top: 100px;
+position:fixed;
+top: 43px;
 left: 220px;
 width: 400px;
 height: 60px;
 border: 0px dashed red;
 text-align:left;
-font-size:40px;
+font-size:27px;
+color:#333333;
+z-index:100;
 }
 .account-title{
 
 position:absolute;
-bottom:120px;
+bottom:110px;
 left: 20px;
 width:400px;
 height:80px;
@@ -96,11 +98,11 @@ font-size:35px;
 
 .checklist{
 position :absolute;
-top : 170px;
+top : 110px;
 left : 200px;
 right: 30px;
-height: 680px;
-//width: 600px;
+height: 80%;
+///width: 800px;
 border: 0px dashed red;
 //background-color: blue;
 z-index: 1;
@@ -110,7 +112,7 @@ z-index: 1;
 position: absolute;
 left:1%;
 width:32%;
-top: 0%;
+top: -2%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -119,7 +121,7 @@ height: 5%;
 position: absolute;
 left:34%;
 width:32%;
-top: 0%;
+top: -2%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -129,7 +131,7 @@ height: 5%;
 position: absolute;
 left:67%;
 width:32%;
-top: 0%;
+top: -2%;
 height: 5%;
 //border: 1px dashed grey;
  text-align: center;
@@ -142,7 +144,7 @@ position: absolute;
 left:1%;
 width:32%;
 top: 5%;
-height: 75%;
+height: 82%;
 //border: 1px dotted grey;
 overflow: scroll;
 //z-index: 2;
@@ -155,7 +157,7 @@ position: absolute;
 left:34%;
 width:32%;
 top: 5%;
-height: 70%;
+height: 82%;
 //border: 1px dashed grey;
 overflow: scroll;
 }
@@ -166,13 +168,13 @@ position: absolute;
 left:67%;
 width:32%;
 top: 5%;
-height: 70%;
+height: 82%;
 //border: 1px dashed grey;
 overflow: scroll;
 }
 .check-button{
 position : absolute;
-bottom: 10px;
+bottom: 0%;
 left: 0%;
 right: 0%;
 //height: 40px;
