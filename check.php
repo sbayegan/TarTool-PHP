@@ -312,7 +312,7 @@ echo '> <label for="Security" class="css-label">Security</label><br>';
 
 echo '<input type="checkbox" class="css-checkbox" id="DataManagement" name="DataManagement" value="1"';
 if(interested($userid, "DataManagement")==1){echo ' checked';}
-echo '> <label for="DataManagement" class="css-label">Data Management(Database Design)</label><br>';
+echo '> <label for="DataManagement" class="css-label">Data Management</label><br>';
 
 echo'<input type="checkbox" class="css-checkbox" id="Hosting" name="Hosting" value="1"';
 if(interested($userid, "Hosting")==1){echo ' checked';}
