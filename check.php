@@ -306,69 +306,69 @@ echo '</div>';
 
 echo '<div class="checklist-right">';
 
-echo '<input type="checkbox" name="Security" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Security" name="Security" value="1"';
 if(interested($userid,"Security")==1){echo ' checked';}
-echo '> Security<br>';
+echo '> <label for="Security" class="css-label">Security</label><br>';
 
-echo '<input type="checkbox" name="DataManagement" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="DataManagement" name="DataManagement" value="1"';
 if(interested($userid, "DataManagement")==1){echo ' checked';}
-echo '> Data Management(Database Design)<br>';
+echo '> <label for="DataManagement" class="css-label">Data Management(Database Design)</label><br>';
 
-echo'<input type="checkbox" name="Hosting" value="1"';
+echo'<input type="checkbox" class="css-checkbox:" id="Hosting" name="Hosting" value="1"';
 if(interested($userid, "Hosting")==1){echo ' checked';}
-echo '> Hosting<br>';
+echo '> <label for="Hosting" class="css-label">Hosting</label><br>';
 
-echo'<input type="checkbox" name="PHP" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="PHP" name="PHP" value="1"';
 if(interested($userid,"PHP")==1){echo ' checked';}
-echo'> PHP<br>';
+echo'> <label for="PHP" class="css-label">PHP</label><br>';
 
-echo '<input type="checkbox" name="Python" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Python" name="Python" value="1"';
 if(interested($userid,"Python")==1){echo ' checked';}
-echo '> Python<br>';
+echo '> <label for="Python" class="css-label">Python</label><br>';
 
-echo'<input type="checkbox" name="ASPNET" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="ASPNET" name="ASPNET" value="1"';
 if(interested($userid, "ASPNET")==1){echo ' checked';}
-echo '> ASP.NET<br>';
+echo '> <label for="ASPNET" class="css-label">ASP.NET</label><br>';
 
-echo '<input type="checkbox" name="VBScript" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="VBScript" name="VBScript" value="1"';
 if(interested($userid, "VBScript")==1){echo ' checked';}
-echo '> Visual Basic Script<br>';
+echo '> <label for="VBScript" class="css-label">Visual Basic Script</label><br>';
 
-echo'<input type="checkbox" name="SQL" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="SQL" name="SQL" value="1"';
 if(interested($userid, "SQL")==1){echo ' checked';}
-echo '> SQL<br>';
+echo '> <label for="SQL" class="css-label">SQL</label><br>';
 
-echo'<input type="checkbox" name="C" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="C" name="C" value="1"';
 if(interested($userid, "C")==1){echo ' checked';}
-echo '> C<br>';
+echo '> <label for="C" class="css-label">C</label><br>';
 
-echo'<input type="checkbox" name="C++" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="C++" name="C++" value="1"';
 if(interested($userid, "C++")==1){echo ' checked';}
-echo '> C++<br>';
+echo '> <label for="C++" class="css-label">C++</label><br>';
 
-echo'<input type="checkbox" name="Shell" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="Shell" name="Shell" value="1"';
 if(interested($userid, "Shell")==1){echo ' checked';}
-echo'> Shell<br>';
+echo'> <label for="Shell" class="css-label">Shell</label><br>';
 
-echo '<input type="checkbox" name="Java" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Java" name="Java" value="1"';
 if(interested($userid, "Java")==1){echo ' checked';}
-echo '> Java<br>';
+echo '> <label for="Java" class="css-label">Java</label><br>';
 
-echo'<input type="checkbox" name="Ruby" value="1"';
+echo'<input type="checkbox" class="css-checkbox" id="Ruby" name="Ruby" value="1"';
 if(interested($userid, "Ruby")==1){echo ' checked';}
-echo '> Ruby<br>';
+echo '> <label for="Ruby" class="css-label">Ruby</label><br>';
 
-echo '<input type="checkbox" name="Objective-C" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="Objective-C" name="Objective-C" value="1"';
 if(interested($userid, "Objective-C")==1){echo ' checked';}
-echo '> Objective-C<br>';
+echo '> <label for="Objective-C" class="css-label">Objective-C</label><br>';
 
-echo '<input type="checkbox" name="Swift" value="1"';
+echo '<input type="checkbox" classs="css-checkbox" id="Swift" name="Swift" value="1"';
 if(interested($userid, "Swift")==1){echo ' checked';}
-echo '> Swift<br>';
+echo '> <label for="Swift" class="css-label">Swift</label><br>';
 
-echo '<input type="checkbox" name="C#" value="1"';
+echo '<input type="checkbox" class="css-checkbox" id="C#" name="C#" value="1"';
 if(interested($userid, "C#")==1){echo ' checked';}
-echo '> C#<br>';
+echo '> <label for="C#" class="css-label">C#</label><br>';
 
 echo '<input type="checkbox" class="css-checkbox" id="Debugging" name="Debugging" value="1"';
 if(interested($userid, "Debugging")==1){echo ' checked';}
