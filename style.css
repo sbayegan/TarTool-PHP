@@ -100,9 +100,11 @@ font-size:35px;
 position :absolute;
 top : 110px;
 left : 200px;
-right: 30px;
-height: 80%;
-///width: 800px;
+right: 30px
+//bottom:0px;
+height: calc(85% - 85px);
+
+width: 70%;
 border: 0px dashed red;
 //background-color: blue;
 z-index: 1;
@@ -168,16 +170,16 @@ position: absolute;
 left:67%;
 width:32%;
 top: 5%;
-height: 82%;
+height: 72%;
 //border: 1px dashed grey;
 overflow: scroll;
 }
 .check-button{
 position : absolute;
-bottom: 0%;
+bottom: 10%;
 left: 0%;
 right: 0%;
-//height: 40px;
+height: 15%;
 border: 0px dashed grey;
 }
 .stick-to-top{
