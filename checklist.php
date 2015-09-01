@@ -1,4 +1,5 @@
 <?php
+ob_start();
 if(isset($_COOKIE['junto'])){
 $userid = $_COOKIE['junto'];
 
@@ -11,7 +12,6 @@ $conn->close();}
 function remove($user,$interest){
 include ('datalogin.php');
 $query = 'DELETE FROM INTERESTS WHERE USERID='.$user.' and INTEREST="'.$interest.'"';
-echo $query;
 $conn->query($query);
 $conn->close();
 }
@@ -74,11 +74,11 @@ if(isset($_POST['Swift'])){remove($userid,'Swift');add($userid,'Swift');}else{re
 if(isset($_POST['C#'])){remove($userid,'C#');add($userid,'C#');}else{remove($userid,'C#');}
 if(isset($_POST['Debugging'])){remove($userid,'Debugging');add($userid,'Debugging');}else{remove($userid,'Debugging');}
 
-header ('Location: http://www.tartool.com/home.php');
+header ('Location: home.php');
 
 }
 else{
-header ('Location: http://www.tartool.com/authentication.php');
+header ('Location: home.php');
 }
 
 
