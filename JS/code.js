@@ -8,8 +8,6 @@ xmlhttp.onreadystatechange = function() {
         }
         xmlhttp.open("GET", "numloader.php?last=" + last, true);
         xmlhttp.send();
-	
-	
 }
 }
 
@@ -17,20 +15,21 @@ xmlhttp.onreadystatechange = function() {
 function loader(last){
 // First check to see if ended was set to 1, if so then do nothing
 if(Ended == 1){return;}
-
-// Else connect the to a file called loader.php, get the results
+else{
+// Else connect to a file called loader.php, get the results
 // then create another child for feed and then put the results there
 Frame++;
 var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 0){// Set Ended to 1 and then show a flag showing that there
+                if(xmlhttp.responseText == 0){
+                // Set Ended to 1 and then show a flag showing that there
                 // are no more cards to be displayed
                 Ended = 1;
                 var node = document.createElement("DIV");
 		node.setAttribute("id", "Frame"+Frame);
 		document.getElementById("feed").appendChild(node);
-		//document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
+		document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
 		 
                 }
                 else{// Append the content to the feed
@@ -43,6 +42,7 @@ var xmlhttp = new XMLHttpRequest();
         }
         xmlhttp.open("GET", "loader.php?last=" + last, true);
         xmlhttp.send();
+  }//else
 }
 
 function favorite(cardid) {
