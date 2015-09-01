@@ -29,7 +29,7 @@ var xmlhttp = new XMLHttpRequest();
                 var node = document.createElement("DIV");
 		node.setAttribute("id", "Frame"+Frame);
 		document.getElementById("feed").appendChild(node);
-		document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
+		//document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
 		 
                 }
                 else{// Append the content to the feed

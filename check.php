@@ -1,4 +1,5 @@
 <?php
+include('UniversalHeader.php');
 if(isset($_COOKIE['junto'])){
 $userid = $_COOKIE['junto'];
 function interested($user, $subject){
@@ -23,7 +24,7 @@ echo "<html>";
 echo "<head>";
 
 echo "<title>";
-echo "Junto Home";
+echo $UniversalName;
 echo "</title>";
 echo '<script src="JS/code.js"></script>';
 echo '

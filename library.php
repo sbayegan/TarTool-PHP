@@ -1,4 +1,5 @@
 <?php
+include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
 if(!isset($_COOKIE['junto'])){
@@ -9,7 +10,7 @@ echo "<!DOCTYPE html>";
 echo "<html>";
 echo "<head>";
 echo "<title>";
-echo "Junto Home";
+echo $UniversalName;
 echo "</title>";
 echo '
 <link rel="stylesheet" type="text/css" href="style.css">
