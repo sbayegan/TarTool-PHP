@@ -342,7 +342,6 @@ function valid(str) {
                 }
            }
         }
-        
         xmlhttp.open("GET", "emailcheck.php?email=" + str, true);
         xmlhttp.send();
 }
@@ -410,13 +409,11 @@ one = document.getElementById("loginusername").value;
 		 document.getElementById("condition").innerHTML =  xmlhttp.responseText;
 
                 if(xmlhttp.responseText == 1){
+                  window.location.replace("home.php");
                   document.getElementById("condition").innerHTML = "good, lets go";
-		  window.location.replace("home.php");
-
                 }
                 if(xmlhttp.responseText == 0){
                   document.getElementById("condition").innerHTML = "Waiting for the correct password";
-                 
                 }
  		if(xmlhttp.responseText == -1){
                   document.getElementById("condition").innerHTML = "Not activated, Please verify your email address and retype your password";

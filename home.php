@@ -1,6 +1,5 @@
 <?php
 // Copyright 2015, Saeid Bayeganeh, All rights reserved
-
 // Include the headers you need
 include('UniversalHeader.php');
 include('datalogin.php');
@@ -58,115 +57,114 @@ echo '<div class="stick-to-top">';
 	echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
-	if(isset($_COOKIE['junto'])){
-	//echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
-	//echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
-	//echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-	echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
-	}
-	else{
-	//echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-	//echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-	//echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-	echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
-	}
+	   if(isset($_COOKIE['junto'])){
+	   //echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
+	   //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
+	   //echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
+	   echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
+	   }
+	   else{
+	   //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+	   //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+	   //echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
+	   echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
+	   }
 	// A commented code snippet that gets the name of the user
-	/*
-	$value = $_COOKIE['junto'];
-	$result= $conn->query("SELECT * FROM USERS WHERE USERID=$value");
-	$result = mysqli_fetch_assoc($result);
-	$result = $result["NAME"];
-	*/
+	   /*
+	   $value = $_COOKIE['junto'];
+	   $result= $conn->query("SELECT * FROM USERS WHERE USERID=$value");
+	   $result = mysqli_fetch_assoc($result);
+	   $result = $result["NAME"];
+	   */
 echo '</div>';//stick-to-top
 
 // Set the slider and its content 
-if(!isset($_COOKIE['junto']))
-{
-echo '
-<div class="slider">
-<img src="pictures/check.png" height="80" width="80" style="position:absolute;left:30px;top:60px">
-<img src="pictures/reader.png" height="80" width="80" style="position:absolute;left:27px;top:195px">
-<img src="pictures/save.png" height="80" width="80" style="position:absolute;left:30px;top:330px">
-<span style="display:block;margin-top:30px;margin-left:20px;font-size:130%" >Personalize</span>
-<span style="display:block;margin-top:110px;margin-left:35px;font-size:130%">Discover</span>
-<span style="display:block;margin-top:105px;margin-left:50px;font-size:130%">Save</span>
-';
-}
-else{
+    if(!isset($_COOKIE['junto']))
+    {
+    echo '
+    <div class="slider">
+    <img src="pictures/check.png" height="80" width="80" style="position:absolute;left:30px;top:60px">
+    <img src="pictures/reader.png" height="80" width="80" style="position:absolute;left:27px;top:195px">
+    <img src="pictures/save.png" height="80" width="80" style="position:absolute;left:30px;top:330px">
+    <span style="display:block;margin-top:30px;margin-left:20px;font-size:130%" >Personalize</span>
+    <span style="display:block;margin-top:110px;margin-left:35px;font-size:130%">Discover</span>
+    <span style="display:block;margin-top:105px;margin-left:50px;font-size:130%">Save</span>
+    ';
+    } 
 
-// Set the slider for the logged in user
-echo'
-<div class="slider">
-<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="home.php" >
-<div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
-</div>
-<div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
-Feed
-</div>
-</a>
-</div>';
+    else{
+    // Set the slider for the logged in user
+    // Feed button
+    echo'
+    <div class="slider">
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
+    <a href="home.php" >
+    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
+    Feed
+    </div>
+    </a>
+    </div>';
 
-echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="#submit" data-toggle="modal">
-<div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
-</div>
-<div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
-Submit<br> Resource
-</div>
-</a>
-</div>';
+    // Submit button
+    echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
+    <a href="#submit" data-toggle="modal">
+    <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
+    </div>  
+    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
+    Submit<br> Resource
+    </div>
+    </a>
+    </div>';
 
-echo '
-<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-<a href="library.php">
-<div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
-</div>
-<div style="position:relative;margin-top:-10px;text-align:center;">
-My library
-</div>
-</a>
-</div>
-';
-echo '
-<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-<a href="check.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
-</div>
-<div style="position:relative;margin-top:0px;text-align:center">
-My streams
-</div>
-</a>
+    // My Library button
+    echo '
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
+    <a href="library.php">
+    <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:-10px;text-align:center;">
+    My Library
+    </div>
+    </a>
+    </div>';
 
-</div>
-';
-/*
-echo '
-<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
-<a href="account.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/user.png" height="70" width="70">
-</div>
-<div style="position:relative;margin-top:0px;text-align:center">
-<b>Account<br>settings</b>
-</div>
-</a>
-</div>
-';
-*/
-}
+    // My Streams
+    echo '
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
+    <a href="check.php">
+    <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:0px;text-align:center">
+    My streams
+    </div>
+    </a>
+    </div>';
+
+      // (Potential) Account Setting icon
+      /*
+      echo '
+      <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
+      <a href="account.php">
+      <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/user.png" height="70" width="70">
+      </div>
+      <div style="position:relative;margin-top:0px;text-align:center">
+      <b>Account<br>settings</b>
+      </div>
+      </a>
+      </div>';
+      */
+    }// else clause
+
 echo '</div>';// closing the slider
 
 
-
-
-
-
-
-
+// ******* This areas is totally useless and I may have to remove it
 echo '<div class="submit" >';
 echo '</div>';
 
-// This is a tab to choose from trending/newest for the feed
+// ******* This is a tab to choose from trending/newest for the feed
 /*
 echo '<div class="tab">';
 echo '</div>';
@@ -174,10 +172,11 @@ echo '</div>';
 
 
 echo '<div class="feed-column" id="feed">';
-
 // This is when Javascript and PHP merge to provide the feed content
 
 // This piece of Javascript code will envoke your function when you reach the end of your page.
+// The loader function will work only if the the user is logged in, if a cookie is not detected then 
+// the loader will not respond and the feed will remain empty.
 
 echo 
 '<script type="text/javascript">
@@ -199,42 +198,12 @@ var Frame = 0;
             });
 	    loader(LastCard);
 	    numloader(LastCard); 
-
 </script>';
 
-/*
-if(isset($_COOKIE['junto'])){
-
-$query="select * from RESOURCES where CONFIRMED=1 order by ADDED";
-$result = $conn->query($query);
-while($card = mysqli_fetch_assoc($result)){
-//echo 'select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID'].'----';
-$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
-
-while($temp = mysqli_fetch_assoc($cats)){
-//echo 'select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST='.$temp['SUB'].'----';
-$match = $conn->query('select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST="'.$temp['SUB'].'"');
-
-if($match->num_rows > 0){card($card['RESOURCEID']);break;}
-}
-
-}
-
-}
-
-
-else{
-card(13);
-card(12);
-card(6);
-card(10);
-card(9);
-card(8);
-card(7);
-}
-*/
 
 echo'</div>';
+
+// This is the html content that will be used by bootstrap to load the page 
 echo '
 <div id="submit" class="modal fade">
     <div class="modal-dialog">
