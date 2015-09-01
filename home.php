@@ -180,6 +180,10 @@ echo '<div class="feed-column" id="feed">';
 
 echo 
 '<script type="text/javascript">
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
+
 var LastCard = ';
 $query = "select max(RESOURCEID) as RESOURCEID from RESOURCES";
 $result = $conn->query($query);
