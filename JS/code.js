@@ -13,6 +13,7 @@ xmlhttp.onreadystatechange = function() {
 
 
 function loader(last){
+  var loader;
 // First check to see if ended was set to 1, if so then do nothing
 if(Ended == 1){return;}
 else{
@@ -29,6 +30,7 @@ var xmlhttp = new XMLHttpRequest();
                 var node = document.createElement("DIV");
 		node.setAttribute("id", "Frame"+Frame);
 		document.getElementById("feed").appendChild(node);
+		if(Load==1){loader.parentNode.removeChild(loader);Load=0;}
 		//document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
 		 
                 }
@@ -37,9 +39,17 @@ var xmlhttp = new XMLHttpRequest();
 		node.setAttribute("id", "Frame"+Frame);
 		document.getElementById("feed").appendChild(node);
 		document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
+		if(Load == 1){loader.parentNode.removeChild(loader);Load=0;}
                 }
             }
         }
+if(Load == 0){
+	Load = 1;
+        loader = document.createElement("DIV");
+        loader.setAttribute('id', 'loader');
+        loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
+        document.getElementById("feed").appendChild(loader);
+}
         xmlhttp.open("GET", "loader.php?last=" + last, true);
         xmlhttp.send();
   }//else

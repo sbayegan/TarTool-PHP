@@ -188,6 +188,7 @@ echo ($bigest['RESOURCEID']+1).';';
 echo'
 var Ended = 0;
 var Frame = 0;
+var Load = 0;
             $(window).scroll(function(){
                     if  ($(window).scrollTop() == $(document).height() - $(window).height()){
                           // run our call for pagination
@@ -202,7 +203,9 @@ var Frame = 0;
 
 
 echo'</div>';
-
+echo '<div>';
+echo 'test';
+echo '</div>';
 // This is the html content that will be used by bootstrap to load the page 
 echo '
 <div id="submit" class="modal fade">
