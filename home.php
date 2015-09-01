@@ -180,7 +180,8 @@ echo '<div class="feed-column" id="feed">';
 
 echo 
 '<script type="text/javascript">
-$(window).on('beforeunload', function() {
+
+$(window).on("beforeunload", function() {
     $(window).scrollTop(0);
 });
 
