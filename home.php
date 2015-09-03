@@ -195,7 +195,7 @@ var Ended = 0;
 var Frame = 0;
 var Load = 0;
             $(window).scroll(function(){
-                    if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+                    if  ($(document).height() - ($(window).height() + $(window).scrollTop()) == 0 ){
                           // run our call for pagination
         		  //document.getElementById("test").innerHTML="Things are now changed";        
 	    		  loader(LastCard);
