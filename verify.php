@@ -40,8 +40,8 @@ echo '<div class="stick-to-top">';
      }
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
-echo "<h3 style='color:green;'>Activation Successful</h3>";
-echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your address before you log in.</p>";
+echo "<h3 style='color:green;text-align:center;'>Thank you</h3>";
+echo "<p style='text-align:center;'> Welcome, your account is now activated. </p>";
 echo '</div>';
 
 
