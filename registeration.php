@@ -4,7 +4,7 @@ function putinterest($user,$interest){
 include('datalogin.php');
 $query = "INSERT INTO INTERESTS VALUES (".$user.",'".$interest."')";
 $conn->query($query);
-echo $query;
+//echo $query;
 }
 
 // Retrieve all of the information from the form to be processed and saved in the database
