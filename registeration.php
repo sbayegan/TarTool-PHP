@@ -128,7 +128,7 @@ putinterest($userid,"Debugging");
 // send an email to the client
 $to = $email;
 $subject = "Activate your account";
-$header = "From: general@tartool.com \r\n";
+$header = "From: do-not-reply@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 
@@ -210,7 +210,7 @@ echo '<div class="stick-to-top">';
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
 echo "<h3>Verify your email</h3>";
-echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your email address before you log in.</p>";
+echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your address before you log in.</p>";
 echo '</div>';
 
 
