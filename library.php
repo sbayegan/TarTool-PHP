@@ -561,20 +561,15 @@ echo '
    <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
-   </div>
-   <div class="form-group">
+
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
-   </div>
-  
-   <div class="form-group">
+
    <label for="url">URL:</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
-   </div>
-  
-   <div class="form-group">
+
    <label for="type">Medium: </label> 
    <select name="type"  class="form-control">
     <option value="Video/Audio">Video</option>
