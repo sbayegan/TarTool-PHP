@@ -231,9 +231,7 @@ echo '
    <label for="title">Title:</label>
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
    <span id="title-status"></span> 
-   </div>
 
-   <div class="form-group">
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
@@ -413,21 +411,17 @@ echo '<div id="feedback" class="modal fade">
  			<div class="form-group">
  			<input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
  			</div>
-    
  </form>
-                
                 <p class="text-warning"><small></small></p>
             </div>
             <div class="modal-footer">
-
                  </form>
             </div>
-
         </div>
     </div>
 </div>
-
 ';
+
 echo '</body>';
 echo '<footer>';
 //echo'<div class="footer-line">';

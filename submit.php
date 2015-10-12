@@ -162,7 +162,7 @@ echo '<div class="stick-to-top">';
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
 echo "<h3>Your submission was successfull</h3>";
-echo "<p>The submitted resource will go live as soon as it is approved by our moderator. </p>";
+echo "<p>The suggested resource will go live as soon as it is approved by one of our moderators. </p>";
 echo '</div>';
 
 

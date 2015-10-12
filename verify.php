@@ -41,7 +41,7 @@ echo '<div class="stick-to-top">';
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
 echo "<h3 style='color:green;text-align:center;'>Thank you</h3>";
-echo "<p style='text-align:center;'> Welcome, your account is now activated. </p>";
+echo "<h4 style='text-align:center;'> Welcome, your account is now activated. </h4>";
 echo '</div>';
 
 
