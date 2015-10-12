@@ -209,8 +209,8 @@ echo '<div class="stick-to-top">';
      }
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
-echo "<h3>Verify your E-mail</h3>";
-echo "<p> Please go to your E-mail at ";echo $email;echo " and verify your email address before you log in.</p>";
+echo "<h3>Verify your email</h3>";
+echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your email address before you log in.</p>";
 echo '</div>';
 
 
