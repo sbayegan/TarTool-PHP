@@ -260,7 +260,7 @@ echo '
           <option value="BE">Back-end development</option>
           </select>
 
-          <label > Sub-category: </label>  
+          <label > Labels: </label>  
           <select name="subcat1"  id="D1" class="form-control"> 
           <option value="">Choose One</option>
           <option value="LeanStartup">Lean Startup</option>
