@@ -153,7 +153,7 @@ Click on the link below to activate your Junto account.<br>
 <br>
 <br>
 Cheers, <br>
-Junto team<br>
+TarTool team<br>
 <img src='http://www.tartool.com/pictures/logo.png' alt='logo'/> <br>
 </p>
 </body>
@@ -174,14 +174,44 @@ Try again
 
 echo'<!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript">
+<head>';
+/*
+echo '<script type="text/javascript">
 <!--
    window.location="home.php?sign=1";
 //-->
-</script>
-</head>
-</html>
+</script>';
+*/
+
+
+echo '</head>';
+echo "<title>";
+echo "Confirm your e-mail";
+echo "</title>";
+
+echo "<body>";
+echo '<div class="stick-to-top">';
+  // LOGO
+  echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+
+// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
+     if(isset($_COOKIE['junto'])){
+     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
+     }
+     else{
+     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
+     }
+echo '</div>';//stick-to-top
+echo '<div class="feed-column" >';
+echo "<h3>Verify your E-mail</h3>";
+echo "<p> Please go to your E-mail at ";echo $email;echo " and verify your email address before you log in.</p>";
+echo '</div>';
+
+
+
+echo "</body>";
+
+echo '</html>
 ';
 $conn->close();
 ?>
