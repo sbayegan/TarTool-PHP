@@ -4,7 +4,7 @@ function putinterest($user,$interest){
 include('datalogin.php');
 $query = "INSERT INTO INTERESTS VALUES (".$user.",'".$interest."')";
 $conn->query($query);
-//echo $query;
+
 }
 
 // Retrieve all of the information from the form to be processed and saved in the database
@@ -161,7 +161,7 @@ TarTool team<br>
 ";
 
 mail($to,$subject,$message, $header);
-echo "Confirmation E-mail sent successfully. You will receive our e-mail in a few minutes.";
+//echo "Confirmation E-mail sent successfully. You will receive our e-mail in a few minutes.";
 }
 else echo "-------- REPEATED SIGNUP -----------
 Some of the submitted information are already on our database
@@ -188,6 +188,12 @@ echo '</head>';
 echo "<title>";
 echo "Confirm your e-mail";
 echo "</title>";
+echo '<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+';
 
 echo "<body>";
 echo '<div class="stick-to-top">';
