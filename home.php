@@ -224,7 +224,6 @@ echo '
                 
 
 
-
 <form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
    
 
@@ -310,16 +309,14 @@ echo '
                 
                 <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
                 </form>
-            </div>
-            
-	</div>
+            </div>   
+	       </div>
         </div>
     </div>
-</div>
+</div>';
 
-
-<div id="feedback" class="modal fade">
-    <div class="modal-dialog">
+echo '<div id="feedback" class="modal fade">
+      <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
