@@ -48,7 +48,7 @@ echo '</div>';
 
 echo "</body>";
 
-echo '</html>
+echo '</html>';
 
 
 
