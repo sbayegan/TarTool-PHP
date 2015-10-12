@@ -235,20 +235,15 @@ echo '
    <label for="description">Description:</label><br>
    <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
    <span id="description-status"></span>
-   </div>
 
-  
-   <div class="form-group">
    <label for="url">URL:</label>
    <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
-   </div>
-  
-   <div class="form-group">
+
    <label for="type">Medium: </label> 
    <select name="type"  class="form-control">
-    <option value="Video/Audio">Video</option>
     <option value="Website">Website/Tool</option>
+    <option value="Video/Audio">Video</option>
     <option value="Influencer">Twitter influencer</option>
     <option value="Blog">Blog</option>
     <option value="Book">Book</option>
