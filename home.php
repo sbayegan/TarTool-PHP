@@ -226,12 +226,12 @@ echo '
 
 <form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
    
-
+   <label for="title" >Title:</label>
    <div class="form-group">
-   <label for="title" class="col-lg-4">Title:</label>
-   <div class="col-lg-8">
+
+
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
-   </div>
+
    <span id="title-status"></span> 
 
    <label for="description">Description:</label><br>
