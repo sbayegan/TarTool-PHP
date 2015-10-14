@@ -103,7 +103,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<div class="description">';
     //echo '<b>'.$result['TITLE'].'</b><br><br>';
 	if($result['MEDIUM']=='Video/Audio'){
-		echo '<iframe width="460" height="200" src="'.$result['URL'].'" frameborder="0" allowfullscreen></iframe>';
+            $url = $result['URL'];
+            parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+            $videoid = $my_array_of_vars['v'];
+
+		echo '<iframe width="460" height="200" src="https:://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
 		
 		}
 	else{echo $result['DESCRIPTION'];}
@@ -123,22 +127,24 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<div style="" id="approve-';
     echo $i;
     echo '">';
-    if(!isset($_COOKIE['junto'])){echo '<span href="#sign" data-toggle="modal">';}
+    if(!isset($_COOKIE['junto'])){
+        //echo '<span href="#sign" data-toggle="modal">';
+    }
     else{
     $query = "SELECT * FROM VOTES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
     //echo $query;
     $appd = $conn->query($query);
       if($appd->num_rows == 0){
-    echo '<span onclick="approve('.$i.')">';
-    echo '<img src="pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
+    ////echo '<span onclick="approve('.$i.')">';
+    ////echo '<img src="pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
 				}
       else{
-    echo '<span>';
+    ////echo '<span>';
           }
     }
 
    
-    echo '</span>';
+    ////echo '</span>';
     echo '</div>';
     echo '<div style="" id="save-';
     echo $i;

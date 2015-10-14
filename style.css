@@ -340,7 +340,7 @@ padding-top:25px;
 border-radius: 1px;
 border: 2px dashed grey;
 overflow:scroll;
-z-index:59;
+z-index:70;
 -webkit-transform: rotate(-90deg);
 -moz-transform: rotate(-90deg);
 -ms-transform: rotate(-90deg);
