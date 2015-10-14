@@ -59,18 +59,6 @@ label.css-label {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .checktop{
 position:fixed;
 top: 43px;
@@ -190,7 +178,7 @@ top: 0px;
 right: 0px;
 left: 0px;
 width: 100%;
-z-index:55;
+z-index:60;
 background-color: #FEFEFE;
 }
 .top-left{
@@ -337,6 +325,29 @@ border-radius: 1px;
 overflow:scroll;
 z-index:58;
 }
+.slider-cover{
+position: fixed;
+//float: top;
+//display: block;
+//background-color: #FCFCFC;
+background-color: rgba(255, 255, 255, 0.9);
+height: 150px;
+width: 500px;
+left: -174px;
+top:240px;
+padding-left:60px;
+padding-top:25px;
+border-radius: 1px;
+//border: 1px solid grey;
+overflow:scroll;
+z-index:59;
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
 .navigator{
 position: absolute;
 left: 30px;

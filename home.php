@@ -82,14 +82,60 @@ echo '</div>';//stick-to-top
     if(!isset($_COOKIE['junto']))
     {
     echo '
-    <div class="slider">
-    <img src="pictures/check.png" height="80" width="80" style="position:absolute;left:30px;top:60px">
-    <img src="pictures/reader.png" height="80" width="80" style="position:absolute;left:27px;top:195px">
-    <img src="pictures/save.png" height="80" width="80" style="position:absolute;left:30px;top:330px">
-    <span style="display:block;margin-top:30px;margin-left:20px;font-size:130%" >Personalize</span>
-    <span style="display:block;margin-top:110px;margin-left:35px;font-size:130%">Discover</span>
-    <span style="display:block;margin-top:105px;margin-left:50px;font-size:130%">Save</span>
+    <a href="#sign"  data-toggle="modal">
+    <div class="slider-cover">
+    <h1>Log in to use the panel</h1>
+    </div>
+    </a>
+
     ';
+
+    echo'
+    <div class="slider">
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
+
+    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
+    Feed
+    </div>
+
+    </div>';
+
+    // Submit button
+    echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
+
+    <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
+    </div>  
+    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
+    Submit<br> Resource
+    </div>
+
+    </div>';
+
+    // My Library button
+    echo '
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
+
+    <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:-10px;text-align:center;">
+    My Library
+    </div>
+
+    </div>';
+
+    // My Streams
+    echo '
+    <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
+
+    <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
+    </div>
+    <div style="position:relative;margin-top:0px;text-align:center">
+    My streams
+    </div>
+
+    </div>';
     } 
 
     else{
@@ -226,9 +272,9 @@ echo '
 
 <form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
    
-   <label for="title" >Title:</label>
-   <div class="form-group">
 
+   <div class="form-group">
+   <label for="title" >Title:</label>
 
    <input type="text" name="title" id="title"  size="45" class="form-control"/>
 
