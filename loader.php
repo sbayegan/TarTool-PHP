@@ -41,6 +41,34 @@ echo 0;
 
 }
 
+else{
+//$userid = $_COOKIE['junto'];
+$last = mysqli_real_escape_string($conn,$_GET['last']);
+$query="select * from RESOURCES where CONFIRMED=1 order by ADDED desc";
+$result = $conn->query($query);
+$final;
+$counter = 3;
+//echo $query;
+
+while($card = mysqli_fetch_assoc($result)){
+
+
+	if($counter == 0){break;}
+	if($card['RESOURCEID'] < $last){
+
+				card($card['RESOURCEID']);
+				$final = $card['RESOURCEID'];
+				$counter = $counter - 1;}
+		
+	}// if statement
+
+
+if($counter == 3 ){
+echo 0;
+}
+}
+
+
 
 
 
