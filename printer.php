@@ -107,7 +107,8 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
             parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
             $videoid = $my_array_of_vars['v'];
 
-		echo '<iframe width="460" height="200" src="https:://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
+
+		echo '<iframe width="460" height="200" src="https://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
 		
 		}
 	else{echo $result['DESCRIPTION'];}
