@@ -131,7 +131,6 @@ $subject = "Activate your account";
 $header = "From: do-not-reply@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
-
 <!DOCTYPE html>
 <html>
 <head>
