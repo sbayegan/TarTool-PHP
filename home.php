@@ -84,7 +84,7 @@ echo '</div>';//stick-to-top
     echo '
     <a href="#sign"  data-toggle="modal">
     <div class="slider-cover">
-    <h1>login to use the panel</h1>
+    <h2>login to use the panel</h2>
     </div>
     </a>
 
