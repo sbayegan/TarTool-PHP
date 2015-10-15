@@ -410,11 +410,13 @@ echo '<div id="feedback" class="modal fade">
  		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
 		<span id="condition" class="text-warning"><small></small></span>
 		</div>
-		<br>
-		<a href="twitter/login_to_twitter.php">
+		<br>';
+
+echo 		'<a href="twitter/login_to_twitter.php">
 			<img style="display:block;margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
-		</a>
-		<hr>
+		</a>';
+		
+echo    '<hr>
 		</form>
 			<form action="registeration.php" method="post" id="form" autocomplete="off">
  			 <div class="form-group">
