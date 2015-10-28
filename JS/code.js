@@ -308,19 +308,21 @@ function available(str) {
 
 function userlogin(str) {
     if (str.length < 4) { 
-        document.getElementById("welcome-message").innerHTML = "too short";
-        {document.getElementById("login-password").disabled = true;}
+        //document.getElementById("welcome-message").innerHTML = "too short";
+        {//document.getElementById("login-password").disabled = true;
+    }
         return;
     } else {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-                   document.getElementById("welcome-message").innerHTML = "Doesnt exist";
-                  {document.getElementById("login-password").disabled = true;}
+                   //document.getElementById("welcome-message").innerHTML = "Doesnt exist";
+                  {//document.getElementById("login-password").disabled = true;
+              }
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("welcome-message").innerHTML = "Okay";
+                  //document.getElementById("welcome-message").innerHTML = "Okay";
                   {document.getElementById("login-password").disabled = false;}
                 }
             }
@@ -423,7 +425,7 @@ one = document.getElementById("loginusername").value;
                   document.getElementById("condition").innerHTML = "good, lets go";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("condition").innerHTML = "Waiting for the correct password";
+                  document.getElementById("condition").innerHTML = "Wrong password";
                 }
  		if(xmlhttp.responseText == -1){
                   document.getElementById("condition").innerHTML = "Not activated, Please verify your email address and retype your password";

@@ -19,7 +19,7 @@ echo "</title>";
 
 // Include the JavaScript code
 echo '<script src="JS/code.js"></script>';
-
+echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 // Include the headers associated wth bootstrap
 echo 
 '<link rel="stylesheet" type="text/css" href="style.css">
@@ -394,29 +394,32 @@ echo '<div id="feedback" class="modal fade">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Authentication</h4>
+                
+                <h6 class="modal-title" style="text-align:center;font-size:150%;">Sign in</h6>
             </div>
             
             <div class="modal-body">
                 
 
+
 		<form autocomplete="off">
-		<div class="form-group">
-		<label for="username">Username:</label>
+		<div class="form">
+		<label for="username" style="">Username:</label>
 		<input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
 		<span id="welcome-message" class="text-warning"><small></small></span>
-		<br>
-		<label for="password">Password:</label>
- 		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
-		<span id="condition" class="text-warning"><small></small></span>
-		</div>
-		<br>';
 
+		<label for="password" style="">Password:</label>
+ 		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
+		<span id="condition" style="margin-left: 240px;" class="text-warning"></span>
+		</div>';
+/*
 echo 		'<a href="twitter/login_to_twitter.php">
 			<img style="display:block;margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
 		</a>';
-		
-echo    '<hr>
+*/
+//  echo '<hr>';
+/*
+echo    '
 		</form>
 			<form action="registeration.php" method="post" id="form" autocomplete="off">
  			 <div class="form-group">
@@ -456,11 +459,14 @@ echo    '<hr>
  			<div class="form-group">
  			<input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
  			</div>
- </form>
-                <p class="text-warning"><small></small></p>
+ </form>';
+*/
+ echo '
+                
             </div>
+            </form>
             <div class="modal-footer">
-                 </form>
+                 <a href="signup.html" class="btn btn-warning btn-md" role="button">Become a Member</a>
             </div>
         </div>
     </div>

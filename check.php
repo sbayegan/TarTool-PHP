@@ -26,6 +26,7 @@ echo "<head>";
 echo "<title>";
 echo $UniversalName;
 echo "</title>";
+echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 echo '<script src="JS/code.js"></script>';
 echo '
 <link rel="stylesheet" type="text/css" href="style.css">
