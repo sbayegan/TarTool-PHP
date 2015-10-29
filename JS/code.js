@@ -428,7 +428,7 @@ one = document.getElementById("loginusername").value;
                   document.getElementById("condition").innerHTML = "Wrong password";
                 }
  		if(xmlhttp.responseText == -1){
-                  document.getElementById("condition").innerHTML = "Not activated, Please verify your email address and retype your password";
+                  document.getElementById("condition").innerHTML = "Please verify your email";
                  
                 }
             }

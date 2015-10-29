@@ -20,6 +20,7 @@ echo '</head>';
 echo "<title>";
 echo "Successful Activation";
 echo "</title>";
+echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 echo '<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -39,11 +40,43 @@ echo '<div class="stick-to-top">';
      echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
      }
 echo '</div>';//stick-to-top
-echo '<div class="feed-column" >';
+echo '<div class="feed-column" style="left:0px;">';
 echo "<h3 style='color:green;text-align:center;'>Thank you</h3>";
-echo "<h4 style='text-align:center;'> Welcome, your account is now activated. </h4>";
+echo "<h4 style='text-align:center;'> Your account is now activated. </h4>";
 echo '</div>';
 
+echo '
+<div id="sign" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+                <h6 class="modal-title" style="text-align:center;font-size:150%;">Sign in</h6>
+            </div>
+            
+            <div class="modal-body">
+                
+    <form autocomplete="off">
+    <div class="form">
+    <label for="username" style="">Username:</label>
+    <input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
+    <span id="welcome-message" class="text-warning"><small></small></span>
+
+    <label for="password" style="">Password:</label>
+    <input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
+    <span id="condition" style="margin-left: 240px;" class="text-warning"></span>
+    </div>
+
+            </div>
+            </form>
+            <div class="modal-footer">
+                 <a href="signup.html" class="btn btn-warning btn-md" role="button">Become a Member</a>
+            </div>
+        </div>
+    </div>
+</div>
+';
 
 
 echo "</body>";
