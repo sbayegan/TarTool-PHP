@@ -192,6 +192,7 @@ echo '<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
 ';
 
 echo "<body>";
@@ -211,6 +212,40 @@ echo '<div class="feed-column" >';
 echo "<h3>Verify your email</h3>";
 echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your address before you log in.</p>";
 echo '</div>';
+
+
+echo '
+<div id="sign" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                
+                <h6 class="modal-title" style="text-align:center;font-size:150%;">Sign in</h6>
+            </div>
+            
+            <div class="modal-body">
+                
+    <form autocomplete="off">
+    <div class="form">
+    <label for="username" style="">Username:</label>
+    <input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
+    <span id="welcome-message" class="text-warning"><small></small></span>
+
+    <label for="password" style="">Password:</label>
+    <input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
+    <span id="condition" style="margin-left: 240px;" class="text-warning"></span>
+    </div>
+
+            </div>
+            </form>
+            <div class="modal-footer">
+                 <a href="signup.html" class="btn btn-warning btn-md" role="button">Become a Member</a>
+            </div>
+        </div>
+    </div>
+</div>
+';
 
 
 
