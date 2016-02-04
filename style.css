@@ -480,14 +480,15 @@ padding-left:10px;
 padding-top:5px;
 width: calc(100% - 140px);
     height: 35px;
-    font-size: 130%;
+    font-size: 120%;
+    color:#404040;
     overflow-x: auto;
     overflow-y: hidden;
-    background: #FCFCFC;
+    background: white;
     white-space: nowrap;
     float: left;
+    box-shadow: inset -9px -0px 19px #b3b3b3;
 }
-
 
 .minicard{
 margin:10px;
