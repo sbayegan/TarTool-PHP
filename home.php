@@ -58,16 +58,21 @@ echo '<div class="stick-to-top">';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
-	   //echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
-	   //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
-	   //echo '<span style="position:absolute;right:350px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-	   echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
+	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 	   }
 	   else{
-	   //echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-	   //echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
-	   //echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
-	   echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
+	   echo '<div class="login-square">';
+     echo '<p style="position:fixed;margin-top:12px;font-size:120%;"><a href="signup.html">Sign Up</a></p>';
+     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:72px;" src="pictures/line-shadow.png" height="70" width="2">';
+     echo '<form>';
+
+
+     echo '<input style="position;relative;margin-left:85px;margin-top:5px;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="8" placeholder="Username">';
+     echo '<input style="margin-left:15px;margin-top:5px;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="8" placeholder="Password" disabled/>';
+//	   echo '<a href="#sign"  data-toggle="modal" style="float:right"><img src="pictures/power.png" height="45" width="45"></a>';
+     echo '</form>';
+     echo '</div>';
+
 	   }
 	// A commented code snippet that gets the name of the user
 	   /*
@@ -207,8 +212,8 @@ echo '</div>';// closing the slider
 
 
 // ******* This areas is totally useless and I may have to remove it
-echo '<div class="submit" >';
-echo '</div>';
+//echo '<div class="submit" >';
+//echo '</div>';
 
 // ******* This is a tab to choose from trending/newest for the feed
 /*

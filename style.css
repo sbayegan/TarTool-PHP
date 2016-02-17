@@ -58,6 +58,16 @@ label.css-label {
 			}
 
 
+.login-square{
+position:absolute;
+border: 0px dashed red;
+right:0px;
+top:20px;
+height:45px;
+width:300px;
+}
+
+
 
 .checktop{
 position:fixed;
