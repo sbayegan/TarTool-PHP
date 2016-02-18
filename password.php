@@ -16,6 +16,8 @@ if($resultone->num_rows == 1)
 {
 // Update the password in the Database and then send an email to the user.
 
+$conn-query("UPDATE USERS SET PASSWORD='$pass' WHERE USEID=$userid");
+
 // Get some of the necessary information.
 $result = mysqli_fetch_assoc($resultone);
 $name = $result['NAME'];
@@ -60,27 +62,6 @@ echo '</div>';
 echo "</body>";
 echo '</html>
 ';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -138,7 +119,7 @@ echo'<!DOCTYPE html>
 <head>';
 echo '</head>';
 echo "<title>";
-echo "Confirm your e-mail";
+echo "Invalid Link";
 echo "</title>";
 echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 echo '<link rel="stylesheet" type="text/css" href="style.css">
@@ -155,17 +136,11 @@ echo '<div class="stick-to-top">';
   // LOGO
   echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
-// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
-     if(isset($_COOKIE['junto'])){
-     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
-     }
-     else{
-     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
-     }
+
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
-echo "<h3>Verify your email</h3>";
-echo "<p> Please go to your email at \"";echo $email;echo "\" and verify your address before you log in.</p>";
+echo "<h3>Invalid Link</h3>";
+echo "<p> There seems to be something wrong with your request. Contact our team! </p>";
 echo '</div>';
 echo "</body>";
 echo '</html>
