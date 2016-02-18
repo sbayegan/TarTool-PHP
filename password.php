@@ -16,7 +16,7 @@ if($resultone->num_rows == 1)
 {
 // Update the password in the Database and then send an email to the user.
 
-$conn->query("UPDATE USERS SET PASSWORD='$pass' WHERE USEID=$userid");
+$conn->query("UPDATE USERS SET PASSWORD='$pass' WHERE USERID=$userid");
 
 // Get some of the necessary information.
 $result = mysqli_fetch_assoc($resultone);
