@@ -191,6 +191,17 @@ width: 100%;
 z-index:60;
 background-color: #FEFEFE;
 }
+
+.stick-to-top-forgot{
+box-shadow: 0px 1px 8px grey;
+height: 26px;
+position: absolute;
+top: 95px;
+right: 30px;
+width: 160px;
+background-color: #FEFEFE;
+}
+
 .top-left{
 float: left;
 position: absolute;

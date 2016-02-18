@@ -418,17 +418,17 @@ one = document.getElementById("loginusername").value;
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
-		 document.getElementById("condition").innerHTML =  xmlhttp.responseText;
+		 //document.getElementById("condition").innerHTML =  xmlhttp.responseText;
 
                 if(xmlhttp.responseText == 1){
                   window.location.replace("home.php");
-                  document.getElementById("condition").innerHTML = "good, lets go";
+                  //document.getElementById("condition").innerHTML = "good, lets go";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("condition").innerHTML = "Wrong password";
+                  //document.getElementById("condition").innerHTML = "Wrong password";
                 }
  		if(xmlhttp.responseText == -1){
-                  document.getElementById("condition").innerHTML = "Please verify your email";
+                  //document.getElementById("condition").innerHTML = "Please verify your email";
                  
                 }
             }

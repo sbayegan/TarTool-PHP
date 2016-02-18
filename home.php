@@ -23,7 +23,6 @@ echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 // Include the headers associated wth bootstrap
 echo 
 '<link rel="stylesheet" type="text/css" href="style.css">
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -61,21 +60,20 @@ echo '<div class="stick-to-top">';
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 	   }
 	   else{
+     echo '<div class="stick-to-top-forgot"><a href="forgotpassword.html"><div style="margin-top:3px;margin-left:6px;">Forgot your password?</div></a></div>';
 	   echo '<div class="login-square">';
-     echo '<p style="position:fixed;margin-top:12px;font-size:120%;"><a href="signup.html">Sign Up</a></p>';
-     echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
-     echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
-     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:70px;" src="pictures/line-shadow.png" height="70" width="2">';
+     echo '<p style="position:fixed;margin-top:12px;font-size:120%;margin-left:30px;"><a href="signup.html">Sign Up</a></p>';
+     //echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
+     //echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
+     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:110px;" src="pictures/line-shadow.png" height="70" width="2">';
      echo '<form>';
-
-
      echo '<input style="position;relative;margin-left:135px;margin-top:5px;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="8" placeholder="Username">';
      echo '<input style="margin-left:15px;margin-top:5px;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="8" placeholder="Password" disabled/>';
 //	   echo '<a href="#sign"  data-toggle="modal" style="float:right"><img src="pictures/power.png" height="45" width="45"></a>';
      echo '</form>';
      echo '</div>';
-
 	   }
+
 	// A commented code snippet that gets the name of the user
 	   /*
 	   $value = $_COOKIE['junto'];
@@ -93,55 +91,45 @@ echo '</div>';//stick-to-top
     <div class="slider-cover">
     <h2>login to use the panel</h2>
     </div>
-    </a>
-
-    ';
+    </a>';
 
     echo'
     <div class="slider">
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-
     <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
     Feed
     </div>
-
     </div>';
 
     // Submit button
     echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-
     <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
     </div>  
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
     Submit<br> Resource
     </div>
-
     </div>';
 
     // My Library button
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-
     <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:-10px;text-align:center;">
     My Library
     </div>
-
     </div>';
 
     // My Streams
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-
     <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:0px;text-align:center">
     My streams
     </div>
-
     </div>';
     } 
 
@@ -227,9 +215,7 @@ echo '</div>';
 echo '<div class="feed-column" id="feed">';
 // This is when Javascript and PHP merge to provide the feed content
 
-// This piece of Javascript code will envoke your function when you reach the end of your page.
-// The loader function will work only if the the user is logged in, if a cookie is not detected then 
-// the loader will not respond and the feed will remain empty.
+
 
 echo 
 '<script type="text/javascript">
@@ -261,9 +247,7 @@ var Load = 0;
 
 
 echo'</div>';
-echo '<div>';
-echo 'test';
-echo '</div>';
+
 // This is the html content that will be used by bootstrap to load the page 
 echo '
 <div id="submit" class="modal fade">
@@ -395,90 +379,10 @@ echo '<div id="feedback" class="modal fade">
     </div>
 </div>
 
-
-<div id="sign" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                
-                <h6 class="modal-title" style="text-align:center;font-size:150%;">Sign in</h6>
-            </div>
-            
-            <div class="modal-body">
-                
-
-
-		<form autocomplete="off">
-		<div class="form">
-		<label for="username" style="">Username:</label>
-		<input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
-		<span id="welcome-message" class="text-warning"><small></small></span>
-
-		<label for="password" style="">Password:</label>
- 		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
-		<span id="condition" style="margin-left: 240px;" class="text-warning"></span>
-		</div>';
-/*
-echo 		'<a href="twitter/login_to_twitter.php">
-			<img style="display:block;margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
-		</a>';
-*/
-//  echo '<hr>';
-/*
-echo    '
-		</form>
-			<form action="registeration.php" method="post" id="form" autocomplete="off">
- 			 <div class="form-group">
-			 <label for="full_name">Name :</label>
-			 <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
- 			 </div>
- 			 <div class="form-group">
- 			 <label for="email">Email  :</label>
-			 <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
-			 <span id="email-status"></span>
-			 </div>
- 			 <div class="form-group">
- 			<label for="username">Username:</label>
- 			<input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
- 			<span id="user-status"> </span> 
- 			</div>
- 			 <div class="form-group">
-			<label for="password">Password:</label>
- 			<input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
- 			<span id="pass-status"> </span> 
- 			</div>
- 			<div class="form-group">
- 			<label for="password1">Retype Password:</label>
-			 <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
-			 <span id="pass1-status"> </span> 
- 			</div>
- 			 	<div class="form-group">
-				<label for="dropdown">Who are you?</label>
-				<select name="type" form="form" id="dropdown" class="form-control" >
-				<option value="NULL">choose one</option>
-				<option value="one">a founder</option>
-				<option value="two">working at a startup</option>
-         			<option value="three">I just like strartups</option>
-        			<option value="four">None of your business!</option>
-        			</select>
-				</div>
- 			<div class="form-group">
- 			<input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
- 			</div>
- </form>';
-*/
- echo '
-                
-            </div>
-            </form>
-            <div class="modal-footer">
-                 <a href="signup.html" class="btn btn-warning btn-md" role="button">Become a Member</a>
-            </div>
-        </div>
-    </div>
-</div>
 ';
+
+
+
 
 echo '</body>';
 echo '<footer>';
