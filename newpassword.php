@@ -52,7 +52,7 @@ $temp = mysqli_fetch_assoc($result);
              </div>';
         echo '<div class="form-group">
              <label for="password1">Retype Password:</label>
-             <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
+             <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatchrec()" class="form-control" />
              <span id="pass1-status"> </span> 
              </div>';
         echo '<div class="form-group">

@@ -451,5 +451,18 @@ function passmatch(){
 				repass = 0;
 				{document.getElementById("submit_btn").disabled = true;}
 							}
-			}						
+			}		
+function passmatchrec(){ //for password recovery
+            if(document.getElementById("password").value == document.getElementById("password1").value){
+                document.getElementById("pass1-status").innerHTML = "matched";
+                repass = 1;
+                        if(pass == 1 && repass ==1)
+                    {document.getElementById("submit_btn").disabled = false;}
+                            }
+            if(document.getElementById("password").value != document.getElementById("password1").value){
+                document.getElementById("pass1-status").innerHTML = "not mached";
+                repass = 0;
+                {document.getElementById("submit_btn").disabled = true;}
+                            }
+            }   				
 
