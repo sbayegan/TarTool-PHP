@@ -63,11 +63,13 @@ echo '<div class="stick-to-top">';
 	   else{
 	   echo '<div class="login-square">';
      echo '<p style="position:fixed;margin-top:12px;font-size:120%;"><a href="signup.html">Sign Up</a></p>';
-     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:72px;" src="pictures/line-shadow.png" height="70" width="2">';
+     echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
+     echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
+     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:70px;" src="pictures/line-shadow.png" height="70" width="2">';
      echo '<form>';
 
 
-     echo '<input style="position;relative;margin-left:85px;margin-top:5px;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="8" placeholder="Username">';
+     echo '<input style="position;relative;margin-left:135px;margin-top:5px;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="8" placeholder="Username">';
      echo '<input style="margin-left:15px;margin-top:5px;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="8" placeholder="Password" disabled/>';
 //	   echo '<a href="#sign"  data-toggle="modal" style="float:right"><img src="pictures/power.png" height="45" width="45"></a>';
      echo '</form>';

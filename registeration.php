@@ -23,8 +23,7 @@ $userid;
 // if they resubmit the form by refreshing
 $resultone = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
 $resulttwo = $conn->query("SELECT * FROM USERS WHERE EMAIL='$email'");
-echo $resultone->num_rows;
-echo $resulttwo->num_rows;
+
 
 if($resultone->num_rows == 0 && $resulttwo->num_rows == 0 
 	&& isset($_POST['username']) && isset($_POST['email'])  
@@ -146,14 +145,13 @@ Welome $name <br>
 
 <b>Just one more step ...</b> <br>
 <br>
-Click on the link below to activate your Junto account.<br>
-<br>
+Click on the link below to activate your TarTool account.<br>
 <a href='http://www.tartool.com/verify.php?code=$hash&id=$userid' > Activate Your Account </a>
 <br>
 <br>
 Cheers, <br>
 TarTool team<br>
-<img src='http://www.tartool.com/pictures/logo.png' alt='logo'/> <br>
+<img src='http://www.tartool.com/pictures/logo.png' width='165' height='76' alt='logo'/> <br>
 </p>
 </body>
 </html>
