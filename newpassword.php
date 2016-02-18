@@ -54,6 +54,9 @@ $temp = mysqli_fetch_assoc($result);
              <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
              <span id="pass1-status"> </span> 
              </div>';
+        echo '<div class="form-group">
+             <input name="submit" type="submit" value="Submit" id="submit_btn" class="btn btn-danger" disabled />
+             </div>';
         echo '</form>';
         echo '</div>';
         echo "</body>";
