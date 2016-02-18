@@ -27,6 +27,7 @@ $temp = mysqli_fetch_assoc($result);
         echo "<title>";
         echo "Enter New Password";
         echo "</title>";
+        echo '<script src="JS/code.js"></script>';
         echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
         echo '<link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
