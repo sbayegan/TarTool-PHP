@@ -44,7 +44,9 @@ $temp = mysqli_fetch_assoc($result);
         echo '<div class="feed-column" style="left:0px;">';
         echo "<h3 style='color:green;text-align:center;'>Reset Password</h3>";
         echo "<h4 style='text-align:center;'> Please enter your new password. </h4>";
-        echo '<form action="registeration.php" method="post" id="form" autocomplete="off">';
+        echo '<form action="password.php" method="post" id="form" autocomplete="off">';
+        echo '<input type="hidden" name="hash" value="'.$hash.'">';
+        echo '<input type="hidden" name="id" value="'.$userid.'">';
         echo '<div class="form-group">
              <label for="password">Password:</label>
              <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
