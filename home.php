@@ -94,7 +94,7 @@ echo '
               </select>
         </div>
       <div class="form-group">
-      <input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
+      <input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-success" disabled />
       </div>
  </form>
 </div>';
