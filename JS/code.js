@@ -1,3 +1,22 @@
+
+function showsignup(){
+document.getElementById("transparent").style.display = 'block';
+document.getElementById("transparent-signup").style.display = 'block';
+}
+
+function showsignin(){
+document.getElementById("transparent").style.display = 'block';
+document.getElementById("transparent-signin").style.display = 'block';
+}
+
+function closeall(){
+document.getElementById("transparent").style.display = 'none';
+document.getElementById("transparent-signup").style.display = 'none';
+document.getElementById("transparent-signin").style.display = 'none';
+}
+
+
+
 function numloader(last){
 if(Ended == 0){	
 var xmlhttp = new XMLHttpRequest();

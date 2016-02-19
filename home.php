@@ -49,7 +49,62 @@ echo
   fjs.parentNode.insertBefore(js, fjs);
 }(document, \'script\', \'facebook-jssdk\'));</script>';
 
+// The transparent background
+echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
+echo '<div class="signup-square" id="transparent-signup">
+<div style="border:0px dashed grey;width:500px;margin-left:100px">
+<p style="font-size:125%;"> Go ahead and fill this form to create your account.</p>
+</div>
+</form>
+      <form action="registeration.php" method="post" id="form" autocomplete="off">
+       <div class="form-group">
+       <label for="full_name">Name :</label>
+       <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
+       </div>
+       <div class="form-group">
+       <label for="email">Email  :</label>
+       <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
+       <span id="email-status"></span>
+       </div>
+       <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
+      <span id="user-status"> </span> 
+      </div>
+       <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
+      <span id="pass-status"> </span> 
+      </div>
+      <div class="form-group">
+      <label for="password1">Retype Password:</label>
+       <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
+       <span id="pass1-status"> </span> 
+      </div>
+        <div class="form-group">
+        <label for="dropdown">Who are you?</label>
+        <select name="type" form="form" id="dropdown" class="form-control" >
+        <option value="NULL">choose one</option>
+        <option value="one">a founder</option>
+        <option value="two">working at a startup</option>
+              <option value="three">I just like strartups</option>
+              <option value="four">None of your business!</option>
+              </select>
+        </div>
+      <div class="form-group">
+      <input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
+      </div>
+ </form>
+</div>';
 
+echo '<div class="signin-square" id="transparent-signin">';
+     echo '<form>';
+     echo '<p style="margin-top:-10px;padding-bottom:5px;font-size:125%;"> Log in</p>';
+     echo '<input style="position;relative;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="11" placeholder=" Username">';
+     echo '<input style="float:right;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="11" placeholder=" Password" disabled/>';
+     echo '<p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
+     echo '</form>';
+echo '</div>';
 
 echo '<div class="stick-to-top">';
 	// LOGO
@@ -60,18 +115,20 @@ echo '<div class="stick-to-top">';
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 	   }
 	   else{
-     echo '<div class="stick-to-top-forgot"><a href="forgotpassword.html"><div style="margin-top:3px;margin-left:6px;">Forgot your password?</div></a></div>';
+
+
+
 	   echo '<div class="login-square">';
-     echo '<p style="position:fixed;margin-top:12px;font-size:120%;margin-left:30px;"><a href="signup.html">Sign Up</a></p>';
+     //echo '<p style="position:fixed;margin-top:12px;font-size:120%;margin-left:30px;"><a href="#" onclick="showsignin()">Sign Up</a></p>';
      //echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
      //echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
-     echo '<img style="position:fixed;margin-right:15px;margin-top:-8px;margin-left:110px;" src="pictures/line-shadow.png" height="70" width="2">';
-     echo '<form>';
-     echo '<input style="position;relative;margin-left:135px;margin-top:5px;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="8" placeholder="Username">';
-     echo '<input style="margin-left:10px;margin-top:5px;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="8" placeholder="Password" disabled/>';
-//	   echo '<a href="#sign"  data-toggle="modal" style="float:right"><img src="pictures/power.png" height="45" width="45"></a>';
-     echo '</form>';
+     echo '<img style="margin-right:20px;margin-top:-10px;" href="#" onclick="showsignin()" src="pictures/power.png" width="50" height="50" >';
+     echo '<a href="#" onclick="showsignup()" class="btn btn-default" role="button">Create Account</a>';
+
      echo '</div>';
+
+
+
 	   }
 
 	// A commented code snippet that gets the name of the user
@@ -347,39 +404,6 @@ echo '
     </div>
 </div>';
 
-echo '<div id="feedback" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Leave Your Feedback</h4>
-            </div>
-            <div class="modal-body">
-                <form  class="form-asd" role="form" action="submit.php" method="get">
-                <div class="form-group">
-                <label for="title">Subject:</label>
-                <input type="text" name="title" id="title"  size="45" class="form-control"/>
-                <span id="title-status"></span> 
-                </div>
-
-                <div class="form-group">
-                <label for="description">Your Feedback!</label><br>
-                <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
-                <span id="description-status"></span>
-                </div>
-                
-                <p class="text-warning"><small></small></p>
-            </div>
-            <div class="modal-footer">
-                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
-                 </form>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-';
 
 
 
