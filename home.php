@@ -51,7 +51,9 @@ echo
 
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
-echo '<div class="signup-square" id="transparent-signup">
+echo '<div class="signup-square" id="transparent-signup">';
+echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+echo '
 <div style="border:0px dashed grey;width:500px;margin-left:100px">
 <p style="font-size:125%;"> Go ahead and fill this form to create your account.</p>
 </div>
@@ -107,7 +109,8 @@ echo '<div class="signup-square" id="transparent-signup">
      $email = $result["EMAIL"];
   
 echo '<div class="profile-square" id="transparent-profile">';
-echo '<h2 align="center">My account</h2>';
+echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+echo '<h2 align="center">Account Settings</h2>';
 echo '<br>';
 echo '<p>Name: <b>'.$name.'</b></p>';
 echo '<p>E-mail: '.$email.'</p>';
@@ -116,6 +119,7 @@ echo '<p>Password: <a>change password</a>';
 echo '</div>';
 
 echo '<div class="signin-square" id="transparent-signin">';
+     echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
      echo '<form>';
      echo '<p style="margin-top:-10px;padding-bottom:5px;font-size:125%;"> Log in</p>';
      echo '<input style="position;relative;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="11" placeholder=" Username">';
