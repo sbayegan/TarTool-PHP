@@ -97,6 +97,22 @@ echo '<div class="signup-square" id="transparent-signup">
  </form>
 </div>';
 
+  // A commented code snippet that gets the name of the user
+     
+     $value = $_COOKIE['junto'];
+     $result= $conn->query("SELECT * FROM USERS WHERE USERID=".$value);
+     $result = mysqli_fetch_assoc($result);
+     $name = $result["NAME"];
+     $id = $result["USERNAME"];
+  
+echo '<div class="profile-square" id="transparent-profile">';
+echo '<h2 align="center">My account</h2>';
+echo '<br>';
+echo '<p>Name: <b>'.$name.'</b></p>';
+echo '<p>User ID: '.$id.'</p>';
+echo '<p>Password: <a>change password</a>';
+echo '</div>';
+
 echo '<div class="signin-square" id="transparent-signin">';
      echo '<form>';
      echo '<p style="margin-top:-10px;padding-bottom:5px;font-size:125%;"> Log in</p>';
@@ -113,7 +129,8 @@ echo '<div class="stick-to-top">';
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
-	   }
+	   echo '<span style="position:absolute;float:left;right:120px;top:20px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50"></a></span>';
+     }
 	   else{
 
 

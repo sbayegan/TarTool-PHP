@@ -9,12 +9,17 @@ document.getElementById("transparent").style.display = 'block';
 document.getElementById("transparent-signin").style.display = 'block';
 }
 
+function showprofile(){
+document.getElementById("transparent").style.display = 'block';
+document.getElementById("transparent-profile").style.display = 'block';
+}
+
 function closeall(){
 document.getElementById("transparent").style.display = 'none';
 document.getElementById("transparent-signup").style.display = 'none';
 document.getElementById("transparent-signin").style.display = 'none';
+document.getElementById("transparent-profile").style.display = 'none';
 }
-
 
 
 function numloader(last){
