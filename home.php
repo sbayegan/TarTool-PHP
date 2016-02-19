@@ -110,8 +110,8 @@ echo '<div class="profile-square" id="transparent-profile">';
 echo '<h2 align="center">My account</h2>';
 echo '<br>';
 echo '<p>Name: <b>'.$name.'</b></p>';
-echo '<p>User ID: '.$id.'</p>';
 echo '<p>E-mail: '.$email.'</p>';
+echo '<p>User ID: '.$id.'</p>';
 echo '<p>Password: <a>change password</a>';
 echo '</div>';
 
