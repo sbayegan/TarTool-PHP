@@ -54,37 +54,37 @@ echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="signup-square" id="transparent-signup">';
 echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
 echo '
-<div style="border:0px dashed grey;width:500px;margin-left:100px">
-<p style="font-size:125%;"> Go ahead and fill this form to create your account.</p>
+<div style="border:0px dashed grey;width:500px;margin-top:-5px;">
+<p style="font-size:130%;"> Sign Up</p>
 </div>
 </form>
       <form action="registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
-       <label for="full_name">Name :</label>
+       <label for="full_name">Name</label>
        <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
        </div>
        <div class="form-group">
-       <label for="email">Email  :</label>
+       <label for="email">Email</label>
        <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
        <span id="email-status"></span>
        </div>
        <div class="form-group">
-      <label for="username">Username:</label>
+      <label for="username">Username</label>
       <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
       <span id="user-status"> </span> 
       </div>
        <div class="form-group">
-      <label for="password">Password:</label>
+      <label for="password">Password</label>
       <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
       <span id="pass-status"> </span> 
       </div>
       <div class="form-group">
-      <label for="password1">Retype Password:</label>
+      <label for="password1">Retype Password</label>
        <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
        <span id="pass1-status"> </span> 
       </div>
         <div class="form-group">
-        <label for="dropdown">Who are you?</label>
+        <label for="dropdown">What do you do for a living?</label>
         <select name="type" form="form" id="dropdown" class="form-control" >
         <option value="NULL">choose one</option>
         <option value="one">a founder</option>
