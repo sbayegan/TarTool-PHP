@@ -122,8 +122,8 @@ echo '<div class="stick-to-top">';
      //echo '<p style="position:fixed;margin-top:12px;font-size:120%;margin-left:30px;"><a href="#" onclick="showsignin()">Sign Up</a></p>';
      //echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
      //echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
-     echo '<img style="margin-right:20px;margin-top:-10px;" href="#" onclick="showsignin()" src="pictures/power.png" width="50" height="50" >';
-     echo '<a href="#" onclick="showsignup()" class="btn btn-default" role="button">Create Account</a>';
+     echo '<a style="margin-right:20px;font-size:110%;" href="#" onclick="showsignin()"  role="button">Log In</a>';
+     echo '<a href="#" onclick="showsignup()" class="btn btn-default" role="button">Sign Up</a>';
 
      echo '</div>';
 
@@ -144,9 +144,9 @@ echo '</div>';//stick-to-top
     if(!isset($_COOKIE['junto']))
     {
     echo '
-    <a href="#sign"  data-toggle="modal">
+    <a href="#" onclick="showsignin()"  data-toggle="modal">
     <div class="slider-cover">
-    <h2>login to use the panel</h2>
+    <h2>log in to use the panel</h2>
     </div>
     </a>';
 

@@ -152,7 +152,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '">';
 
     if(!isset($_COOKIE['junto'])){
-    echo '<span href="#sign" data-toggle="modal">';
+    echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
     echo '<img src="pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
 
 }
