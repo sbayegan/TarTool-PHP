@@ -104,12 +104,14 @@ echo '<div class="signup-square" id="transparent-signup">
      $result = mysqli_fetch_assoc($result);
      $name = $result["NAME"];
      $id = $result["USERNAME"];
+     $email = $result["EMAIL"];
   
 echo '<div class="profile-square" id="transparent-profile">';
 echo '<h2 align="center">My account</h2>';
 echo '<br>';
 echo '<p>Name: <b>'.$name.'</b></p>';
 echo '<p>User ID: '.$id.'</p>';
+echo '<p>E-mail: '.$email.'</p>';
 echo '<p>Password: <a>change password</a>';
 echo '</div>';
 
