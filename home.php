@@ -113,7 +113,7 @@ echo '
    <span id="description-status"></span>
   
    <label for="url">URL</label>
-   <input type="text" name="url" id="url" size="45" onkeyup="submissionsample()" class="form-control"/>
+   <input type="text" name="url" id="url" size="45" onchange="submissionsample()" class="form-control"/>
    <span id="url-status"> </span> 
    
    <p><b>Medium</b></p> 
@@ -220,9 +220,9 @@ echo '
     <div style="" id="save-44"><span onclick="unfavorite(44)"><img src="pictures/cross-red.png" width="55" height="55" style="float:left;margin-left:0px;margin-top:15px"></span></div>
   </div>
   <div class="numbers">
-    <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%">7</div>
-    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%">47</div>
-    <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%">165</div>
+    <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-linkedin">0</div>
+    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-twitter">N/A</div>
+    <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-facebook">0</div>
   </div>
   <div class="box-stats" style="background-color:#FFDAA3;red)">
     <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#636363">
@@ -493,7 +493,7 @@ echo '
    <span id="description-status"></span>
 
    <label for="url">URL:</label>
-   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
+   <input type="text" name="url"  size="45" onchange="activate(this.value)" class="form-control"/>
    <span id="url-status"> </span> 
 
    <label for="type">Medium: </label> 

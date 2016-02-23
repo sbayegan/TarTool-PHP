@@ -1,19 +1,4 @@
 
-// Helper function to check and see if a string is a valid URL
-// http://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-an-url
-function ValidURL(str) {
-  var pattern = new RegExp('^(https?:\/\/)?'+ // protocol
-    '((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // domain name
-    '((\d{1,3}\.){3}\d{1,3}))'+ // OR ip (v4) address
-    '(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port and path
-    '(\?[;&a-z\d%_.~+=-]*)?'+ // query string
-    '(\#[-a-z\d_]*)?$','i'); // fragment locater
-  if(!pattern.test(str)) {
-    return false;
-  } else {
-    return true;
-  }
-}
 
 
 
@@ -34,9 +19,28 @@ document.getElementById("samplecard-title").innerHTML= title;
 // Update the description
 document.getElementById("samplecard-description").innerHTML= description;
 // Deal with the URL.
-if(ValidURL(url)){
+        //facebook
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("samplecard-facebook").innerHTML = xmlhttp.responseText;
 
-}
+                                                                    }
+                                                }
+        xmlhttp.open("GET", "PHP/socialscores/facebook.php?URL=" + url, true);
+        xmlhttp.send();
+        //linkedin
+        var xmlhttplink = new XMLHttpRequest();
+        xmlhttplink.onreadystatechange = function() {
+            if (xmlhttplink.readyState == 4 && xmlhttplink.status == 200) {
+                document.getElementById("samplecard-linkedin").innerHTML = xmlhttplink.responseText;
+
+                                                                    }
+                                                }
+        xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
+        xmlhttplink.send();
+
+
 
 
 
