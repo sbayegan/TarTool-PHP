@@ -177,7 +177,7 @@ echo '
      
       
 
-<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
+<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()"> + </button>
 <br>
 <br>
 <input type="submit" value="submit" class="btn btn-danger btn-sm" style="width:100%;" id="submit_bt">
@@ -536,7 +536,7 @@ echo '
      
       
 
-<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
+<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">+</button>
 
 
 
