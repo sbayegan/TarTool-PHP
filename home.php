@@ -149,7 +149,7 @@ echo '
           </select>
 
           <label > Labels: </label>  
-          <select name="subcat1"  id="D1" class="form-control"> 
+          <select name="subcat1"  id="D1" class="form-control" onchange="submissionupdatelabels(1,this.options[this.selectedIndex].innerHTML)"> 
           <option value="">Choose One</option>
           <option value="LeanStartup">Lean Startup</option>
           <option value="MarketingAndResearch">Marketing & Research</option>
@@ -193,7 +193,6 @@ echo '
 <div class="box" style="background-color:#FCFCFC;">
   <a href="#"><div class="sticker" id="samplecard-category">Business Development</div></a>
   <div class="subcats" id="samplecard-subcategory">
-    <a href="home.php?subcat=HTML"><span class="label label-default">HTML</span></a>
   </div>
   <div class="profile-picture">
     <img src="http://www.csscheckbox.com/imgs/logo-3.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 

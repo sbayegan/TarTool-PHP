@@ -46,6 +46,22 @@ if (medium=="Blog"){         document.getElementById("samplecard-boxstats").styl
 if (medium=="Book"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#9b59b6";}
 }
 
+
+function submissionupdatelabels(number,text){    
+
+    var element = document.getElementById("samplelabel"+number);
+    if(element != null){element.parentNode.removeChild(element);}
+    
+
+var node = document.createElement("DIV");
+node.innerHTML = text;
+node.setAttribute("id", "samplelabel"+number);
+node.setAttribute("class","label label-default");
+node.setAttribute("style","margin:2px;display:inline-block;");
+if(text != 'Choose One')document.getElementById("samplecard-subcategory").appendChild(node); 
+
+}
+
 function showsubmission(){
 document.getElementById("transparent").style.display = 'block';
 document.getElementById("transparent-box").style.display = 'block';
@@ -201,6 +217,17 @@ if(str.length > 5){document.getElementById("submit_bt").disabled = false;}
 else {document.getElementById("submit_bt").disabled = true;}
 }
 function update(str){
+    var element = document.getElementById("samplelabel1");
+    if(element != null){element.parentNode.removeChild(element);}
+    var element = document.getElementById("samplelabel2");
+    if(element != null){element.parentNode.removeChild(element);}
+    var element = document.getElementById("samplelabel3");
+    if(element != null){element.parentNode.removeChild(element);}
+    var element = document.getElementById("samplelabel4");
+    if(element != null){element.parentNode.removeChild(element);}
+    var element = document.getElementById("samplelabel5");
+    if(element != null){element.parentNode.removeChild(element);}
+
 lastused = 2;
 document.getElementById("adderbutton").disabled = false;
 if (document.getElementById("D5")){var element = document.getElementById("D5");element.parentNode.removeChild(element);}
@@ -282,8 +309,8 @@ if(str == "BD"){
 
 function add() {
 var FE = 
-	'<select name="subcat' + lastused + '"  class="form-control" id=lastused>'+
-	'<option value="">Choose One</option>'+
+	'<select name="subcat' + lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
+	    '<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
         '<option value="MockupsAndWireframing">Mockups & Wireframing</option>'+
@@ -296,15 +323,15 @@ var FE =
         '<option value="FrontEndAndroid">Android</option>'+
         '<option value="Bootstrap">Bootstrap</option>'+
         '<option value="XML">XML</option>'+
-	'<option value="JQuery">jQuery</option>'+
-	'<option value="Angular">Angular</option>'+
-	'<option value="Canvas">Canvas</option>'+
-	'<option value="SVG">Scalable Vector Graphics</option>'+
-	'<option value="JSON">JSON</option>'+
+	   '<option value="JQuery">jQuery</option>'+
+	   '<option value="Angular">Angular</option>'+
+	   '<option value="Canvas">Canvas</option>'+
+	   '<option value="SVG">Scalable Vector Graphics</option>'+
+	   '<option value="JSON">JSON</option>'+
         '<option value="Ajax">Ajax</option>'+
 	'</select>';
 var BE = 
-	'<select name="subcat'+ lastused +'"  class="form-control" id=lastused>'+
+	'<select name="subcat'+ lastused +'"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
 	'<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
@@ -325,7 +352,7 @@ var BE =
         '<option value="Debugging Tools">Debugging</option>'+
 	'</select>';
 var BD = 
- 	'<select name="subcat'+ lastused + '"  class="form-control" id=lastused>'+
+ 	'<select name="subcat'+ lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
  	'<option value="">Choose One</option>'+
         '<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
