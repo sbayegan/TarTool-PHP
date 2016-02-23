@@ -126,7 +126,7 @@ echo '
       </label>
       <br>
   <label class="radio-inline"> 
-    <input type="radio" name="type" value="Influencer" onclick="submissionsample()">Twitter influencer
+    <input type="radio" name="type" value="Influencer" onclick="submissionsample()">Influencer
       </label>
       
   <label class="radio-inline">
@@ -178,18 +178,11 @@ echo '
       
 
 <button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
-
-
-
-                
-                
-                <p class="text-warning"><small></small></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                
-                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
-                </form>
+<br>
+<br>
+<input type="submit" value="submit" class="btn btn-danger" id="submit_bt">
+        
+        </form>
 
 
 ';
@@ -226,7 +219,7 @@ echo '
   </div>
   <div class="box-stats" style="background-color:#FFDAA3;red)">
     <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#636363">
-      social score: <div class="badge" style="font-size:100%">222</div>
+      social score: <div class="badge" style="font-size:100%">N/A</div>
     </div>
       <div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">Website</div>
   </div>

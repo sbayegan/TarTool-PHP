@@ -195,11 +195,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
 
 echo '<div class="box-stats" style="background-color:';
-     if($medium == 'Video/Audio')     {echo '#B3FFBD;';}
-     if($medium == 'Website')   {echo '#FFDAA3;';}
-     if($medium == 'Blog')      {echo '#FF9933;';}
-     if($medium == 'Book')      {echo '#FFACE3;';}
-     if($medium == 'Influencer'){echo '#A3D1FF;';}
+     if($medium == 'Video/Audio'){echo '#e74c3c;';}
+     if($medium == 'Website')    {echo '#f1c40f;';}
+     if($medium == 'Blog')       {echo '#2ecc71;';}
+     if($medium == 'Book')       {echo '#9b59b6;';}
+     if($medium == 'Influencer') {echo '#3498db;';}
      else{echo 'red';}
 
     echo')">';

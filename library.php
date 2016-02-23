@@ -461,7 +461,7 @@ if(isset($_COOKIE['junto'])){
 echo '
 <div style="position:fixed;left:150px;margin-bottom:185px;top:86px;width:calc(100% - 0px);margin-right:200px;height:90%;overflow:scroll;background-color: white">
 <div class="shelve-title">Website/Tools</div>
-	<div class="shelve" style="background-color:#FFDAA3">
+	<div class="shelve" style="background-color:#f1c40f;">
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
@@ -496,7 +496,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 
 echo '</div>';
 echo '<div class="shelve-title">Blogs</div>';
-echo '<div class="shelve" style="background-color:#FF9933;">';
+echo '<div class="shelve" style="background-color:#2ecc71;">';
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
@@ -510,7 +510,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Books</div>';
-echo '<div class="shelve" style="background-color:#FFACE3;">';
+echo '<div class="shelve" style="background-color:#9b59b6;">';
 
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -524,8 +524,8 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
-echo '<div class="shelve-title">Twitter Influencers</div>';
-echo '<div class="shelve" style="background-color:#A3D1FF;">';
+echo '<div class="shelve-title">Influencers</div>';
+echo '<div class="shelve" style="background-color:#3498db;">';
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
