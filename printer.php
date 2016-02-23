@@ -200,7 +200,7 @@ echo '<div class="box-stats" style="background-color:';
      if($medium == 'Blog')       {echo '#2ecc71;';}
      if($medium == 'Book')       {echo '#9b59b6;';}
      if($medium == 'Influencer') {echo '#3498db;';}
-     else{echo 'red';}
+
 
     echo')">';
     echo '<div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';

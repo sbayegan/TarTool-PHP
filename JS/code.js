@@ -13,7 +13,8 @@ function submissionsample(){
 var title       = document.getElementById("title").value;
 var description = document.getElementById("description").value;
 var url         = document.getElementById("url").value;
-var medium      = document.getElementById("type");
+var medium      = document.querySelector('input[name="type"]:checked').value;
+
 // Update the title
 document.getElementById("samplecard-title").innerHTML= title;
 // Update the description
@@ -23,8 +24,7 @@ document.getElementById("samplecard-description").innerHTML= description;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("samplecard-facebook").innerHTML = xmlhttp.responseText;
-
+                if(xmlhttp.responseText.length < 10)document.getElementById("samplecard-facebook").innerHTML = xmlhttp.responseText;
                                                                     }
                                                 }
         xmlhttp.open("GET", "PHP/socialscores/facebook.php?URL=" + url, true);
@@ -33,17 +33,17 @@ document.getElementById("samplecard-description").innerHTML= description;
         var xmlhttplink = new XMLHttpRequest();
         xmlhttplink.onreadystatechange = function() {
             if (xmlhttplink.readyState == 4 && xmlhttplink.status == 200) {
-                document.getElementById("samplecard-linkedin").innerHTML = xmlhttplink.responseText;
-
+                if(xmlhttplink.responseText.length < 10){document.getElementById("samplecard-linkedin").innerHTML = xmlhttplink.responseText;}
                                                                     }
                                                 }
         xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
         xmlhttplink.send();
-
-
-
-
-
+// Deal with the medium
+if (medium=='Website'){      document.getElementById("samplecard-boxstats").style.backgroundColor="#f1c40f";}
+if (medium=='Video/Audio'){  document.getElementById("samplecard-boxstats").style.backgroundColor="#e74c3c";}
+if (medium=="Influencer"){   document.getElementById("samplecard-boxstats").style.backgroundColor="#3498db";}
+if (medium=="Blog"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#2ecc71";}
+if (medium=="Book"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#9b59b6";}
 }
 
 function showsubmission(){

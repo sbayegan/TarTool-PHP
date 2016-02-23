@@ -203,25 +203,24 @@ echo '
     <div class="description" id="samplecard-description"></div>
   </a>
   <div class="score">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.csscheckbox.com/" target="_blank">
-      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px"></a>
-    <a href="https://twitter.com/share?url=http://www.csscheckbox.com/" target="_blank">
-      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px"></a>
-    <a href="http://linkedin.com/shareArticle?mini=true&amp;url=http://www.csscheckbox.com/" target="_blank">
-      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px"></a>
-    <div style="" id="approve-44"></div>
-    <div style="" id="save-44"><span onclick="unfavorite(44)"><img src="pictures/cross-red.png" width="55" height="55" style="float:left;margin-left:0px;margin-top:15px"></span></div>
+
+      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">
+
+      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">
+
+      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">
+
   </div>
   <div class="numbers">
     <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-linkedin">0</div>
     <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-twitter">N/A</div>
     <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-facebook">0</div>
   </div>
-  <div class="box-stats" style="background-color:#FFDAA3;red)">
-    <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#636363">
+  <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">
+    <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">
       social score: <div class="badge" style="font-size:100%">N/A</div>
     </div>
-      <div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">Website</div>
+      <div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#ecf0f1;">Website</div>
   </div>
 </div>
 ';
