@@ -198,7 +198,7 @@ echo '
   <div class="profile-picture">
     <img src="http://www.csscheckbox.com/imgs/logo-3.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 
   </div>
-  <a href="http://www.csscheckbox.com/" target="_blank">
+  <a href="#">
     <b><div class="title" id="samplecard-title"></div></b>
     <div class="description" id="samplecard-description"></div>
   </a>
