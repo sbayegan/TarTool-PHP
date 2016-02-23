@@ -50,11 +50,28 @@ if (medium=="Book"){         document.getElementById("samplecard-boxstats").styl
 }
 
 
+
+function submissionthumbnail(){
+    var element = document.getElementById("imageurl");
+    if(element != null){
+        document.getElementById("submission-thumbnail").innerHTML= "<label for='fileToUpload'>Upload Thumbnail "+
+        "<a style='color:red;' href='#' onclick='submissionthumbnail()'> (Submit URL) </a></label>"+
+        "<input type='file' name='fileToUpload' id='fileToUpload'><br>";
+    }
+    else{
+          document.getElementById("submission-thumbnail").innerHTML="<label for='imageurl'>"
+          +"Thumbnail URL <a style='color:red;' href='#' onclick='submissionthumbnail()'> (Upload Thumbnail) </a> </label>"
+          +"<input type='text' name='imageurl' id='imageurl' size='45' onchange='submissionsample()' class='form-control'/>"
+          +"<br>";
+    }
+}
+
+
+
 function submissionupdatelabels(number,text){    
 
     var element = document.getElementById("samplelabel"+number);
     if(element != null){element.parentNode.removeChild(element);}
-    
 
 var node = document.createElement("DIV");
 node.innerHTML = text;
@@ -62,7 +79,6 @@ node.setAttribute("id", "samplelabel"+number);
 node.setAttribute("class","label label-default");
 node.setAttribute("style","margin:2px;display:inline-block;");
 if(text != 'Choose One')document.getElementById("samplecard-subcategory").appendChild(node); 
-
 }
 
 function showsubmission(){

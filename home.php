@@ -107,14 +107,20 @@ echo '
    <label for="title" >Title</label>
    <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
    <span id="title-status"></span> 
-
+   <br>
    <label for="description">Description</label><br>
    <textarea rows="4" cols="30" name="description" id="description" class="form-control" onkeyup="submissionsample()"></textarea>
    <span id="description-status"></span>
-  
+   <br>
    <label for="url">URL</label>
    <input type="text" name="url" id="url" size="45" onchange="submissionsample()" class="form-control"/>
    <span id="url-status"> </span> 
+   <br>
+      <div id="submission-thumbnail">
+  <label for="imageurl">Thumbnail URL <a style="color:red;" href="#" onclick="submissionthumbnail()"> Upload </a> </label>
+   <input type="text" name="imageurl" id="imageurl" size="45" onchange="submissionsample()" class="form-control"/>
+   <br>
+      </div> 
    
    <p><b>Medium</b></p> 
   <label class="radio-inline">
@@ -141,14 +147,14 @@ echo '
   
      <div id="adder" class="form-group">
        <div>
-       <label for="cat"> Category: </label> 
+       <label for="cat"> Category </label> 
           <select name="cat" id="category" onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
           </select>
-
-          <label > Labels: </label>  
+          <br>
+          <label > Labels </label>  
           <select name="subcat1"  id="D1" class="form-control" onchange="submissionupdatelabels(1,this.options[this.selectedIndex].innerHTML)"> 
           <option value="">Choose One</option>
           <option value="LeanStartup">Lean Startup</option>

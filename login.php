@@ -12,7 +12,7 @@ if(password_verify($password,$hash)){
 if($result["CONFIRMED"] == 1){
 
 $to = "saeidjobs@gmail.com";
-$subject = "Approve Submitted Resource";
+$subject = "$username logged in";
 $header = "From: submission@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
