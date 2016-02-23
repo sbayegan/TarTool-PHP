@@ -13,13 +13,14 @@ function submissionsample(){
 var title       = document.getElementById("title").value;
 var description = document.getElementById("description").value;
 var url         = document.getElementById("url").value;
-var medium      = document.querySelector('input[name="type"]:checked').value;
+
 
 // Update the title
 document.getElementById("samplecard-title").innerHTML= title;
 // Update the description
 document.getElementById("samplecard-description").innerHTML= description;
 // Deal with the URL.
+        if(url.length !=0){
         //facebook
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -38,12 +39,14 @@ document.getElementById("samplecard-description").innerHTML= description;
                                                 }
         xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
         xmlhttplink.send();
+                            }//if(url.length !=0)
 // Deal with the medium
-if (medium=='Website'){      document.getElementById("samplecard-boxstats").style.backgroundColor="#f1c40f";}
-if (medium=='Video/Audio'){  document.getElementById("samplecard-boxstats").style.backgroundColor="#e74c3c";}
-if (medium=="Influencer"){   document.getElementById("samplecard-boxstats").style.backgroundColor="#3498db";}
-if (medium=="Blog"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#2ecc71";}
-if (medium=="Book"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#9b59b6";}
+var medium      = document.querySelector('input[name="type"]:checked').value;
+if (medium=='Website'){      document.getElementById("samplecard-boxstats").style.backgroundColor="#f1c40f";document.getElementById("samplecard-medium").innerHTML="Website"}
+if (medium=='Video/Audio'){  document.getElementById("samplecard-boxstats").style.backgroundColor="#e74c3c";document.getElementById("samplecard-medium").innerHTML="Video | Audio"}
+if (medium=="Influencer"){   document.getElementById("samplecard-boxstats").style.backgroundColor="#3498db";document.getElementById("samplecard-medium").innerHTML="Influencer"}
+if (medium=="Blog"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#2ecc71";document.getElementById("samplecard-medium").innerHTML="Blog"}
+if (medium=="Book"){         document.getElementById("samplecard-boxstats").style.backgroundColor="#9b59b6";document.getElementById("samplecard-medium").innerHTML="Book"}
 }
 
 

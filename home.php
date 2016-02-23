@@ -219,7 +219,7 @@ echo '
     <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">
       social score: <div class="badge" style="font-size:100%">N/A</div>
     </div>
-      <div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#ecf0f1;">Website</div>
+      <div  id="samplecard-medium" style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#ecf0f1;">Website</div>
   </div>
 </div>
 ';
