@@ -203,8 +203,8 @@ echo '<div class="box-stats" style="background-color:';
      else{echo 'red';}
 
     echo')">';
-    echo '<div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#636363">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';
-    echo '<div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">'.''.$result['MEDIUM'].'</div>';
+    echo '<div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';
+    echo '<div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#ecf0f1;">'.''.$result['MEDIUM'].'</div>';
 //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
     echo '</div>';
