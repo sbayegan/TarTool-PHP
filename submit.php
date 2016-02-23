@@ -124,7 +124,7 @@ You can activate and de-activate the resource using the following two links<br>
 <a href='http://www.tartool.com/approveresource.php?hash=$hash&id=$resourceid&status=deactive'> Undo Approval </a><br>
 <br>
 Cheers, <br>
-Junto team<br>
+Tartool team<br>
 <img src='http://www.tartool.com/pictures/logo.png' alt='logo'/> <br>
 </p>
 </body>

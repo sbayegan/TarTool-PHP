@@ -478,7 +478,7 @@ echo '
 </div>
 <div class="shelve-title">Video/Audio</div>
 
-	<div class="shelve" style="background-color:#e74c3c;;">';
+	<div class="shelve" style="background-color:#e74c3c;">';
 //minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
