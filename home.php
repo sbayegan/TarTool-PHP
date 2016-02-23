@@ -98,6 +98,141 @@ echo '
       </div>
  </form>
 </div>';
+echo '<div class="submit-square" id="transparent-square">';
+echo '
+<form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
+   
+
+   <div class="form-group">
+   <label for="title" >Title</label>
+   <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
+   <span id="title-status"></span> 
+
+   <label for="description">Description</label><br>
+   <textarea rows="4" cols="30" name="description" id="description" class="form-control" onkeyup="submissionsample()"></textarea>
+   <span id="description-status"></span>
+
+   <label for="url">URL</label>
+   <input type="text" name="url" id="url" size="45" onkeyup="submissionsample()" class="form-control"/>
+   <span id="url-status"> </span> 
+   <br>
+   <p><b>Medium</b></p> 
+  <label class="radio-inline">
+    <input type="radio" name="type" value="Website" onclick="submissionsample()">Website or Tool
+      </label>
+      <br>
+  <label class="radio-inline">
+    <input type="radio" name="type" value="Video/Audio" onclick="submissionsample()">Video
+      </label>
+      <br>
+  <label class="radio-inline"> 
+    <input type="radio" name="type" value="Influencer" onclick="submissionsample()">Twitter influencer
+      </label>
+      <br>
+  <label class="radio-inline">
+    <input type="radio" name="type" value="Blog" onclick="submissionsample()">Blog
+      </label>
+      <br>
+   <label class="radio-inline">
+    <input type="radio" name="type" value="Book" onclick="submissionsample()">Book
+      </label>
+      <br>
+   </div>
+  
+     <div id="adder" class="form-group">
+       <div>
+       <label for="cat"> Category: </label> 
+          <select name="cat" id="category" onchange="update(this.value)" class="form-control">
+          <option value="BD">Business development</option>
+          <option value="FE">Front-end development/Design</option>
+          <option value="BE">Back-end development</option>
+          </select>
+
+          <label > Labels: </label>  
+          <select name="subcat1"  id="D1" class="form-control"> 
+          <option value="">Choose One</option>
+          <option value="LeanStartup">Lean Startup</option>
+          <option value="MarketingAndResearch">Marketing & Research</option>
+          <option value="Naming">Naming</option>
+          <option value="CopyWriting">Copywriting</option>
+          <option value="Analytics">Analytics</option> 
+          <option value="Launching">Launching</option>
+    <option value="UserFeedback">User Feedback</option>  
+          <option value="SEO">SEO</option>
+          <option value="SocialMediaCommunity">Social Media & Community</option>
+          <option value="ProjectManagement">Project Management</option>
+          <option value="CustomerService">Customer Service</option>
+          <option value="InventoryManagement">Inventory Management</option>
+          <option value="Sales">Sales</option>
+          <option value="Funding">Funding</option>
+    <option value="Administration">Administration</option>
+    <option value="Productivity">Productivity</option>
+          <option value="Outsourcing">Outsourcing</option>
+          <option value="E-commerce">E-commerce</option>
+    <option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
+    <option value="Events">Events</option>
+          </select>
+        </div>
+      </div>
+     
+      
+
+<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
+
+
+
+                
+                
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+                </form>
+
+
+';
+echo '</div>';
+
+echo '<div class="submit-box" id="transparent-box">';
+echo '
+<div class="box" style="background-color:#FCFCFC;">
+  <a href="#"><div class="sticker" id="samplecard-category">Business Development</div></a>
+  <div class="subcats" id="samplecard-subcategory">
+    <a href="home.php?subcat=HTML"><span class="label label-default">HTML</span></a>
+  </div>
+  <div class="profile-picture">
+    <img src="http://www.csscheckbox.com/imgs/logo-3.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 
+  </div>
+  <a href="http://www.csscheckbox.com/" target="_blank">
+    <b><div class="title" id="samplecard-title"></div></b>
+    <div class="description" id="samplecard-description"></div>
+  </a>
+  <div class="score">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.csscheckbox.com/" target="_blank">
+      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px"></a>
+    <a href="https://twitter.com/share?url=http://www.csscheckbox.com/" target="_blank">
+      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px"></a>
+    <a href="http://linkedin.com/shareArticle?mini=true&amp;url=http://www.csscheckbox.com/" target="_blank">
+      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px"></a>
+    <div style="" id="approve-44"></div>
+    <div style="" id="save-44"><span onclick="unfavorite(44)"><img src="pictures/cross-red.png" width="55" height="55" style="float:left;margin-left:0px;margin-top:15px"></span></div>
+  </div>
+  <div class="numbers">
+    <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%">7</div>
+    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%">47</div>
+    <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%">165</div>
+  </div>
+  <div class="box-stats" style="background-color:#FFDAA3;red)">
+    <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#636363">
+      social score: <div class="badge" style="font-size:100%">222</div>
+    </div>
+      <div style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#636363;">Website</div>
+  </div>
+</div>
+';
+echo '</div>';
 
   // A commented code snippet that gets the name of the user
      
@@ -231,7 +366,7 @@ echo '</div>';//stick-to-top
 
     // Submit button
     echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-    <a href="#submit" data-toggle="modal">
+    <a href="#" onclick="showsubmission()" data-toggle="modal">
     <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
     </div>  
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">

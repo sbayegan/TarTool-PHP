@@ -104,6 +104,35 @@ z-index: 75;
 background-color: #FEFEFE;
 }
 
+.submit-square{
+//border-radius: 10px;
+padding: 20px;
+box-shadow: 0px 1px 8px grey;
+display: none;
+height: 100%;
+position: fixed;
+//margin-top: 95px;
+left: 0px;
+width: 400px;
+//margin-left:0px;
+z-index: 75;
+background-color: #FEFEFE;
+}
+
+.submit-box{
+position: fixed;
+
+box-shadow: 0px 1px 8px grey;
+display: none;
+height: 500px;
+position: fixed;
+margin-top: 30px;
+right: 155px;
+width: 500px;
+//margin-left:0px;
+z-index: 76;
+//background-color: #FEFEFE;
+}
 
 
 

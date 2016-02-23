@@ -1,3 +1,25 @@
+function submissionsample(){
+// This function is triggered by onclickup() event. It takes the form input
+// and puts them in the sample card for the user to review.
+// A unique id (html) has been assigned to each of the form fields therefore we can
+// get the content using GetElementById() and then put them in the card (which also has
+// uniques ids)    
+
+var title       = document.getElementById("title").value;
+var description = document.getElementById("description").value;
+var url         = document.getElementById("url").value;
+var medium      = document.getElementById("type");
+
+document.getElementById("samplecard-title").innerHTML= title;
+document.getElementById("samplecard-description").innerHTML= description;
+
+}
+
+function showsubmission(){
+document.getElementById("transparent").style.display = 'block';
+document.getElementById("transparent-box").style.display = 'block';
+document.getElementById("transparent-square").style.display = 'block';  
+}
 
 function showsignup(){
 document.getElementById("transparent").style.display = 'block';
@@ -19,6 +41,8 @@ document.getElementById("transparent").style.display = 'none';
 document.getElementById("transparent-signup").style.display = 'none';
 document.getElementById("transparent-signin").style.display = 'none';
 document.getElementById("transparent-profile").style.display = 'none';
+document.getElementById("transparent-box").style.display = 'none';
+document.getElementById("transparent-square").style.display = 'none';
 }
 
 
@@ -153,7 +177,9 @@ if (document.getElementById("D4")){var element = document.getElementById("D4");e
 if (document.getElementById("D3")){var element = document.getElementById("D3");element.parentNode.removeChild(element);}
 if (document.getElementById("D2")){var element = document.getElementById("D2");element.parentNode.removeChild(element);}
 currentcat = str;
-if(str == "FE"){document.getElementById("D1").innerHTML = 
+if(str == "FE"){
+    document.getElementById("samplecard-category").innerHTML="Front-End Development";
+    document.getElementById("D1").innerHTML = 
 	'<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
@@ -174,7 +200,9 @@ if(str == "FE"){document.getElementById("D1").innerHTML =
 	'<option value="JSON">JSON</option>'+
         '<option value="Ajax">Ajax</option>';
 }
-if(str == "BE"){document.getElementById("D1").innerHTML = 
+if(str == "BE"){
+    document.getElementById("samplecard-category").innerHTML="Back-End Development";
+    document.getElementById("D1").innerHTML = 
 	'<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
@@ -194,7 +222,9 @@ if(str == "BE"){document.getElementById("D1").innerHTML =
         '<option value="C#">C#</option>'+
         '<option value="Debugging Tools">Debugging</option>';
 }
-if(str == "BD"){document.getElementById("D1").innerHTML = 
+if(str == "BD"){
+    document.getElementById("samplecard-category").innerHTML="Business Development";
+    document.getElementById("D1").innerHTML = 
 	'<option value="">Choose One</option>'+
 	'<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
