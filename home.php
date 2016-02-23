@@ -111,16 +111,16 @@ echo '
    <label for="description">Description</label><br>
    <textarea rows="4" cols="30" name="description" id="description" class="form-control" onkeyup="submissionsample()"></textarea>
    <span id="description-status"></span>
-
+  
    <label for="url">URL</label>
    <input type="text" name="url" id="url" size="45" onkeyup="submissionsample()" class="form-control"/>
    <span id="url-status"> </span> 
-   <br>
+   
    <p><b>Medium</b></p> 
   <label class="radio-inline">
     <input type="radio" name="type" value="Website" onclick="submissionsample()">Website or Tool
       </label>
-      <br>
+    
   <label class="radio-inline">
     <input type="radio" name="type" value="Video/Audio" onclick="submissionsample()">Video
       </label>
@@ -128,15 +128,15 @@ echo '
   <label class="radio-inline"> 
     <input type="radio" name="type" value="Influencer" onclick="submissionsample()">Twitter influencer
       </label>
-      <br>
+      
   <label class="radio-inline">
     <input type="radio" name="type" value="Blog" onclick="submissionsample()">Blog
       </label>
-      <br>
+      
    <label class="radio-inline">
     <input type="radio" name="type" value="Book" onclick="submissionsample()">Book
       </label>
-      <br>
+      
    </div>
   
      <div id="adder" class="form-group">
@@ -235,14 +235,15 @@ echo '
 echo '</div>';
 
   // A commented code snippet that gets the name of the user
-     
+if(isset($_COOKIE['junto'])){   
      $value = $_COOKIE['junto'];
      $result= $conn->query("SELECT * FROM USERS WHERE USERID=".$value);
      $result = mysqli_fetch_assoc($result);
      $name = $result["NAME"];
      $id = $result["USERNAME"];
-     $email = $result["EMAIL"];
-  
+     $email = $result["EMAIL"];}
+
+
 echo '<div class="profile-square" id="transparent-profile">';
 echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
 echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';

@@ -1,3 +1,23 @@
+
+// Helper function to check and see if a string is a valid URL
+// http://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-an-url
+function ValidURL(str) {
+  var pattern = new RegExp('^(https?:\/\/)?'+ // protocol
+    '((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // domain name
+    '((\d{1,3}\.){3}\d{1,3}))'+ // OR ip (v4) address
+    '(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port and path
+    '(\?[;&a-z\d%_.~+=-]*)?'+ // query string
+    '(\#[-a-z\d_]*)?$','i'); // fragment locater
+  if(!pattern.test(str)) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
+
+
 function submissionsample(){
 // This function is triggered by onclickup() event. It takes the form input
 // and puts them in the sample card for the user to review.
@@ -9,9 +29,16 @@ var title       = document.getElementById("title").value;
 var description = document.getElementById("description").value;
 var url         = document.getElementById("url").value;
 var medium      = document.getElementById("type");
-
+// Update the title
 document.getElementById("samplecard-title").innerHTML= title;
+// Update the description
 document.getElementById("samplecard-description").innerHTML= description;
+// Deal with the URL.
+if(ValidURL(url)){
+
+}
+
+
 
 }
 
@@ -248,6 +275,7 @@ if(str == "BD"){
 	'<option value="Events">Events</option>';
 }
 }
+
 function add() {
 var FE = 
 	'<select name="subcat' + lastused + '"  class="form-control" id=lastused>'+
@@ -332,6 +360,8 @@ var username = 0;
 var email = 0;
 var pass = 0;
 var repass = 0;
+
+
 function available(str) {
     if (str.length < 4) { 
         document.getElementById("user-status").innerHTML = "too short";
