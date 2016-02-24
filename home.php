@@ -100,9 +100,11 @@ echo '
 </div>';
 echo '<div class="submit-square" id="transparent-square">';
 echo '
+<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;top:20px;" src=pictures/cross-red.png width="18" height="18"></a>
+<h3 style="color:#6C7A89;">
+Submit a Card
+</h3>
 <form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
-   
-
    <div class="form-group">
    <label for="title" >Title</label>
    <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
@@ -201,7 +203,7 @@ echo '
   <div class="subcats" id="samplecard-subcategory">
   </div>
   <div class="profile-picture">
-    <img id="samplecard-image" src="" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 
+    <img id="samplecard-image" src="pictures/pencil.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 
   </div>
   <a href="#">
     <b><div class="title" id="samplecard-title"></div></b>
