@@ -457,20 +457,20 @@ var Load = 0;
                           // run our call for pagination    
 	    		 // Here if no category or subcategories are chosen then just call loader(LastCard,NULL);
            // else call loader(LastCard,Cat|Subcat)';
-     if (!isset($_GET['CAT']) && !isset($_GET['subcat'])) echo'
+     if (!isset($_GET['cat']) && !isset($_GET['subcat'])) echo'
            loader(LastCard,"NULL");
 			     numloader(LastCard,"NULL");
 		                                    }
             });
 	    loader(LastCard,"NULL");
 	    numloader(LastCard,"NULL");';
-     elseif (isset($_GET['CAT'])){echo'
-           loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo '");
-           numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo'");
+     elseif (isset($_GET['cat'])){echo'
+           loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['cat']);echo '");
+           numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['cat']);echo'");
                                         }
             });
-      loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo '");
-      numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo'");';}
+      loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['cat']);echo '");
+      numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['cat']);echo'");';}
       elseif (isset($_GET['subcat'])){echo'
            loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo '");
            numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo'");
@@ -479,7 +479,9 @@ var Load = 0;
       loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo '");
       numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo'");';}
 echo '</script>';
-
+// Printing the Category and Subcategory tags
+if (isset($_GET['cat'])) {ShowCatSubcat(mysqli_real_escape_string($conn,$_GET['cat']));}
+else if (isset($_GET['subcat'])) {ShowCatSubcat(mysqli_real_escape_string($conn,$_GET['subcat']));}
 
 echo'</div>';
 

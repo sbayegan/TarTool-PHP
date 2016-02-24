@@ -1,5 +1,72 @@
 <?php
 
+
+function ShowCatSubcat($input){
+if($input == "BD"){echo"<div class='category'> Business Development </div>";return;}
+if($input == "FE"){echo"<div class='category'> Front-End Development </div>";return;}
+if($input == "BE"){echo"<div class='category'> Back-End Development </div>";return;}
+
+if($input == 'LeanStartup')             {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Lean Startup </div>";return;}
+if($input == 'MarketingAndResearch')    {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Marketing & Research </div>";return;}
+if($input == 'Naming')                  {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Naming </div>";return;}
+if($input == 'CopyWriting')             {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Copywriting </div>";return;}
+if($input == 'UserFeedback')            {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> User Feedback </div>";return;}
+if($input == 'Analytics')               {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Analytics </div>";return;}
+if($input == 'SocialMediaCommunity')    {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Social Media & Community </div>";return;}
+if($input == 'Launching')               {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Launching </div>";return;}
+if($input == 'SEO')                     {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> SEO </div>";return;}
+if($input == 'ProjectManagement')       {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Project Management </div>";return;}
+if($input == 'CustomerService')         {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Customer Service </div>";return;}
+if($input == 'InventoryManagement')     {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Inventory Management </div>";return;}
+if($input == 'Sales')                   {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Sales </div>";return;}
+if($input == 'Funding')                 {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Funding </div>";return;}
+if($input == 'Administration')          {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Administration </div>";return;}
+if($input == 'Productivity')            {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Productivity </div>";return;}
+if($input == 'Outsourcing')             {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Outsourcing </div>";return;}
+if($input == 'E-commerce')              {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> E-commerce </div>";return;}
+if($input == 'Events')                  {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Events </div>";return;}
+if($input == 'AcceleratorsAndIncubators'){echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Accelerators & Incubators </div>";return;}
+
+if($input == 'UserInterface')           {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> User Interface </div>";return;}
+if($input == 'UserExperience')          {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> User Experience </div>";return;}
+if($input == 'MockupsAndWireframing')   {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Mockups & Wireframing </div>";return;}
+if($input == 'HTML')                    {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> HTML </div>";return;}
+if($input == 'CSS')                     {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> CSS </div>";return;}
+if($input == 'JavaScript')              {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> JavaScript </div>";return;}
+if($input == 'Themes')                  {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Themes </div>";return;}
+if($input == 'Mobile')                  {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Mobile </div>";return;}
+if($input == 'FrontEndiOS')             {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> iOS </div>";return;}
+if($input == 'FrontEndAndroid')         {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Android </div>";return;}
+if($input == 'Bootstrap')               {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Bootstrap </div>";return;}
+if($input == 'XML')                     {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> XML </div>";return;}
+if($input == 'JQuery')                  {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> jQuery </div>";return;}
+if($input == 'Angular')                 {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Angular </div>";return;}
+if($input == 'Canvas')                  {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Canvas </div>";return;}
+if($input == 'SVG')                     {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Scalable Vector Graphics </div>";return;}
+if($input == 'JSON')                    {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> JSON </div>";return;}
+if($input == 'Ajax')                    {echo"<div class='category'> Front-End Development </div>";echo "<div class='subcategory'> Ajax </div>";return;}
+
+if($input == 'Security')                {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Security </div>";return;}
+if($input == 'DataManagement')          {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Data Management </div>";return;}
+if($input == 'Hosting')                 {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Hosting </div>";return;}
+if($input == 'PHP')                     {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> PHP </div>";return;}
+if($input == 'Python')                  {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Python </div>";return;}
+if($input == 'ASP.NET')                 {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> ASP.NET </div>";return;}
+if($input == 'VBScript')                {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> VBScript </div>";return;}
+if($input == 'SQL')                     {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> SQL </div>";return;}
+if($input == 'C')                       {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> C </div>";return;}
+if($input == 'C++')                     {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> C++ </div>";return;}
+if($input == 'Shell')                   {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Shell </div>";return;}
+if($input == 'Java')                    {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Java </div>";return;}
+if($input == 'Ruby')                    {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Ruby </div>";return;}
+if($input == 'Objective-C')             {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Objective-C </div>";return;}
+if($input == 'Swift')                   {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Swift </div>";return;}
+if($input == 'C#')                      {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> C# </div>";return;}
+if($input == 'Debugging')               {echo"<div class='category'> Back-End Development </div>";echo "<div class='subcategory'> Debugging </div>";return;}
+
+}
+
+
 function linky($input){
 if($input == 'LeanStartup'){echo '<a href="home.php?subcat=LeanStartup"><span style="display:inline-block;" class="label label-default">Lean Startup</span></a>';}
 if($input == 'MarketingAndResearch'){echo '<a href="home.php?subcat=MarketingAndResearch"><span style="display:inline-block;" class="label label-default">Marketing & Research</span></a>';}
@@ -34,7 +101,7 @@ if($input == 'FrontEndiOS'){echo '<a href="home.php?subcat=FrontEndiOS"><span st
 if($input == 'FrontEndAndroid'){echo '<a href="home.php?subcat=FrontEndAndroid"><span style="display:inline-block;" class="label label-default">Android</span></a>';}
 if($input == 'Bootstrap'){echo '<a href="home.php?subcat=Bootstrap"><span style="display:inline-block;" class="label label-default">Bootstrap</span></a>';}
 if($input == 'XML'){echo '<a href="home.php?subcat=XML"><span style="display:inline-block;" class="label label-default">XML</span></a>';}
-if($input == 'JQuery'){echo '<a href="home.php?subcat=JQuery"><span style="display:inline-block;" class="label label-default">JQuery</span></a>';}
+if($input == 'JQuery'){echo '<a href="home.php?subcat=JQuery"><span style="display:inline-block;" class="label label-default">jQuery</span></a>';}
 if($input == 'Angular'){echo '<a href="home.php?subcat=Angular"><span style="display:inline-block;" class="label label-default">Angular</span></a>';}
 if($input == 'Canvas'){echo '<a href="home.php?subcat=Canvas"><span style="display:inline-block;" class="label label-default">Canvas</span></a>';}
 if($input == 'SVG'){echo '<a href="home.php?subcat=SVG"><span style="display:inline-block;" class="label label-default">Scalable Vector Graphics</span></a>';}
