@@ -121,29 +121,27 @@ document.getElementById("transparent-square").style.display = 'none';
 }
 
 
-function numloader(last){
+function numloader(last,string){
 if(Ended == 0){	
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                LastCard = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("GET", "numloader.php?last=" + last, true);
-        xmlhttp.send();
-}
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            LastCard = xmlhttp.responseText;}
+                                            }
+        xmlhttp.open("GET", "numloader.php?last=" + last +"&cat="+string, true);
+        xmlhttp.send();}
 }
 
 
-function loader(last){
+function loader(last,string){
   var loader;
 // First check to see if ended was set to 1, if so then do nothing
-if(Ended == 1){return;}
-else{
+    if(Ended == 1){return;}
+    else{
 // Else connect to a file called loader.php, get the results
 // then create another child for feed and then put the results there
-Frame++;
-var xmlhttp = new XMLHttpRequest();
+        Frame++;
+        var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 0){
@@ -151,32 +149,32 @@ var xmlhttp = new XMLHttpRequest();
                 // are no more cards to be displayed
                 Ended = 1;
                 var node = document.createElement("DIV");
-		node.setAttribute("id", "Frame"+Frame);
-		document.getElementById("feed").appendChild(node);
-		if(Load==1){loader.parentNode.removeChild(loader);Load=0;}
-		//document.getElementById("Frame"+Frame).innerHTML = "NO MORE CARDS TO DISPLAY!";
-		 
+		        node.setAttribute("id", "Frame"+Frame);
+		        document.getElementById("feed").appendChild(node);
+		          if(Load==1){loader.parentNode.removeChild(loader);Load=0;}	 
                 }
-                else{// Append the content to the feed
-		var node = document.createElement("DIV");
-		node.setAttribute("id", "Frame"+Frame);
-		document.getElementById("feed").appendChild(node);
-		document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
-		if(Load == 1){loader.parentNode.removeChild(loader);Load=0;}
+            else{// Append the content to the feed
+		        var node = document.createElement("DIV");
+		        node.setAttribute("id", "Frame"+Frame);
+		        document.getElementById("feed").appendChild(node);
+		        document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
+		        if(Load == 1){loader.parentNode.removeChild(loader);Load=0;}
                 }
-            }
-        }
-if(Load == 0){
-	Load = 1;
-        loader = document.createElement("DIV");
-        loader.setAttribute('id', 'loader');
-        loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
-        document.getElementById("feed").appendChild(loader);
+            }// if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+        }// xmlhttp.onreadystatechange
+
+        if(Load == 0){
+	        Load = 1;
+            loader = document.createElement("DIV");
+            loader.setAttribute('id', 'loader');
+            loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
+            document.getElementById("feed").appendChild(loader);
 }
-        xmlhttp.open("GET", "loader.php?last=" + last, true);
+        xmlhttp.open("GET", "loader.php?last=" + last+"&cat="+string, true);
         xmlhttp.send();
-  }//else
+            }//else
 }
+
 
 function favorite(cardid) {
    var xmlhttp = new XMLHttpRequest();

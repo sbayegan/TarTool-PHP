@@ -74,9 +74,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     echo '<a href="';
     
-    if ($firsttag['CAT'] == 'BD') {echo 'http://junto.link/feed.php?cat=BD';}
-    if ($firsttag['CAT'] == 'FE') {echo 'http://junto.link/feed.php?cat=FE';}
-    if ($firsttag['CAT'] == 'BE') {echo 'http://junto.link/feed.php?cat=BE';}
+    if ($firsttag['CAT'] == 'BD') {echo 'home.php?cat=BD';}
+    if ($firsttag['CAT'] == 'FE') {echo 'home.php?cat=FE';}
+    if ($firsttag['CAT'] == 'BE') {echo 'home.php?cat=BE';}
     echo '">';
     echo '<div class="sticker">'; 
     if ($firsttag['CAT'] == 'BD') {echo 'Business Development';}

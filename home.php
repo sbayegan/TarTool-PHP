@@ -436,11 +436,13 @@ echo '<div class="feed-column" id="feed">';
 
 echo 
 '<script type="text/javascript">
-
+// So that the page is shown from the beginning on every load.
 $(window).on("beforeunload", function() {
     $(window).scrollTop(0);
 });
 
+
+// LastCard is not changed based on whether or not a cat or a subcat is clicked
 var LastCard = ';
 $query = "select max(RESOURCEID) as RESOURCEID from RESOURCES";
 $result = $conn->query($query);
@@ -452,15 +454,31 @@ var Frame = 0;
 var Load = 0;
             $(window).scroll(function(){
                     if  ($(document).height() - ($(window).height() + $(window).scrollTop()) < 400 ){
-                          // run our call for pagination
-        		  //document.getElementById("test").innerHTML="Things are now changed";        
-	    		  loader(LastCard);
-			  numloader(LastCard);
-		}
+                          // run our call for pagination    
+	    		 // Here if no category or subcategories are chosen then just call loader(LastCard,NULL);
+           // else call loader(LastCard,Cat|Subcat)';
+     if (!isset($_GET['CAT']) && !isset($_GET['subcat'])) echo'
+           loader(LastCard,"NULL");
+			     numloader(LastCard,"NULL");
+		                                    }
             });
-	    loader(LastCard);
-	    numloader(LastCard); 
-</script>';
+	    loader(LastCard,"NULL");
+	    numloader(LastCard,"NULL");';
+     elseif (isset($_GET['CAT'])){echo'
+           loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo '");
+           numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo'");
+                                        }
+            });
+      loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo '");
+      numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['CAT']);echo'");';}
+      elseif (isset($_GET['subcat'])){echo'
+           loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo '");
+           numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo'");
+                                        }
+            });
+      loader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo '");
+      numloader(LastCard,"';echo mysqli_real_escape_string($conn,$_GET['subcat']);echo'");';}
+echo '</script>';
 
 
 echo'</div>';
