@@ -104,6 +104,7 @@ echo '
 <h3 style="color:#6C7A89;">
 Submit a Card
 </h3>
+<hr>
 <form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
    <div class="form-group">
    <label for="title" >Title</label>
