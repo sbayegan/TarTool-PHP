@@ -13,6 +13,7 @@ function submissionsample(){
 var title       = document.getElementById("title").value;
 var description = document.getElementById("description").value;
 var url         = document.getElementById("url").value;
+var imageurl    = document.getElementById("imageurl").value;
 
 
 // Update the title
@@ -40,6 +41,8 @@ document.getElementById("samplecard-description").innerHTML= description;
         xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
         xmlhttplink.send();
                             }//if(url.length !=0)
+// Deal with the thumbnail URL
+if(imageurl.length>0){document.getElementById("samplecard-image").src = imageurl;}
 // Deal with the medium
 var medium      = document.querySelector('input[name="type"]:checked').value;
 if (medium=='Website'){      document.getElementById("samplecard-boxstats").style.backgroundColor="#f1c40f";document.getElementById("samplecard-medium").innerHTML="Website"}
@@ -54,15 +57,19 @@ if (medium=="Book"){         document.getElementById("samplecard-boxstats").styl
 function submissionthumbnail(){
     var element = document.getElementById("imageurl");
     if(element != null){
-        document.getElementById("submission-thumbnail").innerHTML= "<label for='fileToUpload'>Upload Thumbnail "+
-        "<a style='color:red;' href='#' onclick='submissionthumbnail()'> (Submit URL) </a></label>"+
-        "<input type='file' name='fileToUpload' id='fileToUpload'><br>";
+        document.getElementById("submission-thumbnail").innerHTML= "<label>Upload Thumbnail "
+        +"<a style='color:red;' href='#' onclick='submissionthumbnail()'> (Submit URL) </a></label><br>"
+        +"<label for='fileToUpload'><span class='file-input btn btn-block btn-primary btn-file'>"
+        +"<input type='file' name='fileToUpload' id='fileToUpload' style='display:none;'>Browse</label><br>"
+        +"</span>";
     }
-    else{
+    else{ 
           document.getElementById("submission-thumbnail").innerHTML="<label for='imageurl'>"
           +"Thumbnail URL <a style='color:red;' href='#' onclick='submissionthumbnail()'> (Upload Thumbnail) </a> </label>"
           +"<input type='text' name='imageurl' id='imageurl' size='45' onchange='submissionsample()' class='form-control'/>"
+          +"</span>"
           +"<br>";
+          document.getElementById("imageurl").value = document.getElementById("samplecard-image").src;
     }
 }
 
