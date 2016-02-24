@@ -1,6 +1,7 @@
-
-
-
+  var loadFile = function(event) {
+    var output = document.getElementById('samplecard-image');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
 
 
 function submissionsample(){
@@ -13,7 +14,8 @@ function submissionsample(){
 var title       = document.getElementById("title").value;
 var description = document.getElementById("description").value;
 var url         = document.getElementById("url").value;
-var imageurl    = document.getElementById("imageurl").value;
+if(document.getElementById("imageurl")){var imageurl    = document.getElementById("imageurl").value;}
+else var imageurl = null;
 
 
 // Update the title
@@ -42,7 +44,7 @@ document.getElementById("samplecard-description").innerHTML= description;
         xmlhttplink.send();
                             }//if(url.length !=0)
 // Deal with the thumbnail URL
-if(imageurl.length>0){document.getElementById("samplecard-image").src = imageurl;}
+if(imageurl!=null){if(imageurl.length>0)document.getElementById("samplecard-image").src = imageurl;}
 // Deal with the medium
 var medium      = document.querySelector('input[name="type"]:checked').value;
 if (medium=='Website'){      document.getElementById("samplecard-boxstats").style.backgroundColor="#f1c40f";document.getElementById("samplecard-medium").innerHTML="Website"}
@@ -60,7 +62,7 @@ function submissionthumbnail(){
         document.getElementById("submission-thumbnail").innerHTML= "<label>Upload Thumbnail "
         +"<a style='color:red;' href='#' onclick='submissionthumbnail()'> (Submit URL) </a></label><br>"
         +"<label for='fileToUpload'><span class='file-input btn btn-block btn-primary btn-file'>"
-        +"<input type='file' name='fileToUpload' id='fileToUpload' style='display:none;'>Browse</label><br>"
+        +"<input type='file' accept='image/*' name='fileToUpload' id='fileToUpload' style='display:none;' onchange='loadFile(event)'>Browse</label><br>"
         +"</span>";
     }
     else{ 
