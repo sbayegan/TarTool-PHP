@@ -259,8 +259,8 @@ echo '<div class="signin-square" id="transparent-signin">';
 
      echo '<form>';
      echo '<p style="margin-top:-5px;padding-bottom:5px;font-size:125%;"> Log in</p>';
-     echo '<input style="position;relative;height:40px;font-size:120%;" type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" size="11" placeholder=" Username">';
-     echo '<input style="float:right;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="11" placeholder=" Password" disabled/>';
+     echo '<input style="position;relative;height:40px;font-size:120%;" type="text" name="username" id="loginusername" size="11" placeholder=" Username">';
+     echo '<input style="float:right;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="11" placeholder=" Password"/>';
      echo '<p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
      echo '</form>';
 echo '</div>';
