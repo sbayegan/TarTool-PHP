@@ -247,30 +247,32 @@ if(isset($_COOKIE['junto'])){
 echo '<div class="profile-square" id="transparent-profile">';
 echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
 echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';
+echo '<hr>';
+echo '<form  id="account-settings" action="update.php" method="post">';
+echo '<div class="form-group">
+      <label for="user">Name </label>
+      <input  class="form-control" type="text" name="name" id="profilename" placeholder=" Name" value="';echo $name;echo'">
+      </div>';
+echo '<div class="form-group">
+      <label for="user">Email </label>
+      <input  class="form-control" type="text" name="email" id="profilemail" placeholder=" Email" value="';echo $email;echo'">
+      </div>';
+echo '<div class="form-group">
+      <label for="user">Username </label>
+      <input  class="form-control" type="text" name="username" id="profilusername" placeholder=" Username" value="';echo $id;echo'">
+      </div>';
+
+echo '<button type="button" style="width:100%;" class="btn btn-danger btn-xs">Change Password</button>';
 echo '<br>';
-echo '<p>Name: <b>'.$name.'</b></p>';
-echo '<p>E-mail: '.$email.'</p>';
-echo '<p>User ID: '.$id.'</p>';
-echo '<p>Password: <a>change password</a>';
+echo '<br>';
+echo '<button type="button" style="width:45%;" class="btn btn-default btn-sm" onclick="closeall()">Cancel</button>';
+echo '<button type="button" style="width:45%;margin-left:10%;" class="btn btn-warning btn-sm">Save Changes</button>';
 echo '</div>';
+echo '</form>';
+
+
 
 echo '<div class="signin-square" id="transparent-signin">';
-     //echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
-     //echo '<p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>';
-     //echo '<form action="login.php" role="form" method="post" >';
-     //echo '<div class="form-group">';
-
-     //echo '<hr style="margin-top:-5px;">';
-     //echo '<label for="user">Username </label>';
-     //echo '<input style="margin-left:10px;" type="text" name="user" id="loginusername" size="11" placeholder=" Username">';
-          //echo '</div>';
-     //echo '<input style="float:right;" type="password"  name="pass" id="login-password"  size="11" placeholder=" Password"/>';
-     //echo '<br><input type="submit" value="Log In">';
-
-     //echo '<a href="" onclick="login()"><p style="position:absolute;margin-top:10px;right:30px;font-size:120%;color:blue;">Sign In</p></a>';
-
-     //echo '<p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
-
       echo '
     <a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>
     <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>
@@ -292,9 +294,8 @@ echo '<div class="signin-square" id="transparent-signin">';
       
       </div>
   </form>';
-  
-     //echo '</form>';
 echo '</div>';
+
 
 echo '<div class="stick-to-top">';
 	// LOGO
