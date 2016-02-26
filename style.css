@@ -87,7 +87,7 @@ padding: 20px;
 box-shadow: 0px 1px 8px grey;
 display: none;
 height: auto;
-position: absolute;
+position: fixed;
 margin-top: 20px;
 width: 350px;
 right: 15px;
