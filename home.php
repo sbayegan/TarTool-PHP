@@ -221,7 +221,7 @@ echo '
   </div>
   <div class="numbers">
     <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-linkedin">0</div>
-    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-twitter">N/A</div>
+    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-twitter">0</div>
     <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-facebook">0</div>
   </div>
   <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">
