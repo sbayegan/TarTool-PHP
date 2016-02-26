@@ -262,7 +262,7 @@ echo '<div class="form-group">
       <input  class="form-control" type="text" name="username" id="profilusername" placeholder=" Username" value="';echo $id;echo'">
       </div>';
 
-echo '<button type="button" style="width:100%;" class="btn btn-danger btn-xs">Change Password</button>';
+echo '<button type="button" style="width:100%;" class="btn btn-danger btn-xs" onclick="showchangepassword()">Change Password</button>';
 echo '<br>';
 echo '<br>';
 echo '<button type="button" style="width:45%;" class="btn btn-default btn-sm" onclick="closeall()">Cancel</button>';
@@ -271,6 +271,9 @@ echo '</div>';
 echo '</form>';
 
 
+echo '<div class="change-password" id="change-password">
+<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>
+</div>';
 
 echo '<div class="signin-square" id="transparent-signin">';
       echo '

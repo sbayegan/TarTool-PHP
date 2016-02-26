@@ -99,6 +99,10 @@ $("#transparent").fadeIn();
 //document.getElementById("transparent-square").style.display = 'block';  
 }
 
+function showchangepassword(){
+$("#change-password").fadeIn();
+}
+
 function showsignup(){
 $("#transparent").fadeIn();
 $("#transparent-signup").fadeIn();
@@ -128,7 +132,7 @@ $("#transparent-signin").fadeOut();
 $("#transparent-profile").fadeOut();
 $("#transparent-box").fadeOut();
 $("#transparent-square").fadeOut();
-
+$("#change-password").fadeOut();
 
 //document.getElementById("transparent").style.display = 'none';
 //document.getElementById("transparent-signup").style.display = 'none';
