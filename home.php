@@ -18,7 +18,7 @@ echo $UniversalName;
 echo "</title>";
 
 // Include the JavaScript code
-echo '<script src="JS/code.js"></script>';
+
 echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 // Include the headers associated wth bootstrap
 echo 
@@ -28,7 +28,7 @@ echo
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 ';
-
+echo '<script src="JS/code.js"></script>';
 // Include the headers associated with jQuery
 echo 
 '<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -255,14 +255,45 @@ echo '<p>Password: <a>change password</a>';
 echo '</div>';
 
 echo '<div class="signin-square" id="transparent-signin">';
-     echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+     //echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+     //echo '<p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>';
+     //echo '<form action="login.php" role="form" method="post" >';
+     //echo '<div class="form-group">';
 
-     echo '<form>';
-     echo '<p style="margin-top:-5px;padding-bottom:5px;font-size:125%;"> Log in</p>';
-     echo '<input style="position;relative;height:40px;font-size:120%;" type="text" name="username" id="loginusername" size="11" placeholder=" Username">';
-     echo '<input style="float:right;height:40px;font-size:120%;" type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" size="11" placeholder=" Password"/>';
-     echo '<p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
-     echo '</form>';
+     //echo '<hr style="margin-top:-5px;">';
+     //echo '<label for="user">Username </label>';
+     //echo '<input style="margin-left:10px;" type="text" name="user" id="loginusername" size="11" placeholder=" Username">';
+          //echo '</div>';
+     //echo '<input style="float:right;" type="password"  name="pass" id="login-password"  size="11" placeholder=" Password"/>';
+     //echo '<br><input type="submit" value="Log In">';
+
+     //echo '<a href="" onclick="login()"><p style="position:absolute;margin-top:10px;right:30px;font-size:120%;color:blue;">Sign In</p></a>';
+
+     //echo '<p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
+
+      echo '
+    <a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>
+    <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>
+    <hr style="margin-top:-5px;">
+
+      <form  id="login-form" action="login.php" method="post">
+    <div class="form-group">
+
+      <label for="user">Username </label>
+      <input  class="form-control" type="text"      name="user" id="loginusername"   placeholder=" Username">
+    </div>
+    <div class="form-group">
+      <label for="pass">Password </label>
+      <input  class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
+      <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
+      <br>
+      <input type="submit" id="submit" class="btn btn-default" value="Log In" > 
+      <p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>
+      
+      </div>
+  </form>';
+  
+     //echo '</form>';
 echo '</div>';
 
 echo '<div class="stick-to-top">';
@@ -486,105 +517,6 @@ else if (isset($_GET['subcat'])) {ShowCatSubcat(mysqli_real_escape_string($conn,
 echo'</div>';
 
 // This is the html content that will be used by bootstrap to load the page 
-echo '
-<div id="submit" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Submit a card</h4>
-            </div>
-            <div class="modal-body">
-                
-
-
-<form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
-   
-
-   <div class="form-group">
-   <label for="title" >Title:</label>
-
-   <input type="text" name="title" id="title"  size="45" class="form-control"/>
-
-   <span id="title-status"></span> 
-
-   <label for="description">Description:</label><br>
-   <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
-   <span id="description-status"></span>
-
-   <label for="url">URL:</label>
-   <input type="text" name="url"  size="45" onchange="activate(this.value)" class="form-control"/>
-   <span id="url-status"> </span> 
-
-   <label for="type">Medium: </label> 
-   <select name="type"  class="form-control">
-    <option value="Website">Website/Tool</option>
-    <option value="Video/Audio">Video</option>
-    <option value="Influencer">Twitter influencer</option>
-    <option value="Blog">Blog</option>
-    <option value="Book">Book</option>
-   </select>
-   </div>
-  
-     
-     <div id="adder" class="form-group">
-       <div>
-       <label for="cat"> Category: </label> 
-          <select name="cat"  onchange="update(this.value)" class="form-control">
-          <option value="BD">Business development</option>
-          <option value="FE">Front-end development/Design</option>
-          <option value="BE">Back-end development</option>
-          </select>
-
-          <label > Labels: </label>  
-          <select name="subcat1"  id="D1" class="form-control"> 
-          <option value="">Choose One</option>
-          <option value="LeanStartup">Lean Startup</option>
-          <option value="MarketingAndResearch">Marketing & Research</option>
-          <option value="Naming">Naming</option>
-          <option value="CopyWriting">Copywriting</option>
-          <option value="Analytics">Analytics</option> 
-          <option value="Launching">Launching</option>
-	  <option value="UserFeedback">User Feedback</option>  
-          <option value="SEO">SEO</option>
-          <option value="SocialMediaCommunity">Social Media & Community</option>
-          <option value="ProjectManagement">Project Management</option>
-          <option value="CustomerService">Customer Service</option>
-          <option value="InventoryManagement">Inventory Management</option>
-          <option value="Sales">Sales</option>
-          <option value="Funding">Funding</option>
-	  <option value="Administration">Administration</option>
-	  <option value="Productivity">Productivity</option>
-          <option value="Outsourcing">Outsourcing</option>
-          <option value="E-commerce">E-commerce</option>
-	  <option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
-	  <option value="Events">Events</option>
-          </select>
-        </div>
-      </div>
-     
-      
-
-<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">+</button>
-
-
-
-                
-                
-                <p class="text-warning"><small></small></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                
-                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
-                </form>
-            </div>   
-	       </div>
-        </div>
-    </div>
-</div>';
-
-
 
 
 

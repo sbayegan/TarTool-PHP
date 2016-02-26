@@ -551,10 +551,20 @@ function check-passcheck(str) {
 
 
 
+$(document).ready(function(){
+    $("#login-form").submit(function(event) {
+
+event.preventDefault();
 
 
-function login(two) {
-one = document.getElementById("loginusername").value;
+
+ });});
+
+
+
+function login() {
+var one = document.getElementById("loginusername").value;
+var two = document.getElementById("login-password").value;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -563,13 +573,13 @@ one = document.getElementById("loginusername").value;
 
                 if(xmlhttp.responseText == 1){
                   window.location.replace("home.php");
-                  //document.getElementById("condition").innerHTML = "good, lets go";
+                  document.getElementById("condition").innerHTML = "good, lets go";
                 }
                 if(xmlhttp.responseText == 0){
-                  //document.getElementById("condition").innerHTML = "Wrong password";
+                  document.getElementById("condition").innerHTML = "Wrong password";
                 }
  		if(xmlhttp.responseText == -1){
-                  //document.getElementById("condition").innerHTML = "Please verify your email";
+                  document.getElementById("condition").innerHTML = "Please verify your email";
                  
                 }
             }
@@ -579,6 +589,15 @@ one = document.getElementById("loginusername").value;
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("user="+one+"&pass="+two);
 }
+
+$(document).ready(function(){
+    $("#login-form").submit(function(event) {
+
+event.preventDefault();
+
+login();
+
+ });});
 
 function passmatch(){
 			if(document.getElementById("password").value == document.getElementById("password1").value){

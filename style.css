@@ -100,15 +100,15 @@ background-color: #FEFEFE;
 .signin-square{
 border-radius: 10px;
 padding: 20px;
-padding-bottom: 10px;
+//padding-bottom: 10px;
 box-shadow: 0px 1px 8px grey;
 display: none;
 height: auto;
 position: fixed;
 margin-top: 95px;
 left: 50%;
-width: 320px;
-margin-left:-150px;
+width: 350px;
+margin-left:-175px;
 z-index: 75;
 background-color: #FEFEFE;
 }
