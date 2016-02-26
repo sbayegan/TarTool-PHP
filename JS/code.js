@@ -576,7 +576,7 @@ var two = document.getElementById("login-password").value;
                   document.getElementById("condition").innerHTML = "good, lets go";
                 }
                 if(xmlhttp.responseText == 0){
-                  document.getElementById("condition").innerHTML = "Wrong password";
+                  document.getElementById("condition").innerHTML = "The username and password do not match!";
                 }
  		if(xmlhttp.responseText == -1){
                   document.getElementById("condition").innerHTML = "Please verify your email";
