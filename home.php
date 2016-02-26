@@ -87,8 +87,8 @@ echo '
         <label for="dropdown">What do you do for a living?</label>
         <select name="type" form="form" id="dropdown" class="form-control" >
         <option value="NULL">choose one</option>
-        <option value="one">a founder</option>
-        <option value="two">working at a startup</option>
+        <option value="one">I am a founder</option>
+        <option value="two">I work at a startup</option>
               <option value="three">I just like strartups</option>
               <option value="four">None of your business!</option>
               </select>

@@ -91,33 +91,51 @@ if(text != 'Choose One')document.getElementById("samplecard-subcategory").append
 }
 
 function showsubmission(){
-document.getElementById("transparent").style.display = 'block';
-document.getElementById("transparent-box").style.display = 'block';
-document.getElementById("transparent-square").style.display = 'block';  
+$("#transparent-box").fadeIn();
+$("#transparent-square").fadeIn();
+$("#transparent").fadeIn();
+//document.getElementById("transparent").style.display = 'block';
+//document.getElementById("transparent-box").style.display = 'block';
+//document.getElementById("transparent-square").style.display = 'block';  
 }
 
 function showsignup(){
-document.getElementById("transparent").style.display = 'block';
-document.getElementById("transparent-signup").style.display = 'block';
+$("#transparent").fadeIn();
+$("#transparent-signup").fadeIn();
+//document.getElementById("transparent").style.display = 'block';
+//document.getElementById("transparent-signup").style.display = 'block';
 }
 
 function showsignin(){
-document.getElementById("transparent").style.display = 'block';
-document.getElementById("transparent-signin").style.display = 'block';
+$("#transparent").fadeIn();
+$("#transparent-signin").fadeIn();
+//document.getElementById("transparent").style.display = 'block';
+//document.getElementById("transparent-signin").style.display = 'block';
 }
 
 function showprofile(){
-document.getElementById("transparent").style.display = 'block';
-document.getElementById("transparent-profile").style.display = 'block';
+$("#transparent").fadeIn();
+$("#transparent-profile").fadeIn();
+
+//document.getElementById("transparent").style.display = 'block';
+//document.getElementById("transparent-profile").style.display = 'block';
 }
 
 function closeall(){
-document.getElementById("transparent").style.display = 'none';
-document.getElementById("transparent-signup").style.display = 'none';
-document.getElementById("transparent-signin").style.display = 'none';
-document.getElementById("transparent-profile").style.display = 'none';
-document.getElementById("transparent-box").style.display = 'none';
-document.getElementById("transparent-square").style.display = 'none';
+$("#transparent").fadeOut();
+$("#transparent-signup").fadeOut();
+$("#transparent-signin").fadeOut();
+$("#transparent-profile").fadeOut();
+$("#transparent-box").fadeOut();
+$("#transparent-square").fadeOut();
+
+
+//document.getElementById("transparent").style.display = 'none';
+//document.getElementById("transparent-signup").style.display = 'none';
+//document.getElementById("transparent-signin").style.display = 'none';
+//document.getElementById("transparent-profile").style.display = 'none';
+//document.getElementById("transparent-box").style.display = 'none';
+//document.getElementById("transparent-square").style.display = 'none';
 }
 
 
