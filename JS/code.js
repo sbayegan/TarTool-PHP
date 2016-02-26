@@ -585,6 +585,7 @@ var two = document.getElementById("login-password").value;
             }
 	
         }
+        document.getElementById("condition").innerHTML = "";
         xmlhttp.open("POST", "login.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("user="+one+"&pass="+two);
