@@ -390,6 +390,7 @@ width: 100%;
 background-color: #33CC33;
 }
 .title{
+font-weight: bold;
 overflow:scroll;
 position: absolute;
 padding-left:10px;

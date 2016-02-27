@@ -285,7 +285,9 @@ echo '<div class="form-group" >
       <label >Password:</label>
       <input  class="form-control" type="password"  name="user" id="deleteaccount-password">
       <span id="changepassword-condition-delete" style="color:red;"></span>
+      <button type="button" style="width:30%;margin-right:5px;margin-top:-28px;float:right;" class="btn btn-danger btn-xs" onclick="">Delete</button>
       </div>';
+
 
 echo '</div>';
 
@@ -557,7 +559,7 @@ echo '<footer>';
 echo '</footer>';
 
 
-echo '</body>';
+echo '</body>';   
 $conn->close();
 echo '</html>';
 ?>

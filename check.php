@@ -65,7 +65,7 @@ echo "</head>";
 echo "<body style='background-color:white;'>";
 echo '<div class="stick-to-top">';
 
-echo '<div class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a>';
+echo '<div class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a>';
 echo ' </div>';
 
 
@@ -78,7 +78,7 @@ echo '</div>';
 echo'
 <div class="slider">';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="home.php" >
+<a href="index.php" >
 <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
@@ -385,7 +385,7 @@ echo '</div>';
 */
 echo '<div class="check-button">';
 echo '<hr>';
-echo '<a href="home.php" class="btn btn-default btn-sm" style="margin-right:4%;width:48%;">Cancel</a>';
+echo '<a href="index.php" class="btn btn-default btn-sm" style="margin-right:4%;width:48%;">Cancel</a>';
 echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="width:48%;" value="Submit">';
 
 echo '</div>';

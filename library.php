@@ -3,7 +3,7 @@ include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
 if(!isset($_COOKIE['junto'])){
-header('Location: http://junto.link/home.php');
+header('Location: http://junto.link/index.php');
 }
 
 echo "<!DOCTYPE html>";
@@ -334,7 +334,7 @@ one = document.getElementById("loginusername").value;
 		 document.getElementById("condition").innerHTML =  xmlhttp.responseText;
                 if(xmlhttp.responseText == 1){
                   document.getElementById("condition").innerHTML = "good, lets go";
-		  window.location.replace("home.php");
+		  window.location.replace("index.php");
                 }
                 if(xmlhttp.responseText == 0){
                   document.getElementById("condition").innerHTML = "Waiting for the correct password";
@@ -372,7 +372,7 @@ echo "</head>";
 // HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
-echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+echo '<span class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 if(isset($_COOKIE['junto'])){
 //echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
@@ -402,7 +402,7 @@ echo '
 }
 else{
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="home.php">
+<a href="index.php">
 <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
