@@ -102,6 +102,9 @@ $("#transparent").fadeIn();
 function showchangepassword(){
 $("#change-password").fadeIn();
 }
+function closechangepassword(){
+$("#change-password").fadeOut();
+}
 
 function showsignup(){
 $("#transparent").fadeIn();
@@ -441,6 +444,8 @@ var pass = 0;
 var repass = 0;
 
 
+
+
 function available(str) {
     if (str.length < 4) { 
         document.getElementById("user-status").innerHTML = "too short";
@@ -574,14 +579,52 @@ function check-passcheck(str) {
 
 
 $(document).ready(function(){
-    $("#login-form").submit(function(event) {
-
+    $("#changepassword-form").submit(function(event) {
 event.preventDefault();
-
-
 
  });});
 
+
+function changepasswordstepone(){
+var one = document.getElementById("changepassword-user").value;
+var two = document.getElementById("changepassword-password").value;
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+         //document.getElementById("condition").innerHTML =  xmlhttp.responseText;
+
+                if(xmlhttp.responseText == 1){
+                  document.getElementById("change-password-inner").innerHTML = '<form  id="changepassword-form" action="login.php" method="post">'
+                    +'<div class="form-group">'
+                    +'<label for="user">This should be the new form </label>'
+      +'<input  class="form-control" type="password"  name="user" id="changepassword-password">'
+      +'<span id="changepassword-condition" style="display:inline-block;margin:5px;color:red;"></span>'
+      //+'<input type="submit" id="submit" style="float:right;margin-top:10px;" class="btn btn-danger btn-sm" value="Next" onclick="changepasswordstepone()">'
+      +'</div>'
+      +'</form>'
+                  ;
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("changepassword-condition").innerHTML = "Wrong password!";
+                }
+        if(xmlhttp.responseText == -1){
+                  //document.getElementById("condition").innerHTML = "Please verify your email";
+                 
+                }
+            }
+    
+        }
+        document.getElementById("changepassword-condition").innerHTML = "";
+        xmlhttp.open("POST", "login.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("user="+one+"&pass="+two);
+
+
+
+
+}
 
 
 function login() {
@@ -591,7 +634,7 @@ var two = document.getElementById("login-password").value;
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
-		 //document.getElementById("condition").innerHTML =  xmlhttp.responseText;
+         //document.getElementById("condition").innerHTML =  xmlhttp.responseText;
 
                 if(xmlhttp.responseText == 1){
                   window.location.replace("home.php");
@@ -600,18 +643,19 @@ var two = document.getElementById("login-password").value;
                 if(xmlhttp.responseText == 0){
                   document.getElementById("condition").innerHTML = "The username and password do not match!";
                 }
- 		if(xmlhttp.responseText == -1){
+        if(xmlhttp.responseText == -1){
                   document.getElementById("condition").innerHTML = "Please verify your email";
                  
                 }
             }
-	
+    
         }
         document.getElementById("condition").innerHTML = "";
         xmlhttp.open("POST", "login.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("user="+one+"&pass="+two);
 }
+
 
 $(document).ready(function(){
     $("#login-form").submit(function(event) {
