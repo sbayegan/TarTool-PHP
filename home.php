@@ -252,13 +252,13 @@ echo '<hr style="border:1px solid #000;">';
 echo '<input type="hidden" name="userid" value="';echo $value;echo '">';
 echo '<input type="hidden" id="update-username" value="';echo $id;echo '">';
 echo '<div class="form-group">
-      <p><b>Name: </b><div style="font-size:130%;">';echo $name;echo '</div></p>
+      <b>Name: </b><div style="font-size:130%;">';echo $name;echo '</div>
       </div>';
 echo '<div class="form-group">
-      <p><b>Email: </b><div style="font-size:120%;">';echo $email;echo '</div></p>
+      <b>Email: </b><div style="font-size:120%;">';echo $email;echo '</div>
       </div>';
 echo '<div class="form-group">
-      <p><b>Username: </b><div style="font-size:120%;">';echo $id;echo '</div></p>
+      <b>Username: </b><div style="font-size:120%;">';echo $id;echo '</div>
       </div>';
 echo '<div style="display:none;" id="change-password">';
 echo '<div class="form-group" >
