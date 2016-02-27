@@ -204,7 +204,7 @@ echo '
   <div class="subcats" id="samplecard-subcategory">
   </div>
   <div class="profile-picture">
-    <img id="samplecard-image" src="http://www.white-lioness.com/img/logo/white-lioness-technologies-white-notext.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px"> 
+    <img id="samplecard-image" src="http://www.white-lioness.com/img/logo/white-lioness-technologies-white-notext.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px" alt="logo"> 
   </div>
   <a href="#">
     <b><div class="title" id="samplecard-title"></div></b>
@@ -212,11 +212,11 @@ echo '
   </a>
   <div class="score">
 
-      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">
+      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px" alt="facebook">
 
-      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">
+      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px" alt="twitter">
 
-      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">
+      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px" alt="linkedin">
 
   </div>
   <div class="numbers">
@@ -245,7 +245,7 @@ if(isset($_COOKIE['junto'])){
 
 
 echo '<div class="profile-square" id="transparent-profile">';
-echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closig cross"></a>';
 echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';
 echo '<hr style="border:1px solid #000;">';
 echo '<form  id="account-settings" action="update.php" method="post">';
@@ -332,8 +332,8 @@ echo '<div class="stick-to-top">';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
-	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
-	   echo '<span style="position:absolute;float:left;right:120px;top:20px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50"></a></span>';
+	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
+	   echo '<span style="position:absolute;float:left;right:120px;top:20px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';
      }
 	   else{
 
@@ -371,7 +371,7 @@ echo '</div>';//stick-to-top
     echo'
     <div class="slider">
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
+    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70" alt="feed">
     </div>
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
     Feed
@@ -380,7 +380,7 @@ echo '</div>';//stick-to-top
 
     // Submit button
     echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-    <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
+    <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70" alt="submit">
     </div>  
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
     Submit<br> Resource
@@ -390,7 +390,7 @@ echo '</div>';//stick-to-top
     // My Library button
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-    <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
+    <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70" alt="library">
     </div>
     <div style="position:relative;margin-top:-10px;text-align:center;">
     My Library
@@ -400,7 +400,7 @@ echo '</div>';//stick-to-top
     // My Streams
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-    <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
+    <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70" alt="streams">
     </div>
     <div style="position:relative;margin-top:0px;text-align:center">
     My streams
