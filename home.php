@@ -75,12 +75,12 @@ echo '
       </div>
        <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
+      <input type="password" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
       <span id="pass-status"> </span> 
       </div>
       <div class="form-group">
       <label for="password1">Retype Password</label>
-       <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
+       <input type="password"  name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
        <span id="pass1-status"> </span> 
       </div>
         <div class="form-group">
@@ -105,7 +105,7 @@ echo '
 Submit a Card
 </h3>
 <hr>
-<form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off">
+<form  class="form-asd"  action="submit.php" method="get" autocomplete="off">
    <div class="form-group">
    <label for="title" >Title</label>
    <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
@@ -303,7 +303,7 @@ echo '</form>';
 
 echo '<div class="signin-square" id="transparent-signin">';
       echo '
-    <a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>
+    <a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
     <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>
     <hr style="margin-top:-5px;">
 
