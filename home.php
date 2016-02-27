@@ -52,12 +52,12 @@ echo
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="signup-square" id="transparent-signup">';
-echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
+echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
 echo '
 <div style="border:0px dashed grey;width:500px;margin-top:-5px;">
 <p style="font-size:130%;"> Sign Up</p>
 </div>
-</form>
+
       <form action="registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
        <label for="full_name">Name</label>
