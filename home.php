@@ -547,7 +547,7 @@ echo'</div>';
 
 
 
-echo '</body>';
+
 echo '<footer>';
 //echo'<div class="footer-line">';
 //echo'</div>';
@@ -557,7 +557,7 @@ echo '<footer>';
 echo '</footer>';
 
 
-
+echo '</body>';
 $conn->close();
 echo '</html>';
 ?>
