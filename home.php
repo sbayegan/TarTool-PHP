@@ -60,31 +60,31 @@ echo '
 
       <form action="registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
-       <label for="full_name">Name</label>
+       <label >Name</label>
        <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
        </div>
        <div class="form-group">
-       <label for="email">Email</label>
+       <label >Email</label>
        <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
        <span id="email-status"></span>
        </div>
        <div class="form-group">
-      <label for="username">Username</label>
+      <label >Username</label>
       <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
       <span id="user-status"> </span> 
       </div>
        <div class="form-group">
-      <label for="password">Password</label>
+      <label >Password</label>
       <input type="password" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
       <span id="pass-status"> </span> 
       </div>
       <div class="form-group">
-      <label for="password1">Retype Password</label>
+      <label >Retype Password</label>
        <input type="password"  name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
        <span id="pass1-status"> </span> 
       </div>
         <div class="form-group">
-        <label for="dropdown">What do you do for a living?</label>
+        <label >What do you do for a living?</label>
         <select name="type" form="form" id="dropdown" class="form-control" >
         <option value="NULL">choose one</option>
         <option value="one">I am a founder</option>
@@ -107,20 +107,20 @@ Submit a Card
 <hr>
 <form  class="form-asd"  action="submit.php" method="get" autocomplete="off">
    <div class="form-group">
-   <label for="title" >Title</label>
+   <label  >Title</label>
    <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
    <span id="title-status"></span> 
    <br>
-   <label for="description">Description</label><br>
+   <label >Description</label><br>
    <textarea rows="4" cols="30" name="description" id="description" class="form-control" onkeyup="submissionsample()"></textarea>
    <span id="description-status"></span>
    <br>
-   <label for="url">URL</label>
+   <label >URL</label>
    <input type="text" name="url" id="url" size="45" onchange="submissionsample()" class="form-control"/>
    <span id="url-status"> </span> 
    <br>
       <div id="submission-thumbnail">
-  <label for="imageurl">Thumbnail URL <a style="color:red;" href="#" onclick="submissionthumbnail()"> Upload </a> </label>
+  <label >Thumbnail URL <a style="color:red;" href="#" onclick="submissionthumbnail()"> Upload </a> </label>
    <input type="text" name="imageurl" id="imageurl" size="45" onchange="submissionsample()" class="form-control"/>
    <br>
       </div> 
@@ -150,7 +150,7 @@ Submit a Card
   
      <div id="adder" class="form-group">
        <div>
-       <label for="cat"> Category </label> 
+       <label > Category </label> 
           <select name="cat" id="category" onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
@@ -262,19 +262,19 @@ echo '<div class="form-group">
       </div>';
 echo '<div style="display:none;" id="change-password">';
 echo '<div class="form-group" >
-      <label for="user">Current password</label>
+      <label >Current password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password">
       <span id="changepassword-condition" style="color:red;"></span>
       </div>
 
       <div class="form-group">
-      <label for="user">New Password</label>
+      <label >New Password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password1">
       <span id="changepassword-condition1" style="color:red;"></span>
       </div>
 
       <div class="form-group">
-      <label for="user">Re-type New Password </label>
+      <label >Re-type New Password </label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password2">
       <span id="changepassword-condition2" style="color:red;"></span>
       </div>';
@@ -282,7 +282,7 @@ echo '</div>';
 
 echo '<div style="display:none;" id="account-delete">';
 echo '<div class="form-group" >
-      <label for="user">Password:</label>
+      <label >Password:</label>
       <input  class="form-control" type="password"  name="user" id="deleteaccount-password">
       <span id="changepassword-condition-delete" style="color:red;"></span>
       </div>';
@@ -310,11 +310,11 @@ echo '<div class="signin-square" id="transparent-signin">';
       <form  id="login-form" action="login.php" method="post">
     <div class="form-group">
 
-      <label for="user">Username </label>
+      <label >Username </label>
       <input  class="form-control" type="text"      name="user" id="loginusername"   placeholder=" Username">
     </div>
     <div class="form-group">
-      <label for="pass">Password </label>
+      <label >Password </label>
       <input  class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
       <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
       <br>
