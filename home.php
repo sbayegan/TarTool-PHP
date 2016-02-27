@@ -261,7 +261,25 @@ echo '<div class="form-group">
       <label for="user">Username </label>
       <input  class="form-control" type="text" name="username" id="profilusername" placeholder=" Username" value="';echo $id;echo'">
       </div>';
+echo '<div style="display:none;" id="change-password">';
+echo '<div class="form-group" >
+      <label for="user">Your current password</label>
+      <input  class="form-control" type="password"  name="user" id="changepassword-password">
+      <span id="changepassword-condition" style="color:red;"></span>
+      </div>
 
+      <div class="form-group">
+      <label for="user">New Password</label>
+      <input  class="form-control" type="password"  name="user" id="changepassword-password1">
+      <span id="changepassword-condition" style="color:red;"></span>
+      </div>
+
+      <div class="form-group">
+      <label for="user">Re-type New Password </label>
+      <input  class="form-control" type="password"  name="user" id="changepassword-password2">
+      <span id="changepassword-condition" style="color:red;"></span>
+      </div>';
+echo '</div>';
 echo '<button type="button" style="width:100%;" class="btn btn-danger btn-xs" onclick="showchangepassword()">Change Password</button>';
 echo '<br>';
 echo '<br>';
@@ -271,22 +289,6 @@ echo '</div>';
 echo '</form>';
 
 
-echo '<div class="change-password" id="change-password">
-<a href="#" onclick="closechangepassword()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>
-    <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Change Password</p>
-<br>
-  <div id="change-password-inner">
-    <form  id="changepassword-form" action="login.php" method="post">
-      <div class="form-group">
-      <label for="user">What is your current password? </label>
-      <input  class="form-control" type="hidden"  name="user" id="changepassword-user" value="';echo $id;echo'">
-      <input  class="form-control" type="password"  name="user" id="changepassword-password">
-      <span id="changepassword-condition" style="display:inline-block;margin:5px;color:red;"></span>
-      <input type="submit" id="submit" style="float:right;margin-top:10px;" class="btn btn-danger btn-sm" value="Next" onclick="changepasswordstepone()"> 
-      </div>
-    </form>
-  </div>
-</div>';
 
 echo '<div class="signin-square" id="transparent-signin">';
       echo '
