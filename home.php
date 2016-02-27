@@ -248,7 +248,7 @@ echo '<div class="profile-square" id="transparent-profile">';
 echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closig cross"></a>';
 echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';
 echo '<hr style="border:1px solid #000;">';
-echo '<form  id="account-settings" action="update.php" method="post">';
+//echo '<form  id="account-settings" action="update.php" method="post">';
 echo '<input type="hidden" name="userid" value="';echo $value;echo '">';
 echo '<input type="hidden" id="update-username" value="';echo $id;echo '">';
 echo '<div class="form-group">
@@ -297,7 +297,7 @@ echo '<hr>';
 echo '<button type="button" style="width:45%;" class="btn btn-default btn-sm" onclick="closeall()">Cancel</button>';
 echo '<button type="submit" style="width:45%;margin-left:10%;" class="btn btn-warning btn-sm">Submit</button>';
 echo '</div>';
-echo '</form>';
+//echo '</form>';
 
 
 
