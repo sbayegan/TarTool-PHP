@@ -1,7 +1,82 @@
-  var loadFile = function(event) {
+// GLOBAL VARIABLES
+// VARIABLES USED FOR SIGNUP
+var username = 0;
+var email = 0;
+var pass = 0;
+var repass = 0;
+// VARIABLES USED FOR ACCOUNT SETTING UPDATE
+var currentpass = 0;
+var newpass = 0 ;
+var matched = 0 ;
+
+$(document).ready(function(){
+    $("#account-settings").submit(function(event) {
+event.preventDefault();
+     return   currentpassword();
+    });});
+
+
+function currentpassword(){
+var one = document.getElementById("update-username").value;
+var two = document.getElementById("changepassword-password").value;
+var three = document.getElementById("changepassword-password1").value;
+var four = document.getElementById("changepassword-password2").value;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){//Success
+                      if(four == three && three.length > 4){
+                            //Update the password
+                            var mlhttp = new XMLHttpRequest();
+                            mlhttp.onreadystatechange = function() {
+                            if (mlhttp.readyState == 4 && mlhttp.status == 200) {
+                                //document.getElementById("change-password").innerHTML = "Just above conditions";
+                                if(mlhttp.responseText == 1){
+                                   document.getElementById("change-password").innerHTML = "Your password was updated successfully";
+                                }
+                                if(mlhttp.responseText == 0){
+                                   document.getElementById("change-password").innerHTML = "Oops! Something went wrong, please refresh the page and try again";
+                                }
+                            }}
+                            document.getElementById("change-password").innerHTML = "We are working";
+                            mlhttp.open("POST", "PHP/update.php", true);
+                            mlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                            mlhttp.send("user="+one+"&pass="+two+"&newpass="+four);
+                      }
+                      else
+                      {
+                if(three.length <= 4){
+                    document.getElementById("changepassword-condition1").innerHTML = "The password is too short!";
+                }
+                else{
+                    document.getElementById("changepassword-condition2").innerHTML = "The passwords do not match!";      
+                      }
+                      }
+                }
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("changepassword-condition").innerHTML = "Wrog password!";
+                }
+            }
+        }
+        document.getElementById("changepassword-condition").innerHTML = "";
+        document.getElementById("changepassword-condition1").innerHTML = "";
+        document.getElementById("changepassword-condition2").innerHTML = "";
+        xmlhttp.open("POST", "login.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("user="+one+"&pass="+two);
+
+}
+
+
+var loadFile = function(event) {
     var output = document.getElementById('samplecard-image');
     output.src = URL.createObjectURL(event.target.files[0]);
   };
+
+function del(){
+$("#change-password").fadeOut();
+$("#account-delete").fadeIn();
+}
 
 
 function submissionsample(){
@@ -101,6 +176,8 @@ $("#transparent").fadeIn();
 
 function showchangepassword(){
 $("#change-password").fadeIn();
+$("#account-delete").fadeOut();
+
 }
 function closechangepassword(){
 $("#change-password").fadeOut();
@@ -438,10 +515,7 @@ document.getElementById("adderbutton").disabled = true;
 }
 }
 
-var username = 0;
-var email = 0;
-var pass = 0;
-var repass = 0;
+
 
 
 
@@ -550,39 +624,9 @@ function passcheck(str) {
         xmlhttp.send("pass="+str);
 }
 
-/*
-function check-passcheck(str) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-                  document.getElementById("pass-status").innerHTML = "good";
-                  pass = 1;
-                  if(username ==1 && email ==1 && pass == 1 && repass ==1)
-                  {document.getElementById("submit_btn").disabled = false;}
-                }
-                if(xmlhttp.responseText == 0){
-                  document.getElementById("pass-status").innerHTML = "too short";
-                  pass = 0;
-                  {document.getElementById("submit_btn").disabled = true;}
-                }
-            }
-        }
-        xmlhttp.open("POST", "passwordcheck.php", true);
-        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xmlhttp.send("pass="+str);
-}
-
-
-*/
 
 
 
-$(document).ready(function(){
-    $("#changepassword-form").submit(function(event) {
-event.preventDefault();
-
- });});
 
 
 function changepasswordstepone(){

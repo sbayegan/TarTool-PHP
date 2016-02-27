@@ -247,23 +247,22 @@ if(isset($_COOKIE['junto'])){
 echo '<div class="profile-square" id="transparent-profile">';
 echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18"></a>';
 echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';
-echo '<hr>';
+echo '<hr style="border:1px solid #000;">';
 echo '<form  id="account-settings" action="update.php" method="post">';
+echo '<input type="hidden" name="userid" value="';echo $value;echo '">';
+echo '<input type="hidden" id="update-username" value="';echo $id;echo '">';
 echo '<div class="form-group">
-      <label for="user">Name </label>
-      <input  class="form-control" type="text" name="name" id="profilename" placeholder=" Name" value="';echo $name;echo'">
+      <p><b>Name: </b><div style="font-size:130%;">';echo $name;echo '</div></p>
       </div>';
 echo '<div class="form-group">
-      <label for="user">Email </label>
-      <input  class="form-control" type="text" name="email" id="profilemail" placeholder=" Email" value="';echo $email;echo'">
+      <p><b>Email: </b><div style="font-size:120%;">';echo $email;echo '</div></p>
       </div>';
 echo '<div class="form-group">
-      <label for="user">Username </label>
-      <input  class="form-control" type="text" name="username" id="profilusername" placeholder=" Username" value="';echo $id;echo'">
+      <p><b>Username: </b><div style="font-size:120%;">';echo $id;echo '</div></p>
       </div>';
 echo '<div style="display:none;" id="change-password">';
 echo '<div class="form-group" >
-      <label for="user">Your current password</label>
+      <label for="user">Current password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password">
       <span id="changepassword-condition" style="color:red;"></span>
       </div>
@@ -271,20 +270,32 @@ echo '<div class="form-group" >
       <div class="form-group">
       <label for="user">New Password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password1">
-      <span id="changepassword-condition" style="color:red;"></span>
+      <span id="changepassword-condition1" style="color:red;"></span>
       </div>
 
       <div class="form-group">
       <label for="user">Re-type New Password </label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password2">
-      <span id="changepassword-condition" style="color:red;"></span>
+      <span id="changepassword-condition2" style="color:red;"></span>
       </div>';
 echo '</div>';
+
+echo '<div style="display:none;" id="account-delete">';
+echo '<div class="form-group" >
+      <label for="user">Password:</label>
+      <input  class="form-control" type="password"  name="user" id="deleteaccount-password">
+      <span id="changepassword-condition" style="color:red;"></span>
+      </div>';
+
+echo '</div>';
+
+
+echo '<hr>';
 echo '<button type="button" style="width:100%;" class="btn btn-danger btn-xs" onclick="showchangepassword()">Change Password</button>';
-echo '<br>';
-echo '<br>';
+echo '<button type="button" style="width:100%;margin-top:5px;" class="btn btn-danger btn-xs" onclick="del()">Delete My Account</button>';
+echo '<hr>';
 echo '<button type="button" style="width:45%;" class="btn btn-default btn-sm" onclick="closeall()">Cancel</button>';
-echo '<button type="button" style="width:45%;margin-left:10%;" class="btn btn-warning btn-sm">Save Changes</button>';
+echo '<button type="submit" style="width:45%;margin-left:10%;" class="btn btn-warning btn-sm">Submit</button>';
 echo '</div>';
 echo '</form>';
 
@@ -307,7 +318,7 @@ echo '<div class="signin-square" id="transparent-signin">';
       <input  class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
       <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
       <br>
-      <input type="submit" id="submit" class="btn btn-default" value="Log In" > 
+      <input style="width:100%;" type="submit" id="submit" class="btn btn-default btn-sm" value="Log In" > 
       <p style="margin-top:15px;font-size:85%;"><a href="forgotpassword.html">Forgot your password?</a></p>
       
       </div>
@@ -329,9 +340,6 @@ echo '<div class="stick-to-top">';
 
 
 	   echo '<div class="login-square">';
-     //echo '<p style="position:fixed;margin-top:12px;font-size:120%;margin-left:30px;"><a href="#" onclick="showsignin()">Sign Up</a></p>';
-     //echo '<p style="position:fixed;margin-top:12px;margin-left:80px;font-size:120%;">Log in</p>';
-     //echo '<p style="position:fixed;margin-top:46px;margin-left:136px;font-size:80%;"><a href="forgotpassword.html">Forgot your password?</a></p>';
      echo '<a style="margin-right:20px;font-size:110%;" href="#" onclick="showsignin()"  role="button">Log In</a>';
      echo '<a href="#" onclick="showsignup()" class="btn btn-default" role="button">Sign Up</a>';
 
