@@ -199,6 +199,7 @@ z-index:100;
 }
 
 .account-title{
+font-weight: bold;
 position:absolute;
 bottom:110px;
 left: 20px;

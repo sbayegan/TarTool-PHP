@@ -100,7 +100,7 @@ echo '
 </div>';
 echo '<div class="submit-square" id="transparent-square">';
 echo '
-<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;top:20px;" src=pictures/cross-red.png width="18" height="18"></a>
+<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;top:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
 <h3 style="color:#6C7A89;">
 Submit a Card
 </h3>
@@ -207,7 +207,7 @@ echo '
     <img id="samplecard-image" src="http://www.white-lioness.com/img/logo/white-lioness-technologies-white-notext.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px" alt="logo"> 
   </div>
   <a href="#">
-    <b><div class="title" id="samplecard-title"></div></b>
+    <div class="title" id="samplecard-title"></div>
     <div class="description" id="samplecard-description"></div>
   </a>
   <div class="score">
@@ -284,7 +284,7 @@ echo '<div style="display:none;" id="account-delete">';
 echo '<div class="form-group" >
       <label for="user">Password:</label>
       <input  class="form-control" type="password"  name="user" id="deleteaccount-password">
-      <span id="changepassword-condition" style="color:red;"></span>
+      <span id="changepassword-condition-delete" style="color:red;"></span>
       </div>';
 
 echo '</div>';
