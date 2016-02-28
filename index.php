@@ -11,7 +11,7 @@ echo "<html>";
 
 // HEADER ----------------------------------------------------------------------------------------------------------------
 echo "<head>";
-
+echo '<meta name="description" content="The best startup resources essential to your success. Resources are streamed in 3 channels of Front-end, Back-end and Business development">';
 // Set the title of the page
 echo "<title>";
 echo $UniversalName;
