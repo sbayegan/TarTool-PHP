@@ -16,6 +16,36 @@ event.preventDefault();
     });});
 
 
+function deleteaccount(){
+
+var one = document.getElementById("update-username").value;
+var two = document.getElementById("deleteaccount-password").value;
+
+
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                   window.location.replace("logout.php"); 
+                }
+                if(xmlhttp.responseText == 0){
+                    document.getElementById("changepassword-condition-delete").innerHTML = "Wrong Password";
+                }
+
+
+
+        }
+    }
+        document.getElementById("changepassword-condition-delete").innerHTML = "Processing";
+        xmlhttp.open("POST", "PHP/update.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("user="+one+"&delpass="+two);
+
+}
+
+
+
 function currentpassword(){
 var one = document.getElementById("update-username").value;
 var two = document.getElementById("changepassword-password").value;
