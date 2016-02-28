@@ -27,6 +27,7 @@ else{
 	$userid = $result["USERID"];
 		/////  I COULD SEND AND EMAIL TO THE USER HERE TO NOTIFY THEM OF THE DELETION
 		if(password_verify($pass,$hash)){
+		$conn->query("DELETE FROM USERS WHERE USERID='$userid'");
 		$conn->query("DELETE FROM FAVOURITES WHERE USERID='$userid'");
 		$conn->query("DELETE FROM INTERESTS WHERE USERID='$userid'");
 		echo 1;
