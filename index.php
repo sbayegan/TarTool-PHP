@@ -333,7 +333,7 @@ echo '</div>';
 
 echo '<div class="stick-to-top">';
 	// LOGO
-	echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+	echo '<span class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
@@ -419,7 +419,7 @@ echo '</div>';//stick-to-top
     echo'
     <div class="slider">
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-    <a href="home.php" >
+    <a href="index.php" >
     <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
