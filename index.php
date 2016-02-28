@@ -257,6 +257,7 @@ echo '<div class="form-group">
 echo '<div class="form-group">
       <b>Email: </b><div style="font-size:120%;">';echo $email;echo '</div>
       </div>';
+echo '<form action="update.php" id="account-settings">';
 echo '<div class="form-group">
       <b>Username: </b><div style="font-size:120%;">';echo $id;echo '</div>
       </div>';
@@ -280,6 +281,7 @@ echo '<div class="form-group" >
       </div>';
 echo '</div>';
 
+
 echo '<div style="display:none;" id="account-delete">';
 echo '<div class="form-group" >
       <label >Password:</label>
@@ -299,6 +301,7 @@ echo '<hr>';
 echo '<button type="button" style="width:45%;" class="btn btn-default btn-sm" onclick="closeall()">Cancel</button>';
 echo '<button type="submit" style="width:45%;margin-left:10%;" class="btn btn-warning btn-sm">Submit</button>';
 echo '</div>';
+echo '</form>';
 //echo '</form>';
 
 
