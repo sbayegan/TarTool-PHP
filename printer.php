@@ -232,7 +232,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
+                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icona">';
            }
 
     }
@@ -247,9 +247,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     echo '<div class="numbers">';
 
-    echo '<div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['LINKEDIN'].'</div>';
-    echo '<div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['TWITTER'].'</div>';
-    echo '<div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['FACEBOOK'].'</div>';  
+    echo '<div class="linkedin-score">'.$result['LINKEDIN'].'</div>';
+    echo '<div class="twitter-score">'.$result['TWITTER'].'</div>';
+    echo '<div class="facebook-score">'.$result['FACEBOOK'].'</div>';  
     
    
 
