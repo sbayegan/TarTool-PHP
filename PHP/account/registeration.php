@@ -1,7 +1,7 @@
 <?php
 include('../../datalogin.php');
 function putinterest($user,$interest){
-include('datalogin.php');
+include('../../datalogin.php');
 $query = "INSERT INTO INTERESTS VALUES (".$user.",'".$interest."')";
 $conn->query($query);
 
