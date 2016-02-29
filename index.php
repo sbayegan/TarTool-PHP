@@ -11,7 +11,7 @@ echo "<html>";
 
 // HEADER ----------------------------------------------------------------------------------------------------------------
 echo "<head>";
-echo '<meta name="description" content="The best startup resources essential to your success. Resources are streamed in 3 channels of Front-end, Back-end and Business development">';
+echo '<meta name="description" content="Tartool is a feed of startup resources essential to your success. Resources are streamed in 3 channels of Front-end, Back-end and Business development">';
 // Set the title of the page
 echo "<title>";
 echo $UniversalName;
@@ -333,7 +333,7 @@ echo '</div>';
 
 echo '<div class="stick-to-top">';
 	// LOGO
-	echo '<span class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){

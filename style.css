@@ -311,11 +311,19 @@ background-color: #FEFEFE;
 
 
 
+.top-left-name{
+font-family: "My logo font";
+src: url(fonts/JosefinSansThin.tff);
+float: left;
+position: absolute;
+
+}
+
 .top-left{
 float: left;
 position: absolute;
-top:0px;
-left:10px;
+top:10px;
+left:100px;
 }
 
 .menu{
@@ -403,6 +411,8 @@ top:102px;
 border: 0px dashed grey;
 }
 .description{
+    font-family: "My logo font";
+src: url(fonts/JosefinSansThin.tff);
 font-size:115%;
 overflow: scroll;
 position: absolute;
