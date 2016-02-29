@@ -58,7 +58,7 @@ echo '
 <div class="signup-title">
 Sign Up
 </div>
-      <form action="registeration.php" method="post" id="form" autocomplete="off">
+      <form action="PHP/account/registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
        <label >Name</label>
        <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>

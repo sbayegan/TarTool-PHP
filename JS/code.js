@@ -42,7 +42,7 @@ var two = document.getElementById("deleteaccount-password").value;
         }
     }
         document.getElementById("changepassword-condition-delete").innerHTML = "Processing";
-        xmlhttp.open("POST", "PHP/update.php", true);
+        xmlhttp.open("POST", "PHP/account/update.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("user="+one+"&delpass="+two);
 
@@ -73,7 +73,7 @@ var four = document.getElementById("changepassword-password2").value;
                                 }
                             }}
                             document.getElementById("change-password").innerHTML = "We are working";
-                            mlhttp.open("POST", "PHP/update.php", true);
+                            mlhttp.open("POST", "PHP/account/update.php", true);
                             mlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
                             mlhttp.send("user="+one+"&pass="+two+"&newpass="+four);
                       }
