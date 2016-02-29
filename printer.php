@@ -220,7 +220,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     if(!isset($_COOKIE['junto'])){
     echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
-    echo '<img src="pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+    echo '<img src="pictures/save.png"  width="55" height="55" class="saving-icon">';
 
 }
     else{
@@ -228,11 +228,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     $favorited = $conn->query($query);
       if($favorited->num_rows == 0){
                    echo '<span onclick="favorite('.$i.')">';
-                   echo '<img src="pictures/save.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+                   echo '<img src="pictures/save.png"  width="55" height="55" class="saving-icon">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="pictures/cross-red.png"  width="55" height="55" style="float:left;margin-left:0px;margin-top:15px">';
+                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
            }
 
     }
@@ -246,10 +246,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '</div>';    
 
     echo '<div class="numbers">';
-    //echo '<div style="position:absolute;left:4px;font-size:120%">'.'Score: <b>'.$result['TOTALSCORE'].'</b></div>';
-    //echo '<div style="position:absolute;left:100px;font-size:110%">'.$result['LIKES'].'</div>';
 
-//    echo '<div style="position:absolute;left:20px;width:60px;text-align:center;font-size:110%;border: 0px dashed red;">'.$result['GOOGLEPLUS'].'</div>';
     echo '<div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['LINKEDIN'].'</div>';
     echo '<div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['TWITTER'].'</div>';
     echo '<div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%">'.$result['FACEBOOK'].'</div>';  

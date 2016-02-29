@@ -340,6 +340,12 @@ right:20px;
 top:20px;
 }
 
+.saving-icon{
+float:left;
+margin-left:0px;
+margin-top:15px;
+}
+
 .facebook-icon{
 float:right;
 margin-right:30px;

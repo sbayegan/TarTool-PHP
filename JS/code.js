@@ -360,12 +360,12 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img src=\'pictures/save.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>";
+        		output += ")\'    > <img src=\'pictures/save.png\'  width=\'55\' height=\'55\' class='saving-icon'></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";
+	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' class='saving-icon'>";
         xmlhttp.open("POST", "unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
