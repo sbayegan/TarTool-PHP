@@ -8,6 +8,11 @@
 /*
  * 		SHARED STYES classes
 */
+@font-face {
+font-family: Thin;
+src: url(fonts/JosefinSansThin.ttf);
+}
+
 span {cursor: pointer}
 a:active,.slider a:hover,a:visited,a:link{
 text-decoration:none;
@@ -311,19 +316,21 @@ background-color: #FEFEFE;
 
 
 
+
 .top-left-name{
-font-family: "My logo font";
-src: url(fonts/JosefinSansThin.tff);
+font-family: Thin;
+font-size:250%;
 float: left;
 position: absolute;
-
+top:22px;
+left:20px;
 }
 
 .top-left{
 float: left;
 position: absolute;
 top:10px;
-left:100px;
+left:120px;
 }
 
 .menu{
@@ -333,6 +340,22 @@ font-size: 100%;
 font-family:"Arial";
 color: #4D4D4D;
 padding-left:2em;
+}
+
+.end-of-feed{
+text-align:center;
+padding:20px;
+font-size: 300%;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+border-radius: 1px;
+border: 1px solid #E6E6E6;
+color: white;
+background-color: red;
+height: auto;
+width: 500px;
+margin-bottom: 100px; 
 }
 
 
@@ -411,8 +434,7 @@ top:102px;
 border: 0px dashed grey;
 }
 .description{
-    font-family: "My logo font";
-src: url(http://www.tartool.com/fonts/JosefinSansThin.tff);
+
 font-size:115%;
 overflow: scroll;
 position: absolute;

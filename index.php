@@ -334,7 +334,7 @@ echo '</div>';
 echo '<div class="stick-to-top">';
 	// LOGO
 	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
-
+  echo '<div class="top-left-name">TarTool</div>';
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
