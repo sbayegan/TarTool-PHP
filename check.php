@@ -65,8 +65,12 @@ echo "</head>";
 echo "<body style='background-color:white;'>";
 echo '<div class="stick-to-top">';
 
-echo '<div class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a>';
-echo ' </div>';
+
+	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
+  echo '<div class="top-left-name">tarTool</div>';
+
+
+
 
 
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
@@ -98,7 +102,7 @@ Submit<br> Resource
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="library.php">
-<div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book-red.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:-10px;text-align:center;">
 My library
@@ -109,7 +113,7 @@ My library
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="check.php">
-<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check.png" height="70" width="70">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check-red.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;text-align:center">
 My streams

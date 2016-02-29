@@ -372,7 +372,10 @@ echo "</head>";
 // HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
-echo '<span class="top-left"> <a href="index.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+
+echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
+echo '<div class="top-left-name">tarTool</div>';
+
 if(isset($_COOKIE['junto'])){
 //echo '<span style="position:absolute;right:250px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
 //echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
