@@ -335,6 +335,8 @@ echo '<div class="stick-to-top">';
 	// LOGO
 	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
   echo '<div class="top-left-name">tarTool</div>';
+
+
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
@@ -420,9 +422,9 @@ echo '</div>';//stick-to-top
     <div class="slider">
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
     <a href="index.php" >
-    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
+    <div style="position:relative;margin-left:40px;"><img src="pictures/glasses-red.png" height="70" width="70">
     </div>
-    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
+    <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center;color:red;">
     Feed
     </div>
     </a>
