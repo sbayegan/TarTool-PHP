@@ -11,21 +11,23 @@ if(password_verify($password,$hash)){
 
 if($result["CONFIRMED"] == 1){
 
+$ip = $_SERVER['REMOTE_ADDR'];
+
 $to = "saeidjobs@gmail.com";
 $subject = "$username logged in";
-$header = "From: submission@tartool.com \r\n";
+$header = "From: login-report@tartool.com \r\n";
 $header .="Content-Type: text/html; charset=ISO-8859-1 \r\n";
 $message = "
 <!DOCTYPE html>
 <html>
 <head>
 <title>
-User $username logged in
+User $username logged in from $ip
 </title>
 </head>
 <body>
 <p>
-A new login from $username <br>
+A new login from $username from  $ip<br>
 <br>
 <br>
 Cheers, <br>
