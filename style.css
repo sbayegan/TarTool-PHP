@@ -86,6 +86,20 @@ padding: 5px;
 box-shadow: 0px 1px 8px grey;
 }
 
+
+
+.account-text{
+font-size: 130%;
+}
+.signup-title{
+border:0px dashed grey;
+width:500px;
+margin-top:-5px;
+margin-bottom:15px;
+font-size:130%;
+
+}
+
 .profile-square{
 border-radius: 10px;
 padding: 20px;
@@ -314,7 +328,9 @@ z-index:60;
 background-color: #FEFEFE;
 }
 
-
+.red-text{
+    color: red;
+}
 
 
 .top-left-name{

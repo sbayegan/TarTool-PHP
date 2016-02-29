@@ -39,25 +39,15 @@ echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
 echo '<body >';
-echo 
-'<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, \'script\', \'facebook-jssdk\'));</script>';
-
+ 
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="signup-square" id="transparent-signup">';
 echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
 echo '
-<div style="border:0px dashed grey;width:500px;margin-top:-5px;">
-<p style="font-size:130%;"> Sign Up</p>
+<div class="signup-title">
+Sign Up
 </div>
-
       <form action="registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
        <label >Name</label>
@@ -245,48 +235,48 @@ if(isset($_COOKIE['junto'])){
 
 
 echo '<div class="profile-square" id="transparent-profile">';
-echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closig cross"></a>';
-echo '<p style="margin-top:-4px;padding-bottom:5px;font-size:140%;">Account Settings</p>';
-echo '<hr style="border:1px solid #000;">';
+echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closig cross"></a>';
+echo '<p class="signup-title">Account Settings</p>';
+
 //echo '<form  id="account-settings" action="update.php" method="post">';
 echo '<input type="hidden" name="userid" value="';echo $value;echo '">';
 echo '<input type="hidden" id="update-username" value="';echo $id;echo '">';
 echo '<div class="form-group">
-      <b>Name: </b><div style="font-size:130%;">';echo $name;echo '</div>
+      <b>Name: </b><div class="account-text">';echo $name;echo '</div>
       </div>';
 echo '<div class="form-group">
-      <b>Email: </b><div style="font-size:120%;">';echo $email;echo '</div>
+      <b>Email: </b><div class="account-text">';echo $email;echo '</div>
       </div>';
 echo '<form action="update.php" id="account-settings">';
 echo '<div class="form-group">
-      <b>Username: </b><div style="font-size:120%;">';echo $id;echo '</div>
+      <b>Username: </b><div class="account-text">';echo $id;echo '</div>
       </div>';
-echo '<div style="display:none;" id="change-password">';
+echo '<div  id="change-password">';
 echo '<div class="form-group" >
       <label >Current password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password">
-      <span id="changepassword-condition" style="color:red;"></span>
+      <span id="changepassword-condition" class="red-text"></span>
       </div>
 
       <div class="form-group">
       <label >New Password</label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password1">
-      <span id="changepassword-condition1" style="color:red;"></span>
+      <span id="changepassword-condition1" class="red-text"></span>
       </div>
 
       <div class="form-group">
       <label >Re-type New Password </label>
       <input  class="form-control" type="password"  name="user" id="changepassword-password2">
-      <span id="changepassword-condition2" style="color:red;"></span>
+      <span id="changepassword-condition2" class="red-text"></span>
       </div>';
 echo '</div>';
 
 
-echo '<div style="display:none;" id="account-delete">';
+echo '<div  id="account-delete">';
 echo '<div class="form-group" >
       <label >Password:</label>
       <input  class="form-control" type="password"  name="user" id="deleteaccount-password">
-      <span id="changepassword-condition-delete" style="color:red;"></span>
+      <span id="changepassword-condition-delete" class="red-text"></span>
       <button type="button" style="width:30%;margin-right:5px;margin-top:-28px;float:right;" class="btn btn-danger btn-xs" onclick="deleteaccount()">Delete</button>
       </div>';
 
@@ -309,7 +299,7 @@ echo '</form>';
 echo '<div class="signin-square" id="transparent-signin">';
       echo '
     <a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
-    <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>
+    <p class="signup-title"> Log In</p>
     <hr style="margin-top:-5px;">
 
       <form  id="login-form" action="login.php" method="post">
