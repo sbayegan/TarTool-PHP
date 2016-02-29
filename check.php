@@ -115,7 +115,7 @@ echo '
 <a href="check.php">
 <div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/check-red.png" height="70" width="70">
 </div>
-<div style="position:relative;margin-top:0px;text-align:center">
+<div style="position:relative;margin-top:0px;text-align:center;color:red;">
 My streams
 </div>
 </a>

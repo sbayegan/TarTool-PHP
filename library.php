@@ -427,7 +427,7 @@ echo '
 <a href="library.php">
 <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book-red.png" height="70" width="70">
 </div>
-<div style="position:relative;margin-top:-10px;text-align:center;">
+<div style="position:relative;margin-top:-10px;text-align:center;color:red;">
 My library
 </div>
 </a>
