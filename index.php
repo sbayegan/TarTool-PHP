@@ -40,6 +40,16 @@ echo "</head>";
 // BODY -----------------------------------------------------------------------------------------------------------------------
 echo '<body >';
  
+
+// WELCOME TRANSPARENT
+echo '<div class="welcome-transparent"> Welcome to tarTool</div>';
+
+
+
+
+
+
+
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="signup-square" id="transparent-signup">';
@@ -202,17 +212,17 @@ echo '
   </a>
   <div class="score">
 
-      <img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px" alt="facebook">
+      <img src="pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
 
-      <img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px" alt="twitter">
+      <img src="pictures/twitter.png" width="30" height="30" class="twitter-icon" alt="twitter">
 
-      <img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px" alt="linkedin">
+      <img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
 
   </div>
   <div class="numbers">
-    <div style="position:absolute;left:85px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-linkedin">0</div>
-    <div style="position:absolute;left:145px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-twitter">0</div>
-    <div style="position:absolute;left:205px;width:60px;text-align:center;border:0px dashed red;font-size:110%" id="samplecard-facebook">0</div>
+    <div class="linkedin-score" id="samplecard-linkedin">0</div>
+    <div class="twitter-score" id="samplecard-twitter">0</div>
+    <div class="facebook-score" id="samplecard-facebook">0</div>
   </div>
   <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">
     <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">
@@ -324,7 +334,7 @@ echo '</div>';
 echo '<div class="stick-to-top">';
 	// LOGO
 	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
-  echo '<div class="top-left-name">TarTool</div>';
+  echo '<div class="top-left-name">tarTool</div>';
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
 	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
