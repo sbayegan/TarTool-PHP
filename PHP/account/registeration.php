@@ -198,15 +198,9 @@ echo '<link rel="stylesheet" type="text/css" href="../../style.css">
 echo "<body>";
 echo '<div class="stick-to-top">';
   // LOGO
-  echo '<span class="top-left"> <a href="home.php"><img src="/pictures/logo.png" alt="logo" height="85" width="185"/> </a> </span>';
+    echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
+  echo '<div class="top-left-name">tarTool</div>';
 
-// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
-     if(isset($_COOKIE['junto'])){
-     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="../../pictures/power-red.png" height="45" width="45"></a></span>';
-     }
-     else{
-     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="#sign"  data-toggle="modal"><img src="pictures/power.png" height="45" width="45"></a></span>';
-     }
 echo '</div>';//stick-to-top
 echo '<div class="feed-column" >';
 echo "<h3>Verify your email</h3>";
