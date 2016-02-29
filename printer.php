@@ -232,7 +232,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icona">';
+                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
            }
 
     }
