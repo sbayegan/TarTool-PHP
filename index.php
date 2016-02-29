@@ -14,7 +14,7 @@ echo "<head>";
 echo '<meta name="description" content="Tartool is a feed of startup resources essential to your success. Resources are streamed in 3 channels of Front-end, Back-end and Business development">';
 // Set the title of the page
 echo "<title>";
-echo $UniversalName;
+echo $UniversalName; echo " Startup Resources";
 echo "</title>";
 
 // Include the JavaScript code
@@ -38,7 +38,7 @@ echo "</head>";
 
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
-echo '<body style="background-color:white;">';
+echo '<body >';
 echo 
 '<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -52,7 +52,7 @@ echo
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="signup-square" id="transparent-signup">';
-echo '<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
+echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
 echo '
 <div style="border:0px dashed grey;width:500px;margin-top:-5px;">
 <p style="font-size:130%;"> Sign Up</p>
@@ -100,7 +100,7 @@ echo '
 </div>';
 echo '<div class="submit-square" id="transparent-square">';
 echo '
-<a href="#" onclick="closeall()"><img style="position:absolute;right:20px;top:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
+<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
 <h3 style="color:#6C7A89;">
 Submit a Card
 </h3>
@@ -308,7 +308,7 @@ echo '</form>';
 
 echo '<div class="signin-square" id="transparent-signin">';
       echo '
-    <a href="#" onclick="closeall()"><img style="position:absolute;right:20px;" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
+    <a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
     <p style="margin-top:-5px;padding-bottom:5px;font-size:140%;"> Log In</p>
     <hr style="margin-top:-5px;">
 

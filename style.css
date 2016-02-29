@@ -333,6 +333,14 @@ top:10px;
 left:120px;
 }
 
+
+.closing-cross{
+position:absolute;
+right:20px;
+top:20px;
+}
+
+
 .menu{
 top: 2px;
 float:left;
