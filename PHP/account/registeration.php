@@ -186,8 +186,8 @@ echo "<title>";
 echo "Confirm your e-mail";
 echo "</title>";
 echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
-echo '<link rel="stylesheet" type="text/css" href="style.css">
-<script src="JS/code.js"></script>
+echo '<link rel="stylesheet" type="text/css" href="../../style.css">
+<script src="../../JS/code.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
