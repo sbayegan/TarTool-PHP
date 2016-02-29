@@ -391,7 +391,7 @@ background-color: #33CC33;
 }
 .title{
 font-weight: bold;
-font-size:110%;
+font-size:125%;
 overflow:scroll;
 position: absolute;
 padding-left:10px;
@@ -399,11 +399,11 @@ left:5px;
 right:10px;
 width:480px;
 height:30px;
-top:105px;
+top:102px;
 border: 0px dashed grey;
 }
 .description{
-font-size:110%;
+font-size:115%;
 overflow: scroll;
 position: absolute;
 background-color:#FCFCFC;
