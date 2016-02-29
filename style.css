@@ -412,7 +412,7 @@ border: 0px dashed grey;
 }
 .description{
     font-family: "My logo font";
-src: url(fonts/JosefinSansThin.tff);
+src: url(http://www.tartool.com/fonts/JosefinSansThin.tff);
 font-size:115%;
 overflow: scroll;
 position: absolute;
