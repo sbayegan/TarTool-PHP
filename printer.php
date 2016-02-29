@@ -182,13 +182,13 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo'</div></a>';
     echo '<div class="score">';
     echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/facebook.png" width="30" height="30" style="float:right;margin-right:30px;margin-top:15px">';
+    echo '<img src="pictures/facebook.png" width="30" height="30" class="facebook-icon">';
     echo '</a>';
     echo '<a href="https://twitter.com/share?url='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/twitter.png" width="30" height="30" style="position:absolute;left:360px;margin-top:17px">';
+    echo '<img src="pictures/twitter.png" width="30" height="30" class="twitter-icon">';
     echo '</a>';
     echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/linkedin.png" width="30" height="30" style="position:absolute;left:300px;margin-top:16px">';
+    echo '<img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon">';
     echo '</a>';
 //    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
