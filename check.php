@@ -1,6 +1,6 @@
 <?php
 include('UniversalHeader.php');
-if(!isset($_COOKIE['junto'])){header ('Location: http://wwww.tartool.com');}
+if(isset($_COOKIE['junto'])){
 $userid = $_COOKIE['junto'];
 function interested($user, $subject){
 include('datalogin.php');
@@ -47,6 +47,16 @@ echo '
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script>
+  $(function() {
+    $( "#accordion" ).accordion(
+{
+active:false,
+collapsible:true,
+heightStyle: "content"
+}
+);
+});
+</script>
 ';
 echo "</head>";
 
@@ -61,6 +71,11 @@ echo '<div class="stick-to-top">';
 
 
 
+
+
+//echo '<span style="position:absolute;right:150px;top:10px;"><a href="check.php"> <img src="http://junto.link/pictures/check.png" height="65" width="65"></a></span>';
+//echo '<span style="position:absolute;right:150px;top:10px;"><a href="profile.php"> <img src="http://junto.link/pictures/user.png" height="65" width="65"></a></span>';
+//echo '<span style="position:absolute;right:250px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
 echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 echo '</div>';
 
@@ -76,7 +91,7 @@ Feed
 </a>
 </div>';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="#" onclick="showsubmission()" data-toggle="modal">
+<a href="#submit" data-toggle="modal">
 <div style="position:relative;margin-left:40px;"><img src="pictures/pencil.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
@@ -106,7 +121,18 @@ My streams
 </a>
 </div>
 ';
-
+/*
+echo '
+<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;margin-bottom:80px;width:150px;height:100px;border:0px dashed black;">
+<a href="account.php">
+<div style="position:relative;margin-left:40px;margin-right:auto;"><img src="pictures/user.png" height="70" width="70">
+</div>
+<div style="position:relative;margin-top:0px;text-align:center">
+<b>Account<br>settings</b>
+</div>
+</a>
+</div>
+';*/
 echo '</div>';
 
 echo '<div class="checktop">';
@@ -355,79 +381,102 @@ if(interested($userid, "Debugging")==1){echo ' checked';}
 echo '> <label for="Debugging" class="css-label">Debugging</label>';
 
 echo '</div>';
-
+/*
+//echo '<hr>';
+echo '<div class="account-title">';
+echo 'Account Settings';
+echo '</div>';
+*/
 echo '<div class="check-button">';
 echo '<hr>';
 echo '<a href="index.php" class="btn btn-default btn-sm" style="margin-right:4%;width:48%;">Cancel</a>';
 echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="width:48%;" value="Submit">';
 
 echo '</div>';
+/*
+	echo '<div style="position:absolute;bottom:80px;left:0%;right:0%;border:0px dashed red;">';echo '<hr>';
+		echo '<div class="form-inline">
+			  <div class="form-group" style="margin-left:4%;">
+			    <label for="exampleInputName2">Name</label>
+			    <input type="text" class="form-control" id="exampleInputName2" value="';
 
+$query ="Select NAME from USERS WHERE USERID=".$userid;
+$name = $conn->query($query);
+$name = mysqli_fetch_assoc($name);
+$name = $name['NAME'];
+echo $name;
+
+
+					echo '">
+			  </div>
+			  <div class="form-group" style="position:absolute;left:37%;">
+			    <label for="exampleInputEmail2">Email</label>
+			    <input type="email" class="form-control" id="exampleInputEmail2" value="';
+
+$query ="Select EMAIL from USERS WHERE USERID=".$userid;
+$email = $conn->query($query);
+$email = mysqli_fetch_assoc($email);
+$email = $email['EMAIL'];
+echo $email;
+
+
+
+					echo '">
+			  </div>
+			  <span href="#password" data-toggle="modal" class="btn btn-warning btn-sm" style="position:absolute;right:10%;width:20%;">Change Password</span>
+			</div>';
+	echo '</div>';
+*/
 echo '</form>';
 echo '</div>';
 
 
-echo '<div class="submit-square" id="transparent-square">';
 echo '
-<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
-<h3 style="color:#6C7A89;">
-Submit a Card
-</h3>
-<hr>
-<form  class="form-asd"  action="submit.php" method="get" autocomplete="off">
-   <div class="form-group">
-   <label  >Title</label>
-   <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
-   <span id="title-status"></span> 
-   <br>
-   <label >Description</label><br>
-   <textarea rows="4" cols="30" name="description" id="description" class="form-control" onkeyup="submissionsample()"></textarea>
-   <span id="description-status"></span>
-   <br>
-   <label >URL</label>
-   <input type="text" name="url" id="url" size="45" onchange="submissionsample()" class="form-control"/>
-   <span id="url-status"> </span> 
-   <br>
-      <div id="submission-thumbnail">
-  <label >Thumbnail URL <a style="color:red;" href="#" onclick="submissionthumbnail()"> Upload </a> </label>
-   <input type="text" name="imageurl" id="imageurl" size="45" onchange="submissionsample()" class="form-control"/>
-   <br>
-      </div> 
+<div id="submit" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Submit a card</h4>
+            </div>
+            <div class="modal-body">
+                
+<form  class="form-asd" role="form" action="submit.php" method="get" autocomplete="off" >
    
-   <p><b>Medium</b></p> 
-  <label class="radio-inline">
-    <input type="radio" name="type" value="Website" onclick="submissionsample()">Website or Tool
-      </label>
-    
-  <label class="radio-inline">
-    <input type="radio" name="type" value="Video/Audio" onclick="submissionsample()">Video
-      </label>
-      <br>
-  <label class="radio-inline"> 
-    <input type="radio" name="type" value="Influencer" onclick="submissionsample()">Influencer
-      </label>
-      
-  <label class="radio-inline">
-    <input type="radio" name="type" value="Blog" onclick="submissionsample()">Blog
-      </label>
-      
-   <label class="radio-inline">
-    <input type="radio" name="type" value="Book" onclick="submissionsample()">Book
-      </label>
-      
+   <div class="form-group">
+   <label for="title">Title:</label>
+   <input type="text" name="title" id="title"  size="45" class="form-control"/>
+   <span id="title-status"></span> 
+
+   <label for="description">Description:</label><br>
+   <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
+   <span id="description-status"></span>
+
+   <label for="url">URL:</label>
+   <input type="text" name="url" id="url" size="45" onchange="activate(this.value)" class="form-control"/>
+   <span id="url-status"> </span> 
+
+   <label for="type">Medium: </label> 
+   <select name="type" class="form-control">
+    <option value="Video/Audio">Video</option>
+    <option value="Website">Website/Tool</option>
+    <option value="Influencer">Twitter influencer</option>
+    <option value="Blog">Blog</option>
+    <option value="Book">Book</option>
+   </select>
    </div>
   
+     
      <div id="adder" class="form-group">
        <div>
-       <label > Category </label> 
-          <select name="cat" id="category" onchange="update(this.value)" class="form-control">
+       <label for="cat"> Category: </label> 
+          <select name="cat"  onchange="update(this.value)" class="form-control">
           <option value="BD">Business development</option>
           <option value="FE">Front-end development/Design</option>
           <option value="BE">Back-end development</option>
           </select>
-          <br>
-          <label > Labels </label>  
-          <select name="subcat1"  id="D1" class="form-control" onchange="submissionupdatelabels(1,this.options[this.selectedIndex].innerHTML)"> 
+          <label > Labels: </label>  
+          <select name="subcat1"  id="D1" class="form-control"> 
           <option value="">Choose One</option>
           <option value="LeanStartup">Lean Startup</option>
           <option value="MarketingAndResearch">Marketing & Research</option>
@@ -435,7 +484,7 @@ Submit a Card
           <option value="CopyWriting">Copywriting</option>
           <option value="Analytics">Analytics</option> 
           <option value="Launching">Launching</option>
-    <option value="UserFeedback">User Feedback</option>  
+	  <option value="UserFeedback">User Feedback</option>  
           <option value="SEO">SEO</option>
           <option value="SocialMediaCommunity">Social Media & Community</option>
           <option value="ProjectManagement">Project Management</option>
@@ -443,74 +492,212 @@ Submit a Card
           <option value="InventoryManagement">Inventory Management</option>
           <option value="Sales">Sales</option>
           <option value="Funding">Funding</option>
-    <option value="Administration">Administration</option>
-    <option value="Productivity">Productivity</option>
+	  <option value="Administration">Administration</option>
+	  <option value="Productivity">Productivity</option>
           <option value="Outsourcing">Outsourcing</option>
           <option value="E-commerce">E-commerce</option>
-    <option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
-    <option value="Events">Events</option>
+	  <option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>
+	  <option value="Events">Events</option>
           </select>
         </div>
       </div>
      
       
-
-<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()"> + </button>
-<br>
-<br>
-<input type="submit" value="submit" class="btn btn-danger btn-sm" style="width:100%;" id="submit_bt">
-        
-        </form>
-
-
-';
-echo '</div>';
-
-echo '<div class="submit-box" id="transparent-box">';
-echo '
-<div class="box" style="background-color:#FCFCFC;">
-  <a href="#"><div class="sticker" id="samplecard-category">Business Development</div></a>
-  <div class="subcats" id="samplecard-subcategory">
-  </div>
-  <div class="profile-picture">
-    <img id="samplecard-image" src="http://www.white-lioness.com/img/logo/white-lioness-technologies-white-notext.png" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px" alt="logo"> 
-  </div>
-  <a href="#">
-    <div class="title" id="samplecard-title"></div>
-    <div class="description" id="samplecard-description"></div>
-  </a>
-  <div class="score">
-
-      <img src="pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
-
-      <img src="pictures/twitter.png" width="30" height="30" class="twitter-icon" alt="twitter">
-
-      <img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
-
-  </div>
-  <div class="numbers">
-    <div class="linkedin-score" id="samplecard-linkedin">0</div>
-    <div class="twitter-score" id="samplecard-twitter">0</div>
-    <div class="facebook-score" id="samplecard-facebook">0</div>
-  </div>
-  <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">
-    <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">
-      social score: <div class="badge" style="font-size:100%"></div>
+<button type="button" id="adderbutton" class="btn btn-default btn-xs" onclick="add()">add another category</button>
+                
+                
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+                </form>
+            </div>
+            
+	</div>
+        </div>
     </div>
-      <div  id="samplecard-medium" style="position:absolute;left:10px;font-size:150%;margin-top:4px;color:#ecf0f1;">Website</div>
-  </div>
+</div>
+<div id="password" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="text-align:center;">Change Password</h4>
+            </div>
+            <div class="modal-body">
+                <form  class="form-group" role="form" action="updatepassword.php" method="get">
+                	<div class="form-group">
+                		<label for="password1">Old Password:</label>
+                			<input type="Password" name="password1" id="password1"  class="form-control" onkeyup="check-passcheck(this.value)"/>
+                		<span id="title-status"></span> 
+				<br>
+				<label for="password2">New Password:</label>
+                			<input type="Password" name="password2" id="password2"   class="form-control" disabled/>
+                		<span id="title-status"></span> 
+				<label for="password3">Re-type New Password:</label>
+                			<input type="Password" name="password3" id="password3"   class="form-control" disabled/>
+                		<span id="title-status"></span> 
+
+
+                	</div>
+                		<p class="text-warning"><small></small></p>
+            	<div class="modal-footer">
+                <input type="submit" value="update" class="btn btn-danger" id="submit_bt" disabled > 
+            	</div>
+
+            </div>
+                 </form>
+        </div>
+    </div>
+</div>
+
+<div id="feedback" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Leave Your Feedback</h4>
+            </div>
+            <div class="modal-body">
+                <form  class="form-asd" role="form" action="submit.php" method="get">
+                <div class="form-group">
+                <label for="title">Subject:</label>
+                <input type="text" name="title" id="title"  size="45" class="form-control"/>
+                <span id="title-status"></span> 
+                </div>
+                <div class="form-group">
+                <label for="description">Your Feedback!</label><br>
+                <textarea rows="4" cols="50" name="description" id="description" class="form-control"></textarea>
+                <span id="description-status"></span>
+                </div>
+                
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" value="submit" class="btn btn-danger" id="submit_bt" >
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="sign" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Authentication</h4>
+            </div>
+            
+            <div class="modal-body">
+                
+		<form autocomplete="off">
+		<div class="form-group">
+		<label for="username">Username:</label>
+		<input type="text" name="username" id="loginusername"  onkeyup="userlogin(this.value)" class="form-control"/>
+		<span id="welcome-message" class="text-warning"><small></small></span>
+		<br>
+		<label for="password">Password:</label>
+ 		<input type="password" length="25" name="password" id="login-password" onkeyup="login(this.value)" class="form-control"disabled/>
+		<span id="condition" class="text-warning"><small></small></span>
+		</div>
+		<br>
+		<a href="twitter/login_to_twitter.php">
+			<img style="display:block;margin-left:auto;margin-right:auto;" src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png" title="Click to login with twitter">
+		</a>
+		<hr>
+		</form>
+			<form action="registeration.php" method="post" id="form" autocomplete="off">
+ 			 <div class="form-group">
+			 <label for="full_name">Name :</label>
+			 <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
+ 			 </div>
+ 			 <div class="form-group">
+ 			 <label for="email">Email  :</label>
+			 <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
+			 <span id="email-status"></span>
+			 </div>
+ 			 <div class="form-group">
+ 			<label for="username">Username:</label>
+ 			<input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
+ 			<span id="user-status"> </span> 
+ 			</div>
+ 			 <div class="form-group">
+			<label for="password">Password:</label>
+ 			<input type="password" length="25" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
+ 			<span id="pass-status"> </span> 
+ 			</div>
+ 			<div class="form-group">
+ 			<label for="password1">Retype Password:</label>
+			 <input type="password" length="25" name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
+			 <span id="pass1-status"> </span> 
+ 			</div>
+ 			 	<div class="form-group">
+				<label for="dropdown">Who are you?</label>
+				<select name="type" form="form" id="dropdown" class="form-control" >
+				<option value="NULL">choose one</option>
+				<option value="one">a founder</option>
+				<option value="two">working at a startup</option>
+         			<option value="three">I just like strartups</option>
+        			<option value="four">None of your business!</option>
+        			</select>
+				</div>
+ 			<div class="form-group">
+ 			<input name="submit" type="submit" value="Create my account" id="submit_btn" class="btn btn-danger" disabled />
+ 			</div>
+    
+ </form>
+                
+                <p class="text-warning"><small></small></p>
+            </div>
+            <div class="modal-footer">
+                 </form>
+            </div>
+        </div>
+    </div>
 </div>
 ';
-echo '</div>';
-echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 
 
+
+
+
+echo '</body>';
 echo '<footer>';
 echo '</footer>';
-echo '</body>';
-
 $conn->close();
 echo '</html>';
+
+
+
+
+
+
+
+}
+else{
+//echo '<span style="position:absolute;right:350px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+//echo '<span style="position:absolute;right:250px;top:10px;"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></span>';
+//echo '<span style="position:absolute;right:150px;top:10px;"><a href="feed.php"> <img src="http://junto.link/pictures/glasses.png" height="65" width="65"></a></span>';
+//echo '<span style="position:absolute;right:50px;top:20px;"> <a href="authentication.php"><img src="http://junto.link/pictures/power.png" height="45" width="45"></a></span>';
+header ('Location: http://junto.link/authentication.php');
+}
+
+ 
+/*
+echo '
+
+<div class="dropdown" style="position:relative;float:left;padding-left:2em;padding-right:1em" >
+    
+<button  type="button" id="" data-toggle="dropdown">';
+$value = $_COOKIE['junto'];
+$result= $conn->query("SELECT * FROM USERS WHERE USERID=$value");
+$result = mysqli_fetch_assoc($result);
+$result = $result["NAME"];
+
+//echo 'Hello, '.$result;
+*/
 
 
 
