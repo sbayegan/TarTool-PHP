@@ -20,6 +20,30 @@ $(document).ready(function(){
 });
 
 
+function rolllogin(){
+$(document).ready(function(){
+    $("#welcome-transparent").slideUp();
+});
+return showsignin();
+}
+
+function rollregister(){
+$(document).ready(function(){
+    $("#welcome-transparent").slideUp();
+});
+return showsignup();
+}
+
+
+function rollup(){
+$(document).ready(function(){
+    $("#welcome-transparent").slideUp();
+});
+
+}
+
+
+
 function deleteaccount(){
 
 var one = document.getElementById("update-username").value;
