@@ -42,6 +42,21 @@ $(document).ready(function(){
 
 }
 
+function setvisitor(){
+
+  var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                                    }
+                            }         
+        xmlhttp.open("POST", "PHP/account/setvisitor.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send();
+
+
+
+}
+
 
 
 function deleteaccount(){

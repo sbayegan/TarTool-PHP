@@ -60,18 +60,16 @@ echo '<div class="welcome-transparent" id="welcome-transparent">
 </div>';
 
 
-if(!isset($_COOKIE['junto'])){ 
+if(!isset($_COOKIE["tartoolv"])){ 
 echo '
 <script>
 $(document).ready(function(){
     $("#welcome-transparent").slideDown();
 });
+
+setvisitor();
 </script>
-
-
 ';
-
-
 
 }
 
