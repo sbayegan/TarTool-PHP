@@ -58,9 +58,29 @@ function setvisitor(){
 }
 
 
+function removemini(id){
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                var name = "mini-";
+                name += id;
+                var element = document.getElementById(name);
+                element.parentNode.removeChild(element);
+                                            }
+                                    }
+                        }
+         
+        xmlhttp.open("POST", "unfavorite.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("id="+id);
+
+            }
+
+
 
 function deleteaccount(){
-
 var one = document.getElementById("update-username").value;
 var two = document.getElementById("deleteaccount-password").value;
 
