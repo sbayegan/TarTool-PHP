@@ -642,7 +642,7 @@ if(interested($userid, "Debugging")==1){echo ' checked';}
 echo '> <label for="Debugging" class="css-label">Debugging</label>';
 echo '</div>';
 
-
+echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="position:absolute;bottom:-40px;width:100%;" value="Submit">';
 echo '</form>';
 echo '</div>';
 
