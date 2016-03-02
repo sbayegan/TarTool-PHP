@@ -47,7 +47,7 @@ echo '<div class="welcome-transparent" id="welcome-transparent">
 <span style="position:fixed;margin-left:50%;left:35px;top:130px;font-size:110%;"><b>BETA</b></span>
 <h1 style="font-family:Thin;margin-top:60px;font-size:400%;location:absolute;text-align:center;color:black;">tarTool</h1>
 <h2 style="font-size:170%;location:absolute;text-align:center;color:black;margin-top:60px;color:red;">a platform for technology enthusiasts</h2>
-<h3 style="font-size:150%;text-align:center;margin-left:0px;">Curaete, collect and browse the best startup resources in the world</h3>
+<h3 style="font-size:150%;text-align:center;margin-left:0px;">Curate, collect and browse the best startup resources in the world</h3>
 <span style="position:fixed;margin-left:50%;left:-200px;top:300px;">  <img src="pictures/check.png" width="100" height="100">  </span>
 <span style="position:fixed;margin-left:50%;left:-50px;top:300px;">  <img src="pictures/glasses.png" width="100" height="100">  </span>
 <span style="position:fixed;margin-left:50%;left:100px;top:310px;">  <img src="pictures/save.png" width="80" height="80">  </span>
