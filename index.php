@@ -376,7 +376,7 @@ echo '<div class="stick-to-top">';
 
   echo '<a href="index.php"> <div class="top-left-name">tarTool</div></a>';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
-echo '</div>';//stick-to-top
+
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
@@ -388,7 +388,7 @@ echo '</div>';//stick-to-top
      echo '<a href="#" onclick="showsignup()" class="btn btn-default" role="button">Sign Up</a>';
      echo '</div>';
 	   }
-
+echo '</div>';//stick-to-top
 
 echo '<div class="cat-box">';
 echo '<div class="names" style="background-color:#ff614e;">';
@@ -403,10 +403,10 @@ echo '</div>';
 
 echo '</div>';
 
-echo '<form action="checklist.php" method="post">';
+
 
 echo '<div class="subcat-box">';
-
+echo '<form action="checklist.php" method="post">';
 
 echo '<div class="checklist-business" id="checklist-business-section">';
 echo '<input type="checkbox" class="css-checkbox" id="SEO" name="SEO" value="1"';
@@ -641,9 +641,9 @@ echo '> <label for="Debugging" class="css-label">Debugging</label>';
 echo '</div>';
 
 
-
-echo '</div>';
 echo '</form>';
+echo '</div>';
+
 
 	// A commented code snippet that gets the name of the user
 	   /*
