@@ -376,7 +376,7 @@ echo '<div class="stick-to-top">';
 
   echo '<a href="index.php"> <div class="top-left-name">tarTool</div></a>';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
-
+echo '</div>';//stick-to-top
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
@@ -402,7 +402,7 @@ echo 'Back end';
 echo '</div>';
 
 echo '</div>';
-echo '</div>';//stick-to-top
+
 echo '<form action="checklist.php" method="post">';
 
 echo '<div class="subcat-box">';
