@@ -435,12 +435,20 @@ margin-top:16px;
 .cat-box{
 position:fixed;
 top:70px;
-right:0px;
-height:20px;
-width:calc(100% - 750px);
+right:10px;
+height:150px;
+width:calc(100% - 700px);
 border: 2px dashed grey;
 }
 
+.subcat-box{
+position:fixed;
+top:240px;
+right:10px;
+height:calc(100% - 260px);
+width:calc(100% - 700px);
+border: 2px dashed grey;
+}
 
 .menu{
 top: 2px;

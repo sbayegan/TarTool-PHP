@@ -384,6 +384,11 @@ echo '</div>';
 
 
 
+echo '<div class="subcat-box">';
+
+echo '</div>';
+
+
 	// A commented code snippet that gets the name of the user
 	   /*
 	   $value = $_COOKIE['junto'];
