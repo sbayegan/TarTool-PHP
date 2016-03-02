@@ -394,10 +394,10 @@ echo '<div class="cat-box">';
 echo '<div class="names" style="background-color:#ff614e;" onclick="panelbusiness()">';
 echo 'Business';
 echo '</div>';
-echo '<div class="names" style="background-color:#0068fd; onclick="panelfrontend()"">';
+echo '<div class="names" style="background-color:#0068fd; onclick="panelfrontend()">';
 echo 'Front end';
 echo '</div>';
-echo '<div class="names" style="background-color:#3ecd3e; onclick="panelbackend()"">';
+echo '<div class="names" style="background-color:#3ecd3e; onclick="panelbackend()">';
 echo 'Back end';
 echo '</div>';
 
