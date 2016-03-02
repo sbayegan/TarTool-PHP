@@ -146,9 +146,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     if ($firsttag['CAT'] == 'BE') {echo 'index.php?cat=BE';}
     echo '">';
     echo '<div class="sticker">'; 
-    if ($firsttag['CAT'] == 'BD') {echo 'Business Development';}
-    if ($firsttag['CAT'] == 'FE') {echo 'Front-End Development';}
-    if ($firsttag['CAT'] == 'BE') {echo 'Back-End Development';}
+    if ($firsttag['CAT'] == 'BD') {echo 'Business';}
+    if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
+    if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
     echo '</div>';
     echo '</a>';
     echo '<div class="subcats">';
