@@ -27,7 +27,7 @@ echo "<title>";
 echo $UniversalName;
 echo "</title>";
 echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
-echo '<script src="JS/code.js"></script>';
+
 echo '
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -43,6 +43,7 @@ echo '
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
 ';
+echo '<script src="JS/code.js"></script>';
 echo "</head>";
 
 // BODY -----------------------------------------------------------------------------------------------------------------------
