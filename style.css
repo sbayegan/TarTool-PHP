@@ -482,11 +482,12 @@ background-color: red;
 left:0px;
 top:15px;
 height: 27px;
-width: 210px;
+width: auto;
 z-index: 2;
 color:white;
 font-size: 130%;
 padding-left: 10px;
+padding-right: 10px;
 }
 
 .subcats{
