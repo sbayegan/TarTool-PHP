@@ -470,8 +470,8 @@ height: 30%;
 position:fixed;
 top:200px;
 right:20px;
-height:calc(100% - 290px);
-width:calc(100% - 710px);
+height:calc(100% - 250px);
+width:calc(100% - 750px);
 //border: 2px dashed grey;
 }
 
