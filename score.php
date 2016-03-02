@@ -23,7 +23,7 @@ if(isset($decode["GooglePlusOne"])){$google=$decode["GooglePlusOne"];}else{$goog
 $total = $facebook+$twitter+$linkedin+$score;
 
 $query = 'UPDATE RESOURCES SET '.' GOOGLEPLUS='.$google.', TWITTER='.$twitter.',FACEBOOK='.$facebook.',LINKEDIN='.$linkedin.',LIKES='.$score.',TOTALSCORE='.$total.' where RESOURCEID='.$i;
-//echo $query;
+echo $query;
 //echo $query;
 $conn->query($query);
 
