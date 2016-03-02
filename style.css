@@ -217,7 +217,7 @@ background-color: rgba(255, 255, 255, 0.95);
 position:absolute;
 border: 0px dashed red;
 right:0px;
-top:25px;
+top:15px;
 height:45px;
 width:170px;
 }
@@ -338,7 +338,7 @@ border: 0px dashed grey;
 }
 .stick-to-top{
 box-shadow: 0px 1px 8px grey;
-height: 85px;
+height: 60px;
 position: fixed;
 top: 0px;
 right: 0px;
@@ -354,28 +354,28 @@ background-color: #FEFEFE;
 
 .top-left-beta{
 //font-family: Thin;
-//font-size:100%;
+font-size:90%;
 float: left;
 position: absolute;
-top:62px;
+top:42px;
 left:102px;
 }
 
 
 .top-left-name{
 font-family: Thin;
-font-size:300%;
+font-size:280%;
 float: left;
 position: absolute;
-top:20px;
+top:5px;
 left:20px;
 }
 
 .top-left{
 float: left;
 position: absolute;
-top:10px;
-left:120px;
+top:5px;
+left:135px;
 }
 
 
@@ -581,7 +581,7 @@ float: left;
 background-color: #FCFCFC;
 height: 100%;
 width: 150px;
-top: 92px;
+top: 60px;
 left:0px;
 //margin-left: auto;
 //margin-right: auto;
@@ -599,7 +599,7 @@ background-color: rgba(255, 255, 255, 0.9);
 height: 150px;
 width: 500px;
 left: -175px;
-top:261px;
+top:235px;
 padding-left:90px;
 padding-top:32px;
 border-radius: 1px;

@@ -145,10 +145,10 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     if ($firsttag['CAT'] == 'FE') {echo 'index.php?cat=FE';}
     if ($firsttag['CAT'] == 'BE') {echo 'index.php?cat=BE';}
     echo '">';
-    echo '<div class="sticker">'; 
-    if ($firsttag['CAT'] == 'BD') {echo 'Business';}
-    if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
-    if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
+    echo '<div class="sticker"'; 
+    if ($firsttag['CAT'] == 'BD') {echo '>Business';}
+    if ($firsttag['CAT'] == 'FE') {echo 'style="background-color:blue;" >Front-End';}
+    if ($firsttag['CAT'] == 'BE') {echo 'style="background-color:#32cd32;" >Back-End';}
     echo '</div>';
     echo '</a>';
     echo '<div class="subcats">';

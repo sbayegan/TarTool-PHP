@@ -360,7 +360,7 @@ echo '</div>';
 
 echo '<div class="stick-to-top">';
 	// LOGO
-	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="70" width="60"/> </a> </span>';
+	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </a> </span>';
 
   echo '<a href="index.php"> <div class="top-left-name">tarTool</div></a>';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
@@ -368,8 +368,8 @@ echo '<div class="stick-to-top">';
 
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
-	   echo '<span style="position:absolute;float:left;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
-	   echo '<span style="position:absolute;float:left;right:120px;top:20px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';
+	   echo '<span style="position:absolute;float:left;right:30px;top:5px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
+	   echo '<span style="position:absolute;float:left;right:100px;top:5px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';
      }
 	   else{
 
@@ -429,7 +429,7 @@ echo '</div>';//stick-to-top
     <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70" alt="library">
     </div>
     <div style="position:relative;margin-top:-10px;text-align:center;">
-    My Library
+    Saved Cards
     </div>
     </div>';
 
@@ -477,7 +477,7 @@ echo '</div>';//stick-to-top
     <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:-10px;text-align:center;">
-    My Library
+    Saved Cards
     </div>
     </a>
     </div>';
