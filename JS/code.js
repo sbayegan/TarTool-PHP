@@ -24,21 +24,21 @@ function panelbusiness(){
     $("#checklist-frontend-section").fadeOut();
     $("#checklist-backend-section").fadeOut();
     $("#checklist-business-section").fadeIn();
-    document.getElementById("subcat-status").style.backgroundColor: "red";
+    document.getElementById("subcat-status").body.style.backgroundColor: "red";
 }
 
 function panelfrontend(){
     $("#checklist-backend-section").fadeOut();
     $("#checklist-business-section").fadeOut();
     $("#checklist-frontend-section").fadeIn();
-    document.getElementById("subcat-status").style.backgroundColor: "blue";
+    document.getElementById("subcat-status").body.style.backgroundColor: "blue";
 }
 
 function panelbackend(){
     $("#checklist-frontend-section").fadeOut();
     $("#checklist-business-section").fadeOut();
     $("#checklist-backend-section").fadeIn();
-    document.getElementById("subcat-status").style.backgroundColor: "#32cd32";
+    document.getElementById("subcat-status").body.style.backgroundColor: "#32cd32";
 }
 
 
