@@ -480,9 +480,9 @@ width:calc(100% - 750px);
 background: red;
 position:fixed;
 top:200px;
-right:0px;
+right:3px;
 height:calc(100% - 250px);
-width:20px;
+width:15px;
 //border: 2px dashed grey;
 }
 
