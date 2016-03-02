@@ -402,7 +402,7 @@ echo 'Back end';
 echo '</div>';
 
 echo '</div>';
-
+echo '</div>';//stick-to-top
 echo '<form action="checklist.php" method="post">';
 
 echo '<div class="subcat-box">';
@@ -652,7 +652,7 @@ echo '</form>';
 	   $result = mysqli_fetch_assoc($result);
 	   $result = $result["NAME"];
 	   */
-echo '</div>';//stick-to-top
+
 
 // Set the slider and its content 
     if(!isset($_COOKIE['junto']))
