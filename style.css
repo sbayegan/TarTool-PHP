@@ -446,6 +446,7 @@ margin-top:16px;
 }
 
 .cat-box{
+cursor:pointer;
 position:fixed;
 top:70px;
 right:20px;

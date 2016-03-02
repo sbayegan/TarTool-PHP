@@ -21,10 +21,21 @@ $(document).ready(function(){
 });
 
 function panelbusiness(){
-
     $("#checklist-frontend-section").fadeOut();
     $("#checklist-backend-section").fadeOut();
+    $("#checklist-business-section").fadeIn();
+}
+
+function panelfrontend(){
+    $("#checklist-backend-section").fadeOut();
     $("#checklist-business-section").fadeOut();
+    $("#checklist-frontend-section").fadeIn();
+}
+
+function panelbackend(){
+    $("#checklist-frontend-section").fadeOut();
+    $("#checklist-business-section").fadeOut();
+    $("#checklist-backend-section").fadeIn();
 }
 
 
