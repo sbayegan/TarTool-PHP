@@ -2,9 +2,9 @@
 
 
 function ShowCatSubcat($input){
-if($input == "BD"){echo"<div class='category'> Business Development </div>";return;}
-if($input == "FE"){echo"<div class='category'> Front-End Development </div>";return;}
-if($input == "BE"){echo"<div class='category'> Back-End Development </div>";return;}
+if($input == "BD"){echo"<div class='category'> Business </div>";return;}
+if($input == "FE"){echo"<div class='category' style='background-color:blue;'> Front-End </div>";return;}
+if($input == "BE"){echo"<div class='category' style='background-color:#32cd32;'> Back-End </div>";return;}
 
 if($input == 'LeanStartup')             {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Lean Startup </div>";return;}
 if($input == 'MarketingAndResearch')    {echo"<div class='category'> Business Development </div>";echo "<div class='subcategory'> Marketing & Research </div>";return;}
