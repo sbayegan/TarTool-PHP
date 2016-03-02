@@ -476,6 +476,16 @@ width:calc(100% - 750px);
 //border: 2px dashed grey;
 }
 
+.subcat-status{
+background: red;
+position:fixed;
+top:200px;
+right:0px;
+height:calc(100% - 250px);
+width:20px;
+//border: 2px dashed grey;
+}
+
 .menu{
 top: 2px;
 float:left;

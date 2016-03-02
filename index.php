@@ -403,6 +403,7 @@ echo '</div>';
 
 echo '</div>';
 
+echo '<div class="subcat-status" id="subcat-status"></div>';
 
 
 echo '<div class="subcat-box">';
