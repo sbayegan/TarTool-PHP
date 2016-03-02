@@ -56,17 +56,18 @@ echo '<div class="welcome-transparent" id="welcome-transparent">
 <span style="position:fixed;margin-left:50%;left:30px;">  <img src="pictures/logoanlone.png">  </span>
 <span style="position:fixed;margin-left:50%;left:35px;top:130px;font-size:110%;"><b>BETA</b></span>
 <h1 style="font-family:Thin;margin-top:60px;font-size:400%;location:absolute;text-align:center;color:black;">tarTool</h1>
-<h2 style="font-size:170%;location:absolute;text-align:center;color:black;margin-top:60px;color:red;">a platform for technology enthusiasts</h2>
+<h2 style="font-family:Thin;font-size:250%;location:absolute;text-align:center;color:black;margin-top:20px;color:grey;">Get Inspired</h2>
+<h2 style="font-size:170%;location:absolute;text-align:center;color:black;margin-top:30px;color:red;">a platform for technology enthusiasts</h2>
 <h3 style="font-size:150%;text-align:center;margin-left:0px;">Curate, collect and browse the best startup resources in the world</h3>
-<span style="position:fixed;margin-left:50%;left:-200px;top:300px;">  <img src="pictures/check.png" width="100" height="100">  </span>
-<span style="position:fixed;margin-left:50%;left:-50px;top:300px;">  <img src="pictures/glasses.png" width="100" height="100">  </span>
-<span style="position:fixed;margin-left:50%;left:100px;top:310px;">  <img src="pictures/save.png" width="80" height="80">  </span>
-<span style="position:fixed;margin-left:50%;left:-180px;top:410px;font-size:130%;">Curate</span>
-<span style="position:fixed;margin-left:50%;left:-28px;top:410px;font-size:130%;">Browse</span>
-<span style="position:fixed;margin-left:50%;left:118px;top:410px;font-size:130%;">Save</span>
-<span style="position:fixed;margin-left:50%;left:-220px;top:480px;font-size:130%;"><button type="button" style="width:200px;" class="btn btn-success btn-md" onclick="rollregister()">Register</button></span>
-<span style="position:fixed;margin-left:50%;left:20px;top:480px;font-size:130%;"><button type="button" style="width:200px;" class="btn btn-default btn-md" onclick="rollup()">Continue</button></span>
-<span style="position:fixed;margin-left:50%;left:-220px;top:520px;font-size:130%;"><button type="button" style="width:440px;" class="btn btn-primary btn-md" onclick="rolllogin()">Log In</button></span>
+<span style="position:fixed;margin-left:50%;left:-200px;top:330px;">  <img src="pictures/check.png" width="100" height="100">  </span>
+<span style="position:fixed;margin-left:50%;left:-50px;top:330px;">  <img src="pictures/glasses.png" width="100" height="100">  </span>
+<span style="position:fixed;margin-left:50%;left:100px;top:340px;">  <img src="pictures/save.png" width="80" height="80">  </span>
+<span style="position:fixed;margin-left:50%;left:-180px;top:440px;font-size:130%;">Curate</span>
+<span style="position:fixed;margin-left:50%;left:-28px;top:440px;font-size:130%;">Browse</span>
+<span style="position:fixed;margin-left:50%;left:118px;top:440px;font-size:130%;">Save</span>
+<span style="position:fixed;margin-left:50%;left:-220px;top:510px;font-size:130%;"><button type="button" style="width:200px;" class="btn btn-success btn-md" onclick="rollregister()">Register</button></span>
+<span style="position:fixed;margin-left:50%;left:20px;top:510px;font-size:130%;"><button type="button" style="width:200px;" class="btn btn-default btn-md" onclick="rollup()">Continue</button></span>
+<span style="position:fixed;margin-left:50%;left:-220px;top:550px;font-size:130%;"><button type="button" style="width:440px;" class="btn btn-primary btn-md" onclick="rolllogin()">Log In</button></span>
 </div>';
 
 
