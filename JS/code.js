@@ -14,10 +14,18 @@ $(document).ready(function(){
 event.preventDefault();
      return   currentpassword();
     });});
+
 $(document).ready(function(){
     $("#change-password").hide();
     $("#account-delete").hide();
 });
+
+function panelbusiness(){
+
+    $("#checklist-frontend-section").fadeOut();
+    $("#checklist-backend-section").fadeOut();
+    $("#checklist-business-section").fadeOut();
+}
 
 
 function rolllogin(){

@@ -391,7 +391,7 @@ echo '<div class="stick-to-top">';
 echo '</div>';//stick-to-top
 
 echo '<div class="cat-box">';
-echo '<div class="names" style="background-color:#ff614e;">';
+echo '<div class="names" style="background-color:#ff614e;" onclick="panelbusiness()">';
 echo 'Business';
 echo '</div>';
 echo '<div class="names" style="background-color:#0068fd;">';
