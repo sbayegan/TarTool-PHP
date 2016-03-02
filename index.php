@@ -5,6 +5,16 @@ include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
 
+function interested($user, $subject){
+include('datalogin.php');
+$query = 'select * from INTERESTS where USERID='.$user.' and INTEREST="'.$subject.'"';
+//echo '>'.$query;
+$result=$conn->query($query);
+if($result->num_rows > 0){return 1;}
+else{return 0;}
+}
+
+
 // Introduce HTML
 echo "<!DOCTYPE html>";
 echo "<html>";
@@ -267,7 +277,9 @@ if(isset($_COOKIE['junto'])){
      $result = mysqli_fetch_assoc($result);
      $name = $result["NAME"];
      $id = $result["USERNAME"];
-     $email = $result["EMAIL"];}
+     $email = $result["EMAIL"];
+     $userid = $value;
+   }
 
 
 echo '<div class="profile-square" id="transparent-profile">';
@@ -379,15 +391,259 @@ echo '<div class="stick-to-top">';
 
 
 echo '<div class="cat-box">';
+echo '<div class="names" style="background-color:#ff614e;">';
+echo 'Business';
+echo '</div>';
+echo '<div class="names" style="background-color:#0068fd;">';
+echo 'Front end';
+echo '</div>';
+echo '<div class="names" style="background-color:#3ecd3e;">';
+echo 'Back end';
+echo '</div>';
 
 echo '</div>';
 
-
+echo '<form action="checklist.php" method="post">';
 
 echo '<div class="subcat-box">';
 
+
+echo '<div class="checklist-business" id="checklist-business-section">';
+echo '<input type="checkbox" class="css-checkbox" id="SEO" name="SEO" value="1"';
+if(interested($userid,"SEO")==1){echo ' checked';};
+echo '> <label for="SEO" class="css-label">SEO</label>';
+
+echo'<br><input type="checkbox" class="css-checkbox" id="Sales" name="Sales" value="1"';
+if(interested($userid,"Sales")==1){echo ' checked';};
+echo'> <label for="Sales" class="css-label">Sales</label><br>';
+
+
+echo '<input type="checkbox" class="css-checkbox" id="Naming" name="Naming" value="1"';
+if(interested($userid,"Naming")==1){echo ' checked';}
+echo'> <label for="Naming" class="css-label">Naming</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Copywriting" name="CopyWriting" value="1"';
+if(interested($userid,"CopyWriting")==1){echo ' checked';}
+echo'> <label for="Copywriting" class="css-label">Copywriting</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="MarketingAndResearch" name="MarketingAndResearch" value="1"';
+if(interested($userid,"MarketingAndResearch")==1){echo ' checked';}
+echo '><label for="MarketingAndResearch" class="css-label">Marketing & Research</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="UserFeedback" name="UserFeedback" value="1"';
+if(interested($userid,"UserFeedback")==1){echo ' checked';}
+echo '> <label for="UserFeedback" class="css-label">User Feedback</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="ProjectManagement" name="ProjectManagement" value="1"';
+if(interested($userid,"ProjectManagement")){echo ' checked';}
+echo '> <label for="ProjectManagement" class="css-label">Project Management</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="InventoryManagement" name="InventoryManagement" value="1"';
+if(interested($userid,"InventoryManagement")){echo ' checked';}
+echo '><label for="InventoryManagement" class="css-label">Inventory Management</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Outsourcing" name="Outsourcing" value="1"';
+if(interested($userid, "Outsourcing")==1){echo ' checked';}
+echo '> <label for="Outsourcing" class="css-label">Outsourcing</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Funding" name="Funding" value="1"';
+if(interested($userid, "Funding")){echo ' checked';}
+echo '> <label for="Funding" class="css-label">Funding</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Productivity" name="Productivity" value="1"';
+if(interested($userid, "Productivity")==1){ echo ' checked';}
+echo '> <label for="Productivity" class="css-label">Productivity</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Analytics" name="Analytics" value="1"';
+if(interested($userid, "Analytics")==1){echo ' checked';}
+echo '> <label for="Analytics" class="css-label">Analytics</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="LeanStartup" name="LeanStartup" value="1"';
+if(interested($userid, "LeanStartup")==1){echo ' checked';}
+echo '> <label for="LeanStartup" class="css-label">Lean Startup</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Launching" name="Launching" value="1"';
+if(interested($userid, "Launching")==1){echo ' checked';}
+echo '> <label for="Launching" class="css-label">Launching</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="SocialMediaCommunity" name="SocialMediaCommunity" value="1"'; 
+if(interested($userid, "SocialMediaCommunity")==1){echo ' checked';}
+echo '><label for="SocialMediaCommunity" class="css-label">Social Media & Community</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Administration" name="Administration" value="1"';
+if(interested($userid, "Administration")==1){echo ' checked';}
+echo '> <label for="Administration" class="css-label">Administration</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="CustomerService" name="CustomerService" value="1"';
+if(interested($userid,"CustomerService")==1){echo ' checked';}
+echo '> <label for="CustomerService" class="css-label">Customer Service</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="AcceleratorsAndIncubators" name="AcceleratorsAndIncubators" value="1"';
+if(interested($userid,"AcceleratorsAndIncubators")==1){echo ' checked';}
+echo '><label for="AcceleratorsAndIncubators" class="css-label">Accelerators & Incubators</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="E-commerce" name="E-commerce" value="1"';
+if(interested($userid, "E-commerce")==1){echo ' checked';}
+echo'> <label for="E-commerce" class="css-label">E-commerce</label><br>';
+
+echo'
+<input type="checkbox" class="css-checkbox" id="Events" name="Events" value="1"';
+if(interested($userid, "Events")==1){echo ' checked';}
+echo '> <label for="Events" class="css-label">Events</label>';
 echo '</div>';
 
+
+
+echo '<div class="checklist-business" id="checklist-frontend-section">';
+echo '<input type="checkbox" class="css-checkbox" id="UserInterface" name="UserInterface" value="1"';
+if(interested($userid, "UserInterface")==1){echo ' checked';}
+echo'> <label for="UserInterface" class="css-label">User Interface</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="UserExperience" name="UserExperience" value="1"';
+if(interested($userid, "UserExperience")==1){echo ' checked';}
+echo'><label for="UserExperience" class="css-label">User Experience</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="MockupsAndWireframing" name="MockupsAndWireframing" value="1"';
+if(interested($userid, "MockupsAndWireframing")==1){echo ' checked';}
+echo '> <label for="MockupsAndWireframing" class="css-label">Mockups and Wireframing</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="HTML" name="HTML" value="1"';
+if(interested($userid, "HTML")==1){echo ' checked';}
+echo '> <label for="HTML" class="css-label">HTML</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="CSS" name="CSS" value="1"';
+if(interested($userid, "CSS")==1){echo ' checked';}
+echo '> <label for="CSS" class="css-label">CSS</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="JavaScript" name="JavaScript" value="1"';
+if(interested($userid, "JavaScript")==1){echo ' checked';}
+echo '><label for="JavaScript" class="css-label">JavaScript</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Themes" name="Themes" value="1"';
+if(interested($userid, "Themes")==1){echo ' checked';}
+echo '> <label for="Themes" class="css-label">Themes</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Mobile" name="Mobile" value="1"';
+if(interested($userid, "Mobile")==1){echo ' checked';}
+echo'> <label for="Mobile" class="css-label">Mobile</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="FrontEndiOS" name="FrontEndiOS" value="1"';
+if(interested($userid, "FrontEndiOS")==1){echo ' checked';}
+echo '> <label for="FrontEndiOS" class="css-label">iOS</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="FrontEndAndroid" name="FrontEndAndroid" value="1"';
+if(interested($userid, "FrontEndAndroid")==1){echo ' checked';}
+echo '> <label for="FrontEndAndroid" class="css-label">Android</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Bootstrap" name="Bootstrap" value="1"';
+if(interested($userid, "Bootstrap")==1){echo ' checked';}
+echo '> <label for="Bootstrap" class="css-label">Bootstrap</label> <br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="XML" name="XML" value="1"';
+if(interested($userid, "XML")==1){echo ' checked';}
+echo '><label for="XML" class="css-label">XML</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="JQuery" name="JQuery" value="1"';
+if(interested($userid, "JQuery")==1){echo ' checked';}
+echo'> <label for="JQuery" class="css-label">jQuery</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Angular" name="Angular" value="1"';
+if(interested($userid,"Angular")==1){echo ' checked';}
+echo '> <label for="Angular" class="css-label">Angular</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Canvas" name="Canvas" value="1"';
+if(interested($userid, "Canvas")==1){echo ' checked';}
+echo '> <label for="Canvas" class="css-label">Canvas</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="SVG"name="SVG" value="1"';
+if(interested($userid, "SVG")==1){echo ' checked';}
+echo '> <label for="SVG" class="css-label">SVG (Scalable Vector Graphics)</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="JSON" name="JSON" value="1"';
+if(interested($userid, "JSON")==1){echo ' checked';}
+echo '> <label for="JSON" class="css-label">JSON</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Ajax" name="Ajax" value="1"';
+if(interested($userid, "AJAX")==1){echo ' checked';}
+echo '> <label for="Ajax" class="css-label">Ajax</label>';
+echo '</div>';
+
+
+
+echo '<div class="checklist-business" id="checklist-backend-section">';
+echo '<input type="checkbox" class="css-checkbox" id="Security" name="Security" value="1"';
+if(interested($userid,"Security")==1){echo ' checked';}
+echo '> <label for="Security" class="css-label">Security</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="DataManagement" name="DataManagement" value="1"';
+if(interested($userid, "DataManagement")==1){echo ' checked';}
+echo '> <label for="DataManagement" class="css-label">Data Management</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Hosting" name="Hosting" value="1"';
+if(interested($userid, "Hosting")==1){echo ' checked';}
+echo '> <label for="Hosting" class="css-label">Hosting</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="PHP" name="PHP" value="1"';
+if(interested($userid,"PHP")==1){echo ' checked';}
+echo'> <label for="PHP" class="css-label">PHP</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Python" name="Python" value="1"';
+if(interested($userid,"Python")==1){echo ' checked';}
+echo '> <label for="Python" class="css-label">Python</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="ASPNET" name="ASPNET" value="1"';
+if(interested($userid, "ASPNET")==1){echo ' checked';}
+echo '> <label for="ASPNET" class="css-label">ASP.NET</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="VBScript" name="VBScript" value="1"';
+if(interested($userid, "VBScript")==1){echo ' checked';}
+echo '> <label for="VBScript" class="css-label">Visual Basic Script</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="SQL" name="SQL" value="1"';
+if(interested($userid, "SQL")==1){echo ' checked';}
+echo '> <label for="SQL" class="css-label">SQL</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="C" name="C" value="1"';
+if(interested($userid, "C")==1){echo ' checked';}
+echo '> <label for="C" class="css-label">C</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="C++" name="C++" value="1"';
+if(interested($userid, "C++")==1){echo ' checked';}
+echo '> <label for="C++" class="css-label">C++</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Shell" name="Shell" value="1"';
+if(interested($userid, "Shell")==1){echo ' checked';}
+echo'> <label for="Shell" class="css-label">Shell</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Java" name="Java" value="1"';
+if(interested($userid, "Java")==1){echo ' checked';}
+echo '> <label for="Java" class="css-label">Java</label><br>';
+
+echo'<input type="checkbox" class="css-checkbox" id="Ruby" name="Ruby" value="1"';
+if(interested($userid, "Ruby")==1){echo ' checked';}
+echo '> <label for="Ruby" class="css-label">Ruby</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Objective-C" name="Objective-C" value="1"';
+if(interested($userid, "Objective-C")==1){echo ' checked';}
+echo '> <label for="Objective-C" class="css-label">Objective-C</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Swift" name="Swift" value="1"';
+if(interested($userid, "Swift")==1){echo ' checked';}
+echo '> <label for="Swift" class="css-label">Swift</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="C#" name="C#" value="1"';
+if(interested($userid, "C#")==1){echo ' checked';}
+echo '> <label for="C#" class="css-label">C#</label><br>';
+
+echo '<input type="checkbox" class="css-checkbox" id="Debugging" name="Debugging" value="1"';
+if(interested($userid, "Debugging")==1){echo ' checked';}
+echo '> <label for="Debugging" class="css-label">Debugging</label>';
+echo '</div>';
+
+
+
+echo '</div>';
+echo '</form>';
 
 	// A commented code snippet that gets the name of the user
 	   /*
