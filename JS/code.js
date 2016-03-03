@@ -345,7 +345,7 @@ if(Ended == 0){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             LastCard = xmlhttp.responseText;}
                                             }
-        xmlhttp.open("GET", "numloader.php?last=" + last +"&cat="+string, true);
+        xmlhttp.open("GET", "PHP/numloader.php?last=" + last +"&cat="+string, true);
         xmlhttp.send();}
 }
 
@@ -390,7 +390,7 @@ function loader(last,string){
             loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
             document.getElementById("feed").appendChild(loader);
 }
-        xmlhttp.open("GET", "loader.php?last=" + last+"&cat="+string, true);
+        xmlhttp.open("GET", "PHP/loader.php?last=" + last+"&cat="+string, true);
         xmlhttp.send();
             }//else
 }
@@ -737,7 +737,7 @@ function passcheck(str) {
                 }
             }
         }
-        xmlhttp.open("POST", "passwordcheck.php", true);
+        xmlhttp.open("POST", "PHP/account/passwordcheck.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("pass="+str);
 }
