@@ -642,7 +642,15 @@ if(interested($userid, "Debugging")==1){echo ' checked';}
 echo '> <label for="Debugging" class="css-label">Debugging</label>';
 echo '</div>';
 
-echo '<input type="submit" name="Save and Render" class="btn btn-danger btn-sm" style="position:absolute;bottom:-40px;width:100%;" value="Render!">';
+echo '<input ';
+
+if (isset($_COOKIE["junto"])){echo ' type="submit" ' ;}
+else {echo ' onclick="showsignin()" ';}
+
+
+
+
+echo 'name="Save and Render" class="btn btn-danger btn-sm" style="position:absolute;bottom:-20px;width:100%;" value="Render!">';
 echo '</form>';
 echo '</div>';
 
