@@ -259,7 +259,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
 
 echo '<div class="box-stats" style="background-color:';
-     if($medium == 'Video/Audio'){echo '#e74c3c;';}
+     if($medium == 'Video/Audio'){echo 'red;';}
      if($medium == 'Website')    {echo '#f1c40f;';}
      if($medium == 'Blog')       {echo '#2ecc71;';}
      if($medium == 'Book')       {echo '#9b59b6;';}
