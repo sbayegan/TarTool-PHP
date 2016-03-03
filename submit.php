@@ -1,6 +1,7 @@
 <?php
 include ('datalogin.php');
 include('PHP/printer.php');
+include ('score.php');
 
 // Lets list the number of arguments that are passed to this file
 // title, description, type, url
@@ -8,6 +9,7 @@ $title = mysqli_real_escape_string($conn,$_GET['title']);
 $description = mysqli_real_escape_string($conn,$_GET['description']);
 $type = mysqli_real_escape_string($conn,$_GET['type']);
 $url = mysqli_real_escape_string($conn,$_GET['url']);
+$profileurl = mysqli_real_escape_string($conn,$_GET['imageurl']);
 $cat = mysqli_real_escape_string($conn,$_GET['cat']);
 $subcat1 = mysqli_real_escape_string($conn,$_GET['subcat1']);
 if(isset($_GET['subcat2'])){
@@ -52,9 +54,9 @@ $conn->query($query);
 // Put the resource in the table
 $hash = rand(0,10000000000);
 $submitter = $_COOKIE['junto'];
-$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash',NULL,0,0,0,0,0,0,NOW(),'.$submitter.')";
+$query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$profileurl',0,0,0,0,0,0,NOW(),'.$submitter.')";
 $conn->query($query);
-
+score($resourceid);
 
 // Put the categories of the resource in the table CATEGORIES 
 if(!empty($_GET['subcat1']) && !empty($_GET['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
