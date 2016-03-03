@@ -55,7 +55,7 @@ $conn->query($query);
 $hash = rand(0,10000000000);
 $submitter = $_COOKIE['junto'];
 
-if($_FILES["fileToUpload"]["name"] != ""){
+if(isset($_FILES["fileToUpload"])) {
   $target_dir = "thumbnails".$resourceid;
   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
   if ($_FILES["fileToUpload"]["size"] > 500000) {
