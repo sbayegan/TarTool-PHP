@@ -62,6 +62,8 @@ if(isset($_FILES["fileToUpload"])) {
   $target_dir = "thumbnails/";
   $target_file = $target_dir . $resourceid;
   $imageFileType = pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
+  $target_file = $target_file. '.' . $imageFileType;
+
   echo "\r\n";
   echo $target_dir;
   echo "\r\n";
