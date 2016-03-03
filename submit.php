@@ -62,6 +62,7 @@ if(isset($_FILES["fileToUpload"])) {
   $target_dir = "thumbnails".$resourceid;
   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
   $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+  $uploadOk = 1;
   if ($_FILES["fileToUpload"]["size"] > 500000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;}
