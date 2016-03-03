@@ -1,6 +1,6 @@
 <?php
 include ('datalogin.php');
-include('printer.php');
+include('PHP/printer.php');
 
 // Lets list the number of arguments that are passed to this file
 // title, description, type, url
@@ -97,6 +97,7 @@ $message = "
 <!DOCTYPE html>
 <html>
 <head>
+<link rel='stylesheet' type='text/css' href='http://tartoo.com/style.css'>
 <title>
 Submission
 </title>
@@ -117,6 +118,9 @@ A new resource has been submitted with the following information:<br><br>
 <b>Subcat3:</b>$subcat3<br>
 <b>Subcat4:</b>$subcat4<br>
 <b>Subcat5:</b>$subcat5<br>
+<br>
+
+<br>
 Plese note that duplicates subcategories are already removed by the code<br>
 You can activate and de-activate the resource using the following two links<br>
 <br>

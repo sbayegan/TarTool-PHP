@@ -4,18 +4,16 @@ if(!isset($_COOKIE['junto'])){header ('Location: http://junto.link/authenticatio
 $userid = $_COOKIE['junto'];
 function interested($user, $subject){
 include('datalogin.php');
-
 $query = 'select * from INTERESTS where USERID='.$user.' and INTEREST="'.$subject.'"';
 //echo '>'.$query;
 $result=$conn->query($query);
 if($result->num_rows > 0){return 1;}
 else{return 0;}
-
 }
 
 
 include('datalogin.php');
-include('printer.php');
+include('PHP/printer.php');
 echo "<!DOCTYPE html>";
 echo "<html>";
 
