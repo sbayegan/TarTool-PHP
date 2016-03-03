@@ -59,7 +59,7 @@ print_r($_FILES);
 
 if(isset($_FILES["fileToUpload"])) {
   echo 'File detected';
-  $target_dir = "thumbnail-".$resourceid;
+  $target_dir = "thumbnail/";
   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
   $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
