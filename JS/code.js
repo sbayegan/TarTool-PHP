@@ -94,7 +94,7 @@ function removemini(id){
                                     }
                         }
          
-        xmlhttp.open("POST", "unfavorite.php", true);
+        xmlhttp.open("POST", "PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+id);
 
@@ -413,7 +413,7 @@ function favorite(cardid) {
    }         
 
         document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";
-	xmlhttp.open("POST", "favorite.php", true);
+	xmlhttp.open("POST", "PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
 }
@@ -451,7 +451,7 @@ function unfavorite(cardid) {
      								}
    					        }         
 	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' class='saving-icon'>";
-        xmlhttp.open("POST", "unfavorite.php", true);
+        xmlhttp.open("POST", "PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
                 }
