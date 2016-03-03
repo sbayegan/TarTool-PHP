@@ -60,12 +60,15 @@ print_r($_FILES);
 if(isset($_FILES["fileToUpload"])) {
   echo 'File detected';
   $target_dir = "thumbnails/";
-  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-  $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
+  $target_file = $target_dir . $resourceid;
+  $imageFileType = pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
+  echo "\r\n";
   echo $target_dir;
+  echo "\r\n";
   echo $target_file;
+  echo "\r\n";
   echo $imageFileType;
+  echo "\r\n";
 
   $uploadOk = 1;
   if ($_FILES["fileToUpload"]["size"] > 500000) {
