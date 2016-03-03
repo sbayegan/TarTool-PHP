@@ -71,6 +71,11 @@ if(isset($_FILES["fileToUpload"])) {
   echo "\r\n";
   echo $imageFileType;
   echo "\r\n";
+  if (is_uploaded_file($_FILES['fileToUpload']['tmp_name'])){
+    echo 'The file is valid';
+  }else{echo 'The file is not valid';}
+  echo "\r\n";
+
 
   $uploadOk = 1;
   if ($_FILES["fileToUpload"]["size"] > 500000) {
