@@ -5,24 +5,24 @@ include ('score.php');
 
 // Lets list the number of arguments that are passed to this file
 // title, description, type, url
-$title = mysqli_real_escape_string($conn,$_GET['title']);
-$description = mysqli_real_escape_string($conn,$_GET['description']);
-$type = mysqli_real_escape_string($conn,$_GET['type']);
-$url = mysqli_real_escape_string($conn,$_GET['url']);
-$profileurl = mysqli_real_escape_string($conn,$_GET['imageurl']);
-$cat = mysqli_real_escape_string($conn,$_GET['cat']);
-$subcat1 = mysqli_real_escape_string($conn,$_GET['subcat1']);
-if(isset($_GET['subcat2'])){
-$subcat2 = mysqli_real_escape_string($conn,$_GET['subcat2']);
+$title = mysqli_real_escape_string($conn,$_POST['title']);
+$description = mysqli_real_escape_string($conn,$_POST['description']);
+$type = mysqli_real_escape_string($conn,$_POST['type']);
+$url = mysqli_real_escape_string($conn,$_POST['url']);
+$profileurl = mysqli_real_escape_string($conn,$_POST['imageurl']);
+$cat = mysqli_real_escape_string($conn,$_POST['cat']);
+$subcat1 = mysqli_real_escape_string($conn,$_POST['subcat1']);
+if(isset($_POST['subcat2'])){
+$subcat2 = mysqli_real_escape_string($conn,$_POST['subcat2']);
 }
-if(isset($_GET['subcat3'])){
-$subcat3 = mysqli_real_escape_string($conn,$_GET['subcat3']);
+if(isset($_POST['subcat3'])){
+$subcat3 = mysqli_real_escape_string($conn,$_POST['subcat3']);
 }
-if(isset($_GET['subcat4'])){
-$subcat4 = mysqli_real_escape_string($conn,$_GET['subcat4']);
+if(isset($_POST['subcat4'])){
+$subcat4 = mysqli_real_escape_string($conn,$_POST['subcat4']);
 }
-if(isset($_GET['subcat5'])){
-$subcat5 = mysqli_real_escape_string($conn,$_GET['subcat5']);
+if(isset($_POST['subcat5'])){
+$subcat5 = mysqli_real_escape_string($conn,$_POST['subcat5']);
 }
 
   // This section will echo the information of the submitted resource and is used for 
@@ -86,9 +86,9 @@ $conn->query($query);
 score($resourceid);
 
 // Put the categories of the resource in the table CATEGORIES 
-if(!empty($_GET['subcat1']) && !empty($_GET['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
+if(!empty($_POST['subcat1']) && !empty($_POST['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
 
-if(isset($_GET['subcat2']) && !empty($_GET['subcat2'])){
+if(isset($_POST['subcat2']) && !empty($_POST['subcat2'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid AND CAT='$cat' AND SUB='$subcat2'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
@@ -96,21 +96,21 @@ if(isset($_GET['subcat2']) && !empty($_GET['subcat2'])){
   }
 }
 
-if(isset($_GET['subcat3']) && !empty($_GET['subcat3'])){
+if(isset($_POST['subcat3']) && !empty($_POST['subcat3'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat3'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat3')";$conn->query($query);
   }
 }
-if(isset($_GET['subcat4']) && !empty($_GET['subcat4'])){
+if(isset($_POST['subcat4']) && !empty($_POST['subcat4'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat4'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
   $query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat4')";$conn->query($query);
   }
 }
-if(isset($_GET['subcat5']) && !empty($_GET['subcat5'])){
+if(isset($_POST['subcat5']) && !empty($_POST['subcat5'])){
   $query = "SELECT * FROM CATEGORIES WHERE RESOURCEID=$resourceid and CAT='$cat' and SUB='$subcat5'";
   $result = $conn->query($query);
   if($result->num_rows == 0){
