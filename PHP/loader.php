@@ -1,5 +1,5 @@
 <?php
-include('../../datalogin.php');
+include('../datalogin.php');
 include('printer.php');
 
 $cat = mysqli_real_escape_string($conn,$_GET['cat']);

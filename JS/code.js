@@ -390,7 +390,7 @@ function loader(last,string){
             loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
             document.getElementById("feed").appendChild(loader);
 }
-        xmlhttp.open("GET", "PHP/loader.php?last=" + last+"&cat="+string, true);
+        xmlhttp.open("GET", "/PHP/loader.php?last=" + last+"&cat="+string, true);
         xmlhttp.send();
             }//else
 }

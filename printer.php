@@ -130,7 +130,7 @@ if($input == 'Debugging'){echo '<a href="index.php?subcat=Debugging"><span style
 
 
 function card($i){
-include ('datalogin.php');
+include ('../datalogin.php');
 $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
 $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
