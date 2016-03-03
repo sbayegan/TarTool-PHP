@@ -56,6 +56,7 @@ $hash = rand(0,10000000000);
 $submitter = $_COOKIE['junto'];
 
 if(isset($_FILES["fileToUpload"])) {
+  echo 'File detected';
   $target_dir = "thumbnails".$resourceid;
   $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
   if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -79,6 +80,7 @@ if(isset($_FILES["fileToUpload"])) {
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$target_dir',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 else{
+  echo 'file not detected';
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$profileurl',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 
@@ -189,7 +191,7 @@ echo '<div class="stick-to-top">';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
 // POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
      if(isset($_COOKIE['junto'])){
-     echo '<span style="position:absolute;right:50px;top:20px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
+     echo '<span style="position:absolute;right:50px;top:5px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
      }
      else{
      echo '
