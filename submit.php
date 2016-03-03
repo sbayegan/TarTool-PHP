@@ -55,6 +55,8 @@ $conn->query($query);
 $hash = rand(0,10000000000);
 $submitter = $_COOKIE['junto'];
 
+print_r($_FILES);
+
 if(isset($_FILES["fileToUpload"])) {
   echo 'File detected';
   $target_dir = "thumbnails".$resourceid;
