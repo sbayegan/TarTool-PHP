@@ -504,11 +504,12 @@ display: none;
 background: #32cd32;
 position:fixed;
 top:200px;
-right:3px;
+right:230px;
 //right:calc(100% - 810px);
 height:calc(100% - 250px);
-width:10px;
+width:5px;
 //border: 2px dashed grey;
+z-index:33;
 }
 
 .menu{
