@@ -462,7 +462,7 @@ border-radius:5px;
 position: fixed;
 top:250px;
 right:-65px;
-width:150px;
+width:300px;
 height: 45px;
 border: 1px solid grey;
 text-align:center;
@@ -478,14 +478,13 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 
 .side-tab2{
-
 display: none;
 cursor:pointer;
 border-radius:5px;
 position: fixed;
-top:451px;
-right:-20px;
-width:532px;
+top:335px;
+right:96px;
+width:300px;
 height: 30px;
 border: 1px solid grey;
 text-align:center;
