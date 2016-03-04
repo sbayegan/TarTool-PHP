@@ -26,7 +26,7 @@ $("#cat-box").animate({width:'toggle'},350);
 $("#subcat-status").animate({width:'toggle'},350);
 $("#side-tab2").animate({width:'toggle'},350);
 $("#side-tab").fadeOut();
-$('.feed-column').animate({"margin-left":"-310px"},1000);
+$('.feed-column').animate({"margin-left":"-320px"},1000);
 }
 
 
@@ -37,7 +37,7 @@ $("#cat-box").animate({width:'toggle'},350);
 $("#subcat-status").animate({width:'toggle'},350);
 $("#side-tab2").animate({width:'toggle'},350);
 $("#side-tab").fadeIn();
-$('.feed-column').animate({"margin-left":"-250px"},1000);
+$('.feed-column').animate({"margin-left":"-200px"},1000);
 }
 
 
