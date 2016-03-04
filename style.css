@@ -462,7 +462,11 @@ right:0px;
 width:30px;
 height: 80px;
 border: 1px dashed grey;
-
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .names{
