@@ -33,8 +33,8 @@ echo "</head>";
 echo '<body style="background-color:white;">';
 echo '<div class="stick-to-top">';
 
-echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </a> </span>';
-
+  echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </a> </span>';
+  echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:200px;color:grey;">Get Inspired</h2>';
   echo '<a href="index.php"> <div class="top-left-name">tarTool</div></a>';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
 
