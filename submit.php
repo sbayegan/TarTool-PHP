@@ -63,28 +63,52 @@ if(isset($_FILES["fileToUpload"])) {
   $target_file = $target_dir . $resourceid;
   $imageFileType = pathinfo(basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION);
   $target_file = $target_file. '.' . $imageFileType;
+
+  echo "\r\n";
+  echo $target_dir;
+  echo "\r\n";
+  echo $target_file;
+  echo "\r\n";
+  echo $imageFileType;
+  echo "\r\n";
+  if (is_uploaded_file($_FILES['fileToUpload']['tmp_name'])){
+    echo 'The file is valid';
+  }else{echo 'The file is not valid';}
+  echo "\r\n";
+
+  if (is_uploaded_file($_FILES['fileToUpload']['tmp_name'])){
+    echo 'The file is valid';
+  }else{echo 'The file is not valid';}
+  echo "\r\n";
+
+
   $uploadOk = 1;
   if ($_FILES["fileToUpload"]["size"] > 500000) {
-    //echo "Sorry, your file is too large.";
+    echo "Sorry, your file is too large.";
     $uploadOk = 0;}
-  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-    //echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
     $uploadOk = 0;}
   if ($uploadOk == 0) {
-    //echo "Sorry, your file was not uploaded.";
+    echo "Sorry, your file was not uploaded.";
     // if everything is ok, try to upload file
     } else {
+      echo $_FILES["fileToUpload"]["tmp_name"];
+        echo "\r\n";
+
+
       if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        //echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";} 
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";} 
       else {
-        //echo "Sorry, there was an error uploading your file.";
+        echo "Sorry, there was an error uploading your file.";
     }
 }
 
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$target_dir',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 else{
-  //echo 'file not detected';
+  echo 'file not detected';
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$profileurl',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 
