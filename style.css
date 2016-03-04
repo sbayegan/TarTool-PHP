@@ -456,12 +456,16 @@ border: 0px dashed grey;
 }
 
 .side-tab{
+border-radius:5px;
 position: fixed;
-top:500px;
-right:0px;
-width:30px;
-height: 80px;
-border: 1px dashed grey;
+top:250px;
+right:-65px;
+width:150px;
+height: 45px;
+border: 1px solid grey;
+text-align:center;
+padding-top:-2px;
+font-size:170%;
 -webkit-transform: rotate(-90deg);
 -moz-transform: rotate(-90deg);
 -ms-transform: rotate(-90deg);
