@@ -24,7 +24,7 @@ function showside(){
 $("#subcat-box").animate({width:'toggle'},350);
 $("#cat-box").animate({width:'toggle'},350);
 $("#subcat-status").animate({width:'toggle'},350);
-$("#side-tab ").animate({right:'toggle'},230);
+$("#side-tab ").animate({right:'toggle'},150);
 
 }
 
