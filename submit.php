@@ -76,6 +76,11 @@ if(isset($_FILES["fileToUpload"])) {
   }else{echo 'The file is not valid';}
   echo "\r\n";
 
+  if (file_exists($_FILES['fileToUpload']['tmp_name'])){
+    echo 'The file is valid';
+  }else{echo 'The file is not valid';}
+  echo "\r\n";
+
 
   $uploadOk = 1;
   if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -93,7 +98,7 @@ if(isset($_FILES["fileToUpload"])) {
         echo "\r\n";
 
 
-      if (copy($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+      if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";} 
       else {
         echo "Sorry, there was an error uploading your file.";
