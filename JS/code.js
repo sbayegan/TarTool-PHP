@@ -20,15 +20,24 @@ $(document).ready(function(){
     $("#account-delete").hide();
 });
 
-function showside(){
+function showsideone(){
 $("#subcat-box").animate({width:'toggle'},350);
 $("#cat-box").animate({width:'toggle'},350);
 $("#subcat-status").animate({width:'toggle'},350);
 $("#side-tab2").animate({width:'toggle'},350);
-$("#side-tab ").fadeOut();
-
-
+$("#side-tab").fadeOut();
 }
+
+
+
+function showsidetwo(){
+$("#subcat-box").animate({width:'toggle'},350);
+$("#cat-box").animate({width:'toggle'},350);
+$("#subcat-status").animate({width:'toggle'},350);
+$("#side-tab2").animate({width:'toggle'},350);
+$("#side-tab").fadeIn();
+}
+
 
 function panelbusiness(){
     $("#checklist-frontend-section").fadeOut();

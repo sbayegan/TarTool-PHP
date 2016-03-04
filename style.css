@@ -478,19 +478,19 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 
 .side-tab2{
+
 display: none;
 cursor:pointer;
 border-radius:5px;
 position: fixed;
-top:350px;
-right:-30px;
-width:550px;
-height: 25px;
+top:451px;
+right:-20px;
+width:532px;
+height: 30px;
 border: 1px solid grey;
 text-align:center;
-//padding-top:-2px;
-font-size:170%;
-z-index: 5;
+font-size:140%;
+z-index: 1;
 -webkit-transform: rotate(-90deg);
 -moz-transform: rotate(-90deg);
 -ms-transform: rotate(-90deg);
