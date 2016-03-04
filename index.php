@@ -405,7 +405,7 @@ echo '</div>';
 echo '</div>';
 
 echo '<div class="subcat-status" id="subcat-status"></div>';
-echo '<div class="side-tab" id="side-tab">';
+echo '<div class="side-tab" id="side-tab"></div>';
 
 
 echo '<div class="subcat-box" id="subcat-box">';
