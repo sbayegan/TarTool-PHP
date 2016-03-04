@@ -21,9 +21,9 @@ $(document).ready(function(){
 });
 
 function showside(){
-$("#subcat-box").slideDown();
-$("#cat-box").slideDown(); 
-$("#subcat-status").slideDown();
+$("#subcat-box").animate({width:'toggle'},350);
+$("#cat-box").animate({width:'toggle'},350);
+$("#subcat-status").animate({width:'toggle'},350);
 
 }
 

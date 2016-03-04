@@ -457,6 +457,7 @@ border: 0px dashed grey;
 }
 
 .side-tab{
+cursor:pointer;
 border-radius:5px;
 position: fixed;
 top:250px;
