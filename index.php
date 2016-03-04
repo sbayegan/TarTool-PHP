@@ -391,7 +391,7 @@ echo '<div class="stick-to-top">';
 	   }
 echo '</div>';//stick-to-top
 
-echo '<div class="cat-box">';
+echo '<div class="cat-box" id="cat-box">';
 echo '<div class="names" style="color:#ff614e;" onclick="panelbusiness()">';
 echo 'Business';
 echo '</div>';
@@ -405,9 +405,10 @@ echo '</div>';
 echo '</div>';
 
 echo '<div class="subcat-status" id="subcat-status"></div>';
+echo '<div class="side-tab" id="side-tab">';
 
 
-echo '<div class="subcat-box">';
+echo '<div class="subcat-box" id="subcat-box">';
 echo '<form action="checklist.php" method="post">';
 
 echo '<div class="checklist-business" id="checklist-business-section">';

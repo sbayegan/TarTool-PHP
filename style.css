@@ -451,8 +451,18 @@ position:fixed;
 top:70px;
 right:20px;
 height:110px;
-width:calc(100% - 820px);
+width:200px;
 border: 0px dashed grey;
+}
+
+.side-tab{
+position: fixed;
+top:500px;
+right:0px;
+width:30px;
+height: 80px;
+
+
 }
 
 .names{
@@ -473,7 +483,7 @@ position:fixed;
 top:200px;
 right:20px;
 height:calc(100% - 250px);
-width:calc(100% - 820px);
+width:200px;
 //border: 1px solid grey;
 }
 
@@ -723,7 +733,8 @@ border: 0px dashed grey;
 width: 550px;
 top:85px;
 margin: 0 auto;
-left:200px;
+left:50%;
+margin-left:-310px;
 border-radius: 10px;
 overflow: scroll;
 }
