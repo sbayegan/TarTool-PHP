@@ -58,7 +58,7 @@ echo '<div class="welcome-transparent" id="welcome-transparent">
 <h1 style="font-family:Thin;margin-top:60px;font-size:400%;location:absolute;text-align:center;color:black;">tarTool</h1>
 <h2 style="font-family:Thin;font-size:250%;location:absolute;text-align:center;color:black;margin-top:20px;color:grey;">Get Inspired</h2>
 <h2 style="font-size:170%;location:absolute;text-align:center;color:black;margin-top:30px;color:red;">a platform for technology enthusiasts</h2>
-<h3 style="font-size:150%;text-align:center;margin-left:0px;">Curate, collect and browse the best startup resources in the world</h3>
+<h3 style="font-size:150%;text-align:center;margin-left:0px;">Curate, collect and browse the best startup resources in the world.</h3>
 <span style="position:fixed;margin-left:50%;left:-200px;top:330px;">  <img src="pictures/check.png" width="100" height="100">  </span>
 <span style="position:fixed;margin-left:50%;left:-50px;top:330px;">  <img src="pictures/glasses.png" width="100" height="100">  </span>
 <span style="position:fixed;margin-left:50%;left:100px;top:340px;">  <img src="pictures/save.png" width="80" height="80">  </span>
@@ -374,7 +374,7 @@ echo '</div>';
 echo '<div class="stick-to-top">';
 	// LOGO
 	echo '<span class="top-left"> <a href="index.php"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </a> </span>';
-  echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:190px;color:grey;">Get Inspired</h2>';
+  echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:200px;color:grey;">Get Inspired</h2>';
   echo '<a href="index.php"> <div class="top-left-name">tarTool</div></a>';
   echo '<a href="index.php"> <div class="top-left-beta">BETA</div>   </a>';
 

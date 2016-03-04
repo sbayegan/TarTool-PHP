@@ -88,8 +88,10 @@ function removemini(id){
                 if(xmlhttp.responseText == 1){
                 var name = "mini-";
                 name += id;
-                var element = document.getElementById(name);
-                element.parentNode.removeChild(element);
+                var jname = "#"+name;
+                $(jname).fadeOut();
+                //var element = document.getElementById(name);
+                //element.parentNode.removeChild(element);
                                             }
                                     }
                         }
