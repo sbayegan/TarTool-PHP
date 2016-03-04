@@ -406,7 +406,7 @@ echo '</div>';
 
 echo '<div class="subcat-status" id="subcat-status"></div>';
 
-echo '<div class="side-tab" id="side-tab">Filer</div>';
+echo '<div class="side-tab" id="side-tab" onclick="showside()">filter</div>';
 
 echo '<div class="subcat-box" id="subcat-box">';
 echo '<form action="checklist.php" method="post">';

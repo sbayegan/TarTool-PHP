@@ -446,6 +446,7 @@ margin-top:16px;
 }
 
 .cat-box{
+display: none;
 cursor:pointer;
 position:fixed;
 top:70px;
@@ -466,6 +467,7 @@ border: 1px solid grey;
 text-align:center;
 padding-top:-2px;
 font-size:170%;
+z-index: 5;
 -webkit-transform: rotate(-90deg);
 -moz-transform: rotate(-90deg);
 -ms-transform: rotate(-90deg);
@@ -487,6 +489,7 @@ height: 30%;
 
 
 .subcat-box{
+display: none;
 position:fixed;
 top:200px;
 right:20px;
@@ -496,7 +499,7 @@ width:200px;
 }
 
 .subcat-status{
-
+display: none;
 background: #32cd32;
 position:fixed;
 top:200px;

@@ -20,6 +20,13 @@ $(document).ready(function(){
     $("#account-delete").hide();
 });
 
+function showside(){
+$("#subcat-box").slideDown();
+$("#cat-box").slideDown(); 
+$("#subcat-status").slideDown();
+
+}
+
 function panelbusiness(){
     $("#checklist-frontend-section").fadeOut();
     $("#checklist-backend-section").fadeOut();
