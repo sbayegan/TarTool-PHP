@@ -71,7 +71,7 @@ echo '<div class="welcome-transparent" id="welcome-transparent">
 </div>';
 
 
-if(!isset($_COOKIE["tartoolv"])){ 
+if(!isset($_COOKIE["tartoolv"]) && !isset($_COOKIE['junto'])){ 
 echo '
 <script>
 $(document).ready(function(){
