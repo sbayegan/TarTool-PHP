@@ -476,6 +476,28 @@ z-index: 5;
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
+
+.side-tab2{
+cursor:pointer;
+border-radius:5px;
+position: fixed;
+top:250px;
+right:-25px;
+width:450px;
+height: 45px;
+border: 1px solid grey;
+text-align:center;
+padding-top:-2px;
+font-size:170%;
+z-index: 5;
+-webkit-transform: rotate(-90deg);
+-moz-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
 .names{
 border: 1px solid grey;
 border-radius: 4px;
