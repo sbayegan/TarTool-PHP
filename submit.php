@@ -84,7 +84,7 @@ if(isset($_FILES["fileToUpload"])) {
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$target_dir',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 else{
-  echo 'file not detected';
+  //echo 'file not detected';
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$profileurl',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
 
