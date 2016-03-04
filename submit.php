@@ -89,9 +89,13 @@ else{
   //echo 'file not detected';
   $query = "INSERT INTO RESOURCES VALUES($resourceid,'$title','$description','$type','$url',0,'$hash','$profileurl',0,0,0,0,0,0,NOW(),'.$submitter.')";
 }
-
 $conn->query($query);
 score($resourceid);
+if($type == "Video/Audio"){
+  $conn->query("UPDATE RESOURCES SET PROFILEPICTURE='thumbnails/YouTube-Logo.png' WHERE RESOURCEID=$resourceid");
+}
+
+
 
 // Put the categories of the resource in the table CATEGORIES 
 if(!empty($_POST['subcat1']) && !empty($_POST['subcat1'])) {$query = "INSERT INTO CATEGORIES VALUES($resourceid,'$cat','$subcat1')";$conn->query($query);}
