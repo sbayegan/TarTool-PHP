@@ -3,10 +3,30 @@ include('datalogin.php');
 $username = mysqli_real_escape_string($conn,$_POST['user']);
 $password = mysqli_real_escape_string($conn,$_POST['pass']);
 
+
+
+
+
 $row = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
 $result = mysqli_fetch_assoc($row);
 $hash = $result["PASSWORD"];
-//$hash = mysqli_real_escape_string($hash);
+
+
+if($row->num_rows == 1){
+$userid = $result['USERID'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$query = "INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')";
+$conn->query($query);
+}
+else{
+$ip = $_SERVER['REMOTE_ADDR'];
+$query = "INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')";
+$conn->query($query);
+}
+
+
+
+
 if(password_verify($password,$hash)){
 
 if($result["CONFIRMED"] == 1){
@@ -49,13 +69,7 @@ if($result["CONFIRMED"] == 0){echo '-1';}
 
 }
 else{
-if($row->num_rows == 1){
-$userid = $result['USERID'];
-$ip = $_SERVER['REMOTE_ADDR'];
-$query = "INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')";
-$conn->query($query);
 
-}
 echo '0';
 
 }
