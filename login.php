@@ -92,13 +92,12 @@ if($attempts > 50){ // If you see suspicious number of failed login attemps from
 					<br>
 					<br>
 					Cheers, <br>
-					Tartool bot<br>
+					Tartool Script<br>
 					</p>
 					</body>
 					</html>";
 					mail($to,$subject,$message, $header);
-
-}
+}//if($attempts > 50)
 
 
 
