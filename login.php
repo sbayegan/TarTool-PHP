@@ -10,6 +10,7 @@ include('datalogin.php');
 $username = mysqli_real_escape_string($conn,$_POST['user']);
 $password = mysqli_real_escape_string($conn,$_POST['pass']);
 $conn->query("DELETE FROM LOGIN WHERE DATE<DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
+$ip = $_SERVER['REMOTE_ADDR'];
 
 // Then look for the corresponding row in the database. A user with the same username
 $row = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
@@ -19,7 +20,6 @@ if($row->num_rows == 1){
 $result = mysqli_fetch_assoc($row);
 $hash = $result["PASSWORD"];
 $userid = $result['USERID'];
-$ip = $_SERVER['REMOTE_ADDR'];
 $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where USERID=$userid and DATE>DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
 $attempts = mysqli_fetch_assoc($failures);
 $attempts = $attempts['attempts'];
@@ -70,6 +70,7 @@ $attempts = $attempts['attempts'];
 if($row->num_rows == 0){
 $conn->query("INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')");
 }
+
 $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where IP='$ip' and DATE>DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
 $attempts = mysqli_fetch_assoc($failures);
 $attempts = $attempts['attempts'];
