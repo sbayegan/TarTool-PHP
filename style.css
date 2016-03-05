@@ -381,15 +381,7 @@ height: 60px;
 width:340px;
 }
 
-.feedIconBorder{
-position: fixed;
-border: 1px solid red;
-left:20px;
-top:100px;
-width: 100px;
-height: 100px;
 
-}
 
 .top-left-name{
 font-family: Thin;

@@ -731,9 +731,6 @@ echo '</div>';
     </div>
     </a>
     </div>
-    <div class="feedIconBorder">
-
-    </div>
     ';
 
     // Submit button
