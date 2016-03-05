@@ -822,7 +822,7 @@ var two = document.getElementById("login-password").value;
          //document.getElementById("condition").innerHTML =  xmlhttp.responseText;
 
                 if(xmlhttp.responseText == 1){
-                  window.location.replace("index.php");
+                  window.location.replace(".");
                   document.getElementById("condition").innerHTML = "good, lets go";
                 }
                 if(xmlhttp.responseText == 0){
