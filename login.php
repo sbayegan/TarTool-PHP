@@ -68,7 +68,7 @@ $attempts = $attempts['attempts'];
 	}//else
 }//if($row->num_rows == 1)
 if($row->num_rows == 0){
-$conn->query = "INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')";
+$conn->query("INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')");
 }
 $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where IP='$ip' and DATE>DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
 $attempts = mysqli_fetch_assoc($failures);
