@@ -46,7 +46,7 @@ echo '</div>';
 
 echo '<div class="slider">';
 echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
-<a href="index.php">
+<a href=".">
 <div style="position:relative;margin-left:40px;"><img src="pictures/glasses.png" height="70" width="70">
 </div>
 <div style="position:relative;margin-top:0px;margin-left:0px;text-align:center">
