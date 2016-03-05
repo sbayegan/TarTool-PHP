@@ -1,4 +1,4 @@
 <?php
 setcookie("junto","NULL",time());
-header( 'Location: tartool.com' );
+header( 'Location: .' );
 ?>
