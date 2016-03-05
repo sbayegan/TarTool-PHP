@@ -83,12 +83,12 @@ if($attempts > 50){ // If you see suspicious number of failed login attemps from
 					<html>
 					<head>
 					<title>
-					$attempts logins from $ip in the past 30 minutes
+					$attempts logins from $ip in the past 15 minutes
 					</title>
 					</head>
 					<body>
 					<p>
-					$attempts logins from $ip in the past 30 minutes<br>
+					$attempts logins from $ip in the past 15 minutes<br>
 					<br>
 					<br>
 					Cheers, <br>
