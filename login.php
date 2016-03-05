@@ -49,7 +49,14 @@ if($result["CONFIRMED"] == 0){echo '-1';}
 
 }
 else{
+if($row->num_rows == 1){
+$userid = $result['USERID'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$conn->query("INSERT INTO LOGIN '$userid',NOW(),'$ip'");
+
+}
 echo '0';
+
 }
 
 //echo $pass;
