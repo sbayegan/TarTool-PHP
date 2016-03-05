@@ -66,7 +66,7 @@ $attempts = $attempts['attempts'];
 		echo '0';
 		}//else
 	}//else
-}//if($row->num_rows == 1)
+}//if($row->num_rows > 0)
 if($row->num_rows == 0){
 $conn->query("INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')");
 echo '0';
@@ -75,7 +75,7 @@ echo '0';
 $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where IP='$ip' and DATE>DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
 $attempts = mysqli_fetch_assoc($failures);
 $attempts = $attempts['attempts'];
-if(($attempts % 1000)  == 50){ // If you see suspicious number of failed login attemps from an IP email Saeid Bayeganeh
+if(($attempts % 5000)  == 50){ // If you see suspicious number of failed login attemps from an IP email Saeid Bayeganeh
 				$to = "saeidjobs@gmail.com";
 				$subject = "Failed Logins from $ip";
 				$header = "From: securityReport@tartool.com \r\n";

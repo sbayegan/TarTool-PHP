@@ -373,7 +373,14 @@ position: absolute;
 top:44px;
 left:102px;
 }
+.logo-link{
+position:fixed;
+top:0px;
+left:0px;
+height: 60px;
+width:200px;
 
+}
 
 .top-left-name{
 font-family: Thin;
