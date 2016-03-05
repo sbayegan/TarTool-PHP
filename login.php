@@ -24,7 +24,10 @@ $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where USERID=$u
 $attempts = mysqli_fetch_assoc($failures);
 $attempts = $attempts['attempts'];
 	//Now check to see if the user has attempted too many log in requests
-	if($attempts > 30){echo 2;}
+	if($attempts > 30){
+		$conn->query("INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')");
+		echo 2;
+						}
 	else{// else check to see if the provided password is correct. If it isn't, record the failure
 		if(password_verify($password,$hash)){
 			if($result["CONFIRMED"] == 1){
