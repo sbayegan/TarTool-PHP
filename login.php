@@ -16,7 +16,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $row = $conn->query("SELECT * FROM USERS WHERE USERNAME='$username'");
 // If you find one match then before you check for its accuracy
 // check the LOGIN form to count the recent failed login attempts 
-if($row->num_rows == 1){
+if($row->num_rows > 0){
 $result = mysqli_fetch_assoc($row);
 $hash = $result["PASSWORD"];
 $userid = $result['USERID'];
@@ -69,6 +69,7 @@ $attempts = $attempts['attempts'];
 }//if($row->num_rows == 1)
 if($row->num_rows == 0){
 $conn->query("INSERT INTO LOGIN VALUES(NULL,NOW(),'$ip')");
+echo '0';
 }
 
 $failures = $conn->query("SELECT COUNT(*) as attempts from LOGIN where IP='$ip' and DATE>DATE_SUB(NOW(), INTERVAL 15 MINUTE)");
@@ -100,13 +101,6 @@ if($attempts > 50){ // If you see suspicious number of failed login attemps from
 					mail($to,$subject,$message, $header);
 }//if($attempts > 50)
 
-
-
-
-
-
-
-//echo $pass;
 
 $conn->close();
 ?>
