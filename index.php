@@ -730,7 +730,11 @@ echo '</div>';
     Feed
     </div>
     </a>
-    </div>';
+    </div>
+    <div class="feedIconBorder">
+
+    </div>
+    ';
 
     // Submit button
     echo'<div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;z-index:9999;border:0px dashed black;">
