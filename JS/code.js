@@ -832,6 +832,9 @@ var two = document.getElementById("login-password").value;
                   document.getElementById("condition").innerHTML = "Please verify your email";
                  
                 }
+        if(xmlhttp.responseText == -1){
+                  document.getElementById("condition").innerHTML = "Too many attemps, come back in 15 minutes";        
+                }
             }
     
         }
