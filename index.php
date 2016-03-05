@@ -363,7 +363,7 @@ echo '<div class="signin-square" id="transparent-signin">';
       <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
       <br>
       <input style="width:100%;" type="submit" id="submit" class="btn btn-default btn-sm" value="Log In" > 
-      <a href="forgotpassword.html"><button type="button" style="width:60px;margin-right:5px;margin-top:-78px;float:right;" class="btn btn-danger btn-xs">Forgot?</button></a>
+      <a href="forgotpassword.html"><button type="button" style="position:absolute;width:90px;right:25px;top:176px;" class="btn btn-danger btn-xs">Forgot?</button></a>
       
       
       </div>
