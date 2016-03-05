@@ -59,7 +59,7 @@ $attempts = $attempts['attempts'];
 				echo '-1';}
 		}//if(password_verify($password,$hash))
 	else{
-		$conn->query = "INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')";
+		$conn->query("INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')");
 		echo '0';
 		}//else
 	}//else
