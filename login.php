@@ -52,7 +52,7 @@ else{
 if($row->num_rows == 1){
 $userid = $result['USERID'];
 $ip = $_SERVER['REMOTE_ADDR'];
-$query = "INSERT INTO LOGIN $userid,NOW(),'$ip'";
+$query = "INSERT INTO LOGIN VALUES($userid,NOW(),'$ip')";
 $conn->query($query);
 
 }
