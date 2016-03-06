@@ -183,7 +183,7 @@ echo '</form>';
 
 
 echo '
-<div style="position:fixed;left:150px;margin-bottom:185px;top:60px;width:calc(100% - 10px);height:calc(100% - 60px);margin-right:200px;overflow:scroll;background-color: white">
+<div class="library">
 <div class="shelve-title">Website/Tools</div>
 	<div class="shelve" style="background-color:#f1c40f;">
 ';

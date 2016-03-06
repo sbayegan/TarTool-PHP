@@ -319,6 +319,23 @@ overflow: scroll;
 //z-index: 2;
 }
 
+
+
+
+.library{
+display: block;
+position:fixed;
+left:150px;
+margin-bottom:185px;
+top:60px;
+width:calc(100% - 10px);
+height:calc(100% - 60px);
+margin-right:200px;
+overflow:scroll;
+background-color: white
+}
+
+
 .checklist-center{
 padding:20px;
 background-color: #FEFEFE;
