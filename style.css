@@ -891,7 +891,7 @@ width: calc(100% - 140px);
     background: white;
     white-space: nowrap;
     float: left;
-    box-shadow: inset -9px -0px 19px #b3b3b3;
+    //box-shadow: inset -9px -0px 19px #b3b3b3;
 }
 
 .minicard{
