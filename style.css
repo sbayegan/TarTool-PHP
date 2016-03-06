@@ -854,6 +854,19 @@ top : 140px;
     width: 100%;
 //
 }
+
+.shelveStats{
+position: relative;
+left:130px;
+width: 140px;
+    height: 200px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: orange;
+    white-space: nowrap;
+    float: left;
+}
+
 .shelve{
 position: relative;
 left:130px;

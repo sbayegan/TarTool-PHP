@@ -183,8 +183,9 @@ echo '</form>';
 
 
 echo '
-<div class="library">
+<div id="mediumView" class="library">
 <div class="shelve-title">Website/Tools</div>
+<div class="shelveStats"></div>
 	<div class="shelve" style="background-color:#f1c40f;">
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -258,6 +259,35 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '</div>';
 
 echo '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo '<div id="categoryView" style="display:none;" class="library">';
+echo '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 echo '<div class="submit-square" id="transparent-square">';
 echo '
@@ -357,6 +387,12 @@ Submit a Card
 
 ';
 echo '</div>';
+
+
+
+
+
+
 
 echo '<div class="submit-box" id="transparent-box">';
 echo '
