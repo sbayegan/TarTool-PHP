@@ -857,20 +857,16 @@ top : 140px;
 
 .shelveStats{
 position: relative;
-left:130px;
-width: 140px;
-    height: 200px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background: orange;
-    white-space: nowrap;
-    float: left;
+float:left;
+width:150px;
+height: 200px;
+background: orange; 
 }
 
 .shelve{
 position: relative;
-left:130px;
-width: calc(100% - 270px);
+left:0px;
+width: calc(100% - 290px);
     height: 200px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -878,6 +874,7 @@ width: calc(100% - 270px);
     white-space: nowrap;
     float: left;
 }
+
 
 .shelve-title{
 padding-left:10px;
