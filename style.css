@@ -327,7 +327,7 @@ overflow: scroll;
 position:fixed;
 left:150px;
 margin-bottom:185px;
-top:60px;
+top:100px;
 width:calc(100% - 10px);
 height:calc(100% - 60px);
 margin-right:200px;
