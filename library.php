@@ -185,7 +185,7 @@ echo '</form>';
 echo '
 <div id="mediumView" class="library">
 <div class="shelve-title">Website/Tools</div>
-<div class="shelveStats"></div>
+<div class="shelveStats">15</div>
 	<div class="shelve" style="background-color:#f1c40f;">
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
