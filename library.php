@@ -285,6 +285,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
       minicard($item['RESOURCEID']);
       echo $item['CATEGORIES.RESOURCEID'];
       echo $query;
+      echo 'HELLO';
       }
 
   echo '</div>';
