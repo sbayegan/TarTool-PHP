@@ -279,7 +279,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelveStats">5</div>';
   echo '<div class="shelve">';
     $ID = $_COOKIE['junto'];
-    $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES\.RESOURCEID=CATEGORIES\.RESOURCEID WHERE FAVOURITES\.USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
+    $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES`.`RESOURCEID=CATEGORIES`.`RESOURCEID WHERE FAVOURITES`.`USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     echo $query;
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){
