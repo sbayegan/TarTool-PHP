@@ -284,6 +284,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
     while($item = mysqli_fetch_assoc($result)){
       minicard($item['RESOURCEID']);
       echo $item['CATEGORIES.RESOURCEID'];
+      echo $query;
       }
 
   echo '</div>';
