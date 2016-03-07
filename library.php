@@ -272,7 +272,7 @@ echo '</div>';
 
 
 
-
+/*
 
 echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
@@ -288,7 +288,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '</div>';
 echo '</div>';
 
-
+*/
 
 
 
