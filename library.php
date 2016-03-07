@@ -195,7 +195,6 @@ while($item = mysqli_fetch_assoc($result)){
 $query = "SELECT * FROM RESOURCES WHERE RESOURCEID=".$item['RESOURCEID']." AND MEDIUM='Website'";
 $bit = $conn->query($query);
 if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
-
 }
 
 
@@ -276,6 +275,16 @@ echo '</div>';
 
 
 echo '<div id="categoryView" style="display:none;" class="library">';
+  echo '<div class="shelve-title">Back-end</div>';
+  echo '<div class="shelveStats">5</div>'
+  echo '<div class="shelve">';
+    $ID = $_COOKIE['junto'];
+    $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES.RESOURCEID=CATEGORIES.RESOURCEID WHERE FAVOURITES.USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
+    $result = $conn->query($query);
+    while($item = mysqli_fetch_assoc($result)){
+      minicard($item['RESOURCEID']);
+      }
+  echo '</div>';
 echo '</div>';
 
 
