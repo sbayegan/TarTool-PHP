@@ -270,7 +270,7 @@ echo '</div>';
 
 
 
-
+$ID = $_COOKIE['junto'];
 
 
 
@@ -278,14 +278,28 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
   echo '<div class="shelveStats">5</div>';
   echo '<div class="shelve">';
-    $ID = $_COOKIE['junto'];
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
-    while($item = mysqli_fetch_assoc($result)){
-      minicard($item['RESOURCEID']);
-      }
-
+    while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
   echo '</div>';
+
+  echo '<div class="shelve-title">Front-end</div>';
+  echo '<div class="shelveStats">2</div>';
+  echo '<div class="shelve">';
+    $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES.RESOURCEID";
+    $result = $conn->query($query);
+    while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
+  echo '</div>';
+
+  echo '<div class="shelve-title">Business Development</div>';
+  echo '<div class="shelveStats">0</div>';
+  echo '<div class="shelve">';
+    $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES.RESOURCEID";
+    $result = $conn->query($query);
+    while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
+  echo '</div>';
+
+
 echo '</div>';
 
 
