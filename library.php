@@ -280,13 +280,9 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve">';
     $ID = $_COOKIE['junto'];
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
-    echo $query;
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){
       minicard($item['RESOURCEID']);
-      echo $item['CATEGORIES.RESOURCEID'];
-
-      echo 'HELLO';
       }
 
   echo '</div>';
