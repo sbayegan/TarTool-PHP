@@ -109,7 +109,7 @@ function removemini(id){
                 if(xmlhttp.responseText == 1){
                 var name = "mini-";
                 name += id;
-                var jname = "#"+name+","+"#"+name;
+                var jname = "'#"+name+","+"#"+name+"'";
                 $(jname).fadeOut();
 
                 //var element = document.getElementById(name);
