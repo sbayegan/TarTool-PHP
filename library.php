@@ -170,6 +170,9 @@ echo '</form>';
 
 
 
+echo '<div class="library-switch-box"></div>';
+
+
 
 
 
