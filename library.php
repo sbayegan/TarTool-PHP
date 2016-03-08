@@ -275,12 +275,24 @@ echo '</div>';
 
 
 $ID = $_COOKIE['junto'];
+ $query = "SELECT COUNT(*) as FE FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE'";
+ $FECount = $conn->query($query);
+ $FECount = mysqli_fetch_assoc($FECount);
+ $FECount =  $FECount['FE'];
+ $query = "SELECT COUNT(*) as BE FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE'";
+ $BECount = $conn->query($query);
+ $BECount = mysqli_fetch_assoc($BECount);
+ $BECount =  $BECount['BE'];
+ $query = "SELECT COUNT(*) as BD FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD'";
+ $BDCount = $conn->query($query);
+ $BDCount = mysqli_fetch_assoc($BDCount);
+ $BDCount =  $FECount['BD'];
 
 
 
 echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
-  echo '<div class="shelveStats" id="back-count">5</div>';
+  echo '<div class="shelveStats" id="back-count">'; echo $BECount ;echo '</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
@@ -288,7 +300,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '</div>';
 
   echo '<div class="shelve-title">Front-end</div>';
-  echo '<div class="shelveStats" id="front-count">2</div>';
+  echo '<div class="shelveStats" id="front-count">';echo $FECount;echo'</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
@@ -296,7 +308,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '</div>';
 
   echo '<div class="shelve-title">Business Development</div>';
-  echo '<div class="shelveStats" id="business-count">0</div>';
+  echo '<div class="shelveStats" id="business-count">';echo $BDCount;echo '</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
