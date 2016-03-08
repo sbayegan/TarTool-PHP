@@ -169,6 +169,7 @@ echo '</div>';
 echo '</form>';
 
 
+
 echo '<div class="library-switch-box" onclick="changeview()"></div>';
 
 
@@ -311,7 +312,7 @@ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES 
  $BDCount =  $BDCount['COUNT(*)'];
 
 
-echo '<div id="categoryView"  class="library">';
+echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
   echo '<div class="shelveStats" id="back-count">'; echo $BECount ;echo '</div>';
   echo '<div class="shelve" style="background-color:#32cd32;">';
