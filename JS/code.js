@@ -141,11 +141,6 @@ function removemini(id,cat,medium){
                     temp--;
                     document.getElementById("media-count").innerHTML = temp;
                 }
-                if(medium == "Video/Audio"){
-                    var temp = document.getElementById("media-count").innerHTML;
-                    temp--;
-                    document.getElementById("media-count").innerHTML = temp;
-                }
                 if(medium == "Book"){
                     var temp = document.getElementById("books-count").innerHTML;
                     temp--;
