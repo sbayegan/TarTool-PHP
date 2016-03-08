@@ -99,9 +99,11 @@ function setvisitor(){
 
 
 }
+// This function takes the id of a minicard and its medium and category and deletes
+// the card from the users favorites and updates the count numbers in the library
+//
 
-
-function removemini(id){
+function removemini(id,cat,medium){
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -112,8 +114,49 @@ function removemini(id){
                 var jname = "#"+name+","+"#"+name;
                 $(jname).fadeOut();
 
-                //var element = document.getElementById(name);
-                //element.parentNode.removeChild(element);
+// The category status is decreased
+                if (cat == "BE"){
+                    var temp = document.getElementById("back-count").innerHTML;
+                    temp--;
+                    document.getElementById("back-count").innerHTML = temp;
+                }
+                if (cat == "FE"){
+                    var temp = document.getElementById("fron-count").innerHTML;
+                    temp--;
+                    document.getElementById("front-count").innerHTML = temp;
+                }
+                if (cat == "BD"){
+                    var temp = document.getElementById("business-count").innerHTML;
+                    temp--;
+                    document.getElementById("business-count").innerHTML = temp;
+                }
+// The medium status is updated
+                if(medium == "Website"){
+                    var temp = document.getElementById("website-count").innerHTML;
+                    temp--;
+                    document.getElementById("website-count").innerHTML = temp;
+                }
+                if(medium == "Video/Audio"){
+                    var temp = document.getElementById("media-count").innerHTML;
+                    temp--;
+                    document.getElementById("media-count").innerHTML = temp;
+                }
+                if(medium == "Video/Audio"){
+                    var temp = document.getElementById("media-count").innerHTML;
+                    temp--;
+                    document.getElementById("media-count").innerHTML = temp;
+                }
+                if(medium == "Book"){
+                    var temp = document.getElementById("books-count").innerHTML;
+                    temp--;
+                    document.getElementById("books-count").innerHTML = temp;
+                }
+                if(medium == "Book"){
+                    var temp = document.getElementById("influencer-count").innerHTML;
+                    temp--;
+                    document.getElementById("influencer-count").innerHTML = temp;
+                }
+
                                             }
                                     }
                         }

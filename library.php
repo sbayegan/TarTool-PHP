@@ -185,7 +185,7 @@ echo '</form>';
 echo '
 <div id="mediumView" class="library">
 <div class="shelve-title">Website/Tools</div>
-<div class="shelveStats">15</div>
+<div class="shelveStats" id="website-count">15</div>
 	<div class="shelve" style="background-color:#f1c40f;">
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -201,7 +201,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '
 </div>
 <div class="shelve-title">Video/Audio</div>
-<div class="shelveStats">10</div>
+<div class="shelveStats" id="media-count">10</div>
 	<div class="shelve" style="background-color:red;">';
 //minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -215,6 +215,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 
 
 echo '</div>';
+/*
 echo '<div class="shelve-title">Blogs</div>';
 echo '<div class="shelveStats">3</div>';
 echo '<div class="shelve" style="background-color:#2ecc71;">';
@@ -230,8 +231,9 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
+*/
 echo '<div class="shelve-title">Books</div>';
-echo '<div class="shelveStats">2</div>';
+echo '<div class="shelveStats" id="books-count">2</div>';
 echo '<div class="shelve" style="background-color:#9b59b6;">';
 
 
@@ -244,10 +246,12 @@ $bit = $conn->query($query);
 if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 }
 
+
+
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Influencers</div>';
-echo '<div class="shelveStats">0</div>';
+echo '<div class="shelveStats" id="influencer-count">0</div>';
 echo '<div class="shelve" style="background-color:#3498db;">';
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -276,7 +280,7 @@ $ID = $_COOKIE['junto'];
 
 echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
-  echo '<div class="shelveStats">5</div>';
+  echo '<div class="shelveStats" id="back-count">5</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
@@ -284,7 +288,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '</div>';
 
   echo '<div class="shelve-title">Front-end</div>';
-  echo '<div class="shelveStats">2</div>';
+  echo '<div class="shelveStats" id="front-count">2</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
@@ -292,7 +296,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
   echo '</div>';
 
   echo '<div class="shelve-title">Business Development</div>';
-  echo '<div class="shelveStats">0</div>';
+  echo '<div class="shelveStats" id="business-count">0</div>';
   echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);

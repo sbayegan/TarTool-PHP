@@ -286,7 +286,7 @@ $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 $firsttag = mysqli_fetch_assoc($tags);
 
-echo'<div class="minicard" id="mini-';echo $i;echo '">';
+echo'<div class="minicard" id="mini-';echo $i;echo ',';echo $firsttag['CAT'];echo',';echo $result['MEDIUM'];echo">';
 
 echo '<div class="minicard-profile">';
 //	echo '<span onclick="removemini(';echo$i;echo ')">';
