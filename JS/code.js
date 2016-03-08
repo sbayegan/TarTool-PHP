@@ -146,7 +146,7 @@ function removemini(id,cat,medium){
                     temp--;
                     document.getElementById("books-count").innerHTML = temp;
                 }
-                if(medium == "Book"){
+                if(medium == "Influencer"){
                     var temp = document.getElementById("influencer-count").innerHTML;
                     temp--;
                     document.getElementById("influencer-count").innerHTML = temp;
