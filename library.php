@@ -275,19 +275,20 @@ echo '</div>';
 
 
 $ID = $_COOKIE['junto'];
+
  $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
  $FECount = $conn->query($query);
  $FECount = mysqli_fetch_assoc($FECount);
  $FECount =  $FECount['COUNT(*)'];
- $query = "SELECT COUNT(*) as BE FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE'";
+
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
  $BECount = $conn->query($query);
  $BECount = mysqli_fetch_assoc($BECount);
- $BECount =  $BECount['BE'];
- $query = "SELECT COUNT(*) as BD FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD'";
+ $BECount =  $BECount['COUNT(*)'];
+$query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
  $BDCount = $conn->query($query);
  $BDCount = mysqli_fetch_assoc($BDCount);
- $BDCount =  $FECount['BD'];
-
+ $BDCount =  $BDCount['COUNT(*)'];
 
 
 echo '<div id="categoryView" style="display:none;" class="library">';
