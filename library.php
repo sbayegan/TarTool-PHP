@@ -1,7 +1,7 @@
 <?php
 include('UniversalHeader.php');
 include('datalogin.php');
-include('printer.php');
+include('PHP/printer.php');
 if(!isset($_COOKIE['junto'])){
 header('Location: http://wwww.tartool.com');
 }
