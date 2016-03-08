@@ -85,8 +85,8 @@ $(document).ready(function(){
 }
 
 function changeview(){
-$("#mediumView").animate({width:'toggle'},200);
-$("#categoryView").animate({width:'toggle'},1500);
+$("#mediumView").animate({width:'toggle'},300);
+$("#categoryView").animate({width:'toggle'},300);
 }
 
 
