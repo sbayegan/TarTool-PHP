@@ -74,6 +74,7 @@ Saved Cards
 </a>
 </div>
 ';
+/*
 echo '
 <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
 <a href="check.php">
@@ -85,7 +86,7 @@ My streams
 </a>
 </div>
 ';
-
+*/
 echo '</div>';
 
 

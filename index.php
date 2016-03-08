@@ -755,7 +755,7 @@ echo '</div>';
     </div>
     </a>
     </div>';
-
+/*
     // My Streams
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
@@ -767,7 +767,7 @@ echo '</div>';
     </div>
     </a>
     </div>';
-
+*/
       // (Potential) Account Setting icon
       /*
       echo '
