@@ -312,7 +312,7 @@ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES 
 echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
   echo '<div class="shelveStats" id="back-count">'; echo $BECount ;echo '</div>';
-  echo '<div class="shelve">';
+  echo '<div class="shelve" style="background-color:#32cd32;">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
@@ -320,7 +320,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
 
   echo '<div class="shelve-title">Front-end</div>';
   echo '<div class="shelveStats" id="front-count">';echo $FECount;echo'</div>';
-  echo '<div class="shelve">';
+  echo '<div class="shelve" style="background-color:blue;">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
@@ -328,7 +328,7 @@ echo '<div id="categoryView" style="display:none;" class="library">';
 
   echo '<div class="shelve-title">Business Development</div>';
   echo '<div class="shelveStats" id="business-count">';echo $BDCount;echo '</div>';
-  echo '<div class="shelve">';
+  echo '<div class="shelve" style="background-color:red;">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
