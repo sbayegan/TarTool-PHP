@@ -173,10 +173,28 @@ echo '</form>';
 
 
 
+$ID = $_COOKIE['junto'];
 
 
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN RESOURCES ON FAVOURITES"."."."RESOURCEID=RESOURCES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and MEDIUM='Website' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
+ $WebsiteCount = $conn->query($query);
+ $WebsiteCount = mysqli_fetch_assoc($WebsiteCount);
+ $WebsiteCount =  $WebsiteCount['COUNT(*)'];
 
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN RESOURCES ON FAVOURITES"."."."RESOURCEID=RESOURCES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and MEDIUM='Video/Audio' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
+ $MediaCount = $conn->query($query);
+ $MediaCount = mysqli_fetch_assoc($MediaCount);
+ $MediaCount =  $MediaCount['COUNT(*)'];
 
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN RESOURCES ON FAVOURITES"."."."RESOURCEID=RESOURCES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and MEDIUM='Book' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
+ $BookCount = $conn->query($query);
+ $BookCount = mysqli_fetch_assoc($BookCount);
+ $BookCount =  $BookCount['COUNT(*)'];
+
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN RESOURCES ON FAVOURITES"."."."RESOURCEID=RESOURCES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and MEDIUM='Influencer' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
+ $InfluencerCount = $conn->query($query);
+ $InfluencerCount = mysqli_fetch_assoc($InfluencerCount);
+ $InfluencerCount =  $InfluencerCount['COUNT(*)']; 
 
 
 
@@ -185,7 +203,7 @@ echo '</form>';
 echo '
 <div id="mediumView" class="library">
 <div class="shelve-title">Website/Tools</div>
-<div class="shelveStats" id="website-count">15</div>
+<div class="shelveStats" id="website-count">';echo $WebsiteCount;echo'</div>
 	<div class="shelve" style="background-color:#f1c40f;">
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -201,7 +219,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '
 </div>
 <div class="shelve-title">Video/Audio</div>
-<div class="shelveStats" id="media-count">10</div>
+<div class="shelveStats" id="media-count">'; echo $MediaCount;echo '</div>
 	<div class="shelve" style="background-color:red;">';
 //minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -233,7 +251,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '</div>';
 */
 echo '<div class="shelve-title">Books</div>';
-echo '<div class="shelveStats" id="books-count">2</div>';
+echo '<div class="shelveStats" id="books-count">';echo $BookCount;echo '</div>';
 echo '<div class="shelve" style="background-color:#9b59b6;">';
 
 
@@ -251,7 +269,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Influencers</div>';
-echo '<div class="shelveStats" id="influencer-count">0</div>';
+echo '<div class="shelveStats" id="influencer-count">';echo $InfluencerCount;echo '</div>';
 echo '<div class="shelve" style="background-color:#3498db;">';
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
@@ -274,7 +292,7 @@ echo '</div>';
 
 
 
-$ID = $_COOKIE['junto'];
+
 
  $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
  $FECount = $conn->query($query);
