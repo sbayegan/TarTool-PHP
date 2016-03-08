@@ -171,7 +171,7 @@ echo '</form>';
 
 
 
-echo '<div class="library-switch-box" onclick="changeview()"></div>';
+echo '<div class="library-switch-box" onclick="changeview()"> Changeview() </div>';
 
 
 

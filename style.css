@@ -384,6 +384,7 @@ background-color: #FEFEFE;
 
 
 .library-switch-box{
+    text-align: center;
     position:fixed;
     top:60px;
     left: 150px;
