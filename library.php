@@ -170,7 +170,7 @@ echo '</form>';
 
 
 
-echo '<div class="library-switch-box"></div>';
+echo '<div class="library-switch-box" onclick="changeview()"></div>';
 
 
 

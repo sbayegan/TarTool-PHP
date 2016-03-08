@@ -384,10 +384,13 @@ background-color: #FEFEFE;
 
 
 .library-switch-box{
-    top:100px;
-    left: 100px;
-    width: 200px;
-    height: 200px;
+    position:fixed;
+    top:60px;
+    left: 150px;
+    width:calc(100% - 150px);
+    height: 40px;
+    background-color:lightblue;
+    z-index:10;
 }
 
 .top-left-beta{

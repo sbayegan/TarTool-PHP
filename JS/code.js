@@ -82,8 +82,13 @@ function rollup(){
 $(document).ready(function(){
     $("#welcome-transparent").slideUp();
 });
-
 }
+
+function changeview(){
+$("#mediumView").animate({width:'toggle'},200);
+$("#categoryView").animate({width:'toggle'},1500);
+}
+
 
 function setvisitor(){
 
