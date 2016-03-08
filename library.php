@@ -275,10 +275,10 @@ echo '</div>';
 
 
 $ID = $_COOKIE['junto'];
- $query = "SELECT COUNT(*) as FE FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE'";
+ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES"."."."RESOURCEID) AS X";
  $FECount = $conn->query($query);
  $FECount = mysqli_fetch_assoc($FECount);
- $FECount =  $FECount['FE'];
+ $FECount =  $FECount['COUNT(*)'];
  $query = "SELECT COUNT(*) as BE FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE'";
  $BECount = $conn->query($query);
  $BECount = mysqli_fetch_assoc($BECount);
