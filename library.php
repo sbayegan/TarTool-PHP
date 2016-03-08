@@ -169,11 +169,6 @@ echo '</div>';
 echo '</form>';
 
 
-echo '
-<script>
-$("#categoryView").animate({width:\'toggle\'},300);
-</script>
-';
 echo '<div class="library-switch-box" onclick="changeview()"></div>';
 
 
