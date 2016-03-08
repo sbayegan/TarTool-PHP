@@ -121,7 +121,7 @@ function removemini(id,cat,medium){
                     document.getElementById("back-count").innerHTML = temp;
                 }
                 if (cat == "FE"){
-                    var temp = document.getElementById("fron-count").innerHTML;
+                    var temp = document.getElementById("front-count").innerHTML;
                     temp--;
                     document.getElementById("front-count").innerHTML = temp;
                 }
