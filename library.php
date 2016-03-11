@@ -256,7 +256,7 @@ echo '</div>';
 */
 echo '<div class="shelve-title">Books</div>';
 echo '<div class="shelveStats" id="books-count" style="background-color:#9b59b6;">';echo $BookCount;echo '</div>';
-echo '<div class="shelve" style="background-color:#9b59b6;">';
+echo '<div class="shelve" >';
 
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
