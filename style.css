@@ -532,6 +532,21 @@ position:absolute;
 left:300px;
 margin-top:16px;
 }
+.comments{
+font-size:130%;
+padding:5px;
+position:absolute;
+right:-1px;
+bottom:-40px;
+width: 250px;
+background-color:#FCFCFC;
+border: 1px solid #E6E6E6;
+margin-top: -30px;
+height: 40px;
+}
+
+
+
 
 .cat-box{
 display: none;
