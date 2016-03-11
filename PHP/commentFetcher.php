@@ -27,6 +27,15 @@ echo '</div>';
 // here print a text box so the user can post stuff
 if(isset($_COOKIE['junto'])){
 
+echo '
+<form action="uploadComment.php" method="post" id="commentform">
+<input type="hidden" name="resource" value="';echo $id;echo '">
+<input type="text" name="comment" >
+<input type="submit" value="Submit">
+</form>
+';
+
+
 
 }
 

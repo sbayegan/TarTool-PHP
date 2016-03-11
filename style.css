@@ -177,10 +177,12 @@ background-color: #FEFEFE;
 
 .singular-comment{
 position: relative;
+padding:4px;
 float: top;
-width: 100%;
+width: auto;
 height: auto;
-border: 1px solid whitesmoke;
+border: 0px solid whitesmoke;
+border-bottom-width: 2px;
 }
 
 .comments-square{
@@ -191,7 +193,7 @@ display: none;
 height: auto;
 overflow: scroll;
 position: fixed;
-margin-top: 20px;
+margin-top: 120px;
 width: 400px;
 right: 50%;
 margin-right: -200px;
