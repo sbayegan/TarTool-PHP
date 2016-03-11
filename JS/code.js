@@ -93,13 +93,6 @@ $("#categoryView").animate({width:'toggle'},300);
 function showcomments(id){
 $("#transparent").fadeIn();
 $("#transparent-comments").fadeIn();
-
-
-
-
-
-
-
 }
 
 
@@ -409,7 +402,7 @@ $("#transparent-profile").fadeOut();
 $("#transparent-box").fadeOut();
 $("#transparent-square").fadeOut();
 $("#change-password").fadeOut();
-
+$("#transparent-comments").fadeOut();
 //document.getElementById("transparent").style.display = 'none';
 //document.getElementById("transparent-signup").style.display = 'none';
 //document.getElementById("transparent-signin").style.display = 'none';
