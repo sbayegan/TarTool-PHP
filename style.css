@@ -175,6 +175,13 @@ background-color: #FEFEFE;
 }
 
 
+.singular-comment{
+position: relative;
+float: top;
+width: 100%;
+height: auto;
+border: 1px solid whitesmoke;
+}
 
 .comments-square{
 border-radius: 10px;

@@ -93,12 +93,28 @@ $("#categoryView").animate({width:'toggle'},300);
 function showcomments(id){
 $("#transparent").fadeIn();
 $("#transparent-comments").fadeIn();
+var xmlhttp = new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                // This is an error 
+                if(xmlhttp.responseText == 0){
+                }
+                else {
+                    document.getElementById("transparent-comments").innerHTML = xmlhttp.responseText;
+                }
+
+                                    }
+                            }         
+        xmlhttp.open("GET", "PHP/commentFetcher.php?id=".id, true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send();
+
 }
 
 
 
 function setvisitor(){
-
   var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
