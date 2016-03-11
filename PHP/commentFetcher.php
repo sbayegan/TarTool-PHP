@@ -8,7 +8,7 @@ if(isset($_GET['id'])){$id = mysqli_real_escape_string($conn,$_GET['id']);}
 else {echo 0;return;}
 
 
-card($id);
+minicard($id);
 
 
 $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id);
