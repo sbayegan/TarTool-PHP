@@ -28,9 +28,9 @@ echo '</div>';
 if(isset($_COOKIE['junto'])){
 
 echo '
-<form action="uploadComment.php" method="post" id="commentform">
+<form action="uploadComment.php" method="post" id="commentform" style="margin-top:20px;">
 <input type="hidden" name="resource" value="';echo $id;echo '">
-<input type="text" name="comment" >
+<input style="width:300px;" type="text" name="comment" >
 <input type="submit" value="Submit">
 </form>
 ';
