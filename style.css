@@ -188,7 +188,7 @@ border-radius: 10px;
 padding: 20px;
 box-shadow: 0px 1px 8px grey;
 display: none;
-height: 600px;
+height: auto;
 overflow: scroll;
 position: fixed;
 margin-top: 20px;

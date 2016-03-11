@@ -5,7 +5,7 @@ include('printer.php');
 
 $id;
 if(isset($_GET['id'])){$id = mysqli_real_escape_string($conn,$_GET['id']);}
-else {echo 0;return;}
+else {echo -1;return;}
 
 
 //card($id);
