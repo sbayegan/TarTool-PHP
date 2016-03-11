@@ -19,7 +19,7 @@ $author = $outComment['USERID'];
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
-echo '<b>'.$username.':</b>';
+echo '<b>'.$username.': </b>';
 echo $outComment['CONTENT'];
 echo '</div>';
 }
