@@ -106,10 +106,9 @@ var xmlhttp = new XMLHttpRequest();
 
                                     }
                             }         
-        xmlhttp.open("GET", "PHP/commentFetcher.php?id=".id, true);
+        xmlhttp.open("GET", "PHP/commentFetcher.php?id="+id , true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send();
-
 }
 
 
