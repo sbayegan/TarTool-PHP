@@ -28,12 +28,14 @@ echo '</div>';
 if(isset($_COOKIE['junto'])){
 
 echo '
-
-<form action="uploadComment.php" method="post" id="commentform" style="margin-top:20px;">
+<textarea style="width:100%;margin-top:20px;" name="comment" form="commentform">You comment</textarea>
+<form action="uploadComment.php" method="post" id="commentform" >
 <input type="hidden" name="resource" value="';echo $id;echo '">
-<input type="submit" value="Submit">
+<div class="form-group" >
+<input style="width:100%;" class="btn btn-default btn-sm" type="submit" value="Submit">
+</div>
 </form>
-<textarea name="comment" form="commentform">You comment</textarea>
+
 ';
 
 
