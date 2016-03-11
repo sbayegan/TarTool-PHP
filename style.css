@@ -533,6 +533,7 @@ left:300px;
 margin-top:16px;
 }
 .comments{
+cursor:pointer;
 font-size:130%;
 padding:5px;
 position:absolute;

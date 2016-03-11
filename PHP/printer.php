@@ -273,10 +273,10 @@ echo '<div class="box-stats" style="background-color:';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
     echo '</div>';
     echo '<div class="comments" onclick="showcomments(';echo $i ;echo ')">';
-    	$comments = $conn->query("SELECT COUNT (*) AS TOTAL FROM COMMMENTS WHERE RESOURCEID=".$i);
+    	$comments = $conn->query("SELECT COUNT(*) AS TOTAL FROM COMMENTS WHERE RESOURCEID=".$i);
     	$comments = mysqli_fetch_assoc($comments);
     	echo $comments['TOTAL'];
-    echo 'comments</div>';
+    echo ' comments</div>';
 
 
 echo '</div>';
