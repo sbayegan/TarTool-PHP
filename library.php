@@ -171,7 +171,7 @@ echo '</form>';
 
 
 
-echo '<div class="library-switch-box" onclick="changeview()"> Changeview() </div>';
+echo '<div class="library-switch-box" onclick="changeview()"> Click to changeview() </div>';
 
 
 
@@ -207,8 +207,8 @@ $ID = $_COOKIE['junto'];
 echo '
 <div id="mediumView" class="library">
 <div class="shelve-title">Website/Tools</div>
-<div class="shelveStats" id="website-count">';echo $WebsiteCount;echo'</div>
-	<div class="shelve" style="background-color:#f1c40f;">
+<div class="shelveStats" id="website-count" style="background-color:#f1c40f;">';echo $WebsiteCount;echo'</div>
+	<div class="shelve" >
 ';
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
@@ -223,8 +223,8 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '
 </div>
 <div class="shelve-title">Video/Audio</div>
-<div class="shelveStats" id="media-count">'; echo $MediaCount;echo '</div>
-	<div class="shelve" style="background-color:red;">';
+<div class="shelveStats" id="media-count" style="background-color:red;"> '; echo $MediaCount;echo '</div>
+	<div class="shelve" >';
 //minicard(10);minicard(6);minicard(7);minicard(12);minicard(13);minicard(10);
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
@@ -255,7 +255,7 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 echo '</div>';
 */
 echo '<div class="shelve-title">Books</div>';
-echo '<div class="shelveStats" id="books-count">';echo $BookCount;echo '</div>';
+echo '<div class="shelveStats" id="books-count" style="background-color:#9b59b6;">';echo $BookCount;echo '</div>';
 echo '<div class="shelve" style="background-color:#9b59b6;">';
 
 
@@ -273,8 +273,8 @@ if($bit->num_rows != 0){minicard($item['RESOURCEID']);}
 //minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);minicard(10);
 echo '</div>';
 echo '<div class="shelve-title">Influencers</div>';
-echo '<div class="shelveStats" id="influencer-count">';echo $InfluencerCount;echo '</div>';
-echo '<div class="shelve" style="background-color:#3498db;">';
+echo '<div class="shelveStats" id="influencer-count" style="background-color:#3498db;">';echo $InfluencerCount;echo '</div>';
+echo '<div class="shelve" >';
 
 $query = "SELECT * FROM FAVOURITES WHERE USERID=".$_COOKIE['junto'];
 //echo $query;
@@ -315,24 +315,24 @@ $query = "SELECT COUNT(*) FROM (SELECT COUNT(*) FROM FAVOURITES JOIN CATEGORIES 
 
 echo '<div id="categoryView" style="display:none;" class="library">';
   echo '<div class="shelve-title">Back-end</div>';
-  echo '<div class="shelveStats" id="back-count">'; echo $BECount ;echo '</div>';
-  echo '<div class="shelve" style="background-color:#32cd32;">';
+  echo '<div class="shelveStats" id="back-count"  style="background-color:#32cd32;">'; echo $BECount ;echo '</div>';
+  echo '<div class="shelve">';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
   echo '</div>';
 
   echo '<div class="shelve-title">Front-end</div>';
-  echo '<div class="shelveStats" id="front-count">';echo $FECount;echo'</div>';
-  echo '<div class="shelve" style="background-color:blue;">';
+  echo '<div class="shelveStats" id="front-count" style="background-color:blue;">';echo $FECount;echo'</div>';
+  echo '<div class="shelve" >';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='FE' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
   echo '</div>';
 
   echo '<div class="shelve-title">Business Development</div>';
-  echo '<div class="shelveStats" id="business-count">';echo $BDCount;echo '</div>';
-  echo '<div class="shelve" style="background-color:red;">';
+  echo '<div class="shelveStats" id="business-count" style="background-color:red;">';echo $BDCount;echo '</div>';
+  echo '<div class="shelve" >';
     $query = "SELECT * FROM FAVOURITES LEFT JOIN CATEGORIES ON FAVOURITES"."."."RESOURCEID=CATEGORIES"."."."RESOURCEID WHERE FAVOURITES"."."."USERID=".$ID." and CAT='BD' GROUP BY FAVOURITES.RESOURCEID";
     $result = $conn->query($query);
     while($item = mysqli_fetch_assoc($result)){minicard($item['RESOURCEID']);}
