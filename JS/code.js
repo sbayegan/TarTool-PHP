@@ -90,6 +90,20 @@ $("#categoryView").animate({width:'toggle'},300);
 }
 
 
+function showcomments(id){
+$("#transparent").fadeIn();
+$("#transparent-comments").fadeIn();
+
+
+
+
+
+
+
+}
+
+
+
 function setvisitor(){
 
   var xmlhttp = new XMLHttpRequest();

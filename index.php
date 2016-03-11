@@ -89,6 +89,7 @@ setvisitor();
 
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
+echo '<div class="comments-square" id="transparent-comments"> <div>';
 echo '<div class="signup-square" id="transparent-signup">';
 echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
 echo '
