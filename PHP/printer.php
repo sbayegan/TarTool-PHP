@@ -275,7 +275,9 @@ echo '<div class="box-stats" style="background-color:';
     echo '<div class="comments" onclick="showcomments(';echo $i ;echo ')">';
     	$comments = $conn->query("SELECT COUNT(*) AS TOTAL FROM COMMENTS WHERE RESOURCEID=".$i);
     	$comments = mysqli_fetch_assoc($comments);
+    	echo '<div id="comment-counter-';echo $i;echo '">';
     	echo $comments['TOTAL'];
+    	echo '</div>';
     echo ' comments</div>';
 
 
