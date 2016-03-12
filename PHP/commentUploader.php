@@ -23,10 +23,10 @@ echo '<div class="singular-comment">';
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$user);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
-echo $query;
-//echo '<b>'.$username.': </b>';
-//echo $comment;
-//echo '</div>';
+
+echo '<b>'.$username.': </b>';
+echo $comment;
+echo '</div>';
 }
 
 else{
