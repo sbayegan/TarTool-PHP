@@ -90,7 +90,7 @@ setvisitor();
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<div class="comments-square">';
-echo '<div id="transparent-comments"></id>';
+echo '<div id="transparent-comments"></div>';
 if(isset($_COOKIE['junto'])){
 echo '
 <textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
