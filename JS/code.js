@@ -93,6 +93,8 @@ $("#categoryView").animate({width:'toggle'},300);
 function showcomments(id){
 $("#transparent").fadeIn();
 $("#transparent-comments").fadeIn();
+commentingResource = id;
+document.getElementById("transparent-comments").innerHTML = "";
 var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {
@@ -910,9 +912,10 @@ var two = document.getElementById("login-password").value;
         xmlhttp.send("user="+one+"&pass="+two);
 }
 
+var commentingResource;
 function commentUpload(){
 var comment = document.getElementById("comment").value;
-var resource = document.getElementById("resourceCommenting").value;
+var resource = commentingResource;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
