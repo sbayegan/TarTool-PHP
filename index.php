@@ -89,7 +89,22 @@ setvisitor();
 
 // The transparent background
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
-echo '<div class="comments-square" id="transparent-comments"> Im Working on the commenting feature today, hopefully this will be finished by the weekend</div>';
+echo '<div class="comments-square" id="transparent-comments"> ';
+
+if(isset($_COOKIE['junto'])){
+echo '
+<textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
+<form action="uploadComment.php" method="post" id="commentform" >
+<input type="hidden" id="resourceCommenting" name="resource" value="';echo $id;echo '">
+<div class="form-group" >
+<input style="width:100%;" class="btn btn-default btn-sm" type="submit" value="Submit">
+</div>
+</form>
+';
+}
+
+
+echo '</div>';
 echo '<div class="signup-square" id="transparent-signup">';
 echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
 echo '

@@ -910,9 +910,7 @@ var two = document.getElementById("login-password").value;
         xmlhttp.send("user="+one+"&pass="+two);
 }
 
-$(document).ready(function(){
-    $("#commentform").submit(function(event) {
-event.preventDefault();
+function commentUpload(){
 var comment = document.getElementById("comment").value;
 var resource = document.getElementById("resourceCommenting").value;
         var xmlhttp = new XMLHttpRequest();
@@ -930,6 +928,12 @@ var resource = document.getElementById("resourceCommenting").value;
         xmlhttp.open("POST", "PHP/commentUploader.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("resource="+resource+"&comment="+comment);
+}
+
+
+$(document).ready(function(){
+    $("#commentform").submit(function(event) {
+    event.preventDefault();
 });});
 
 
