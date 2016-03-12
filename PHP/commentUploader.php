@@ -15,7 +15,7 @@ $next = $commentid + 1;
 $query = "UPDATE LAST SET COMMENTS='$next' WHERE ONE=1";
 $conn->query($query);
 
-$query = "INSERT INTO VALUES($commentid,$user,$resource,NOW(),$commentid)";
+$query = "INSERT INTO COMMENTS VALUES($commentid,$user,$resource,NOW(),$commentid)";
 $conn->query($query);
 
 echo '<div class="singular-comment">';
