@@ -915,7 +915,7 @@ var two = document.getElementById("login-password").value;
 var commentingResource;
 function commentUpload(){
 var comment = document.getElementById("comment").value;
-if (comment.length()< 1){return;}
+if(comment.length < 1){return;}
 var resource = commentingResource;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
