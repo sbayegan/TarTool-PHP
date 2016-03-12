@@ -925,9 +925,9 @@ var resource = commentingResource;
                     node.innerHTML = xmlhttp.responseText;
                     document.getElementById("commentAppend").appendChild(node);
                     document.getElementById("comment").value = "";
-                    var counter = document.getElementById("comment-counter"+resource).innerHTML;
+                    var counter = document.getElementById("comment-counter-"+resource).innerHTML;
                     counter++;
-                    document.getElementById("comment-counter"+resource).innerHTML = counter;
+                    document.getElementById("comment-counter-"+resource).innerHTML = counter;
                 }
             }   
         }
