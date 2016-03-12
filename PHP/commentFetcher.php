@@ -11,12 +11,12 @@ else {echo -1;return;}
 //card($id);
 
 
-$comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id);
+$comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER BY DATE");
 // create a while loop
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment">';
 $author = $outComment['USERID'];
-$username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author." ORDER BY DATE");
+$username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
 echo '<b>'.$username.': </b>';
