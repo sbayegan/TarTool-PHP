@@ -20,6 +20,7 @@ echo $title;
 echo '</div>';
 // create a while loop
 echo '<div id="commentAppend">';
+if ($comments->num_rows == 0){echo 'No comment has been submitted for this card yet!';}
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment">';
 $author = $outComment['USERID'];
