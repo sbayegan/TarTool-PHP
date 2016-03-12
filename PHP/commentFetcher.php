@@ -23,7 +23,10 @@ echo '<div id="commentAppend" style="position:absolute;top:70px;height:340px;ove
 if ($comments->num_rows == 0){echo '<div style="color:red;"> No comment has been submitted for this card yet! Go ahead and tell us what you think about this card :-)</div>';}
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment">';
+
 $author = $outComment['USERID'];
+
+if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<img src="pictures/cross-red.png" width="10" height="10" onclick="deleteComment(';$outComment['COMMENTID'];echo')">';}
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
