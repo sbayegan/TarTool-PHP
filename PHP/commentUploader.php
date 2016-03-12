@@ -15,7 +15,7 @@ $next = $commentid + 1;
 $query = "UPDATE LAST SET COMMENTS='$next' WHERE ONE=1";
 $conn->query($query);
 
-$query = "INSERT INTO COMMENTS VALUES($commentid,$user,$resource,NOW(),$comment)";
+$query = "INSERT INTO COMMENTS VALUES($commentid,$user,$resource,NOW(),'$comment')";
 
 $conn->query($query);
 
