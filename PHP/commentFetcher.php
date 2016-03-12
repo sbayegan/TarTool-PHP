@@ -35,7 +35,7 @@ echo '
 <form action="uploadComment.php" method="post" id="commentform" >
 <input type="hidden" id="resourceCommenting" name="resource" value="';echo $id;echo '">
 <div class="form-group" >
-<input style="width:100%;" class="btn btn-default btn-sm" onclick="commentUpload()" value="Submit">
+<input type="button" style="width:100%;" class="btn btn-default btn-sm" onclick="commentUpload()" value="Submit">
 </div>
 </form>
 ';
