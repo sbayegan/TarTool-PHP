@@ -15,9 +15,9 @@ $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER 
 $title = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
 $title = mysqli_fetch_assoc($title);
 $title = $title['TITLE'];
-echo '<span style="font-size:140%;">';
+echo '<div style="font-size:140%;margin-bottom:10px;">';
 echo $title;
-echo '</span>';
+echo '</div>';
 // create a while loop
 echo '<div id="commentAppend">';
 while($outComment = mysqli_fetch_assoc($comments)){
