@@ -15,12 +15,12 @@ $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER 
 $title = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
 $title = mysqli_fetch_assoc($title);
 $title = $title['TITLE'];
-echo '<div style="position:absolute;top:30px;font-size:140%;">';
+echo '<div style="position:absolute;top:20px;font-size:140%;">';
 echo $title;
 echo '</div>';
 // create a while loop
-echo '<div id="commentAppend" style="position:absolute;top:100px;height:400px;overflow:scroll;">';
-if ($comments->num_rows == 0){echo 'No comment has been submitted for this card yet!';}
+echo '<div id="commentAppend" style="position:absolute;top:70px;height:340px;overflow:scroll;">';
+if ($comments->num_rows == 0){echo '<div style="color:red;"> No comment has been submitted for this card yet! Go ahead and tell us what you think about this card :-)</div>';}
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment">';
 $author = $outComment['USERID'];
