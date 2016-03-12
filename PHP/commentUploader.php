@@ -16,15 +16,17 @@ $query = "UPDATE LAST SET COMMENTS='$next' WHERE ONE=1";
 $conn->query($query);
 
 $query = "INSERT INTO COMMENTS VALUES($commentid,$user,$resource,NOW(),$commentid)";
+
 $conn->query($query);
 
 echo '<div class="singular-comment">';
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$user);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
-echo '<b>'.$username.': </b>';
-echo $comment;
-echo '</div>';
+echo $query;
+//echo '<b>'.$username.': </b>';
+//echo $comment;
+//echo '</div>';
 }
 
 else{
