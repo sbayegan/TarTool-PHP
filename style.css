@@ -174,20 +174,19 @@ z-index: 75;
 background-color: #FEFEFE;
 }
 
-
 .singular-comment{
+margin:10px;
+background-color:whitesmoke;
 position: relative;
-padding:4px;
+padding-right:0px;
 float: top;
-width: auto;
+width: 460px;
 height: auto;
-border: 0px solid whitesmoke;
-border-bottom-width: 2px;
 }
 
 .comments-square{
 border-radius: 10px;
-padding: 20px;
+padding: 10px;
 box-shadow: 0px 1px 8px grey;
 display: none;
 height: auto;
@@ -197,11 +196,10 @@ top: 120px;
 bottom: 120px;
 width: 500px;
 right: 50%;
-margin-right: -200px;
+margin-right: -250px;
 z-index: 75;
 background-color: #FEFEFE;
 }
-
 
 
 
