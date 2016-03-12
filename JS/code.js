@@ -94,7 +94,7 @@ function showcomments(id){
 $("#transparent").fadeIn();
 $("#transparent-comments").fadeIn();
 commentingResource = id;
-document.getElementById("transparent-comments").innerHTML = "";
+document.getElementById("transparent-comments-ajax").innerHTML = "";
 var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {
@@ -103,7 +103,7 @@ var xmlhttp = new XMLHttpRequest();
                 if(xmlhttp.responseText == -1){
                 }
                 else {
-                    document.getElementById("transparent-comments").innerHTML = xmlhttp.responseText;
+                    document.getElementById("transparent-comments-ajax").innerHTML = xmlhttp.responseText;
                 }
 
                                     }
