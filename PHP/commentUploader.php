@@ -19,7 +19,7 @@ $query = "INSERT INTO COMMENTS VALUES($commentid,$user,$resource,NOW(),'$comment
 
 $conn->query($query);
 
-echo '<div class="singular-comment">';
+echo '<div class="singular-comment" id="single-comment-';echo $commentid;echo '">';
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$user);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
