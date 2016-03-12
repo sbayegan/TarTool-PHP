@@ -13,6 +13,7 @@ else {echo -1;return;}
 
 $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER BY DATE");
 // create a while loop
+echo '<div id="commentAppend">';
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment">';
 $author = $outComment['USERID'];
@@ -23,19 +24,20 @@ echo '<b>'.$username.': </b>';
 echo $outComment['CONTENT'];
 echo '</div>';
 }
+echo '</div>';
+
 
 // here print a text box so the user can post stuff
 if(isset($_COOKIE['junto'])){
 
 echo '
-<textarea style="width:100%;margin-top:20px;" name="comment" form="commentform"></textarea>
+<textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
 <form action="uploadComment.php" method="post" id="commentform" >
-<input type="hidden" name="resource" value="';echo $id;echo '">
+<input type="hidden" id="resourceCommenting" name="resource" value="';echo $id;echo '">
 <div class="form-group" >
 <input style="width:100%;" class="btn btn-default btn-sm" type="submit" value="Submit">
 </div>
 </form>
-
 ';
 
 

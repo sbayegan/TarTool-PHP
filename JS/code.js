@@ -910,14 +910,33 @@ var two = document.getElementById("login-password").value;
         xmlhttp.send("user="+one+"&pass="+two);
 }
 
+$(document).ready(function(){
+    $("#commentform").submit(function(event) {
+event.preventDefault();
+var comment = document.getElementById("comment").value;
+var resource = document.getElementById("resourceCommenting").value;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == -1){ }
+                else{
+                    var node = document.createElement("DIV");
+                    node.innerHTML = xmlhttp.responseText;
+                    document.getElementById("commentAppend").appendChild(node);
+                    document.getElementById("comment").value = "";
+                }
+            }   
+        }
+        xmlhttp.open("POST", "PHP/commentUploader.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("resource="+resource+"&comment="+comment);
+});});
+
 
 $(document).ready(function(){
     $("#login-form").submit(function(event) {
-
 event.preventDefault();
-
 login();
-
  });});
 
 function passmatch(){
