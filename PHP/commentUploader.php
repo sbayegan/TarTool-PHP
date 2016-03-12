@@ -24,10 +24,8 @@ $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
 echo '<b>'.$username.': </b>';
 echo $comment;
-echo '</div>'
+echo '</div>';
 }
-
-
 
 else{
 	echo -1;
