@@ -922,6 +922,7 @@ var resource = commentingResource;
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == -1){ }
                 else{
+                    document.getElementById("commentAppend").scrollTop = document.getElementById("commentAppend").scrollHeight;
                     var node = document.createElement("DIV");
                     node.innerHTML = xmlhttp.responseText;
                     document.getElementById("commentAppend").appendChild(node);
