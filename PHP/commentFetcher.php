@@ -13,7 +13,7 @@ else {echo -1;return;}
 
 $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER BY DATE");
 $title = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
-$title = mysqli_real_escape_string($title);
+$title = mysqli_fetch_assoc($title);
 $title = $title['TITLE'];
 echo '<span style="font-size:140%;">';
 echo $title;
