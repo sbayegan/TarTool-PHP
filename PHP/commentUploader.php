@@ -2,7 +2,7 @@
 include('../datalogin.php');
 
 
-if(isset($_POST['comment']) && isset($_POST['resource']) && isset($_COOKIE['junto'])){
+if(isset($_POST['comment']) && isset($_POST['resource']) && isset($_COOKIE['junto']) && !empty($_POST['resource'])){
 $comment = mysqli_real_escape_string($conn,$_POST['comment']);
 $resource = mysqli_real_escape_string($conn,$_POST['resource']);
 $user = $_COOKIE['junto'];
