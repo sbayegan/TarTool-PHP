@@ -23,7 +23,7 @@ echo '<div class="singular-comment">';
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$user);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
-
+if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<img style="position:absolute;display:block;right:5px;top:2px;cursor:pointer;" alt="delete" src="pictures/cross-red.png" width="15" height="15" onclick="deleteComment(';echo $commentid;echo')">';}
 echo '<b>'.$username.': </b>';
 echo $comment;
 echo '</div>';
