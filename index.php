@@ -93,7 +93,7 @@ echo '<div class="comments-square" id="transparent-comments">';
 echo '<div id="transparent-comments-ajax"></div>';
 if(isset($_COOKIE['junto'])){
 echo '
-</div>
+
 <div style="position:absolute">
 <textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
 <form action="uploadComment.php" method="post" id="commentform" >
@@ -104,7 +104,6 @@ echo '
 </div>
 ';
 }
-
 echo'</div>';
 echo '<div class="signup-square" id="transparent-signup">';
 echo '<a href="#" onclick="closeall()"><img class="closing-cross" src=pictures/cross-red.png width="18" height="18" alt="closing cross"></a>';
