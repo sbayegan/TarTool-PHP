@@ -912,6 +912,26 @@ var two = document.getElementById("login-password").value;
         xmlhttp.send("user="+one+"&pass="+two);
 }
 
+function deleteComment(id){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == -1){ }
+                if(xmlhttp.responseText == 1){
+                $("#single-comment-"+id).fadeOut();
+                }
+            }   
+        }
+        xmlhttp.open("POST", "PHP/commentDelete.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("commentid="+id);
+
+
+
+}
+
+
+/////////////////////////////////////
 var commentingResource;
 function commentUpload(){
 var comment = document.getElementById("comment").value;
@@ -925,7 +945,7 @@ var resource = commentingResource;
                     var node = document.createElement("DIV");
                     node.innerHTML = xmlhttp.responseText;
                     document.getElementById("commentAppend").appendChild(node);
-                                        document.getElementById("commentAppend").scrollTop = document.getElementById("commentAppend").scrollHeight;
+                    document.getElementById("commentAppend").scrollTop = document.getElementById("commentAppend").scrollHeight;
                     document.getElementById("comment").value = "";
                     var counter = document.getElementById("comment-counter-"+resource).innerHTML;
                     counter++;
