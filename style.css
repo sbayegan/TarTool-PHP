@@ -84,6 +84,7 @@ left:10px;
 }
 
 .user-name{
+cursor: pointer;
 position: relative;
 float: top;
 margin-top: 10px;
@@ -94,18 +95,54 @@ z-index:115;
 background-color:white;
 height: auto;
 width: 250px;
-//border: 1px dotted grey;
+//border: 1px dashed grey;
+}
+
+.user-name:hover .user-name-edit{
+display: block;
+}
+.user-occupation:hover .user-occupation-edit{
+display: block;
+}
+
+.user-name-edit{
+display: none;
+position: absolute;
+font-size:75%;
+right:0px;
+bottom:4px;
+text-align:center;
+z-index:116;
+height: auto;
+width: auto;
+color:grey;
+//border: 1px dashed grey;
+}
+
+.user-occupation-edit{
+display: none;
+position: absolute;
+font-size:118%;
+right:0px;
+bottom:0px;
+text-align:center;
+z-index:116;
+height: auto;
+width: auto;
+color:grey;
+//border: 1px dashed grey;
 }
 .user-occupation{
+cursor: pointer;
 position: relative;
 float: top;
 margin-top: 0px;
 z-index:115;
 background-color:white;
-height: 120px;
+height: auto;
 width: 250px;
 padding:5px;
-/border: 1px dashed grey;
+//border: 1px dashed grey;
 }
 .user-blogging{
 z-index:115;
