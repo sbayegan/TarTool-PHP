@@ -15,7 +15,7 @@ $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER 
 $title = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
 $title = mysqli_fetch_assoc($title);
 $title = $title['TITLE'];
-echo '<div style="position:absolute;top:20px;font-size:140%;">';
+echo '<div style="position:absolute;top:20px;left:20px;font-size:160%;">';
 echo $title;
 echo '</div>';
 // create a while loop
@@ -26,7 +26,7 @@ echo '<div class="singular-comment" id="single-comment-';echo $outComment['COMME
 
 $author = $outComment['USERID'];
 
-if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<span style="position:absolute;display:block;right:5px;bottom:2px;cursor:pointer;color:red;"  onclick="deleteComment(';echo $outComment['COMMENTID'];echo ",";echo $id;echo')">Delete</span>';}
+if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<span style="position:absolute;display:block;right:5px;bottom:-2px;cursor:pointer;color:red;"  onclick="deleteComment(';echo $outComment['COMMENTID'];echo ",";echo $id;echo')">Delete</span>';}
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
