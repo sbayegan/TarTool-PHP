@@ -8,7 +8,7 @@ $commentid = mysqli_real_escape_string($conn,$_POST['commentid']);
 $user = $_COOKIE['junto'];
 $valid = $conn->query("SELECT * FROM COMMENTS WHERE COMMENTID=".$commentid." AND USERID=".$user);
 if($valid->num_rows == 1){
-$conn->query("DELETE FROM COMMMENTS WHERE COMMENTID=".$commentid);
+$conn->query("DELETE FROM COMMENTS WHERE COMMENTID=".$commentid);
 echo 1;
 } 
 else{
