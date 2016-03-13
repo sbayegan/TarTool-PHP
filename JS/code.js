@@ -912,13 +912,19 @@ var two = document.getElementById("login-password").value;
         xmlhttp.send("user="+one+"&pass="+two);
 }
 
-function deleteComment(id){
+function deleteComment(id,resource){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == -1){ }
                 if(xmlhttp.responseText == 1){
                 $("#single-comment-"+id).fadeOut();
+                var counter = document.getElementById("comment-counter-"+resource).innerHTML;
+                counter++;
+                document.getElementById("comment-counter-"+resource).innerHTML = counter;
+
+
+
                 }
             }   
         }
