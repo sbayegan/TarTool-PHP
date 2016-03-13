@@ -19,8 +19,8 @@ echo '<div style="position:absolute;top:20px;left:20px;font-size:160%;">';
 echo $title;
 echo '</div>';
 // create a while loop
-echo '<div id="commentAppend" style="position:absolute;top:70px;bottom:100px;overflow:scroll;">';
-if ($comments->num_rows == 0){echo '<div style="color:red;"> No comment has been submitted for this card yet! Go ahead and tell us what you think about this card :-)</div>';}
+echo '<div id="commentAppend" style="position:absolute;top:70px;bottom:110px;overflow:scroll;">';
+//if ($comments->num_rows == 0){echo '<div style="color:red;"> No comment has been submitted for this card yet! Go ahead and tell us what you think about this card :-)</div>';}
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment" id="single-comment-';echo $outComment['COMMENTID'];echo '">';
 
