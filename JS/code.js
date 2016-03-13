@@ -920,7 +920,7 @@ function deleteComment(id,resource){
                 if(xmlhttp.responseText == 1){
                 $("#single-comment-"+id).fadeOut();
                 var counter = document.getElementById("comment-counter-"+resource).innerHTML;
-                counter++;
+                counter--;
                 document.getElementById("comment-counter-"+resource).innerHTML = counter;
 
 
