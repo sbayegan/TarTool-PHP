@@ -36,7 +36,7 @@ echo '<div class="stick-to-top">';
   echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:200px;color:grey;">Get Inspired</h2>';
   echo ' <div class="top-left-name">tarTool</div>';
   echo ' <div class="top-left-beta">BETA</div>';
-  echo '<a href="../."><div class="logo-link"></div></a>';
+  echo '<a href="../."> <div class="logo-link"></div></a>';
 
 echo '<span style="position:absolute;right:30px;top:5px;"> <a href="logout.php"><img src="../pictures/power-red.png" height="45" width="45"></a></span>';
 //echo '<span style="position:absolute;float:left;right:100px;top:5px;"> <a href="#" onclick="showprofile()"><img src="../pictures/profile.png" height="50" width="50" alt="account"></a></span>';
