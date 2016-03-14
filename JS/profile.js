@@ -30,18 +30,29 @@ $('#profile-image-upload').change(function() {
 
 function closeall(){
 $("#transparent").fadeOut();
+document.getElementById("user-name").style.zIndex = "1";
+document.getElementById("user-occupation").style.zIndex = "1";
 document.getElementById("full-name-input-box").style.display = 'none';
 document.getElementById("full-name").style.display = 'block';
 document.getElementById("user-name-edit").innerHTML = "Edit";
-
+document.getElementById("user-occupation-edit").innerHTML = "Edit";
+document.getElementById("occupation-input-box").style.display = 'none';
+document.getElementById("occupation").style.display = 'block';
 }
 
 
 function changename(){
+document.getElementById("user-name").style.zIndex = "100";
 document.getElementById("user-name-edit").innerHTML = "";
 $("#transparent").fadeIn();
 document.getElementById("full-name").style.display = 'none';
 document.getElementById("full-name-input-box").style.display = 'block';
+}
 
-
+function changedescription(){
+document.getElementById("user-occupation").style.zIndex = "100";
+document.getElementById("user-occupation-edit").innerHTML = "";
+$("#transparent").fadeIn();
+document.getElementById("occupation").style.display = 'none';
+document.getElementById("occupation-input-box").style.display = 'block';
 }
