@@ -17,7 +17,7 @@ $('#profile-image-upload').change(function() {
                 if(xmlhttp.responseText == -1){ }
                 else{
                 document.getElementById("user-occupation").innerHTML= xmlhttp.responseText;
-                //location.reload();
+                location.reload();
                 }
             }   
         }
