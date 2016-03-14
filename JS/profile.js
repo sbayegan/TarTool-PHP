@@ -25,19 +25,23 @@ $('#profile-image-upload').change(function() {
         //xmlhttp.setRequestHeader("Content-type","multipart/form-data");
         xmlhttp.send(formData);
 
-
-/*
-       $.ajax({
-          url: '/echo/json/',
-          type: 'POST',
-          data: formData,
-          //Options to tell JQuery not to process data or worry about content-type
-          cache: false,
-          contentType: false,
-          processData: false
- });
-*/
-
+});
 });
 
-});
+function closeall(){
+$("#transparent").fadeOut();
+document.getElementById("full-name-input-box").style.display = 'none';
+document.getElementById("full-name").style.display = 'block';
+document.getElementById("user-name-edit").innerHTML = "Edit";
+
+}
+
+
+function changename(){
+document.getElementById("user-name-edit").innerHTML = "";
+$("#transparent").fadeIn();
+document.getElementById("full-name").style.display = 'none';
+document.getElementById("full-name-input-box").style.display = 'block';
+
+
+}

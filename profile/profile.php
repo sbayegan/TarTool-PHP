@@ -30,6 +30,7 @@ echo "</head>";
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
+
 echo '<div class="stick-to-top">';
 
   echo '<span class="top-left"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </span>';
@@ -47,7 +48,7 @@ $rightname = $conn->query("SELECT * FROM USERS WHERE USERNAME='".$username."'");
 if($rightname->num_rows == 1){
 $userRow = mysqli_fetch_assoc($rightname);
 echo '<div class="user-info">';
-
+echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
 echo '<input id="profile-image-upload" class="hidden" type="file" accept="image/*" />';
 
 
@@ -69,14 +70,14 @@ else{
 
 }
 
-echo '<div class="user-name">';
+echo '<div class="user-name" onclick="changename()">';
 		echo '<span id="full-name">';
 		echo $userRow['NAME'];
 		echo '</span>';
 		echo '<span id="full-name-input-box" style="display:none;">';
 		echo '<input type="text" name="FirstName" value="';echo $userRow['NAME'];echo '">';
 		echo '</span>';
-	echo '<div class="user-name-edit">';
+	echo '<div class="user-name-edit" id="user-name-edit">';
 	echo 'Edit';
 	echo '</div>';
 echo '</div>';
