@@ -92,7 +92,7 @@ echo '<div id="transparent-comments-ajax"></div>';
 if(isset($_COOKIE['junto'])){
 echo '
 
-<div style="position:fixed;bottom:120px;width:480px;">
+<div style="position:absolute;bottom:0px;width:480px;">
 <textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
 <form action="uploadComment.php" method="post" id="commentform" >
 <div class="form-group" >
