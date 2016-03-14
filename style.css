@@ -65,7 +65,7 @@ label.css-label {
 
 .user-info{
  position: fixed;
- top:75px;
+ top:85px;
  width: 250px;
  height: 600px;
  left: 10px;
@@ -111,6 +111,7 @@ background-color: white;
 cursor: pointer;
 position: relative;
 float: top;
+margin-bottom: 3px;
 margin-top: 10px;
 padding-left:5px;
 text-align:left;
@@ -535,11 +536,13 @@ background-color: #FEFEFE;
 
 .top-left-beta{
 //font-family: Thin;
+color:limegreen;
+font-weight:900;
 font-size:90%;
 float: left;
 position: absolute;
-top:44px;
-left:102px;
+top:43px;
+left:25px;
 }
 .logo-link{
 position:fixed;

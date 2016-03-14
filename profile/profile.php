@@ -70,7 +70,12 @@ else{
 }
 
 echo '<div class="user-name">';
-echo 'Saeid Bayeganeh';
+		echo '<span id="full-name">';
+		echo $userRow['NAME'];
+		echo '</span>';
+		echo '<span id="full-name-input-box" style="display:none;">';
+		echo '<input type="text" name="FirstName" value="';echo $userRow['NAME'];echo '">';
+		echo '</span>';
 	echo '<div class="user-name-edit">';
 	echo 'Edit';
 	echo '</div>';
@@ -78,7 +83,7 @@ echo '</div>';
 
 
 echo '<div class="user-occupation" id="user-occupation">';
-echo 'Founder of tarTool, Computer science graduate, Toronto!';
+echo $userRow['DESCRIPTION'];
 	echo '<div class="user-occupation-edit">';
 	echo 'Edit';
 	echo '</div>';
