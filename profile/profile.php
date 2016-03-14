@@ -48,6 +48,9 @@ if($rightname->num_rows == 1){
 $userRow = mysqli_fetch_assoc($rightname);
 echo '<div class="user-info">';
 
+echo '<input id="profile-image-upload" class="hidden" type="file" accept="image/*" />';
+
+
 if($userRow['PROFILEPICTURE']!= NULL){
 $width = $userRow['PWIDTH'];
 $height = $userRow['PHEIGHT'];
@@ -55,12 +58,11 @@ $height = $userRow['PHEIGHT'];
 $finalwidth = 250;
 $finalheight;
 $finalheight = ($height * $finalwidth) / $width;
-
-
-
-
-echo '<div class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
+echo '<div id="pic-upload" class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
 echo '<img style="border-radius:3px;" src="';echo $userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
+
+	echo '<div class="user-photo-edit">Upload Profile Picture</div>';
+
 echo '</div>';
 }//if($userRow['PROFILEPICTURE']!= NULL)
 else{
@@ -70,15 +72,15 @@ else{
 echo '<div class="user-name">';
 echo 'Saeid Bayeganeh';
 	echo '<div class="user-name-edit">';
-	echo 'edit';
+	echo 'Edit';
 	echo '</div>';
 echo '</div>';
 
 
-echo '<div class="user-occupation">';
+echo '<div class="user-occupation" id="user-occupation">';
 echo 'Founder of tarTool, Computer science graduate, Toronto!';
 	echo '<div class="user-occupation-edit">';
-	echo 'edit';
+	echo 'Edit';
 	echo '</div>';
 echo '</div>';
 

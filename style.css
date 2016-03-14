@@ -71,8 +71,11 @@ label.css-label {
  left: 10px;
 // border: 1px dashed red;
 }
-
+.hidden{
+    display: none;
+}
 .user-photo{
+cursor: pointer;
 position: :relative;
 float: top;
 z-index:115;
@@ -82,6 +85,27 @@ width: 250px;
 left:10px;
 //border: 1px dashed whitesmoke;
 }
+
+.user-photo:hover .user-photo-edit{
+    display: block;
+}
+
+.user-photo-edit{
+display: none;
+float:bottom;
+position: relative;
+font-size:100%;
+left:35px;
+bottom:30px;
+text-align:center;
+z-index:116;
+height: auto;
+width: 180px;
+color:grey;
+background-color: white;
+//border: 1px dashed grey;
+}
+
 
 .user-name{
 cursor: pointer;
