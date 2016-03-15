@@ -5,6 +5,8 @@ include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
 
+
+
 function interested($user, $subject){
 include('datalogin.php');
 $query = 'select * from INTERESTS where USERID='.$user.' and INTEREST="'.$subject.'"';
@@ -18,6 +20,9 @@ else{return 0;}
 // Introduce HTML
 echo "<!DOCTYPE html>";
 echo "<html>";
+
+analytics();
+
 
 // HEADER ----------------------------------------------------------------------------------------------------------------
 echo "<head>";

@@ -7,6 +7,9 @@ if(!isset($_COOKIE['junto'])){
 
 echo "<!DOCTYPE html>";
 echo "<html>";
+
+analytics();
+
 echo "<head>";
 echo "<title>";
 echo $UniversalName;
