@@ -1,6 +1,7 @@
 <?php
 include('../datalogin.php');
 
+
 if(isset($_FILES["image"]) && isset($_COOKIE['junto'])) {
   echo 'File detected';
   $target_dir = "pics/";
@@ -22,6 +23,9 @@ if(isset($_FILES["image"]) && isset($_COOKIE['junto'])) {
     // if everything is ok, try to upload file
     } else {
           if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+             $image = new imagick($target_file);
+             $image->resizeImage(250,0,imagick::FILTER_LANCZOS,1,true);
+             $image->writeImage($target_file);
           	 $user = $conn->query("SELECT * FROM USERS WHERE USERID=".$_COOKIE['junto']);
           	 $user = mysqli_fetch_assoc($user);
           	 if($target_file != $user['PROFILEPICTURE']){unlink($user['PROFILEPICTURE']);}
