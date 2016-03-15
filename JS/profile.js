@@ -59,27 +59,34 @@ document.getElementById("occupation-input-box").style.display = 'block';
 
 
 function pushdesc(){
+	   var desc = document.getElementById("newdesc").value;
 	   var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
 
                     }
+                else{
+                	document.getElementById("occupation").innerHTML = xmlhttp.responseText;
+                }
      } }
-        xmlhttp.open("POST", "pushdesc.php", true);
+        xmlhttp.open("POST", "/profile/pushdesc.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("desc="+desc);
 }
 
 function pushname(){
+   var name = document.getElementById("newname").value;
    var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                if(xmlhttp.responseText == 1){
-
+                if(xmlhttp.responseText == 0){
                     }
+                else{
+                	document.getElementById("full-name").innerHTML = xmlhttp.responseText;
+                }
      }}
-        xmlhttp.open("POST", "pushname.php", true);
+        xmlhttp.open("POST", "/profile/pushname.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("name="+name);
 

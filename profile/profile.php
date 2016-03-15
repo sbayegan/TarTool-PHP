@@ -75,7 +75,7 @@ echo '<div class="user-name" id="user-name" onclick="changename()">';
 		echo $userRow['NAME'];
 		echo '</span>';
 		echo '<span id="full-name-input-box" style="display:none;">';
-		echo '<input onchange="pushname()" type="text" name="FirstName" value="';echo $userRow['NAME'];echo '">';
+		echo '<input onchange="pushname()" type="text" id="newname" name="FirstName" value="';echo $userRow['NAME'];echo '">';
 		echo '</span>';
 	echo '<div class="user-name-edit" id="user-name-edit">';
 	echo 'Edit';
@@ -89,7 +89,7 @@ echo '<div class="user-occupation" id="user-occupation" onclick="changedescripti
 		echo $userRow['DESCRIPTION'];
 		echo '</span>';
 		echo '<span id="occupation-input-box" style="display:none;">';
-		echo '<textarea onchange="pushdesc()" name="comment" form="usrform" style="width:100%;">';echo $userRow['DESCRIPTION'];echo '</textarea>';
+		echo '<textarea onchange="pushdesc()" id="newdesc" name="comment" form="usrform" style="width:100%;">';echo $userRow['DESCRIPTION'];echo '</textarea>';
 		echo '</span>';
 	echo '<div class="user-occupation-edit" id="user-occupation-edit">';
 	echo 'Edit';
