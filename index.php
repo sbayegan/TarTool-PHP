@@ -761,7 +761,7 @@ echo '</div>';
     // My Library button
     echo '
     <div style="position:relative;margin-left:auto;margin-right:auto;margin-top:10px;width:150px;height:100px;border:0px dashed black;">
-    <a href="library.php">
+    <a href="library">
     <div style="position:relative;margin-left:40px;margin-top:25px"><img src="pictures/book.png" height="70" width="70">
     </div>
     <div style="position:relative;margin-top:-10px;text-align:center;">
