@@ -60,7 +60,7 @@ $finalwidth = 250;
 $finalheight;
 $finalheight = ($height * $finalwidth) / $width;
 echo '<div id="pic-upload" class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
-echo '<img style="border-radius:3px;" src="';echo $userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
+echo '<img style="border-radius:3px;" src="';echo "/profile/".$userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
 
 	echo '<div class="user-photo-edit">Upload Profile Picture</div>';
 
