@@ -21,7 +21,7 @@ $('#profile-image-upload').change(function() {
                 }
             }   
         }
-        xmlhttp.open("POST", "picUpload.php", true);
+        xmlhttp.open("POST", "/profile/picUpload.php", true);
         //xmlhttp.setRequestHeader("Content-type","multipart/form-data");
         xmlhttp.send(formData);
 
@@ -55,4 +55,33 @@ document.getElementById("user-occupation-edit").innerHTML = "";
 $("#transparent").fadeIn();
 document.getElementById("occupation").style.display = 'none';
 document.getElementById("occupation-input-box").style.display = 'block';
+}
+
+
+function pushdesc(){
+	   var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+
+                    }
+     } }
+        xmlhttp.open("POST", "pushdesc.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("desc="+desc);
+}
+
+function pushname(){
+   var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+
+                    }
+     }}
+        xmlhttp.open("POST", "pushname.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("name="+name);
+
+
 }
