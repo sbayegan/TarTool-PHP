@@ -23,16 +23,14 @@ if(isset($_FILES["image"]) && isset($_COOKIE['junto'])) {
     // if everything is ok, try to upload file
     } else {
           if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-             $image = new imagick($target_file);
-             $image->resizeImage(250,0,imagick::FILTER_LANCZOS,1,true);
-             $image->writeImage($target_file);
+            
+
           	 $user = $conn->query("SELECT * FROM USERS WHERE USERID=".$_COOKIE['junto']);
           	 $user = mysqli_fetch_assoc($user);
           	 if($target_file != $user['PROFILEPICTURE']){unlink($user['PROFILEPICTURE']);}
-          	 //move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
              list($width, $height) = getimagesize($target_file);
              $conn->query("UPDATE USERS SET PROFILEPICTURE='".$target_file."' , PWIDTH=".$width." , PHEIGHT=".$height." WHERE USERID=".$user['USERID']);
-
+             
               //echo 1; 
           }
           else {
