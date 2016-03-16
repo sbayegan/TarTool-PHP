@@ -182,13 +182,13 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo'</div></a>';
     echo '<div class="score">';
     echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/facebook.png" width="30" height="30" class="facebook-icon">';
+    echo '<img src="/pictures/facebook.png" width="30" height="30" class="facebook-icon">';
     echo '</a>';
     echo '<a href="https://twitter.com/share?url='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/twitter.png" width="30" height="30" class="twitter-icon">';
+    echo '<img src="/pictures/twitter.png" width="30" height="30" class="twitter-icon">';
     echo '</a>';
     echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
-    echo '<img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon">';
+    echo '<img src="/pictures/linkedin.png" width="30" height="30" class="linkedin-icon">';
     echo '</a>';
 //    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
@@ -220,7 +220,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     if(!isset($_COOKIE['junto'])){
     echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
-    echo '<img src="pictures/save.png"  width="55" height="55" class="saving-icon">';
+    echo '<img src="/pictures/save.png"  width="55" height="55" class="saving-icon">';
 
 }
     else{
@@ -228,11 +228,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     $favorited = $conn->query($query);
       if($favorited->num_rows == 0){
                    echo '<span onclick="favorite('.$i.')">';
-                   echo '<img src="pictures/save.png"  width="55" height="55" class="saving-icon">';
+                   echo '<img src="/pictures/save.png"  width="55" height="55" class="saving-icon">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
+                   echo '<img src="/pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
            }
 
     }

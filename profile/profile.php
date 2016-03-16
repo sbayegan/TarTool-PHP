@@ -1,6 +1,7 @@
 <?php
 include('../UniversalHeader.php');
 include('../datalogin.php');
+include('../PHP/printer.php');
 if(!isset($_COOKIE['junto'])){
 //header('Location: http://wwww.tartool.com');
 }
@@ -29,10 +30,35 @@ echo '
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 ';
 echo '<script src="../JS/profile.js"></script>';
+echo '<script src="../JS/code.js"></script>';
 echo "</head>";
 // BODY -----------------------------------------------------------------------------------------------------------------------
 // HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
+
+
+
+echo '<div class="comments-square" id="transparent-comments">';
+echo '<div id="transparent-comments-ajax"></div>';
+if(isset($_COOKIE['junto'])){
+echo '
+
+<div style="position:absolute;bottom:0px;width:480px;">
+<textarea style="width:100%;margin-top:20px;" name="comment" form="commentform" id="comment"></textarea>
+<form action="uploadComment.php" method="post" id="commentform" >
+<div class="form-group" >
+<input type="button" style="width:100%;" class="btn btn-default btn-sm" onclick="commentUpload()" value="Submit">
+</div>
+</form>
+</div>
+';
+}
+echo'</div>';
+
+
+
+
+
 
 echo '<div class="stick-to-top">';
 
@@ -100,6 +126,10 @@ echo '<div class="user-occupation" id="user-occupation" onclick="changedescripti
 echo '</div>';
 
 echo '<div class="user-blogging">';
+card(94);
+card(94);
+card(94);
+
 echo '';
 echo '</div>';
 

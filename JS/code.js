@@ -108,7 +108,7 @@ var xmlhttp = new XMLHttpRequest();
 
                                     }
                             }         
-        xmlhttp.open("GET", "PHP/commentFetcher.php?id="+id , true);
+        xmlhttp.open("GET", "/PHP/commentFetcher.php?id="+id , true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send();
 }
@@ -499,14 +499,14 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img src=\'pictures/cross-red.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>"
+                      output += ")\'  > <img src=\'/pictures/cross-red.png\'  width=\'55\' height=\'55\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>"
                       document.getElementById(id).innerHTML= output;
                     }
      }
    }         
 
         document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='float:left;margin-top:15px;'>";
-	xmlhttp.open("POST", "PHP/account/favorite.php", true);
+	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
 }
@@ -523,7 +523,7 @@ function approve(cardid) {
      }
    }    
  
-	document.getElementById("approve-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' style='position:absolute;left:65px;margin-top:15px;'>";    
+	document.getElementById("approve-"+cardid).innerHTML="<img src='/pictures/ajax_loader.gif' width='55' height='55' style='position:absolute;left:65px;margin-top:15px;'>";    
         xmlhttp.open("POST", "approve.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
@@ -538,13 +538,13 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img src=\'pictures/save.png\'  width=\'55\' height=\'55\' class='saving-icon'></span>";
+        		output += ")\'    > <img src=\'/pictures/save.png\'  width=\'55\' height=\'55\' class='saving-icon'></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML="<img src='pictures/ajax_loader.gif' width='55' height='55' class='saving-icon'>";
-        xmlhttp.open("POST", "PHP/account/unfavorite.php", true);
+	document.getElementById("save-"+cardid).innerHTML="<img src='/pictures/ajax_loader.gif' width='55' height='55' class='saving-icon'>";
+        xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
                 }
