@@ -141,9 +141,9 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     echo '<a href="';
     
-    if ($firsttag['CAT'] == 'BD') {echo 'business';}
-    if ($firsttag['CAT'] == 'FE') {echo 'frontend';}
-    if ($firsttag['CAT'] == 'BE') {echo 'backend';}
+    if ($firsttag['CAT'] == 'BD') {echo '/business';}
+    if ($firsttag['CAT'] == 'FE') {echo '/frontend';}
+    if ($firsttag['CAT'] == 'BE') {echo '/backend';}
     echo '">';
     echo '<div class="sticker"'; 
     if ($firsttag['CAT'] == 'BD') {echo '>Business';}
