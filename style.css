@@ -175,19 +175,32 @@ position: fixed;
 overflow: scroll;
 top:80px;
 right: 10px;
-width: calc(100% - 800px);
+width: calc(100% - 830px);
 height: calc(100% - 90px);
 border: 1px dashed whitesmoke; 
+}
+
+textarea {
+    resize: none;
+}
+
+.status-submit-icon{
+position: absolute;
+bottom:0px;
+right: 5px;
+width: 100px;
+height: 52px;
+border: 1px dashed black; 
 }
 
 
 .submit-icon{
 position: absolute;
-top:5px;
+top:0px;
 right: 5px;
 width: 100px;
-height: 50px;
-border: 1px dashed whitesmoke; 
+height: 52px;
+border: 1px dashed black; 
 }
 
 
@@ -196,7 +209,7 @@ z-index:1;
 background-color:white;
 position: fixed;
 height: 110px;
-width:500px;
+width:530px;
 left:280px;
 top: 80px;
 overflow: scroll;
@@ -207,7 +220,7 @@ z-index:1;
 background-color:white;
 position: fixed;
 height: calc(100% - 220px);
-width:500px;
+width:530px;
 left:280px;
 top: 200px;
 overflow: scroll;

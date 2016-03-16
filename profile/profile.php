@@ -134,6 +134,9 @@ $userRow = mysqli_fetch_assoc($rightname);
 	echo '<div class="update-status">';
 		echo '<div class="submit-icon">';
 		echo '</div>';
+		echo '<div class="status-submit-icon">';
+		echo '</div>';
+		echo '<textarea style="position:absolute;left:0px;top:0px;bottom:0px;width:420px;font-size:120%;padding:5px;"></textarea>';
 	echo '</div>';
 
 	echo '<div class="latest-mini-cards">';
