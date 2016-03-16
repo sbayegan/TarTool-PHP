@@ -187,8 +187,8 @@ textarea {
 .status-submit-icon{
 position: absolute;
 bottom:0px;
-right: 5px;
-width: 100px;
+right: 15px;
+width: 90px;
 height: 52px;
 border: 1px dashed black; 
 }
@@ -197,8 +197,8 @@ border: 1px dashed black;
 .submit-icon{
 position: absolute;
 top:0px;
-right: 5px;
-width: 100px;
+right: 15px;
+width: 90px;
 height: 52px;
 border: 1px dashed black; 
 }
@@ -213,7 +213,7 @@ width:530px;
 left:280px;
 top: 80px;
 overflow: scroll;
-border: 1px dashed whitesmoke; 
+//border: 1px dashed whitesmoke; 
 }
 .user-blogging{
 z-index:1;
@@ -224,7 +224,7 @@ width:530px;
 left:280px;
 top: 200px;
 overflow: scroll;
-border: 1px solid whitesmoke; 
+//border: 1px solid whitesmoke; 
 }
 
 
