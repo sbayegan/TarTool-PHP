@@ -177,6 +177,7 @@ height: calc(100% - 250px);
 width:500px;
 left:280px;
 top: 230px;
+overflow-y:scroll; 
 border: 1px solid whitesmoke; 
 }
 
