@@ -24,8 +24,8 @@ $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$user);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
 echo '<span style="position:absolute;display:block;right:5px;bottom:-2px;cursor:pointer;color:red" onclick="deleteComment(';echo $commentid;echo ",";echo $resource;echo')">Delete</span>';
-echo '<b>'.$username.': </b>';
-echo $comment;
+echo '<a href="/techie/'.$username.'">'.'<b>'.$username.'</a>: </b>';
+echo stripslashes($comment);
 echo '</div>';
 }
 

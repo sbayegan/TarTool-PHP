@@ -426,6 +426,8 @@ $("#transparent-comments").fadeOut();
 //document.getElementById("transparent-profile").style.display = 'none';
 //document.getElementById("transparent-box").style.display = 'none';
 //document.getElementById("transparent-square").style.display = 'none';
+
+
 }
 
 

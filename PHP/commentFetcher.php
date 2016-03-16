@@ -30,7 +30,7 @@ if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<span style="po
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
-echo '<b>'.$username.': </b>';
+echo '<a href="/techie/'.$username.'">'.'<b>'.$username.'</a>: </b>';
 echo $outComment['CONTENT'];
 echo '</div>';
 }
