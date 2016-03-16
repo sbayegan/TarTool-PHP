@@ -60,6 +60,8 @@ echo'</div>';
 
 
 
+
+
 echo '<div class="stick-to-top">';
 
   echo '<span class="top-left"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </span>';
@@ -74,71 +76,83 @@ echo '</div>';
 
 $username = mysqli_real_escape_string($conn,$_GET['u']);
 $rightname = $conn->query("SELECT * FROM USERS WHERE USERNAME='".$username."'");
-if($rightname->num_rows == 1){
-$userRow = mysqli_fetch_assoc($rightname);
-echo '<div class="user-info">';
-echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
-echo '<input id="profile-image-upload" class="hidden" type="file" accept="image/*" />';
-
-
-if($userRow['PROFILEPICTURE']!= NULL){
-$width = $userRow['PWIDTH'];
-$height = $userRow['PHEIGHT'];
-
-$finalwidth = 250;
-$finalheight;
-$finalheight = ($height * $finalwidth) / $width;
-echo '<div id="pic-upload" class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
-echo '<img style="border-radius:3px;" src="';echo "/profile/".$userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
-
-	echo '<div class="user-photo-edit">Upload Profile Picture</div>';
-
-echo '</div>';
-}//if($userRow['PROFILEPICTURE']!= NULL)
-else{
-
+if($rightname->num_rows == 0){
+header('Location: http://wwww.tartool.com');
 }
 
-echo '<div class="user-name" id="user-name" onclick="changename()">';
-		echo '<span id="full-name">';
-		echo $userRow['NAME'];
-		echo '</span>';
-		echo '<span id="full-name-input-box" style="display:none;">';
-		echo '<input onchange="pushname()" type="text" id="newname" name="FirstName" value="';echo $userRow['NAME'];echo '">';
-		echo '</span>';
-	echo '<div class="user-name-edit" id="user-name-edit">';
-	echo 'Edit';
+if($rightname->num_rows == 1 ){
+$userRow = mysqli_fetch_assoc($rightname);
+	if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$userRow['USERID']){
+
+// This is where the left column gets produced!
+		echo '<div class="user-info">';
+		echo '<div class="transparent" id="transparent" onclick="closeallprofile()"></div>';
+		// Lets take care of the picture
+		echo '<input id="profile-image-upload" class="hidden" type="file" accept="image/*" />';
+			if($userRow['PROFILEPICTURE']!= NULL){
+				$width = $userRow['PWIDTH'];
+				$height = $userRow['PHEIGHT'];
+				$finalwidth = 250;
+				$finalheight;
+				$finalheight = ($height * $finalwidth) / $width;
+				echo '<div id="pic-upload" class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
+					echo '<img style="border-radius:3px;" src="';echo "/profile/".$userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
+					echo '<div class="user-photo-edit">Upload Profile Picture</div>';
+				echo '</div>';
+			}//if($userRow['PROFILEPICTURE']!= NULL)
+			else{
+				echo '<div id="pic-upload" class="user-photo" style="font-size:1000%;padding-left:40%;">!';
+					echo '<div class="user-photo-edit" style="font-size:10%;margin-left:-100px;">Upload Profile Picture</div>';
+				echo '</div>';
+				}
+		// Lets take care of the Name!
+		echo '<div class="user-name" id="user-name" onclick="changename()">';
+			echo '<span id="full-name">';
+			if(strlen($userRow['NAME'])<1 || $userRow['NAME']==NULL){echo 'Click and Name Yourself';}
+				else{echo $userRow['NAME'];}
+			echo '</span>';
+			echo '<span id="full-name-input-box" style="display:none;">';
+			echo '<input onchange="pushname()" type="text" id="newname" name="FirstName" value="';echo $userRow['NAME'];echo '">';
+			echo '</span>';
+			echo '<div class="user-name-edit" id="user-name-edit">';
+			echo 'Edit';
+			echo '</div>';
+		echo '</div>';
+
+
+		echo '<div class="user-occupation" id="user-occupation" onclick="changedescription()">';
+			echo '<span id="occupation">';
+			if(strlen($userRow['DESCRIPTION'])<1 || $userRow['DESCRIPTION']==NULL){echo 'Click to Introduce Yourself!';}
+				else{echo $userRow['DESCRIPTION'];}
+			echo '</span>';
+			echo '<span id="occupation-input-box" style="display:none;">';
+			echo '<textarea onchange="pushdesc()" id="newdesc" name="comment" form="usrform" style="width:100%;">';echo $userRow['DESCRIPTION'];echo '</textarea>';
+			echo '</span>';
+			echo '<div class="user-occupation-edit" id="user-occupation-edit">Edit</div>';
+		echo '</div>';
+	// Update status section!
+	echo '<div class="update-status">';
+		echo '<div class="submit-icon">';
+		echo '</div>';
 	echo '</div>';
-echo '</div>';
 
-
-echo '<div class="user-occupation" id="user-occupation" onclick="changedescription()">';
-		
-		echo '<span id="occupation">';
-		echo $userRow['DESCRIPTION'];
-		echo '</span>';
-		echo '<span id="occupation-input-box" style="display:none;">';
-		echo '<textarea onchange="pushdesc()" id="newdesc" name="comment" form="usrform" style="width:100%;">';echo $userRow['DESCRIPTION'];echo '</textarea>';
-		echo '</span>';
-	echo '<div class="user-occupation-edit" id="user-occupation-edit">';
-	echo 'Edit';
+	echo '<div class="latest-mini-cards">';
 	echo '</div>';
-echo '</div>';
 
-echo '<div class="user-blogging">';
-card(94);
-card(94);
-card(94);
-
-echo '';
-echo '</div>';
+	//Bloging	
+	echo '<div class="user-blogging">';
+	card(94);
+	card(94);
+	echo '</div>';
 
 echo '</div>';//<div class="user-info">
-}//if($rightname->num_rows == 1)
-
+}//if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$userRow['USERID'])
 else{
+// Here I just have to fetch the public profile!
 
 }
+}//if($rightname->num_rows == 1)
+
 
 echo '</body>';
 echo '<footer>';

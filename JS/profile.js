@@ -28,8 +28,10 @@ $('#profile-image-upload').change(function() {
 });
 });
 
-function closeall(){
+function closeallprofile(){
 $("#transparent").fadeOut();
+$("#transparent-comments").fadeOut();
+
 document.getElementById("user-name").style.zIndex = "1";
 document.getElementById("user-occupation").style.zIndex = "1";
 document.getElementById("full-name-input-box").style.display = 'none';
