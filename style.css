@@ -170,18 +170,46 @@ padding:5px;
 //border: 1px dashed grey;
 }
 
-.latest-mini-cards{
+.latest-mini-cards-title{
+text-align:center;
+padding:5px;
+font-size: 150%;
+font-weight:400;
 position: fixed;
+background-color:whitesmoke;
 overflow: scroll;
 top:80px;
 right: 10px;
 width: calc(100% - 830px);
-height: calc(100% - 90px);
-border: 1px dashed whitesmoke; 
+height: 40px;
+//border: 1px dashed black; 
+}
+
+.latest-mini-cards{
+position: fixed;
+overflow: scroll;
+top:130px;
+right: 10px;
+width: calc(100% - 830px);
+height: calc(100% - 140px);
+//border: 1px dashed black; 
 }
 
 textarea {
     resize: none;
+}
+
+.flat-card{
+display: inline-block;
+width: 99%;
+height: auto;
+text-align: left;
+//background-color: whitesmoke;
+border:1px solid whitesmoke;
+font-size: 120%;
+margin: 2px;
+padding: 3px;
+font-weight: 200;
 }
 
 .status-submit-icon{

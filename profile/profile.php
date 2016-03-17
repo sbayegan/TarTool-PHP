@@ -139,7 +139,19 @@ $userRow = mysqli_fetch_assoc($rightname);
 		echo '<textarea style="position:absolute;left:10px;top:0px;bottom:0px;width:410px;font-size:120%;padding:5px;"></textarea>';
 	echo '</div>';
 
+	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
 	echo '<div class="latest-mini-cards">';
+		$minis = $conn->query("SELECT * FROM FAVOURITES JOIN RESOURCES WHERE FAVOURITES"."."."USERID=".$userRow['USERID']." AND FAVOURITES.RESOURCEID=RESOURCES.RESOURCEID");
+		if($minis->num_rows == 0){echo '<div class="flat-card">This Stack is Empty</div>';}
+		else{
+			while($flat = mysqli_fetch_assoc($minis)){
+			 echo '<a href="';	
+			 	echo $flat['URL'].'">';
+				echo '<div class="flat-card">';
+					echo $flat['TITLE'];
+				echo '</div>';
+			 echo '</a>';
+			}}//else
 	echo '</div>';
 
 	//Bloging	
