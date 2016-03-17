@@ -915,6 +915,7 @@ border: 0px dashed grey;
 
 .description{
 font-size:115%;
+font-weight: 200;
 overflow: scroll;
 position: absolute;
 background-color:#FCFCFC;
