@@ -634,11 +634,12 @@ width:340px;
 
 
 .top-left-name{
-font-family: Thin;
+//font-family: Thin;
 font-size:280%;
+font-weight:100;
 float: left;
 position: absolute;
-top:5px;
+top:0px;
 left:20px;
 }
 

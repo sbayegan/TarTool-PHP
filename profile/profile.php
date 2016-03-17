@@ -141,12 +141,12 @@ $userRow = mysqli_fetch_assoc($rightname);
 
 	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
 	echo '<div class="latest-mini-cards">';
-		$minis = $conn->query("SELECT * FROM FAVOURITES JOIN RESOURCES WHERE FAVOURITES"."."."USERID=".$userRow['USERID']." AND FAVOURITES.RESOURCEID=RESOURCES.RESOURCEID");
+		$minis = $conn->query("SELECT * FROM FAVOURITES JOIN RESOURCES WHERE FAVOURITES"."."."USERID=".$userRow['USERID']." AND FAVOURITES.RESOURCEID=RESOURCES.RESOURCEID  ORDER BY DATE DESC");
 		if($minis->num_rows == 0){echo '<div class="flat-card">This Stack is Empty</div>';}
 		else{
 			while($flat = mysqli_fetch_assoc($minis)){
 			 echo '<a href="';	
-			 	echo $flat['URL'].'">';
+			 	echo $flat['URL'].'" target="_blank">';
 				echo '<div class="flat-card">';
 					echo $flat['TITLE'];
 				echo '</div>';
