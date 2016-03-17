@@ -65,7 +65,7 @@ echo'</div>';
 echo '<div class="stick-to-top">';
 
   echo '<span class="top-left"><img src="/logo/junto_logo_solo.png" alt="logo" height="50" width="40"/> </span>';
-  echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:200px;color:grey;">Get Inspired</h2>';
+  //echo '<h2 style="font-family:Thin;font-size:190%;location:fixed;color:black;margin-top:17px;margin-left:200px;color:grey;">Get Inspired</h2>';
   echo ' <div class="top-left-name">tarTool</div>';
   echo ' <div class="top-left-beta">BETA</div>';
   echo '<a href="../."> <div class="logo-link"></div></a>';
