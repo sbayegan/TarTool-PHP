@@ -402,7 +402,12 @@ echo '<div class="stick-to-top">';
 	// POWER BUTTON - Check the cookie and set the color and the link of the power button accordingly
 	   if(isset($_COOKIE['junto'])){
 	   echo '<span style="position:absolute;float:left;right:30px;top:5px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45" alt="signout"></a></span>';
-	   echo '<span style="position:absolute;float:left;right:100px;top:5px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';     }
+	   echo '<span style="position:absolute;float:left;right:100px;top:5px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';
+      echo '<span style="position:absolute;float:left;right:170px;top:15px;font-size:150%;font-weight:300;"> <a style="text-decoration:none;" href="/techie/';
+        echo $id;
+      echo '">My Profile</a></span>';
+      }
+
 	   else{
 	   echo '<div class="login-square">';
      echo '<a style="margin-right:20px;font-size:110%;" href="#" onclick="showsignin()"  role="button">Log In</a>';

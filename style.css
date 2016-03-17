@@ -13,7 +13,9 @@ font-family: Thin;
 src: url(fonts/JosefinSansThin.ttf);
 }
 
+
 span {cursor: pointer}
+
 a:active,.slider a:hover,a:visited,a:link{
 text-decoration:none;
 color:black;

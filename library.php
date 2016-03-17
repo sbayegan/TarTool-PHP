@@ -12,6 +12,15 @@ echo "<head>";
 
 analytics();
 
+if(isset($_COOKIE['junto'])){   
+     $value = $_COOKIE['junto'];
+     $result= $conn->query("SELECT * FROM USERS WHERE USERID=".$value);
+     $result = mysqli_fetch_assoc($result);
+     $name = $result["NAME"];
+     $id = $result["USERNAME"];
+     $email = $result["EMAIL"];}
+
+
 echo "<title>";
 echo $UniversalName;
 echo "</title>";
@@ -43,6 +52,10 @@ echo '<div class="stick-to-top">';
 
 echo '<span style="position:absolute;right:30px;top:5px;"> <a href="logout.php"><img src="pictures/power-red.png" height="45" width="45"></a></span>';
 echo '<span style="position:absolute;float:left;right:100px;top:5px;"> <a href="#" onclick="showprofile()"><img src="pictures/profile.png" height="50" width="50" alt="account"></a></span>';
+      echo '<span style="position:absolute;float:left;right:170px;top:15px;font-size:150%;font-weight:300;"> <a style="text-decoration:none;" href="/techie/';
+        echo $id;
+      echo '">My Profile</a></span>';
+
 echo '</div>';
 
 
@@ -103,13 +116,7 @@ echo '</div>';
 
 echo '<div class="transparent" id="transparent" onclick="closeall()"></div>';
   // A commented code snippet that gets the name of the user
-if(isset($_COOKIE['junto'])){   
-     $value = $_COOKIE['junto'];
-     $result= $conn->query("SELECT * FROM USERS WHERE USERID=".$value);
-     $result = mysqli_fetch_assoc($result);
-     $name = $result["NAME"];
-     $id = $result["USERNAME"];
-     $email = $result["EMAIL"];}
+
 
 
 echo '<div class="profile-square" id="transparent-profile">';
