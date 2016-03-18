@@ -133,14 +133,19 @@ $userRow = mysqli_fetch_assoc($rightname);
 	// Update status section!
 	echo '<div class="update-status">';
 		echo '<div class="submit-icon">';
+				echo '<img src="/pictures/pencil.png" height="70" width="70">';
+				echo '';
 		echo '</div>';
 		echo '<div class="status-submit-icon">';
+			echo '<div class="button-blue">';
+				echo 'Broadcast';
+			echo '</div>';
 		echo '</div>';
 		echo '<div class="status-encouragement">';
-			echo 'Broadcast to other developers';
+			echo 'Broadcast to other developers!';
 		echo '</div>';
 
-		echo '<textarea style="position:absolute;left:15px;height:70%;bottom:0px;width:410px;font-size:120%;padding:5px;"></textarea>';
+		echo '<textarea style="outline-width: 0;position:absolute;left:15px;height:60px;bottom:25px;width:410px;font-size:110%;padding-left:2px;"></textarea>';
 	echo '</div>';
 
 	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
