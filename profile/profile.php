@@ -136,6 +136,10 @@ $userRow = mysqli_fetch_assoc($rightname);
 		echo '</div>';
 		echo '<div class="status-submit-icon">';
 		echo '</div>';
+		echo '<div class="status-encouragement">';
+			echo 'Broadcast to other developers';
+		echo '</div>';
+
 		echo '<textarea style="position:absolute;left:15px;height:70%;bottom:0px;width:410px;font-size:120%;padding:5px;"></textarea>';
 	echo '</div>';
 
