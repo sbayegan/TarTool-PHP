@@ -145,7 +145,7 @@ $userRow = mysqli_fetch_assoc($rightname);
 			echo 'Broadcast to other developers!';
 		echo '</div>';
 
-		echo '<textarea style="outline-width: 0;position:absolute;left:15px;height:60px;bottom:25px;width:410px;font-size:110%;padding-left:2px;"></textarea>';
+		echo '<textarea style="outline-width: 0;position:absolute;left:15px;height:60px;bottom:25px;width:410px;font-size:110%;padding-left:2px;font-weight:200;"></textarea>';
 	echo '</div>';
 
 	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
