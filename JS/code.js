@@ -94,7 +94,7 @@ function showcomments(id){
 $("#transparent").fadeIn();
 $("#transparent-comments").fadeIn();
 commentingResource = id;
-document.getElementById("transparent-comments-ajax").innerHTML = "";
+document.getElementById("transparent-comments-ajax").innerHTML = "<img style='position:absolute;left:50%;margin-left:-50px;top:35%;' src='/pictures/squares-loader.gif'>";
 var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {

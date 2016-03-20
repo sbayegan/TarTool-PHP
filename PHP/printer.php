@@ -135,6 +135,46 @@ $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
 $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
+if ($medium == 'Broadcast'){
+echo '<div class="broadcast-box">';
+	echo '<div class="broadcast-square-top">';
+		echo '<div class="broadcast-name">';
+			$poster = $result['SUBMITTER'];
+			$poster = $conn->query('SELECT * FROM USERS WHERE USERID='.$poster);
+			$poster = mysqli_fetch_assoc($poster);
+			$name = $poster['NAME'];
+			echo $name;
+		echo '</div>';
+		echo '<div class="broadcast-thumbnail">';
+			$picture = $poster['PROFILEPICTURE'];
+			if($picture != 'NULL'){
+				$height = $poster['PHEIGHT'];
+				$width = $poster['PWIDTH'];
+				$finalheight = 100;
+				$finalwidth = ($width * $finalheight) / $height;
+				$finalwidth = round($finalwidth);
+				echo '<img src="';echo $picture;echo '" width="';echo $finalwidth ;echo'" height="';echo $finalheight;echo'">';
+			}
+			else{
+				echo "<span style='font-size:500%;margin-right:40px;'>!</span>";
+			}
+		echo '</div>';		
+	echo '</div>';
+	echo '<div class="broadcast-square-bottom">';
+		echo $result['DESCRIPTION'];
+	echo '</div>';	
+	echo '<div class="comments" onclick="showcomments(';echo $i ;echo ')">';
+    	$comments = $conn->query("SELECT COUNT(*) AS TOTAL FROM COMMENTS WHERE RESOURCEID=".$i);
+    	$comments = mysqli_fetch_assoc($comments);
+    	echo '<span id="comment-counter-';echo $i;echo '">';
+    	echo $comments['TOTAL'];
+    	echo '</span>';
+    echo ' comments</div>';
+echo '</div>';
+return;
+}
+
+
 $firsttag = mysqli_fetch_assoc($tags);
 
 echo '<div class="box" style="background-color:#FCFCFC;">';

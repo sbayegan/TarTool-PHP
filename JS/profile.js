@@ -108,7 +108,7 @@ function uploadBroadcast(){
                     location.reload();
                     }
                 else{
-                    document.getElementById("broadcast").value = xmlhttp.responseText;
+                    //document.getElementById("broadcast").value = xmlhttp.responseText;
                 }
                     }
             }

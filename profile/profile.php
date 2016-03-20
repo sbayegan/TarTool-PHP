@@ -95,6 +95,7 @@ $userRow = mysqli_fetch_assoc($rightname);
 				$finalwidth = 250;
 				$finalheight;
 				$finalheight = ($height * $finalwidth) / $width;
+				$finalheight = round($finalheight);
 				echo '<div id="pic-upload" class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
 					echo '<img style="border-radius:3px;" src="';echo "/profile/".$userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
 					echo '<div class="user-photo-edit">Upload Profile Picture</div>';
@@ -165,7 +166,65 @@ $userRow = mysqli_fetch_assoc($rightname);
 
 	//Bloging	
 	echo '<div class="user-blogging">';
+//********************************************************************
+echo '<div class="broadcast-box">';
+	echo '<div class="broadcast-square-top">';
+		echo '<div class="broadcast-name">';
+			echo 'Saeid Bayeganeh';
+		echo '</div>';
+			echo '<div class="broadcast-thumbnail">';
+				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
+			echo '</div>';
+	echo '</div>';
+	echo '<div class="broadcast-square-bottom">';
+	echo '
+	Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
+	';
+	echo '</div>';
+	echo '<div class="comments">';
+	echo '</div>';
+echo '</div>';
 
+
+echo '<div class="broadcast-box">';
+	echo '<div class="broadcast-square-top">';
+		echo '<div class="broadcast-name">';
+			echo 'Saeid Bayeganeh';
+		echo '</div>';
+			echo '<div class="broadcast-thumbnail">';
+				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
+			echo '</div>';
+	echo '</div>';
+	echo '<div class="broadcast-square-bottom">';
+		echo '
+		Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
+		';
+	echo '</div>';
+	echo '<div class="comments">';
+	echo '</div>';
+echo '</div>';
+
+
+
+
+echo '<div class="broadcast-box">';
+	echo '<div class="broadcast-square-top">';
+		echo '<div class="broadcast-name">';
+			echo 'Saeid Bayeganeh';
+		echo '</div>';
+			echo '<div class="broadcast-thumbnail">';
+				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
+			echo '</div>';
+	echo '</div>';
+	echo '<div class="broadcast-square-bottom">';
+	echo '
+	Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
+	';
+	echo '</div>';
+	echo '<div class="comments">';
+	echo '</div>';
+echo '</div>';
+//********************************************************************
 	echo '</div>';
 
 echo '</div>';//<div class="user-info">
