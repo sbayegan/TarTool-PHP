@@ -12,7 +12,7 @@ $result = $conn->query($query);
 $final;
 $counter = $feedquantity;
 while($card = mysqli_fetch_assoc($result)){
-	if($card['RESOURCEID'] < $last && $card['MEDIUM']!='Broadcast'){
+	if($card['RESOURCEID'] < $last){
 		$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
 		while($temp = mysqli_fetch_assoc($cats)){
 		if($counter == 0){break;}
@@ -24,10 +24,6 @@ while($card = mysqli_fetch_assoc($result)){
 				break;}
 		}//while
 	}// if statement
-		else{
-		$final = $card['RESOURCEID'];
-		$counter = $counter - 1;
-	}
 	if($counter == 0){
 		break;}// if statement
 		}
@@ -45,7 +41,7 @@ $final;
 $counter = $feedquantity;
 
 while($card = mysqli_fetch_assoc($result)){
-	if($card['RESOURCEID'] < $last){
+	if($card['RESOURCEID'] < $last && $card['MEDIUM']!='Broadcast'){
 		$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
 		while($temp = mysqli_fetch_assoc($cats)){
 			$match = $conn->query('select * from INTERESTS where USERID='.$_COOKIE['junto'].' and INTEREST="'.$temp['SUB'].'"');
@@ -55,6 +51,10 @@ while($card = mysqli_fetch_assoc($result)){
 				break;}
 		}//while
 	}// if statement
+		else{
+		$final = $card['RESOURCEID'];
+		$counter = $counter - 1;
+	}
 	if($counter == 0){	
 		echo $final;
 		break;
