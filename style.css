@@ -917,6 +917,13 @@ width: auto;
 height: 100px;
 }
 
+.broadcast-box a{
+    text-decoration: none;
+}
+.broadcast-box a:hover{ 
+    color: #000000;
+}
+
 .broadcast-box{
 //overflow: hidden;
 //float:top;
