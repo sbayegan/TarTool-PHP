@@ -91,6 +91,33 @@ function pushname(){
         xmlhttp.open("POST", "/profile/pushname.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("name="+name);
-
-
 }
+
+
+function uploadBroadcast(){
+// Get the contents of the status box
+// Make sure the text is not empty and also set a character limit.
+    var broadcast = document.getElementById("broadcast").value;
+    
+// Make the ajax call and send the text and then refresh the page.
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if(xmlhttp.responseText == 1){
+                    location.reload();
+                    }
+                else{
+                    document.getElementById("broadcast").value = xmlhttp.responseText;
+                }
+                    }
+            }
+        xmlhttp.open("POST", "/profile/uploadBroadcast.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("broadcast="+broadcast);
+}
+
+
+
+
+

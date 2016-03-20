@@ -132,20 +132,20 @@ $userRow = mysqli_fetch_assoc($rightname);
 		echo '</div>';
 	// Update status section!
 	echo '<div class="update-status">';
-		echo '<div class="submit-icon">';
+		echo '<div class="submit-icon" >';
 				echo '<img src="/pictures/pencil.png" height="70" width="70">';
 				echo '';
 		echo '</div>';
 		echo '<div class="status-submit-icon">';
-			echo '<div class="button-blue">';
+			echo '<div class="button-blue" onclick="uploadBroadcast()">';
 				echo 'Broadcast';
 			echo '</div>';
 		echo '</div>';
 		echo '<div class="status-encouragement">';
-			echo 'Broadcast to other developers!';
+			echo 'Let other technology enthusiasts hear it!';
 		echo '</div>';
 
-		echo '<textarea style="outline-width: 0;position:absolute;left:15px;height:60px;bottom:25px;width:410px;font-size:110%;padding-left:2px;font-weight:200;"></textarea>';
+		echo '<textarea id="broadcast" style="outline-width: 0;position:absolute;left:15px;height:60px;bottom:25px;width:410px;font-size:110%;padding-left:2px;font-weight:200;"></textarea>';
 	echo '</div>';
 
 	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
@@ -165,8 +165,7 @@ $userRow = mysqli_fetch_assoc($rightname);
 
 	//Bloging	
 	echo '<div class="user-blogging">';
-	card(94);
-	card(94);
+
 	echo '</div>';
 
 echo '</div>';//<div class="user-info">

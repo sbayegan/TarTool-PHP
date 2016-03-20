@@ -461,7 +461,7 @@ function loader(last,string){
                 var node = document.createElement("DIV");
 		        node.setAttribute("id", "Frame"+Frame);
 		        document.getElementById("feed").appendChild(node);
-                document.getElementById("Frame"+Frame).innerHTML = "<div class='end-of-feed'> No more cards!</div>";
+                document.getElementById("Frame"+Frame).innerHTML = "<div class='end-of-feed'> End of Stack!</div>";
 		          if(Load==1){loader.parentNode.removeChild(loader);Load=0;}	
 
 
