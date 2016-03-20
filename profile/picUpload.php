@@ -4,7 +4,7 @@ include('../datalogin.php');
 
 if(isset($_FILES["image"]) && isset($_COOKIE['junto'])) {
   echo 'File detected';
-  $target_dir = "/pics/";
+  $target_dir = "pics/";
   $target_file = $target_dir . $_COOKIE['junto'];
   $imageFileType = pathinfo(basename($_FILES["image"]["name"]),PATHINFO_EXTENSION);
   $target_file = $target_file. '.' . $imageFileType;

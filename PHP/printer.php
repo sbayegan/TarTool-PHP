@@ -153,7 +153,7 @@ echo '<div class="broadcast-box">';
 				$finalheight = 100;
 				$finalwidth = ($width * $finalheight) / $height;
 				$finalwidth = round($finalwidth);
-				echo '<img src="';echo $picture;echo '" width="';echo $finalwidth ;echo'" height="';echo $finalheight;echo'">';
+				echo '<img src="/profile/';echo $picture;echo '" width="';echo $finalwidth ;echo'" height="';echo $finalheight;echo'">';
 			}
 			else{
 				echo "<span style='font-size:500%;margin-right:40px;'>!</span>";
