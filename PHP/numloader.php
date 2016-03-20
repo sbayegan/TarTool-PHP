@@ -12,7 +12,7 @@ $result = $conn->query($query);
 $final;
 $counter = $feedquantity;
 while($card = mysqli_fetch_assoc($result)){
-	if($card['RESOURCEID'] < $last){
+	if($card['RESOURCEID'] < $last && $card['MEDIUM']!='Broadcast'){
 		$cats = $conn->query('select * from CATEGORIES where RESOURCEID='.$card['RESOURCEID']);
 		while($temp = mysqli_fetch_assoc($cats)){
 		if($counter == 0){break;}
@@ -24,6 +24,10 @@ while($card = mysqli_fetch_assoc($result)){
 				break;}
 		}//while
 	}// if statement
+		else{
+		$final = $card['RESOURCEID'];
+		$counter = $counter - 1;
+	}
 	if($counter == 0){
 		break;}// if statement
 		}
