@@ -922,7 +922,8 @@ height: 100px;
 }
 .broadcast-box a:hover{ 
     color: #000000;
-}
+    text-decoration: none;
+    }
 
 .broadcast-box{
 //overflow: hidden;
