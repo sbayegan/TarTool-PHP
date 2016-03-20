@@ -149,7 +149,7 @@ echo '<a href="http://www.tartool.com/techie/';echo $poster['USERNAME'];echo '">
 		echo '</div>';
 		echo '<div class="broadcast-thumbnail">';
 			$picture = $poster['PROFILEPICTURE'];
-			if($picture != 'NULL'){
+			if($picture != NULL){
 				$height = $poster['PHEIGHT'];
 				$width = $poster['PWIDTH'];
 				$finalheight = 100;
