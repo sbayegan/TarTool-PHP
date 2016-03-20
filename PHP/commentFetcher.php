@@ -12,11 +12,16 @@ else {echo -1;return;}
 
 
 $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER BY DATE");
-$title = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
-$title = mysqli_fetch_assoc($title);
-$title = $title['TITLE'];
+$row = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
+$row = mysqli_fetch_assoc($row);
+$title = $row['TITLE'];
 echo '<div style="position:absolute;top:20px;left:20px;font-size:160%;">';
-echo $title;
+if($row['MEDIUM']!='Broadcast'){echo $title;}
+else{
+	$name = $conn->query("SELECT * FROM USERS WHERE USERID=".$row['SUBMITTER']);
+	$name = mysqli_fetch_assoc($name);
+	echo $name['NAME'];
+}
 echo '</div>';
 // create a while loop
 echo '<div id="commentAppend" style="position:absolute;top:70px;bottom:110px;overflow:scroll;">';
