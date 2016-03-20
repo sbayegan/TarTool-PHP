@@ -51,7 +51,7 @@ while($card = mysqli_fetch_assoc($result)){
 				break;}
 		}//while
 	}// if statement
-		else{
+		if($card['RESOURCEID'] < $last && $card['MEDIUM']=='Broadcast'){
 		$final = $card['RESOURCEID'];
 		$counter = $counter - 1;
 	}
