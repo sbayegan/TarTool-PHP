@@ -136,13 +136,15 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 if ($medium == 'Broadcast'){
+
 echo '<div class="broadcast-box">';
-	echo '<div class="broadcast-square-top">';
-		echo '<div class="broadcast-name">';
 			$poster = $result['SUBMITTER'];
 			$poster = $conn->query('SELECT * FROM USERS WHERE USERID='.$poster);
 			$poster = mysqli_fetch_assoc($poster);
 			$name = $poster['NAME'];
+echo '<a href="http://www.tartool.com/techie/';echo $poster['USERNAME'];echo '">';
+	echo '<div class="broadcast-square-top">';
+		echo '<div class="broadcast-name">';
 			echo $name;
 		echo '</div>';
 		echo '<div class="broadcast-thumbnail">';
@@ -162,7 +164,8 @@ echo '<div class="broadcast-box">';
 	echo '</div>';
 	echo '<div class="broadcast-square-bottom">';
 		echo $result['DESCRIPTION'];
-	echo '</div>';	
+	echo '</div>';
+echo  '</a>';
 	echo '<div class="comments" onclick="showcomments(';echo $i ;echo ')">';
     	$comments = $conn->query("SELECT COUNT(*) AS TOTAL FROM COMMENTS WHERE RESOURCEID=".$i);
     	$comments = mysqli_fetch_assoc($comments);
