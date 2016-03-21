@@ -647,9 +647,12 @@ background-color: #FEFEFE;
 
 
 .library-switch-box{
-    text-align: center;
+    background-color:lightyellow;
+    //border:1px solid grey;
+    text-align: left;
     font-size:150%;
     padding:4px;
+    padding-left: 10px;
     position:fixed;
     top:60px;
     left: 150px;
@@ -673,7 +676,7 @@ position:fixed;
 top:0px;
 left:0px;
 height: 60px;
-width:340px;
+width:140px;
 }
 
 

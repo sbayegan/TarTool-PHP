@@ -180,7 +180,7 @@ echo '</form>';
 
 
 
-echo '<div class="library-switch-box" onclick="changeview()"> Click this div to change the categorization! </div>';
+echo '<div class="library-switch-box" onclick="changeview()"> Switch Views </div>';
 
 
 

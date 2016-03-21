@@ -227,8 +227,8 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
     echo '<img src="/pictures/facebook.png" width="30" height="30" class="facebook-icon">';
     echo '</a>';
-    echo '<a href="https://twitter.com/share?url='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/twitter.png" width="30" height="30" class="twitter-icon">';
+    echo '<a href="https://plus.google.com/share?url='.$result['URL'].'" target="_blank">';
+    echo '<img src="/pictures/google.png" width="30" height="30" class="twitter-icon">';
     echo '</a>';
     echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
     echo '<img src="/pictures/linkedin.png" width="30" height="30" class="linkedin-icon">';
@@ -291,7 +291,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo '<div class="numbers">';
 
     echo '<div class="linkedin-score">'.$result['LINKEDIN'].'</div>';
-    echo '<div class="twitter-score">'.$result['TWITTER'].'</div>';
+    echo '<div class="twitter-score">'.$result['GOOGLEPLUS'].'</div>';
     echo '<div class="facebook-score">'.$result['FACEBOOK'].'</div>';  
     
    
