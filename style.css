@@ -189,6 +189,7 @@ height: 40px;
 }
 
 .latest-mini-cards{
+z-index: -1;
 position: fixed;
 overflow: scroll;
 top:130px;
