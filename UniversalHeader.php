@@ -11,7 +11,7 @@ echo "<script>
 </script>";
 }
 
-$UniversalName="TarTool";
+$UniversalName="tarTool";
 //phpinfo();
 
 

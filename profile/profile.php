@@ -167,63 +167,19 @@ $userRow = mysqli_fetch_assoc($rightname);
 	//Bloging	
 	echo '<div class="user-blogging">';
 //********************************************************************
-echo '<div class="broadcast-box">';
-	echo '<div class="broadcast-square-top">';
-		echo '<div class="broadcast-name">';
-			echo 'Saeid Bayeganeh';
-		echo '</div>';
-			echo '<div class="broadcast-thumbnail">';
-				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
-			echo '</div>';
-	echo '</div>';
-	echo '<div class="broadcast-square-bottom">';
-	echo '
-	Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
-	';
-	echo '</div>';
-	echo '<div class="comments">';
-	echo '</div>';
-echo '</div>';
-
-
-echo '<div class="broadcast-box">';
-	echo '<div class="broadcast-square-top">';
-		echo '<div class="broadcast-name">';
-			echo 'Saeid Bayeganeh';
-		echo '</div>';
-			echo '<div class="broadcast-thumbnail">';
-				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
-			echo '</div>';
-	echo '</div>';
-	echo '<div class="broadcast-square-bottom">';
-		echo '
-		Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
-		';
-	echo '</div>';
-	echo '<div class="comments">';
-	echo '</div>';
-echo '</div>';
+ // Print the resources submitted by the user
+$query = "SELECT * FROM RESOURCES WHERE SUBMITTER=".$userRow['USERID'];
+echo $query;
+$CardStack = $conn->query($query);
+while ($go = mysqli_fetch_assoc($CardStack)){
+	card($go['RESOURCEID']);
+}
 
 
 
 
-echo '<div class="broadcast-box">';
-	echo '<div class="broadcast-square-top">';
-		echo '<div class="broadcast-name">';
-			echo 'Saeid Bayeganeh';
-		echo '</div>';
-			echo '<div class="broadcast-thumbnail">';
-				echo '<img src="http://www.tartool.com/profile/pics/34.jpg" width="160" height="100">';
-			echo '</div>';
-	echo '</div>';
-	echo '<div class="broadcast-square-bottom">';
-	echo '
-	Every year I release a list of the best, most interesting blogs and websites I have encountered in the previous 365 days that I think other people should know about in the coming 365 days. I’ve done this for 3 years straight—this will be the 4th. As in years past this post was literally 1 year in the making (although it took a mere 2 days to organize and assemble).
-	';
-	echo '</div>';
-	echo '<div class="comments">';
-	echo '</div>';
-echo '</div>';
+
+
 //********************************************************************
 	echo '</div>';
 
@@ -231,6 +187,7 @@ echo '</div>';//<div class="user-info">
 }//if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$userRow['USERID'])
 else{
 // Here I just have to fetch the public profile!
+
 
 }
 }//if($rightname->num_rows == 1)
