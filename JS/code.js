@@ -312,7 +312,7 @@ document.getElementById("samplecard-description").innerHTML= description;
                 if(xmlhttp.responseText.length < 10)document.getElementById("samplecard-facebook").innerHTML = xmlhttp.responseText;
                                                                     }
                                                 }
-        xmlhttp.open("GET", "PHP/socialscores/facebook.php?URL=" + url, true);
+        xmlhttp.open("GET", "/PHP/socialscores/facebook.php?URL=" + url, true);
         xmlhttp.send();
         //linkedin
         var xmlhttplink = new XMLHttpRequest();
@@ -321,7 +321,7 @@ document.getElementById("samplecard-description").innerHTML= description;
                 if(xmlhttplink.responseText.length < 10){document.getElementById("samplecard-linkedin").innerHTML = xmlhttplink.responseText;}
                                                                     }
                                                 }
-        xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
+        xmlhttplink.open("GET", "/PHP/socialscores/linkedin.php?URL=" + url, true);
         xmlhttplink.send();
         //GooglePlus
         var xmlhttpg = new XMLHttpRequest();
@@ -330,7 +330,7 @@ document.getElementById("samplecard-description").innerHTML= description;
                 if(xmlhttpg.responseText.length < 10){document.getElementById("samplecard-google").innerHTML = xmlhttpg.responseText;}
                                                                     }
                                                 }
-        xmlhttpg.open("GET", "PHP/socialscores/google.php?URL=" + url, true);
+        xmlhttpg.open("GET", "/PHP/socialscores/google.php?URL=" + url, true);
         xmlhttpg.send();
                             }//if(url.length !=0)
 // Deal with the thumbnail URL
