@@ -33,7 +33,7 @@ $("#transparent-box").fadeOut();
 $("#transparent-square").fadeOut();
 $("#transparent").fadeOut();
 $("#transparent-comments").fadeOut();
-
+document.getElementById("userinf").style.zIndex = "1";
 document.getElementById("user-name").style.zIndex = "1";
 document.getElementById("user-occupation").style.zIndex = "1";
 document.getElementById("full-name-input-box").style.display = 'none';
@@ -46,7 +46,7 @@ document.getElementById("occupation").style.display = 'block';
 
 
 function changename(){
-
+document.getElementById("userinf").style.zIndex = "80";
 document.getElementById("user-name").style.zIndex = "100";
 document.getElementById("user-name-edit").innerHTML = "";
 $("#transparent").fadeIn();
@@ -55,6 +55,7 @@ document.getElementById("full-name-input-box").style.display = 'block';
 }
 
 function changedescription(){
+document.getElementById("userinf").style.zIndex = "80";
 document.getElementById("user-occupation").style.zIndex = "100";
 document.getElementById("user-occupation-edit").innerHTML = "";
 $("#transparent").fadeIn();
