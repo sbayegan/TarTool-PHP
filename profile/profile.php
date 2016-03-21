@@ -2,6 +2,8 @@
 include('../UniversalHeader.php');
 include('../datalogin.php');
 include('../PHP/printer.php');
+include('../submissionPanel.php');
+
 if(!isset($_COOKIE['junto'])){
 //header('Location: http://wwww.tartool.com');
 }
@@ -138,9 +140,8 @@ $userRow = mysqli_fetch_assoc($rightname);
 	echo '</div>';//<div class="user-info">
 	// Update status section!
 	echo '<div class="update-status">';
-		echo '<div class="submit-icon" >';
+		echo '<div class="submit-icon" onclick="showsubmission()" >';
 				echo '<img src="/pictures/pencil.png" height="70" width="70">';
-				echo '';
 		echo '</div>';
 		echo '<div class="status-submit-icon">';
 			echo '<div class="button-blue" onclick="uploadBroadcast()">';

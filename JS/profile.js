@@ -29,6 +29,8 @@ $('#profile-image-upload').change(function() {
 });
 
 function closeallprofile(){
+$("#transparent-box").fadeOut();
+$("#transparent-square").fadeOut();
 $("#transparent").fadeOut();
 $("#transparent-comments").fadeOut();
 
