@@ -92,7 +92,7 @@ else{
 $conn->query($query);
 score($resourceid);
 if($type == "Video/Audio"){
-  $conn->query("UPDATE RESOURCES SET PROFILEPICTURE='thumbnails/YouTube-Logo.png' WHERE RESOURCEID=$resourceid");
+  $conn->query("UPDATE RESOURCES SET PROFILEPICTURE='/thumbnails/YouTube-Logo.png' WHERE RESOURCEID=$resourceid");
 }
 
 

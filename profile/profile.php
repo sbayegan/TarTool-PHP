@@ -168,8 +168,7 @@ $userRow = mysqli_fetch_assoc($rightname);
 	echo '<div class="user-blogging">';
 //********************************************************************
  // Print the resources submitted by the user
-$query = "SELECT * FROM RESOURCES WHERE SUBMITTER=".$userRow['USERID'];
-echo $query;
+$query = "SELECT * FROM RESOURCES WHERE SUBMITTER=".$userRow['USERID']." ORDER BY ADDED DESC";
 $CardStack = $conn->query($query);
 while ($go = mysqli_fetch_assoc($CardStack)){
 	card($go['RESOURCEID']);
