@@ -112,11 +112,11 @@ echo '
   </a>
   <div class="score">
 
-      <img src="pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
+      <img src="/pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
 
-      <img src="pictures/google.png" width="30" height="30" class="twitter-icon" alt="google">
+      <img src="/pictures/google.png" width="30" height="30" class="twitter-icon" alt="google">
 
-      <img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
+      <img src="/pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
 
   </div>
   <div class="numbers">

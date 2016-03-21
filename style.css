@@ -69,7 +69,7 @@ label.css-label {
  position: fixed;
  top:85px;
  width: 250px;
- height: 600px;
+ height: auto;
  left: 10px;
 // border: 1px dashed red;
 }
@@ -278,7 +278,7 @@ height: auto;
 
 
 .update-status{
-z-index:-1;
+z-index:0;
 background-color:white;
 position: fixed;
 height: 110px;

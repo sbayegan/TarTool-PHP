@@ -91,8 +91,9 @@ $userRow = mysqli_fetch_assoc($rightname);
 	if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$userRow['USERID']){
 
 // This is where the left column gets produced!
-		echo '<div class="user-info">';
 		echo '<div class="transparent" id="transparent" onclick="closeallprofile()"></div>';
+		echo '<div class="user-info" id="userinf">';
+
 		// Lets take care of the picture
 		echo '<input id="profile-image-upload" class="hidden" type="file" accept="image/*" />';
 			if($userRow['PROFILEPICTURE']!= NULL){
@@ -188,8 +189,9 @@ else{
 
 
 // This is where the left column gets produced!
-		echo '<div class="user-info">';
 		echo '<div class="transparent" id="transparent" onclick="closeallprofile()"></div>';
+		echo '<div class="user-info">';
+
 		// Lets take care of the picture
 			if($userRow['PROFILEPICTURE']!= NULL){
 				$width = $userRow['PWIDTH'];

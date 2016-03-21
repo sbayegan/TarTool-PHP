@@ -46,6 +46,7 @@ document.getElementById("occupation").style.display = 'block';
 
 
 function changename(){
+document.getElementById("userinf").style.zIndex = "76";
 document.getElementById("user-name").style.zIndex = "100";
 document.getElementById("user-name-edit").innerHTML = "";
 $("#transparent").fadeIn();
