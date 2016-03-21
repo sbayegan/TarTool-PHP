@@ -4,8 +4,11 @@ include('../datalogin.php');
 include('../PHP/printer.php');
 
 
-if(!isset($_COOKIE['junto'])){
-//header('Location: http://wwww.tartool.com');
+$username = mysqli_real_escape_string($conn,$_GET['u']);
+$title = $conn->query("SELECT * FROM USERS WHERE USERNAME='".$username."'");
+if($title->num_rows == 1){
+	$title = mysqli_fetch_assoc($title);
+	$title = $title['NAME'];
 }
 
 echo "<!DOCTYPE html>";
@@ -15,7 +18,7 @@ analytics();
 
 echo "<head>";
 echo "<title>";
-echo $UniversalName;
+echo $title;
 echo "</title>";
 echo '<link rel="shortcut icon" href="../pictures/icon.ico">';
 echo '
