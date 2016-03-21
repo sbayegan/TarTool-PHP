@@ -4,7 +4,7 @@
 include('UniversalHeader.php');
 include('datalogin.php');
 include('printer.php');
-include('submissionPanel.php');
+
 
 
 function interested($user, $subject){
@@ -87,7 +87,8 @@ setvisitor();
 
 }
 
-
+// Include the submission panel
+include('submissionPanel.php');
 
 
 // The transparent background

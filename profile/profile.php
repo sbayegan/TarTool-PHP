@@ -2,7 +2,7 @@
 include('../UniversalHeader.php');
 include('../datalogin.php');
 include('../PHP/printer.php');
-include('../submissionPanel.php');
+
 
 if(!isset($_COOKIE['junto'])){
 //header('Location: http://wwww.tartool.com');
@@ -38,6 +38,8 @@ echo "</head>";
 // HEADER----------------------------------------------------------------------------
 echo '<body style="background-color:white;">';
 
+// Include the submission panel
+include('../submissionPanel.php');
 
 
 echo '<div class="comments-square" id="transparent-comments">';
