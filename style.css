@@ -203,6 +203,7 @@ textarea {
 }
 
 .flat-card{
+z-index: -1;
 display: inline-block;
 width: 99%;
 height: auto;
