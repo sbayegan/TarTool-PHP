@@ -77,7 +77,11 @@ echo '</div>';
 $username = mysqli_real_escape_string($conn,$_GET['u']);
 $rightname = $conn->query("SELECT * FROM USERS WHERE USERNAME='".$username."'");
 if($rightname->num_rows == 0){
-header('Location: http://wwww.tartool.com');
+echo '
+<script>
+window.location.replace("http://tartool.com");
+</script>
+';
 }
 
 if($rightname->num_rows == 1 ){
@@ -181,6 +185,68 @@ while ($go = mysqli_fetch_assoc($CardStack)){
 else{
 // Here I just have to fetch the public profile!
 
+
+// This is where the left column gets produced!
+		echo '<div class="user-info">';
+		echo '<div class="transparent" id="transparent" onclick="closeallprofile()"></div>';
+		// Lets take care of the picture
+			if($userRow['PROFILEPICTURE']!= NULL){
+				$width = $userRow['PWIDTH'];
+				$height = $userRow['PHEIGHT'];
+				$finalwidth = 250;
+				$finalheight;
+				$finalheight = ($height * $finalwidth) / $width;
+				$finalheight = round($finalheight);
+				echo '<div class="user-photo" style="width:';echo $finalwidth;echo'px; height:';echo $finalheight;echo'px;">';
+					echo '<img style="border-radius:3px;" src="';echo "/profile/".$userRow['PROFILEPICTURE'];echo '" width="250" height="auto">';
+				echo '</div>';
+			}//if($userRow['PROFILEPICTURE']!= NULL)
+			else{
+				echo '<div class="user-photo" style="font-size:1000%;padding-left:40%;">!';
+				echo '</div>';
+				}
+		// Lets take care of the Name!
+		echo '<div class="user-name" id="user-name" >';
+			echo '<span id="full-name">';
+			if(strlen($userRow['NAME'])<1 || $userRow['NAME']==NULL){echo 'Click and Name Yourself';}
+				else{echo $userRow['NAME'];}
+			echo '</span>';
+		echo '</div>';
+
+
+		echo '<div class="user-occupation" id="user-occupation">';
+			echo '<span id="occupation">';
+			if(strlen($userRow['DESCRIPTION'])<1 || $userRow['DESCRIPTION']==NULL){echo 'Click to Introduce Yourself!';}
+				else{echo $userRow['DESCRIPTION'];}
+			echo '</span>';
+		echo '</div>';
+	echo '</div>';//<div class="user-info">
+
+	echo '<div class="latest-mini-cards-title">Saved Resources</div>';
+	echo '<div class="latest-mini-cards">';
+		$minis = $conn->query("SELECT * FROM FAVOURITES JOIN RESOURCES WHERE FAVOURITES"."."."USERID=".$userRow['USERID']." AND FAVOURITES.RESOURCEID=RESOURCES.RESOURCEID  ORDER BY DATE DESC");
+		if($minis->num_rows == 0){echo '<div class="flat-card">This Stack is Empty</div>';}
+		else{
+			while($flat = mysqli_fetch_assoc($minis)){
+			 echo '<a href="';	
+			 	echo $flat['URL'].'" target="_blank">';
+				echo '<div class="flat-card">';
+					echo $flat['TITLE'];
+				echo '</div>';
+			 echo '</a>';
+			}}//else
+	echo '</div>';
+
+	
+//********************************************************************
+// Print the resources submitted by the user
+	echo '<div class="user-blogging" style="top:80px;height:calc(100% - 100px)">';
+$query = "SELECT * FROM RESOURCES WHERE SUBMITTER=".$userRow['USERID']." ORDER BY ADDED DESC";
+$CardStack = $conn->query($query);
+while ($go = mysqli_fetch_assoc($CardStack)){
+	card($go['RESOURCEID']);
+}
+	echo '</div>';
 
 }
 }//if($rightname->num_rows == 1)
