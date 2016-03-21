@@ -131,6 +131,7 @@ $userRow = mysqli_fetch_assoc($rightname);
 			echo '</span>';
 			echo '<div class="user-occupation-edit" id="user-occupation-edit">Edit</div>';
 		echo '</div>';
+	echo '</div>';//<div class="user-info">
 	// Update status section!
 	echo '<div class="update-status">';
 		echo '<div class="submit-icon" >';
@@ -164,25 +165,18 @@ $userRow = mysqli_fetch_assoc($rightname);
 			}}//else
 	echo '</div>';
 
-	//Bloging	
-	echo '<div class="user-blogging">';
+	
 //********************************************************************
- // Print the resources submitted by the user
+// Print the resources submitted by the user
+	echo '<div class="user-blogging">';
 $query = "SELECT * FROM RESOURCES WHERE SUBMITTER=".$userRow['USERID']." ORDER BY ADDED DESC";
 $CardStack = $conn->query($query);
 while ($go = mysqli_fetch_assoc($CardStack)){
 	card($go['RESOURCEID']);
 }
-
-
-
-
-
-
-//********************************************************************
 	echo '</div>';
+//********************************************************************
 
-echo '</div>';//<div class="user-info">
 }//if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$userRow['USERID'])
 else{
 // Here I just have to fetch the public profile!
