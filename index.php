@@ -29,7 +29,7 @@ echo "<head>";
 echo '<meta name="description" content="Tartool is a feed of startup resources essential to your success. Resources are streamed in 3 channels of Front-end, Back-end and Business development">';
 // Set the title of the page
 echo "<title>";
-echo $UniversalName; echo " Startup Resources";
+echo $UniversalName; 
 echo "</title>";
 
 // Include the JavaScript code
