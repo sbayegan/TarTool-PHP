@@ -66,6 +66,7 @@ label.css-label {
 
 
 .user-info{
+z-index: 80;
  position: fixed;
  top:85px;
  width: 250px;
