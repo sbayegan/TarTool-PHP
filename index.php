@@ -270,14 +270,14 @@ echo '
 
       <img src="pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
 
-      <img src="pictures/twitter.png" width="30" height="30" class="twitter-icon" alt="twitter">
+      <img src="pictures/google.png" width="30" height="30" class="twitter-icon" alt="google">
 
       <img src="pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
 
   </div>
   <div class="numbers">
     <div class="linkedin-score" id="samplecard-linkedin">0</div>
-    <div class="twitter-score" id="samplecard-twitter">0</div>
+    <div class="twitter-score" id="samplecard-google">0</div>
     <div class="facebook-score" id="samplecard-facebook">0</div>
   </div>
   <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">

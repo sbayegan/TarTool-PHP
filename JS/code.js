@@ -323,6 +323,15 @@ document.getElementById("samplecard-description").innerHTML= description;
                                                 }
         xmlhttplink.open("GET", "PHP/socialscores/linkedin.php?URL=" + url, true);
         xmlhttplink.send();
+        //GooglePlus
+        var xmlhttpg = new XMLHttpRequest();
+        xmlhttpg.onreadystatechange = function() {
+            if (xmlhttpg.readyState == 4 && xmlhttpg.status == 200) {
+                if(xmlhttpg.responseText.length < 10){document.getElementById("samplecard-google").innerHTML = xmlhttpg.responseText;}
+                                                                    }
+                                                }
+        xmlhttpg.open("GET", "PHP/socialscores/google.php?URL=" + url, true);
+        xmlhttpg.send();
                             }//if(url.length !=0)
 // Deal with the thumbnail URL
 if(imageurl!=null){if(imageurl.length>0)document.getElementById("samplecard-image").src = imageurl;}
