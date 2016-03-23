@@ -508,13 +508,13 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img style='position:relative;top:10px;' src=\'/pictures/cross-red.png\'  width=\'40\' height=\'40\' style=\'float:left;margin-left:0px;margin-top:15px\'></span>"
+                      output += ")\'  > <img  src=\'/pictures/cross-red.png\'  width=\'40\' height=\'40\' style=\'position:relative;top:10px;\'></span>"
                       document.getElementById(id).innerHTML= output;
                     }
      }
    }         
 
-        document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='pictures/ajax_loader.gif' width='40' height='40' style='float:left;margin-top:15px;'>";
+        document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='pictures/ajax_loader.gif' width='40' height='40' >";
 	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
