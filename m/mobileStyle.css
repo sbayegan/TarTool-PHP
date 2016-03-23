@@ -1,0 +1,14 @@
+.box{
+//overflow: hidden;
+//float:top;
+position:relative;
+margin-left:auto;
+margin-right:auto;
+border-radius: 1px;
+//display:block;
+border: 1px solid #E6E6E6;
+background-color: #FCFCFC;
+width: 90vw;
+height: 90vw;
+margin-bottom: 10px; 
+}
