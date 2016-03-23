@@ -18,13 +18,12 @@ margin-bottom: 10px;
 position:absolute;
 background-color: red;
 left:0px;
-top:15px;
-padding:2px;
-height:auto;
+top:1%;
+height:18px;
 width: auto;
 z-index: 2;
 color:white;
-font-size: 110%;
+font-size: auto;
 padding-left: 10px;
 padding-right: 10px;
 }
@@ -32,13 +31,14 @@ padding-right: 10px;
 .subcats{
 position:absolute;
 left:0px;
-top:40px;
-height:30px;
+top:6%;
+height:16%;
 width:75%;
-font-size: 100%;
+font-size: 90%;
+font-weight:200;
 color:grey;
 //padding-left: 10px;
-//border: 1px dashed white;
+border: 1px dashed grey;
 z-index:2;
 }
 .profile-picture{
@@ -47,20 +47,20 @@ background-color: white;
 top:0px;
 width: 100%;
 z-index:1;
-height: 23%;
+height: 22%;
 }
 .title{
-font-weight: bold;
-font-size:100%;
-overflow:scroll;
+//font-weight: bold;
+font-size:auto;
+overflow:visible;
 position: absolute;
+padding:1px;
 padding-left:10px;
 left:5px;
-right:10px;
-width:480px;
-height:30px;
-top:102px;
-border: 0px dashed grey;
+width:auto;
+height:7%;
+top:22%;
+border: 1px dashed grey;
 color:black;
 }
 .description{
@@ -75,62 +75,70 @@ left:5px;
 right: 5px;
 top: 30%;
 width:86vw;
-height: 40%;
+height: 45%;
 color:black;
-//border:1px solid black;
+border:1px solid black;
 }
 .box-stats{
+padding-left:10px;
+font-size:auto;
+padding-top:1px;
+color:white;
+font-weight:200;
+font-size:auto;
 position: absolute;
-right:0px;
-bottom: 17%;
+left:0px;
+top: 77%;
 height:6%;
-width: 100%;
+width:100%;
 background-color: #33CC33;
 }
 
 .score{
 position: absolute;
-//border:4px dashed grey;
+border:1px dashed grey;
 left:10px;
 right:10px;
 bottom: 5%;
 width:90vm;
-height:50px;
+height:12%;
 //border:1px dashed black;
 }
 
 .facebook-icon{
 float:right;
-margin-right:30px;
-margin-top:15px
+margin-right:8%;
+//margin-top:5px
 }
 .linkedin-icon{
 float:right;
-margin-right:30px;
-margin-top:15px
+margin-right:8%;
+//margin-top:5px
 }
 .facebook-score{
+margin-top:-3px;
 position:absolute;
-left:205px;
-width:60px;
+right:23%;
+width:auto;
 text-align:center;
-border:0px dashed red;
-font-size:110%;
+
+border:1px dashed red;
 }
 .linkedin-score{
+margin-top:-3px;
 position:absolute;
-left:145px;
-width:60px;
+right:70%;
+width:auto;
 text-align:center;
-border:0px dashed red;
-font-size:110%;
+border:1px dashed red;
+
 }
 .numbers{
 position: absolute;
-//border: 1px dashed grey;
+border: 1px dashed grey;
 //left:10px;
 right:10px;
 bottom:0px;
-width:280px;
+width:40%;
 height:5%;
 }

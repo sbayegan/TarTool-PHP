@@ -225,15 +225,15 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo'</div></a>';
     echo '<div class="score">';
     echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">';
+    echo '<img src="/pictures/facebook.png" width="auto" height="90%" class="facebook-icon" alt="facebook">';
     echo '</a>';
 
 //    echo '<a href="https://plus.google.com/share?url='.$result['URL'].'" target="_blank">';
-//    echo '<img src="/pictures/google.png" width="30" height="30" class="twitter-icon" alt="googleplus">';
+//    echo '<img src="/pictures/google.png" width="auto" height="100%" class="twitter-icon" alt="googleplus">';
 //    echo '</a>';
 
     echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="facebook">';
+    echo '<img src="/pictures/linkedin.png" width="auto" height="90%" class="linkedin-icon" alt="facebook">';
     echo '</a>';
 //    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
@@ -313,7 +313,7 @@ echo '<div class="box-stats" style="background-color:';
 
     echo')">';
     //echo '<div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:3px;color:white">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';
-    echo '<div style="position:absolute;left:10px;font-size:130%;padding-top:3px;color:white;font-weight:200;">'.''.$result['MEDIUM'].'</div>';
+    echo '<div>'.''.$result['MEDIUM'].'</div>';
 //echo '<img src="http://junto.link/pictures/basic.png" width="60" height="65" style="float:left;margin-left:10px">';
     //echo '<img src="http://junto.link/pictures/pin.png" width="40" height="40" style="float:right;margin-right:10px;margin-top:2px">';
     echo '</div>';
