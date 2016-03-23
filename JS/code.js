@@ -508,7 +508,7 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img  src=\'/pictures/cross-red.png\'  width=\'40\' height=\'40\' style=\'position:relative;top:10px;\'></span>"
+                      output += ")\'  > <img  src=\'/pictures/cross-red.png\'  width=\'40\' height=\'40\' style=\'position:relative;top:25px;\'></span>"
                       document.getElementById(id).innerHTML= output;
                     }
      }
