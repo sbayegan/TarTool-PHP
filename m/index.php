@@ -10,7 +10,11 @@ echo'
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>';
-echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">';
+echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+';
 echo '</head>';
 
 echo '<body><div data-role="page" id="pageone">';

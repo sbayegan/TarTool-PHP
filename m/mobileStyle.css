@@ -12,3 +12,77 @@ width: 90vw;
 height: 90vw;
 margin-bottom: 10px; 
 }
+
+.sticker{
+position:absolute;
+background-color: red;
+left:0px;
+top:15px;
+height: 20px;
+width: auto;
+z-index: 2;
+color:white;
+font-size: 100%;
+font-weight:300;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.subcats{
+position:absolute;
+left:0px;
+top:40px;
+height:30px;
+width:75%;
+font-size: 90%;
+color:grey;
+//padding-left: 10px;
+border: 1px dashed white;
+z-index:2;
+}
+.profile-picture{
+position:absolute;
+background-color: white;
+top:0px;
+width: 100%;
+z-index:1;
+height: 100px;
+}
+.title{
+font-weight: bold;
+font-size:100%;
+overflow:scroll;
+position: absolute;
+padding-left:10px;
+left:5px;
+right:10px;
+width:480px;
+height:30px;
+top:102px;
+border: 0px dashed grey;
+color:black;
+}
+.description{
+font-size:100%;
+font-weight: 200;
+overflow: scroll;
+position: absolute;
+background-color:#FCFCFC;
+margin-bottom:20px;
+padding-left:10px;padding-right:10px;
+left:5px;
+right: 5px;
+top: 130px;
+width:86vw;
+height: 40%;
+color:black;
+//border:1px solid black;
+}
+.box-stats{
+position: absolute;
+right:0px;
+bottom: 15%;
+height:30px;
+width: 100%;
+background-color: #33CC33;
+}
