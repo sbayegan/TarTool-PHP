@@ -108,7 +108,6 @@ background-color: white;
 //border: 1px dashed grey;
 }
 
-
 .user-name{
 cursor: pointer;
 position: relative;
@@ -706,10 +705,12 @@ right:20px;
 top:20px;
 }
 
+
 .saving-icon{
 float:left;
-margin-left:0px;
-margin-top:15px;
+height: 50px;
+//width: auto;
+margin-top:20px;
 }
 
 .facebook-score{
@@ -719,6 +720,7 @@ width:60px;
 text-align:center;
 border:0px dashed red;
 font-size:110%;
+top:5px;
 }
 .linkedin-score{
 position:absolute;
@@ -727,6 +729,7 @@ width:60px;
 text-align:center;
 border:0px dashed red;
 font-size:110%;
+top:5px;
 }
 .twitter-score{
 position:absolute;
@@ -740,7 +743,7 @@ font-size:110%;
 .facebook-icon{
 float:right;
 margin-right:30px;
-margin-top:15px
+margin-top:8px
 }
 .twitter-icon{
 position:absolute;
@@ -750,7 +753,7 @@ margin-top:17px
 .linkedin-icon{
 position:absolute;
 left:360px;
-margin-top:16px;
+margin-top:8px;
 }
 .comments{
 text-align:center;
@@ -1046,8 +1049,8 @@ right:10px;
 bottom: 30px;
 width:480px;
 height:50px;
-
 }
+
 .numbers{
 position: absolute;
 //border: 1px dashed grey;

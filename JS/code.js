@@ -508,13 +508,13 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img  src=\'/pictures/cross-red.png\'  width=\'40\' height=\'40\' style=\'position:relative;top:25px;\'></span>"
+                      output += ")\'  > <img class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>"
                       document.getElementById(id).innerHTML= output;
                     }
      }
    }         
 
-        document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='/pictures/ajax_loader.gif' width='40' height='40' >";
+        document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";
 	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
@@ -547,12 +547,12 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img style='position:relative;top:25px;' src=\'/pictures/save.png\'  width=\'40\' height=\'40\' ></span>";
+        		output += ")\'    > <img class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='/pictures/ajax_loader.gif' width='40' height='40' >";
+	document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";
         xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);

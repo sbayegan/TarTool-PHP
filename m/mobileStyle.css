@@ -38,7 +38,7 @@ font-size: 90%;
 font-weight:200;
 color:grey;
 //padding-left: 10px;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 z-index:2;
 }
 .profile-picture{
@@ -60,7 +60,7 @@ left:5px;
 width:auto;
 height:7%;
 top:22%;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 color:black;
 }
 .description{
@@ -77,7 +77,7 @@ top: 30%;
 width:86vw;
 height: 45%;
 color:black;
-border:1px solid black;
+//border:1px solid black;
 }
 .box-stats{
 padding-left:10px;
@@ -96,10 +96,9 @@ background-color: #33CC33;
 
 .score{
 position: absolute;
-border:1px dashed grey;
 left:10px;
 right:10px;
-bottom: 5%;
+bottom: 4%;
 width:90vm;
 height:12%;
 //border:1px dashed black;
@@ -121,24 +120,30 @@ position:absolute;
 right:23%;
 width:auto;
 text-align:center;
-
-border:1px dashed red;
+top:2px;
+//border:1px dashed red;
 }
 .linkedin-score{
 margin-top:-3px;
 position:absolute;
-right:70%;
+right:72%;
 width:auto;
 text-align:center;
-border:1px dashed red;
-
+//border:1px dashed red;
+top:2px;
 }
 .numbers{
 position: absolute;
-border: 1px dashed grey;
+//border: 1px dashed grey;
 //left:10px;
 right:10px;
 bottom:0px;
 width:40%;
 height:5%;
+}
+.saving-icon{
+    position:relative;
+    height:10vw;
+    width:10vw;
+    top:3vw;
 }
