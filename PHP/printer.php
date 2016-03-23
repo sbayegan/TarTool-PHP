@@ -218,7 +218,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
             $videoid = $my_array_of_vars['v'];
 
 
-		echo '<iframe width="469" height="235" src="https://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
+		echo '<iframe width="100%" height="90%" src="https://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
 		
 		}
 	else{echo $result['DESCRIPTION'];}

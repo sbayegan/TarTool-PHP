@@ -31,7 +31,7 @@ echo  '<div data-role="header">
 echo  '<div data-role="main" class="ui-content">';
 
 card(22);
-card(22);
+card(7);
 card(22);
 echo  	 '</div>';
 
