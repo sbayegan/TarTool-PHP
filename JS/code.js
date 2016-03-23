@@ -514,7 +514,7 @@ function favorite(cardid) {
      }
    }         
 
-        document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='pictures/ajax_loader.gif' width='40' height='40' >";
+        document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='/pictures/ajax_loader.gif' width='40' height='40' >";
 	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
@@ -552,7 +552,7 @@ function unfavorite(cardid) {
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='pictures/ajax_loader.gif' width='40' height='40' >";
+	document.getElementById("save-"+cardid).innerHTML="<img style='position:relative;top:25px;' src='/pictures/ajax_loader.gif' width='40' height='40' >";
         xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);

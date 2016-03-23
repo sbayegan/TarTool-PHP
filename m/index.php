@@ -15,6 +15,7 @@ echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 ';
+echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 
 echo '<body><div data-role="page" id="pageone">';
