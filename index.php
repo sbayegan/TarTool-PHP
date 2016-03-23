@@ -3,7 +3,6 @@
 // Include the headers you need
 include('UniversalHeader.php');
 include('datalogin.php');
-include('printer.php');
 
 
 

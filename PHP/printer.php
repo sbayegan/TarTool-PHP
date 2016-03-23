@@ -204,7 +204,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo ' <img src="';
    
     echo $result['PROFILEPICTURE'];
-    echo '" width="100" height="100" style="margin-top:0px;float:right;margin-right:10px" alt="logo"> 
+    echo '" width="auto" height="100%" style="margin-top:0px;float:right;margin-right:10px" alt="logo"> 
           </div>';
     echo '<a href="'.$result['URL'].'" target="_blank">';
     echo '<div class="title"><b>';
