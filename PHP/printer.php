@@ -225,7 +225,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     echo'</div></a>';
     echo '<div class="score">';
     echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/facebook.png" width="auto" height="90%" class="facebook-icon" alt="facebook">';
+    echo '<img src="/pictures/facebook.png" width="auto" height="80%" class="facebook-icon" alt="facebook">';
     echo '</a>';
 
 //    echo '<a href="https://plus.google.com/share?url='.$result['URL'].'" target="_blank">';
@@ -233,7 +233,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 //    echo '</a>';
 
     echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/linkedin.png" width="auto" height="90%" class="linkedin-icon" alt="facebook">';
+    echo '<img src="/pictures/linkedin.png" width="auto" height="80%" class="linkedin-icon" alt="facebook">';
     echo '</a>';
 //    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
     
