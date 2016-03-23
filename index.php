@@ -3,7 +3,7 @@
 // Include the headers you need
 include('UniversalHeader.php');
 include('datalogin.php');
-include('printer.php');// to user ShowCatSubcat() !
+include('PHP/printer.php');// to user ShowCatSubcat() !
 
 
 function interested($user, $subject){
