@@ -265,7 +265,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
 
     if(!isset($_COOKIE['junto'])){
     echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
-    echo '<img src="/pictures/save.png"  width="55" height="55" class="saving-icon">';
+    echo '<img src="/pictures/save.png"  width="40" height="40" class="saving-icon">';
 
 }
     else{
@@ -273,11 +273,11 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     $favorited = $conn->query($query);
       if($favorited->num_rows == 0){
                    echo '<span onclick="favorite('.$i.')">';
-                   echo '<img src="/pictures/save.png"  width="55" height="55" class="saving-icon">';
+                   echo '<img src="/pictures/save.png"  width="40" height="40" class="saving-icon">';
   				}
        else{
                    echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img src="/pictures/cross-red.png"  width="55" height="55" class="saving-icon">';
+                   echo '<img src="/pictures/cross-red.png"  width="40" height="40" class="saving-icon">';
            }
 
     }
