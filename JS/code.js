@@ -626,7 +626,7 @@ if(str == "BE"){
 	'<option value="Objective-C">Objective-C</option>'+
 	'<option value="Swift">Swift</option>'+
         '<option value="C#">C#</option>'+
-        '<option value="Debugging Tools">Debugging</option>';
+        '<option value="Debugging">Debugging</option>';
 }
 if(str == "BD"){
     document.getElementById("samplecard-category").innerHTML="Business Development";
