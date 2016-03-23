@@ -547,12 +547,12 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img style=\'position:relative;top:25px;\' src=\'/pictures/save.png\'  width=\'40\' height=\'40\' class='saving-icon'></span>";
+        		output += ")\'    > <img style=\'position:relative;top:10px;\' src=\'/pictures/save.png\'  width=\'40\' height=\'40\' class='saving-icon'></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML=" style='position:relative;top:10px;' <img src='/pictures/ajax_loader.gif' width='40' height='40' class='saving-icon'>";
+	document.getElementById("save-"+cardid).innerHTML=" style=\'position:relative;top:25px;\' <img src='/pictures/ajax_loader.gif' width='40' height='40' class='saving-icon'>";
         xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
