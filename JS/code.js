@@ -547,7 +547,7 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img style='position:relative;top:10px;' src=\'/pictures/save.png\'  width=\'40\' height=\'40\' ></span>";
+        		output += ")\'    > <img style='position:relative;top:25px;' src=\'/pictures/save.png\'  width=\'40\' height=\'40\' ></span>";
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
