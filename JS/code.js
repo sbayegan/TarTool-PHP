@@ -532,7 +532,7 @@ function approve(cardid) {
      }
    }    
  
-	document.getElementById("approve-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='/pictures/ajax_loader.gif' width='55' height='55' style='position:absolute;left:65px;margin-top:15px;'>";    
+	document.getElementById("approve-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='/pictures/ajax_loader.gif' width='55' height='55' >";    
         xmlhttp.open("POST", "approve.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
