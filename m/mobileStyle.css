@@ -19,7 +19,7 @@ position:absolute;
 background-color: red;
 left:0px;
 top:15px;
-height: 20px;
+height: 4%;
 width: auto;
 z-index: 2;
 color:white;
@@ -73,7 +73,7 @@ margin-bottom:20px;
 padding-left:10px;padding-right:10px;
 left:5px;
 right: 5px;
-top: 130px;
+top: 30%;
 width:86vw;
 height: 40%;
 color:black;
@@ -82,8 +82,55 @@ color:black;
 .box-stats{
 position: absolute;
 right:0px;
-bottom: 15%;
-height:30px;
+bottom: 16%;
+height:6%;
 width: 100%;
 background-color: #33CC33;
+}
+
+.score{
+position: absolute;
+//border:4px dashed grey;
+left:10px;
+right:10px;
+bottom: 5%;
+width:90vm;
+height:50px;
+//border:1px dashed black;
+}
+
+.facebook-icon{
+float:right;
+margin-right:30px;
+margin-top:15px
+}
+.linkedin-icon{
+float:right;
+margin-right:30px;
+margin-top:15px
+}
+.facebook-score{
+position:absolute;
+left:205px;
+width:60px;
+text-align:center;
+border:0px dashed red;
+font-size:110%;
+}
+.linkedin-score{
+position:absolute;
+left:145px;
+width:60px;
+text-align:center;
+border:0px dashed red;
+font-size:110%;
+}
+.numbers{
+position: absolute;
+//border: 1px dashed grey;
+//left:10px;
+right:10px;
+bottom:0px;
+width:280px;
+height:30px;
 }
