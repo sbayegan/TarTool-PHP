@@ -489,7 +489,7 @@ function loader(last,string){
 	        Load = 1;
             loader = document.createElement("DIV");
             loader.setAttribute('id', 'loader');
-            loader.innerHTML = "<img style='position:relative;padding-bottom:100px;left:50%;margin-left:-30px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
+            loader.innerHTML = "<img style='position:relative;padding-bottom:100px;left:50%;margin-left:-30px;margin-top:10px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
             document.getElementById("feed").appendChild(loader);
 }
         xmlhttp.open("GET", "/PHP/loader.php?last=" + last+"&cat="+string, true);

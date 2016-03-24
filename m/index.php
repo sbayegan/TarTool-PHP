@@ -5,20 +5,25 @@ echo'
 <!DOCTYPE html>
 <html>
 <head>
-<title>tarTool</title>';
-echo '
+<title>tarTool</title>
+
 <link rel="stylesheet" type="text/css" href="mobileStyle.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+';
+echo '
+
+
 
 ';
 echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 
 echo '<body> ';
-
 
 
 
@@ -77,12 +82,12 @@ echo '<body> ';
 //card(7);
 //card(22);
 	echo '</div>';// feed-column
+//echo  	 '</div>';//Main
 
-	echo '<div class="panel">';
-	echo '</div>';
+echo  '<div class="flat-panel">
 
 
-
+  </div> ';
 
 echo '</body>';
 echo '</html>';

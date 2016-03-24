@@ -43,7 +43,7 @@ echo
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 ';
 
-echo '<script src="../JS/code.js"></script>';
+echo '<script src="/JS/code.js"></script>';
 // Include the headers associated with jQuery
 echo 
 '<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">';
