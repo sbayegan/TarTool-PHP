@@ -18,7 +18,7 @@ echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">
 echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 
-echo '<body><div data-role="page" id="pageone">';
+echo '<body> <div data-role="page" id="pageone">';
 
 echo  '<div data-role="panel" id="myPanel"> 
     <h2>Panel Header</h2>
@@ -29,7 +29,7 @@ echo  '<div data-role="header">
 
   		</div>';
 
-echo  '<div data-role="main" class="ui-content" style="background-color:lightgrey;">';
+echo  '<div data-role="main" class="ui-content" >';
 	echo '<div class="feed-column" id="feed">';
 
 	echo 
@@ -51,7 +51,7 @@ echo  '<div data-role="main" class="ui-content" style="background-color:lightgre
 		var Frame = 0;
 		var Load = 0;
             $(window).scroll(function(){
-                    if  ($(document).height() - ($(window).height() + $(window).scrollTop()) < 400 ){
+                    if  ($("#feed").height() - ($(window).height() + $("#feed").scrollTop()) < 400 ){
                           // run our call for pagination    
 	    		 // Here if no category or subcategories are chosen then just call loader(LastCard,NULL);
            // else call loader(LastCard,Cat|Subcat)';
@@ -87,7 +87,7 @@ echo  '<div data-role="main" class="ui-content" style="background-color:lightgre
 	echo '</div>';// feed-column
 echo  	 '</div>';//Main
 
-echo  '<div data-role="footer">
+echo  '<div style="height:15vh;bottom:0px;" data-role="footer">
 		<a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Dashboard</a>
   </div> ';
 
