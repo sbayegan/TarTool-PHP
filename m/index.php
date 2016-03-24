@@ -6,9 +6,8 @@ echo'
 <html>
 <head>
 <title>tarTool</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>';
 echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -18,18 +17,11 @@ echo '<link rel="stylesheet" type="text/css" href="mobileStyle.css">
 echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 
-echo '<body> <div data-role="page" id="pageone">';
+echo '<body> ';
 
-echo  '<div data-role="panel" id="myPanel"> 
-    <h2>Panel Header</h2>
-    <p>You can close the panel by clicking outside the panel, pressing the Esc key or by swiping.</p>
-  </div>';
 
-echo  '<div data-role="header">
 
-  		</div>';
 
-echo  '<div data-role="main" class="ui-content" >';
 	echo '<div class="feed-column" id="feed">';
 
 	echo 
@@ -85,13 +77,14 @@ echo  '<div data-role="main" class="ui-content" >';
 //card(7);
 //card(22);
 	echo '</div>';// feed-column
-echo  	 '</div>';//Main
 
-echo  '<div style="height:15vh;bottom:0px;" data-role="footer">
-		<a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Dashboard</a>
-  </div> ';
+	echo '<div class="panel">';
+	echo '</div>';
 
-echo '</div> </body>';
+
+
+
+echo '</body>';
 echo '</html>';
 
 
