@@ -88,7 +88,7 @@ echo  '<div data-role="main" class="ui-content">';
 echo  	 '</div>';//Main
 
 echo  '<div data-role="footer">
-
+		<a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Dashboard</a>
   </div> ';
 
 echo '</div> </body>';
