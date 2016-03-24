@@ -29,7 +29,7 @@ echo  '<div data-role="header">
 
   		</div>';
 
-echo  '<div data-role="main" class="ui-content">';
+echo  '<div data-role="main" class="ui-content" style="background-color:lightgrey;">';
 	echo '<div class="feed-column" id="feed">';
 
 	echo 
