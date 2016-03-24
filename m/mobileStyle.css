@@ -152,7 +152,7 @@ height:5%;
 
 .feed-column{
     width:auto;
-    height:90vh;
+    height:90%;
     overflow:scroll;
     border:1px dashed red;
 }
