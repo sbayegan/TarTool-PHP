@@ -48,7 +48,7 @@ echo '<body> ';
 		var Frame = 0;
 		var Load = 0;
             $(window).scroll(function(){
-                    if  ($("#feed").height() - ($(window).height() + $("#feed").scrollTop()) < 400 ){
+                    if  ($(document).height() - ($(window).height() + $(window).scrollTop()) < 400 ){
                           // run our call for pagination    
 	    		 // Here if no category or subcategories are chosen then just call loader(LastCard,NULL);
            // else call loader(LastCard,Cat|Subcat)';
