@@ -447,7 +447,7 @@ if(Ended == 0){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             LastCard = xmlhttp.responseText;}
                                             }
-        xmlhttp.open("GET", "PHP/numloader.php?last=" + last +"&cat="+string, true);
+        xmlhttp.open("GET", "/PHP/numloader.php?last=" + last +"&cat="+string, true);
         xmlhttp.send();}
 }
 
@@ -489,7 +489,7 @@ function loader(last,string){
 	        Load = 1;
             loader = document.createElement("DIV");
             loader.setAttribute('id', 'loader');
-            loader.innerHTML = "<img style='padding-bottom:100px;margin-left:240px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
+            loader.innerHTML = "<img style='position:relative;padding-bottom:100px;left:50%;margin-left:-30px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
             document.getElementById("feed").appendChild(loader);
 }
         xmlhttp.open("GET", "/PHP/loader.php?last=" + last+"&cat="+string, true);

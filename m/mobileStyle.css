@@ -146,4 +146,12 @@ height:5%;
     height:10vw;
     width:10vw;
     top:3vw;
+    //border: 1px dashed red;
+    left:-5px;
+}
+
+.feed-column{
+    width:auto;
+    height:85vh;
+    overflow:scroll;
 }
