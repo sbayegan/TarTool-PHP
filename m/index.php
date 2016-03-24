@@ -88,7 +88,7 @@ echo  '<div data-role="main" class="ui-content">';
 echo  	 '</div>';//Main
 
 echo  '<div data-role="footer">
-    <h1>Page Footer</h1>
+
   </div> ';
 
 echo '</div> </body>';
