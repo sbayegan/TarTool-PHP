@@ -142,7 +142,7 @@ echo '<a href="http://www.tartool.com/techie/';echo $poster['USERNAME'];echo '">
 				$finalheight = 100;
 				$finalwidth = ($width * $finalheight) / $height;
 				$finalwidth = round($finalwidth);
-				echo '<img src="/profile/';echo $picture;echo '" width="';echo $finalwidth ;echo'" height="';echo $finalheight;echo'">';
+				echo '<img src="/profile/';echo $picture;echo '" width="';echo "auto" ;echo'" height="';echo "100%";echo'">';
 			}
 			else{
 				echo "<span style='font-size:500%;margin-right:40px;'>!</span>";

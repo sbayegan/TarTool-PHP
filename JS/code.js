@@ -8,6 +8,9 @@ var repass = 0;
 var currentpass = 0;
 var newpass = 0 ;
 var matched = 0 ;
+// USED FOR MOBILE FLIPPING 
+var flipped = 0;
+
 
 $(document).ready(function(){
     $("#account-settings").submit(function(event) {
@@ -508,13 +511,15 @@ function favorite(cardid) {
 	              //document.getElementById("XXX").innerHTML = id;
 	              output = "<span onclick=\'unfavorite(";
 	              output += cardid;
-                      output += ")\'  > <img class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>"
+                      if(flipped == 0){output += ")\'  > <img class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>";}
+                        else{output += ")\'  > <img  style ='left:78vw;' class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>";}
                       document.getElementById(id).innerHTML= output;
                     }
      }
    }         
 
-        document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";
+        if(flipped == 0){document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
+        else{document.getElementById("save-"+cardid).innerHTML="<img style ='left:78vw;' class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
 	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
@@ -547,12 +552,14 @@ function unfavorite(cardid) {
     			//document.getElementById("XXX").innerHTML = id;
         		output = "<span onclick=\'favorite(";
         		output += cardid ;
-        		output += ")\'    > <img class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";
+        		if(flipped == 0){output += ")\'    > <img class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";}
+                else{output += ")\'    > <img style ='left:78vw;' class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";}
         		document.getElementById(id).innerHTML= output;
                 			}
      								}
    					        }         
-	document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";
+	   if(flipped == 0){document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
+        else{document.getElementById("save-"+cardid).innerHTML="<img style ='left:78vw;' class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
         xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);

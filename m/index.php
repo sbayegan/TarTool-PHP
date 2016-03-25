@@ -28,6 +28,7 @@ function flipview(){
 	$(".linkedin-icon").animate({right: "66vw"});
 	$(".panel-menu").animate({left: "65vw"});
 	$(".panel-flip").animate({right: "70vw"});
+	flipped= 1;
 
 	$("#panel-flip").attr("onclick", "resetview()");
 	return;
@@ -39,7 +40,7 @@ function resetview(){
 	$(".linkedin-icon").animate({right: "14vw"});
 	$(".panel-menu").animate({left: "14vw"});
 	$(".panel-flip").animate({right: "16vw"});
-
+	flipped = 0;
 	$("#panel-flip").attr("onclick", "flipview()");
 	return;
 }
