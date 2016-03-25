@@ -208,7 +208,7 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
     		echo '<div class="facebook-icon">';
     		echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
     		echo '<img src="/pictures/facebook.png" width="100%" height="auto" style="top:0px;" alt="facebook">';
-    		   	echo '<div class="score-all">'.$result['LINKEDIN'].'</div>';
+    		   	echo '<div class="score-all">'.$result['FACEBOOK'].'</div>';
     		echo '</a>';
     		echo '</div>';
 
