@@ -20,8 +20,23 @@ echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 
 echo '<body> ';
+echo '<script>';
+echo '
+function changeview(){
+	$(".saving-icon").animate({left: "78vw"})
+	$(".facebook-icon").animate({right: "78vw"})
+	$(".linkedin-icon").animate({right: "68vw"})
+}
+
+function resetview(){
+	$(".saving-icon").animate({left: "2vw"})
+	$(".facebook-icon").animate({right: "2vw"})
+	$(".linkedin-icon").animate({right: "12vw"})
+}
+';
 
 
+echo '</script>';
 
 	echo '<div class="feed-column" id="feed">';
 
@@ -81,8 +96,8 @@ echo '<body> ';
 //echo  	 '</div>';//Main
 
 echo  '<div class="flat-panel">
-
-
+<span onclick="changeview()"> CHANGE VIEW </span>
+<span onclick="resetview()"> RESET VIEW </span>
   </div> ';
 
 echo '</body>';
