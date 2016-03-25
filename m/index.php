@@ -15,11 +15,7 @@ echo'
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 ';
-echo '
-
-
-
-';
+echo '<link rel="shortcut icon" href="/pictures/icon.ico">';
 echo '<script src="../JS/code.js"></script>';
 echo '</head>';
 

@@ -707,53 +707,44 @@ top:20px;
 
 
 .saving-icon{
-float:left;
-height: 50px;
-//width: auto;
-margin-top:20px;
+position:absolute;
+bottom:10px;
+left:10px;
+height:50px;
+width:50px;
+//border:1px solid black;
 }
 
-.facebook-score{
+
+.score-all{
 position:absolute;
-right:18px;
-width:60px;
+width:100%;
+//left:0px;
+//width:auto;
 text-align:center;
-border:0px dashed red;
-font-size:110%;
-top:5px;
+//border:1px dashed red;
+font-size:120%;
+bottom:5px;
+
 }
-.linkedin-score{
-position:absolute;
-right:67px;
-width:60px;
-text-align:center;
-border:0px dashed red;
-font-size:110%;
-top:5px;
-}
-.twitter-score{
-position:absolute;
-left:145px;
-width:60px;
-text-align:center;
-border:0px dashed red;
-font-size:110%;
-}
+
 
 .facebook-icon{
-float:right;
-margin-right:30px;
-margin-top:8px
-}
-.twitter-icon{
 position:absolute;
-left:360px;
-margin-top:17px
+bottom:0px;
+right:38px;
+height:70px;
+width:40px;
+//border:1px solid black;
 }
+
 .linkedin-icon{
 position:absolute;
-left:360px;
-margin-top:8px;
+bottom:0px;
+right:85px;
+height:70px;
+width:40px;
+//border:1px solid black;
 }
 .comments{
 text-align:center;

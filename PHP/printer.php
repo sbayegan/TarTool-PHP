@@ -1,11 +1,8 @@
 <?php
-
-
 function ShowCatSubcat($input){
 if($input == "BD"){echo"<div class='category'> Business </div>";return;}
 if($input == "FE"){echo"<div class='category' style='background-color:blue;'> Front-End </div>";return;}
 if($input == "BE"){echo"<div class='category' style='background-color:#32cd32;'> Back-End </div>";return;}
-
 if($input == 'LeanStartup')              {echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> Lean Startup </div>";return;}
 if($input == 'MarketingAndResearch')     {echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> Marketing & Research </div>";return;}
 if($input == 'Naming')                   {echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> Naming </div>";return;}
@@ -26,7 +23,6 @@ if($input == 'Outsourcing')              {echo"<a href='/business'><div class='c
 if($input == 'E-commerce')               {echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> E-commerce </div>";return;}
 if($input == 'Events')                   {echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> Events </div>";return;}
 if($input == 'AcceleratorsAndIncubators'){echo"<a href='/business'><div class='category'> Business </div></a>";echo "<div class='subcategory'> Accelerators & Incubators </div>";return;}
-
 if($input == 'UserInterface')           {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> User Interface </div>";return;}
 if($input == 'UserExperience')          {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> User Experience </div>";return;}
 if($input == 'MockupsAndWireframing')   {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> Mockups & Wireframing </div>";return;}
@@ -45,7 +41,6 @@ if($input == 'Canvas')                  {echo"<a href='/frontend'><div class='ca
 if($input == 'SVG')                     {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> Scalable Vector Graphics </div>";return;}
 if($input == 'JSON')                    {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> JSON </div>";return;}
 if($input == 'Ajax')                    {echo"<a href='/frontend'><div class='category' style='background-color:blue;'> Front-End </div></a>";echo "<div class='subcategory'> Ajax </div>";return;}
-
 if($input == 'Security')                {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> Security </div>";return;}
 if($input == 'DataManagement')          {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> Data Management </div>";return;}
 if($input == 'Hosting')                 {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> Hosting </div>";return;}
@@ -63,9 +58,7 @@ if($input == 'Objective-C')             {echo"<a href='/backend'><div class='cat
 if($input == 'Swift')                   {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> Swift </div>";return;}
 if($input == 'C#')                      {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> C# </div>";return;}
 if($input == 'Debugging')               {echo"<a href='/backend'><div class='category' style='background-color:#32cd32;'> Back-End </div></a>";echo "<div class='subcategory'> Debugging </div>";return;}
-
 }
-
 // This function is used to print labels on each card
 function linky($input){
 if($input == 'LeanStartup'){echo 				'<a href="/LeanStartup"><span style="display:inline-block;" class="label label-default">Lean Startup</span></a>';}
@@ -88,7 +81,6 @@ if($input == 'Outsourcing'){echo 				'<a href="/Outsourcing"><span style="displa
 if($input == 'E-commerce'){echo 				'<a href="/E-commerce"><span style="display:inline-block;" class="label label-default">E-commerce</span></a>';}
 if($input == 'Events'){echo 					'<a href="/Events"><span style="display:inline-block;" class="label label-default">Events</span></a>';}
 if($input == 'AcceleratorsAndIncubators'){echo  '<a href="/AcceleratorsAndIncubators"><span style="display:inline-block;" class="label label-default">Accelerators & Incubators</span></a>';}
-
 if($input == 'UserInterface'){echo 				'<a href="/UserInterface"><span style="display:inline-block;" class="label label-default">User Interface</span></a>';}
 if($input == 'UserExperience'){echo 			'<a href="/UserExperience"><span style="display:inline-block;" class="label label-default">User Experience </span></a>';}
 if($input == 'MockupsAndWireframing'){echo 		'<a href="/MockupsAndWireframing"><span style="display:inline-block;" class="label label-default">Mockups & Wireframing</span></a>';}
@@ -107,7 +99,6 @@ if($input == 'Canvas'){echo 					'<a href="/Canvas"><span style="display:inline-
 if($input == 'SVG'){echo 						'<a href="/SVG"><span style="display:inline-block;" class="label label-default">Scalable Vector Graphics</span></a>';}
 if($input == 'JSON'){echo 						'<a href="/JSON"><span style="display:inline-block;" class="label label-default">JSON</span></a>';}
 if($input == 'Ajax'){echo 						'<a href="/Ajax"><span style="display:inline-block;" class="label label-default">Ajax</span></a>';}
-
 if($input == 'Security'){echo 					'<a href="/Security"><span style="display:inline-block;" class="label label-default">Security</span></a>';}
 if($input == 'DataManagement'){echo 			'<a href="/DataManagement"><span style="display:inline-block;" class="label label-default">Data Management</span></a>';}
 if($input == 'Hosting'){echo 					'<a href="/Hosting"><span style="display:inline-block;" class="label label-default">Hosting</span></a>';}
@@ -125,10 +116,7 @@ if($input == 'Objective-C'){echo 				'<a href="/Objective-C"><span style="displa
 if($input == 'Swift'){echo 						'<a href="/Swift"><span style="display:inline-block;" class="label label-default">Swift</span></a>';}
 if($input == 'C#'){echo 						'<a href="/C#"><span style="display:inline-block;" class="label label-default">C#</span></a>';}
 if($input == 'Debugging'){echo 					'<a href="/Debugging"><span style="display:inline-block;" class="label label-default">Debugging Tools</span></a>';}
-
 }
-
-
 function card($i){
 include('../datalogin.php');
 $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
@@ -136,7 +124,6 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 if ($medium == 'Broadcast'){
-
 echo '<div class="broadcast-box">';
 			$poster = $result['SUBMITTER'];
 			$poster = $conn->query('SELECT * FROM USERS WHERE USERID='.$poster);
@@ -176,12 +163,8 @@ echo  '</a>';
 echo '</div>';
 return;
 }
-
-
 $firsttag = mysqli_fetch_assoc($tags);
-
 echo '<div class="box" style="background-color:#FCFCFC;">';
-
     echo '<a href="';
     
     if ($firsttag['CAT'] == 'BD') {echo '/business';}
@@ -216,90 +199,48 @@ echo '<div class="box" style="background-color:#FCFCFC;">';
             $url = $result['URL'];
             parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
             $videoid = $my_array_of_vars['v'];
-
-
 		echo '<iframe width="100%" height="90%" src="https://www.youtube.com/embed/'.$videoid.'" frameborder="0" allowfullscreen></iframe>';
 		
 		}
 	else{echo $result['DESCRIPTION'];}
     echo'</div></a>';
-    echo '<div class="score">';
-    echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/facebook.png" width="auto" height="80%" class="facebook-icon" alt="facebook">';
-    echo '</a>';
 
-//    echo '<a href="https://plus.google.com/share?url='.$result['URL'].'" target="_blank">';
-//    echo '<img src="/pictures/google.png" width="auto" height="100%" class="twitter-icon" alt="googleplus">';
-//    echo '</a>';
+    		echo '<div class="facebook-icon">';
+    		echo '<a href="https://www.facebook.com/sharer/sharer.php?u='.$result['URL'].'" target="_blank">';
+    		echo '<img src="/pictures/facebook.png" width="100%" height="auto" style="top:0px;" alt="facebook">';
+    		   	echo '<div class="score-all">'.$result['LINKEDIN'].'</div>';
+    		echo '</a>';
+    		echo '</div>';
 
-    echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
-    echo '<img src="/pictures/linkedin.png" width="auto" height="80%" class="linkedin-icon" alt="facebook">';
-    echo '</a>';
-//    echo '<img src="http://junto.link/pictures/google.png" width="30" height="30" style="position:absolute;left:235px;margin-top:17px">';
-    
-    echo '<div style="" id="approve-';
-    echo $i;
-    echo '">';
-    if(!isset($_COOKIE['junto'])){
-        //echo '<span href="#sign" data-toggle="modal">';
-    }
-    else{
-    $query = "SELECT * FROM VOTES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
-    //echo $query;
-    $appd = $conn->query($query);
-      if($appd->num_rows == 0){
-    ////echo '<span onclick="approve('.$i.')">';
-    ////echo '<img src="pictures/basic.png"  width="55" height="55" style="position: absolute;left:70px;margin-top:19px">';
-				}
-      else{
-    ////echo '<span>';
-          }
-    }
+    		echo '<div class="linkedin-icon">';
+		    echo '<a href="http://linkedin.com/shareArticle?mini=true&url='.$result['URL'].'" target="_blank">';
+    		echo '<img src="/pictures/linkedin.png" width="100%" height="auto" style="top:0px;" alt="facebook">';
+    			echo '<div class="score-all">'.$result['LINKEDIN'].'</div>';
+    		echo '</a>';
+   			echo '</div>'; 
 
-   
-    ////echo '</span>';
-    echo '</div>';
-    echo '<div style="" id="save-';
-    echo $i;
-    echo '">';
-
-    if(!isset($_COOKIE['junto'])){
-    echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
-    echo '<img class="saving-icon" src="/pictures/save.png"  width="auto" height="100%" class="saving-icon">';
-
-}
-    else{
-    $query = "SELECT * FROM FAVOURITES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
-    $favorited = $conn->query($query);
-      if($favorited->num_rows == 0){
-                   echo '<span onclick="favorite('.$i.')">';
-                   echo '<img class="saving-icon" src="/pictures/save.png"  width="auto" height="100%" >';
-  				}
-       else{
-                   echo '<span onclick="unfavorite('.$i.')">';
-                   echo '<img class="saving-icon" src="/pictures/cross-red.png"  width="auto" height="100%" >';
-           }
-
-    }
+    		echo '<div id="save-';
+    		echo $i;
+    		echo '">';
+    		if(!isset($_COOKIE['junto'])){
+    			echo '<span href="#" onclick="showsignin()" data-toggle="modal">';
+    			echo '<img class="saving-icon" src="/pictures/save.png"  width="auto" height="100%" class="saving-icon">';
+			}
+    		else{
+    			$query = "SELECT * FROM FAVOURITES WHERE RESOURCEID=".$i." AND USERID=".$_COOKIE['junto'];
+    			$favorited = $conn->query($query);
+      				if($favorited->num_rows == 0){
+                   		echo '<span onclick="favorite('.$i.')">';
+                   		echo '<img class="saving-icon" src="/pictures/save.png"  width="auto" height="100%" >';
+  						}
+       				else{
+                   		echo '<span onclick="unfavorite('.$i.')">';
+                   		echo '<img class="saving-icon" src="/pictures/cross-red.png"  width="auto" height="100%" >';
+           				}
+    			}
   
-    
-
-    echo '</span>';
-    echo '</div>';
-    //echo '<div style="position:absolute;left:4px;font-size:250%;margin-top:15px">'.'Score: '.$result['TOTALSCORE'].'</div>';
-
-    echo '</div>';    
-
-    echo '<div class="numbers">';
-
-    echo '<div class="linkedin-score">'.$result['LINKEDIN'].'</div>';
-    //echo '<div class="twitter-score">'.$result['GOOGLEPLUS'].'</div>';
-    echo '<div class="facebook-score">'.$result['FACEBOOK'].'</div>';  
-    
-   
-
-
-     echo '</div>';
+    		echo '</span>';
+    	echo '</div>';
 
 
 
@@ -309,8 +250,6 @@ echo '<div class="box-stats" style="background-color:';
      if($medium == 'Blog')       {echo '#2ecc71;';}
      if($medium == 'Book')       {echo '#9b59b6;';}
      if($medium == 'Influencer') {echo '#3498db;';}
-
-
     echo')">';
     //echo '<div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:3px;color:white">'.'social score: <div class="badge" style="font-size:100%">'.$result['TOTALSCORE'].'</div></div>';
     echo '<div>'.''.$result['MEDIUM'].'</div>';
@@ -324,12 +263,8 @@ echo '<div class="box-stats" style="background-color:';
     	echo $comments['TOTAL'];
     	echo '</span>';
     echo ' comments</div>';
-
-
 echo '</div>';
 }
-
-
 function minicard($i){
 include ('datalogin.php');
 $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
@@ -337,9 +272,7 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 $firsttag = mysqli_fetch_assoc($tags);
-
 echo'<div class="minicard" id="mini-';echo $i;echo '">';
-
 echo '<div class="minicard-profile">';
 //	echo '<span onclick="removemini(';echo$i;echo ')">';
 		echo ' <img src="';   
@@ -347,37 +280,28 @@ echo '<div class="minicard-profile">';
 		echo '" width="180" height="180" > ';
 //	echo '</span>';
 echo '</div>';
-
 echo '<div class="minicard-delete">';
 	echo '<span onclick="removemini(';echo$i;echo ', \'';echo $firsttag['CAT'];echo'\' , \'';echo $result['MEDIUM'];echo '\')">';
-
 	echo '<img src="pictures/cross-red.png" height="18" width="18">';
 	echo '</span>';
 echo '</div>';
 echo '<a href="'.$result[URL].'" target="_blank">';
-
 echo '<div class="minicard-title">';
     echo '<b>';
     echo $result['TITLE']; 
     echo '</b>';
 echo '</div>';
-
 echo '<div class="minicard-sticker">';
     if ($firsttag['CAT'] == 'BD') {echo 'Business';}
     if ($firsttag['CAT'] == 'FE') {echo 'Front-End';}
     if ($firsttag['CAT'] == 'BE') {echo 'Back-End';}
-
 echo '</div>';
-
 echo '<div class="minicard-tags">';
     linky($firsttag['SUB']);
     
     while($firsttag = mysqli_fetch_assoc($tags)){echo ' ';linky($firsttag['SUB']);}
-
 echo '</div>';
 echo '</div>';
 echo '</a>';
 }
-
-
 ?>
