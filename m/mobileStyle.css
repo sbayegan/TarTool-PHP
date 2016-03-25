@@ -230,6 +230,7 @@ height: 100px;
 }
 
 .broadcast-box a{
+    color:black;
     text-decoration: none;
 }
 .broadcast-box a:hover{ 
@@ -238,13 +239,11 @@ height: 100px;
     }
 
 .broadcast-box{
-//overflow: hidden;
-//float:top;
+color:black;
 position:relative;
 margin-left:auto;
 margin-right:auto;
 border-radius: 1px;
-//display:block;
 border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
 height: auto;
