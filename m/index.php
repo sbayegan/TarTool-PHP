@@ -23,18 +23,19 @@ echo '<body> ';
 echo '<script>';
 echo '
 function flipview(){
-	$(".saving-icon").animate({left: "78vw"})
-	$(".facebook-icon").animate({right: "78vw"})
-	$(".linkedin-icon").animate({right: "68vw"})
+	$(".saving-icon").animate({left: "78vw"});
+	$(".facebook-icon").animate({right: "78vw"});
+	$(".linkedin-icon").animate({right: "68vw"});
 
 
-	$("#panel-feed").attr("onclick", "resetview()").
+	$("#panel-feed").attr("onclick", "resetview()");
 }
 
 function resetview(){
-	$(".saving-icon").animate({left: "2vw"})
-	$(".facebook-icon").animate({right: "2vw"})
-	$(".linkedin-icon").animate({right: "12vw"})
+	$(".saving-icon").animate({left: "2vw"});
+	$(".facebook-icon").animate({right: "2vw"});
+	$(".linkedin-icon").animate({right: "12vw"});
+	$("#panel-feed").attr("onclick", "flipview()");
 }
 ';
 
