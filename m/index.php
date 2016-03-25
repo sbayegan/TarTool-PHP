@@ -101,7 +101,7 @@ echo '</script>';
 echo  '<div class="flat-panel">
 <div class="middle-logo"><img src="/logo/junto_logo_solo.png" alt="logo" height="90%" width="auto"> </div>
 <div class="panel-menu"><img src="/pictures/flip.png" alt="logo" height="90%" width="auto"></div>
-<div class="panel-flip" id="panel-flip onclick="switchview()">menu</div>
+<div class="panel-flip" id="panel-flip" onclick="switchview()">menu</div>
   </div> ';
 
 echo '</body>';
