@@ -314,7 +314,8 @@ width:10vh;
 }
 
 .panel-flip{
-font-size: 6vw;
+font-size: 6vh;
+padding-right:1vh;
 top:0px;
 position:absolute;
 right:0vw;
