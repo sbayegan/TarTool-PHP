@@ -28,14 +28,18 @@ function flipview(){
 	$(".linkedin-icon").animate({right: "68vw"});
 
 
-	$("#panel-feed").attr("onclick", "resetview()");
+	$("#panel-flip").attr("onclick", "resetview()");
+	return;
 }
 
 function resetview(){
 	$(".saving-icon").animate({left: "2vw"});
 	$(".facebook-icon").animate({right: "2vw"});
 	$(".linkedin-icon").animate({right: "12vw"});
-	$("#panel-feed").attr("onclick", "flipview()");
+
+
+	$("#panel-flip").attr("onclick", "flipview()");
+	return;
 }
 ';
 
