@@ -160,7 +160,7 @@ height:5%;
     width:auto;
     height:90%;
     overflow:scroll;
-    border:1px dashed red;
+    //border:1px dashed red;
     z-index:1;
 }
 .flat-panel{
