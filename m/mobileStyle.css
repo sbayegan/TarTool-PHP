@@ -191,6 +191,7 @@ margin-bottom: 100px;
 }
 
 .broadcast-square-top{
+
 background-color: white;
 position: relative;
 float:top;
@@ -202,7 +203,7 @@ height: 102px;
 
 .broadcast-square-bottom{
 position: relative;
-font-size:100%;
+font-size:2.8vw;
 font-weight:200;
 padding: 10px;
 float:top;
