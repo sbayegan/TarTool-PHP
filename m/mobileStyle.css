@@ -11,7 +11,7 @@ border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
 width: 90vw;
 height: 90vw;
-margin-bottom: 70px; 
+margin-bottom: 6vh; 
 }
 
 .sticker{
@@ -34,7 +34,7 @@ left:0px;
 top:7%;
 height:16%;
 width:75%;
-font-size: 150%;
+font-size: 160%;
 font-weight:200;
 color:grey;
 //padding-left: 10px;
@@ -242,20 +242,20 @@ border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
 height: auto;
 width: 90vw;
-margin-bottom: 70px; 
+margin-bottom: 6vh; 
 //border: 1px solid black;
 }
 .comments{
 text-align:center;
 cursor:pointer;
-font-size:130%;
+font-size:2vh;
 //padding:5px;
 position:absolute;
 right:-1px;
-bottom:-35px;
+bottom:-4vh;
 width: 100%;
 background-color:#FCFCFC;
 border: 1px solid #E6E6E6;
 margin-top: -30px;
-height: 28px;
+height: 3vh;
 }
