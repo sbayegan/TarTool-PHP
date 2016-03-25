@@ -1,12 +1,12 @@
-/* 	This is the source file for all of the cascading styles that are used in the website,
- *  	These classes will be grouped by the pages they are used by. We wil also detect duplicate
- *  	styles (e.g styles of the submit and signup/login forms)and will put them under a designated page 
- *  	called SHARED STYLES.		REVIZE THE FORMAT OF CLASSES TO  BE ASSOCIATED WITH SPECIFIC HTML ELEMENTS
+/*  This is the source file for all of the cascading styles that are used in the website,
+ *      These classes will be grouped by the pages they are used by. We wil also detect duplicate
+ *      styles (e.g styles of the submit and signup/login forms)and will put them under a designated page 
+ *      called SHARED STYLES.       REVIZE THE FORMAT OF CLASSES TO  BE ASSOCIATED WITH SPECIFIC HTML ELEMENTS
  */
 
 
 /*
- * 		SHARED STYES classes
+ *      SHARED STYES classes
 */
 
 
@@ -15,37 +15,37 @@
         display: none;
     }
     .stick-to-top{
-    	display:none;
+        display:none;
     }
     .curator{
-    	display:none;
+        display:none;
     }
     .box{
 //overflow: hidden;
 //float:top;
 text-shadow:none;
-position:relative;
-margin-left:auto;
-margin-right:auto;
-border-radius: 1px;
+position:relative  !important;
+margin-left:auto !important ;
+margin-right:auto  !important;
+border-radius: 1px  !important;
 //display:block;
 border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
-width: 90vw;
-height: 90vw;
-margin-bottom: 10vh; 
+width: 90vw  !important;
+height: 90vw  !important;
+margin-bottom: 10vh  !important; 
 }
 
 .sticker{
 position:absolute;
 background-color: red;
 left:0px;
-top:1%;
+top:1%  !important;
 height:auto;
 width: auto;
 z-index: 2;
 color:white;
-font-size: 3vw;
+font-size: 3vw  !important;
 padding-left: 10px;
 padding-right: 10px;
 }
@@ -53,65 +53,66 @@ padding-right: 10px;
 .subcats{
 position:absolute;
 left:0px;
-top:7%;
-height:16%;
+top:7%  !important;
+height:15%  !important;
 width:75%;
-font-size: 3vw;
+font-size: 3vw !important;
 font-weight:200;
 color:grey;
 //padding-left: 10px;
-//border: 1px dashed grey;
+//border: 1px dashed black  !important;
 z-index:2;
 }
 .profile-picture{
 position:absolute;
 background-color: white;
-top:0px;
-width: 100%;
+top:0px  !important;
+width: 100%  !important;
 z-index:1;
-height: 22%;
+height: 22%  !important;
 }
 .title{
 //font-weight: bold;
-font-size:4vw;
-overflow:visible;
+font-size:4vw  !important;
+overflow:visible  !important;
 position: absolute;
 padding:1px;
 padding-left:10px;
-left:5px;
+left:5px  !important;
 width:auto;
-height:7%;
-top:22%;
+height:7%  !important;
+top:21.5%  !important;
 //border: 1px dashed grey;
 color:black;
 }
 .description{
-font-size:2vw;
+font-size:2vw ;
 font-weight: 200;
 overflow: scroll;
 position: absolute;
 background-color:#FCFCFC;
 margin-bottom:20px;
-padding-left:10px;padding-right:10px;
+padding-left:10px;
+padding-right:10px;
 left:5px;
 right: 5px;
 top: 30%;
-width:86vw;
-height: 45%;
+width:86vw  !important;
+height: 45%  !important;
 color:black;
 //border:1px solid black;
 }
 .box-stats{
 padding-left:10px;
-font-size:3.5vw;
+font-size:3.5vw  !important;
 padding-top:1px;
 color:white;
 font-weight:200;
 font-size:auto;
 position: absolute;
 left:0px;
-top: 77%;
-height:6%;
+top: 77%  !important;
+height:6%  !important;
 width:100%;
 background-color: #33CC33;
 }
@@ -119,27 +120,27 @@ background-color: #33CC33;
 .score-all{
 position: absolute;
 text-align:center;
-font-size:4vw;
-bottom: 0;
-width:100%;
+font-size:4vw  !important;
+bottom: 0  !important;
+width:100%  !important;
 color:black;
 
 }
 
 .facebook-icon{
 position:absolute;
-height:14vw;
-width:9vw;
-bottom:0vw;
-right:2vw;
-//margin-top:5px
+height:14vw  !important;
+width:9vw  !important;
+bottom:0vw  !important;
+right:2vw  !important;
+//margin-top:5px;
 }
 .linkedin-icon{
 position:absolute;
-height:14vw;
-width:9vw;
-bottom:0vw;
-right:14vw;
+height:14vw  !important;
+width:9vw  !important;
+bottom:0vw  !important;
+right:14vw  !important;
 //margin-top:5px
 }
 .facebook-score{
@@ -152,7 +153,7 @@ top:2px;
 //border:1px dashed red;
 }
 .linkedin-score{
-margin-top:-3px;
+margin-top:-3px ;
 position:absolute;
 right:72%;
 width:auto;
@@ -171,18 +172,23 @@ height:5%;
 }
 .saving-icon{
     position:absolute;
-    height:10vw;
-    width:10vw;
-    bottom:2vw;
-    left:2vw;
+    height:10vw  !important;
+    width:10vw  !important;
+    bottom:2vw  !important;
+    left:2vw  !important;
     //border: 1px dashed red;
 }
 
 .feed-column{
-    width:auto;
-    height:90%;
+    position:relative  !important;
+    width:100% !important;
+    left:0px !important;
+    margin-left:0px !important;
+    height:90% !important;
+    top:0% !important;
     overflow:scroll;
     //border:1px dashed red;
+    //background-color:orange;
     z-index:1;
 }
 .flat-panel{
@@ -200,7 +206,7 @@ height:5%;
 .end-of-feed{
 text-align:center;
 padding:20px;
-font-size: 300%;
+font-size: 300% ;
 position:relative;
 margin-left:auto;
 margin-right:auto;
@@ -210,47 +216,47 @@ color: white;
 background-color: red;
 height: auto;
 width: 90vw;
-margin-bottom:15vh; 
+margin-bottom:15vh ; 
 }
 
 .broadcast-square-top{
 background-color: white;
 position: relative;
 float:top;
-width: 100%;
-height: 20vw;
+width: 100%  !important;
+height: 20vw  !important;
 //border: 1px solid grey;
 }
 
 
 .broadcast-square-bottom{
 position: relative;
-font-size:95%;
-font-weight:200;
+font-size:95%  !important;
+font-weight:200  !important;
 padding: 10px;
 float:top;
-width: 100%;
+width: 100%  !important;
 height: auto;
 //border: 1px solid grey;
 }
 
 .broadcast-name{
 font-weight: bold;
-font-size:4vw;
+font-size:4vw !important;
 padding-left: 10px;
 padding-right: 5px;
 position: absolute;
-top:20px;
-width: auto;
+top:20px !important;
+width: auto !important;
 border: 1px solid whitesmoke;
 }
 
 .broadcast-thumbnail{
 position: relative;
-float: right;
-right:0px;
-width: auto;
-height: 100%;
+float: right !important;
+right:0px !important;
+width: auto !important;
+height: 100% !important;
 }
 
 .broadcast-box a{
@@ -263,32 +269,32 @@ height: 100%;
     }
 
 .broadcast-box{
-font-size:3vw;
+font-size:3vw !important;
 color:black;
 position:relative;
-margin-left:auto;
-margin-right:auto;
-border-radius: 1px;
+margin-left:auto !important;
+margin-right:auto !important;
+border-radius: 1px !important;
 border: 1px solid #E6E6E6;
 background-color: #FCFCFC;
-height: auto;
-width: 90vw;
-margin-bottom: 10vh; 
+height: auto !important;
+width: 90vw !important; 
+margin-bottom: 10vh !important; 
 //border: 1px solid black;
 }
 .comments{
-text-align:center;
-cursor:pointer;
-font-size:2.5vh;
+text-align:center !important;
+cursor:pointer !important;
+font-size:2.5vh !important;
 //padding:5px;
-position:absolute;
-right:-1px;
-bottom:-5vh;
-width: 100%;
+position:absolute !important;
+right:-1px !important;
+bottom:-5vh !important;
+width: 100% !important;
 background-color:#FCFCFC;
 border: 1px solid #E6E6E6;
-margin-top: -30px;
-height: 4vh;
+margin-top: -30px !important;
+height: 4vh !important;
 }
 
 .middle-logo{
@@ -351,42 +357,42 @@ color:black;
 }
 
 input[type=checkbox].css-checkbox {
-	position:absolute;
-	z-index:-1000;
-	left:-1000px;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height:1px;
-	width:1px;
-	margin:-1px;
-	padding:0;
-	border:0;
-				}
+    position:absolute;
+    z-index:-1000;
+    left:-1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+                }
 
 input[type=checkbox].css-checkbox + label.css-label {
-	padding-left:37px;
-	height:32px; 
-	display:inline-block;
-	line-height:32px;
-	background-repeat:no-repeat;
-	background-position: 0 0;
-	font-size:13px;
-	vertical-align:middle;
-	cursor:pointer;
-						}
+    padding-left:37px;
+    height:32px; 
+    display:inline-block;
+    line-height:32px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:13px;
+    vertical-align:middle;
+    cursor:pointer;
+                        }
 
 input[type=checkbox].css-checkbox:checked + label.css-label {
-	background-position: 0 -32px;
-						}
+    background-position: 0 -32px;
+                        }
 label.css-label {
-	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_6fced975b9270f0b001670c362e8a7e3.png);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-			}
+    background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_6fced975b9270f0b001670c362e8a7e3.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+            }
 
 
 .user-info{
@@ -1383,7 +1389,7 @@ height:30px;
 
 
 /*
- *		HOME PAGE classes
+ *      HOME PAGE classes
  */
 .slider{
 position: fixed;
@@ -1525,7 +1531,7 @@ z-index: 80;
 margin-top:15px;
 }
 /*
- *		FOOTER classes
+ *      FOOTER classes
  */
 .footer-line{
 
