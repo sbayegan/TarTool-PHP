@@ -8,6 +8,26 @@
 /*
  * 		SHARED STYES classes
 */
+
+
+@media only screen and (max-width: 800px) {
+    .slider {
+        display: none;
+    }
+    .stick-to-top{
+    	display:none;
+    }
+    .curator{
+    	display:none;
+    }
+}
+
+.curator{
+
+}
+
+
+
 @font-face {
 font-family: Thin;
 src: url(fonts/JosefinSansThin.ttf);

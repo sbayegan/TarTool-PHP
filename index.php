@@ -278,6 +278,9 @@ echo '<div class="stick-to-top">';
 	   }
 echo '</div>';//stick-to-top
 
+echo '<div class="curator">'; // A wrapper for the right side panel!
+
+
 echo '<div class="cat-box" id="cat-box">';
 echo '<div class="names" style="color:#ff614e;" onclick="panelbusiness()">';
 echo 'Business';
@@ -537,12 +540,11 @@ if (isset($_COOKIE["junto"])){echo ' type="submit" ' ;}
 else {echo ' onclick="showsignin()" ';}
 
 
-
-
 echo 'name="Save and Render" class="btn btn-danger btn-sm" style="position:absolute;bottom:-20px;width:100%;" value="Render!">';
 echo '</form>';
 echo '</div>';
 
+echo '</div>'; // curator closure
 
 	// A commented code snippet that gets the name of the user
 	   /*
