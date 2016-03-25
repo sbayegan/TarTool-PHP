@@ -64,7 +64,7 @@ top:22%;
 color:black;
 }
 .description{
-font-size:100%;
+font-size:2vw;
 font-weight: 200;
 overflow: scroll;
 position: absolute;
@@ -203,7 +203,7 @@ height: 102px;
 
 .broadcast-square-bottom{
 position: relative;
-font-size:1.9em;
+font-size:95%;
 font-weight:200;
 padding: 10px;
 float:top;
@@ -241,6 +241,7 @@ height: 100px;
     }
 
 .broadcast-box{
+font-size:3vw;
 color:black;
 position:relative;
 margin-left:auto;
