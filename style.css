@@ -41,13 +41,15 @@ position:absolute;
 background-color: red;
 left:0px;
 top:1%  !important;
-height:auto;
-width: auto;
+height:auto  !important;
+width: auto  !important;
 z-index: 2;
 color:white;
-font-size: 3vw  !important;
-padding-left: 10px;
-padding-right: 10px;
+font-size: 3.6vw  !important;
+padding:1px  !important;
+padding-left: 10px  !important;
+padding-right: 10px  !important;
+
 }
 
 .subcats{
@@ -60,7 +62,7 @@ font-size: 3vw !important;
 font-weight:200;
 color:grey;
 //padding-left: 10px;
-//border: 1px dashed black  !important;
+border: 0px dashed black  !important;
 z-index:2;
 }
 .profile-picture{
@@ -96,7 +98,7 @@ padding-left:10px;
 padding-right:10px;
 left:5px;
 right: 5px;
-top: 30%;
+top: 30%  !important;
 width:86vw  !important;
 height: 45%  !important;
 color:black;
