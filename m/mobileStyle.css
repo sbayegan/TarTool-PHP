@@ -117,7 +117,7 @@ position:absolute;
 height:14vw;
 width:9vw;
 bottom:0vw;
-right:12vw;
+right:14vw;
 //margin-top:5px
 }
 .facebook-score{
@@ -155,31 +155,7 @@ height:5%;
     left:2vw;
     //border: 1px dashed red;
 }
-.saving-icon-alt{
-    position:absolute;
-    height:10vw;
-    width:10vw;
-    bottom:2vw;
-    right:2vw;
-    //border: 1px dashed red;
-}
 
-.facebook-icon-all{
-position:absolute;
-height:14vw;
-width:9vw;
-bottom:0vw;
-left:2vw;
-//margin-top:5px
-}
-.linkedin-icon-all{
-position:absolute;
-height:14vw;
-width:9vw;
-bottom:0vw;
-left:12vw;
-//margin-top:5px
-}
 .feed-column{
     width:auto;
     height:90%;
@@ -308,7 +284,7 @@ width:10vh;
 cursor: pointer;
 top:0px;
 position:absolute;
-right:70vw;
+right:16vw;
 height:10vh;
 width:10vh;
 //border:1px solid blue;
@@ -321,7 +297,7 @@ padding-right:1vh;
 padding-left:1vh;
 top:0px;
 position:absolute;
-left:65vw;
+left:14vw;
 height:10vh;
 width:auto;
 //border:1px solid orange;

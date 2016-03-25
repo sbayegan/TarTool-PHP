@@ -25,10 +25,9 @@ echo '
 function flipview(){
 	$(".saving-icon").animate({left: "78vw"});
 	$(".facebook-icon").animate({right: "78vw"});
-	$(".linkedin-icon").animate({right: "68vw"});
-	$(".panel-menu").animate({left: "14vw"});
-	$(".panel-flip").animate({right: "16vw"});
-
+	$(".linkedin-icon").animate({right: "66vw"});
+	$(".panel-menu").animate({left: "65vw"});
+	$(".panel-flip").animate({right: "70vw"});
 
 	$("#panel-flip").attr("onclick", "resetview()");
 	return;
@@ -37,9 +36,9 @@ function flipview(){
 function resetview(){
 	$(".saving-icon").animate({left: "2vw"});
 	$(".facebook-icon").animate({right: "2vw"});
-	$(".linkedin-icon").animate({right: "12vw"});
-	$(".panel-menu").animate({left: "65vw"});
-	$(".panel-flip").animate({right: "70vw"});
+	$(".linkedin-icon").animate({right: "14vw"});
+	$(".panel-menu").animate({left: "14vw"});
+	$(".panel-flip").animate({right: "16vw"});
 
 	$("#panel-flip").attr("onclick", "flipview()");
 	return;
