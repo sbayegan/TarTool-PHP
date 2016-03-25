@@ -22,7 +22,7 @@ echo '</head>';
 echo '<body> ';
 echo '<script>';
 echo '
-function changeview(){
+function flipview(){
 	$(".saving-icon").animate({left: "78vw"})
 	$(".facebook-icon").animate({right: "78vw"})
 	$(".linkedin-icon").animate({right: "68vw"})
@@ -96,7 +96,7 @@ echo '</script>';
 //echo  	 '</div>';//Main
 
 echo  '<div class="flat-panel">
-<span onclick="changeview()"> CHANGE VIEW </span>
+<span onclick="flipview()"> FLIP VIEW </span>
 <span onclick="resetview()"> RESET VIEW </span>
   </div> ';
 
