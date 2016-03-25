@@ -188,11 +188,12 @@ left:12vw;
     z-index:1;
 }
 .flat-panel{
+    background-color:white;
     position:fixed;
     width:100%;
-    height:10vh;
-    border:1px dashed black;
-    bottom:0px;
+    height:40vh;
+    border:1px solid black;
+    top:90%;
     z-index:5;
 }
 
@@ -290,4 +291,35 @@ background-color:#FCFCFC;
 border: 1px solid #E6E6E6;
 margin-top: -30px;
 height: 4vh;
+}
+
+.middle-logo{
+top:0px;
+position:absolute;
+margin-left:-5vh;
+left:50vw;
+height:10vh;
+width:10vh;
+//border:1px solid red;
+}
+
+.panel-menu{
+top:0px;
+position:absolute;
+left:0vw;
+right:;
+height:10vh;
+width:10vh;
+//border:1px solid blue;
+}
+
+.panel-flip{
+font-size: 6vw;
+top:0px;
+position:absolute;
+right:0vw;
+left:;
+height:10vh;
+width:auto;
+//border:1px solid orange;
 }

@@ -96,8 +96,9 @@ echo '</script>';
 //echo  	 '</div>';//Main
 
 echo  '<div class="flat-panel">
-<span onclick="flipview()"> FLIP VIEW </span>
-<span onclick="resetview()"> RESET VIEW </span>
+<div class="middle-logo"><img src="/logo/junto_logo_solo.png" alt="logo" height="90%" width="auto"> </div>
+<div class="panel-menu"><img src="/pictures/flip.png" alt="logo" height="90%" width="auto"></div>
+<div class="panel-flip">menu</div>
   </div> ';
 
 echo '</body>';
