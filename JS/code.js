@@ -23,7 +23,7 @@ $(document).ready(function(){
     $("#account-delete").hide();
 });
 
-function popflatpanel{
+function poppanel(){
 $("#transparent").fadeIn();
 $(".flat-panel").animate({"margin-bottom": "0vh"});
 return;
