@@ -327,6 +327,11 @@ padding: 5px;
 box-shadow: 0px 1px 8px grey;
 }
 
+.flat-panel{
+    display: block !important;
+}
+
+
 }
 ///////////////////////////////////////////////////
 .curator{
@@ -335,6 +340,7 @@ box-shadow: 0px 1px 8px grey;
 
 
 .flat-panel{
+    display: none;
     background-color:white;
     position:fixed;
     width:100%;
