@@ -23,6 +23,11 @@ $(document).ready(function(){
     $("#account-delete").hide();
 });
 
+function popflatpanel{
+$("#transparent").fadeIn();
+$(".flat-panel").animate({"margin-bottom": "0vh"});
+}
+
 function flipview(){
     $(".saving-icon").animate({left: "78vw"});
     $(".facebook-icon").animate({right: "78vw"});
