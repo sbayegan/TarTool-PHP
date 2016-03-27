@@ -340,6 +340,15 @@ right: 5vw !important;
 margin-right: 0px !important;
 }
 
+.singular-comment{
+padding:10px !important;
+float: top !important;
+width:86vw !important;
+right:1vw !important;
+left:1vw !important;
+}
+
+
 }
 ///////////////////////////////////////////////////
 .curator{
