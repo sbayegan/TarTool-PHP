@@ -26,6 +26,7 @@ $(document).ready(function(){
 function popflatpanel{
 $("#transparent").fadeIn();
 $(".flat-panel").animate({"margin-bottom": "0vh"});
+return;
 }
 
 function flipview(){
