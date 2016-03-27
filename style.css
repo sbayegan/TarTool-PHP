@@ -332,6 +332,14 @@ box-shadow: 0px 1px 8px grey;
 }
 
 
+.comments-square{
+top: 3vh !important;
+bottom: 12vh !important;
+width: 90vw !important;
+right: 5vw !important;
+margin-right: 0px !important;
+}
+
 }
 ///////////////////////////////////////////////////
 .curator{
