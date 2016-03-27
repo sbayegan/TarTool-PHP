@@ -747,6 +747,12 @@ echo  '<div class="flat-panel" id="flat-panel">
 <div class="middle-logo"><img src="/logo/junto_logo_solo.png" alt="logo" height="90%" width="auto"> </div>
 <div class="panel-flip" id="panel-flip" onclick="flipview()"><img src="/pictures/flip.png" alt="logo" height="90%" width="auto"></div>
 <div class="panel-menu" onclick="poppanel()" >menu</div>
+
+<div class="panel-option" style="top:10vh;"></div>
+<div class="panel-option"></div>
+<div class="panel-option"></div>
+
+
   </div> ';
 
 

@@ -290,7 +290,7 @@ height: 4vh !important;
 }
 
 .middle-logo{
-top:0px;
+top:1vw;
 position:absolute;
 margin-left:-5vh;
 left:50vw;
@@ -1706,15 +1706,11 @@ height: 500px;
 //border: 1px solid grey;
 padding: 20px;
 }
-/*
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-  height:5px;
-    //width: 7px;
+
+.panel-option{
+position:relative;
+float:top;
+width:100%;
+height:10vh;
+background-color:blue;
 }
-::-webkit-scrollbar-thumb {
- //   border-radius: 8px;
- //   background-color: rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.1);
-}
-*/
