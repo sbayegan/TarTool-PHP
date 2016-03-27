@@ -29,6 +29,7 @@ $(".flat-panel").animate({"margin-bottom": "0vh"});
 return;
 }
 
+
 function flipview(){
     $(".saving-icon").animate({left: "78vw"});
     $(".facebook-icon").animate({right: "78vw"});
@@ -462,6 +463,9 @@ $("#transparent-box").fadeOut();
 $("#transparent-square").fadeOut();
 $("#change-password").fadeOut();
 $("#transparent-comments").fadeOut();
+
+// MOBILE STUFF
+$(".flat-panel").animate({"margin-bottom": "-30vh"});
 //document.getElementById("transparent").style.display = 'none';
 //document.getElementById("transparent-signup").style.display = 'none';
 //document.getElementById("transparent-signin").style.display = 'none';
