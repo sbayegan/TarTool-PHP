@@ -743,6 +743,12 @@ echo'</div>';
 
 // This is the html content that will be used by bootstrap to load the page 
 
+echo  '<div class="flat-panel">
+<div class="middle-logo"><img src="/logo/junto_logo_solo.png" alt="logo" height="90%" width="auto"> </div>
+<div class="panel-flip" id="panel-flip" onclick="flipview()"><img src="/pictures/flip.png" alt="logo" height="90%" width="auto"></div>
+<div class="panel-menu" >menu</div>
+  </div> ';
+
 
 
 
@@ -755,7 +761,8 @@ echo '<footer>';
 echo '</footer>';
 
 
-echo '</body>';   
+echo '</body>'; 
+
 $conn->close();
 echo '</html>';
 ?>
