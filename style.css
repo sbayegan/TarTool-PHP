@@ -398,9 +398,9 @@ float: top;
 z-index:115;
 background-color:white;
 height: auto !important;
-width: 100% !important;
+width: 35vw !important;
 left:10px;
-border: 11px dashed whitesmoke;
+border: 1px dashed blue !important;
 }
 
 .user-name{
