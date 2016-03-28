@@ -347,11 +347,9 @@ float: top !important;
 width:85vw !important;
 right:2vw !important;
 left:1vw !important;
-padding-right:9vw !important;
 }
 
 .signin-square{
-font-size:3vh !important;
 border-radius: 10px;
 padding: 20px;
 //padding-bottom: 10px;
@@ -383,6 +381,58 @@ z-index: 75;
 background-color: #FEFEFE;
 }
 
+.user-info{
+ position: fixed;
+ top:0px !important;
+ width: 100% !important;
+ height: auto;
+ left: auto !important;
+ border: 5px solid red;
+}
+
+
+.user-photo{
+cursor: pointer;
+position: :relative;
+float: top;
+z-index:115;
+background-color:white;
+height: auto !important;
+width: 100% !important;
+left:10px;
+border: 11px dashed whitesmoke;
+}
+
+.user-name{
+cursor: pointer;
+position: fixed !important ;
+margin-bottom: 3px;
+top: 10px;
+left:50%;
+//padding-left:5px;
+text-align:left;
+font-size:4vw !important;
+z-index:7;
+background-color:white;
+height: auto;
+width: auto !important;
+border: 6px dashed grey;
+}
+
+.user-occupation{
+cursor: pointer;
+position: fixed !important;
+top: 7vh !important;
+left:40vw;
+z-index:1;
+background-color:white;
+max-height:16vh !important;
+height: auto !important;
+width: 50vw !important;
+padding:5px;
+font-size:2.4vw;
+border: 5px dashed orange;
+}
 
 }
 ///////////////////////////////////////////////////
@@ -780,7 +830,6 @@ margin:2px;
 background-color:whitesmoke;
 position: relative;
 padding:15px;
-padding-right:8vw;
 float: top;
 width: 475px;
 height: auto;
@@ -1771,15 +1820,3 @@ font-size:4vh;
 padding:2vh;
 }
 
-.comment-container{
-    position:absolute;
-    top:6vh;
-    bottom:15vh;
-    overflow:scroll;
-}
-.comment-title{
-    position:absolute;
-    top:20px;
-    left:20px;
-    font-size:3vh;
-}
