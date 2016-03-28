@@ -31,7 +31,7 @@ echo '<div class="singular-comment" id="single-comment-';echo $outComment['COMME
 
 $author = $outComment['USERID'];
 
-if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<span style="position:absolute;display:block;right:5px;bottom:-2px;cursor:pointer;color:red;"  onclick="deleteComment(';echo $outComment['COMMENTID'];echo ",";echo $id;echo')">Delete</span>';}
+if(isset($_COOKIE['junto']) && $_COOKIE['junto']==$author){echo '<span style="position:absolute;display:block;right:5px;bottom:-2px;cursor:pointer;color:red;font-size:2vh;"  onclick="deleteComment(';echo $outComment['COMMENTID'];echo ",";echo $id;echo')">Delete</span>';}
 $username = $conn->query("SELECT * FROM USERS WHERE USERID=".$author);
 $username = mysqli_fetch_assoc($username);
 $username = $username['USERNAME'];
