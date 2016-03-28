@@ -92,7 +92,7 @@ if(isset($_COOKIE['junto'])){
 echo '
 
 <div style="position:absolute;bottom:0px;width:98%;">
-<textarea style="height:11vh;width:98%;margin-top:20px;background-color:whitesmoke;" name="comment" form="commentform" id="comment"></textarea>
+<textarea style="height:9vh;width:98%;margin-top:20px;background-color:whitesmoke;" name="comment" form="commentform" id="comment"></textarea>
 <form action="uploadComment.php" method="post" id="commentform" >
 <div class="form-group" >
 <input type="button" style="width:100%;" class="btn btn-default btn-sm" onclick="commentUpload()" value="Submit">
