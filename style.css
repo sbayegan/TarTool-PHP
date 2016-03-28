@@ -308,7 +308,8 @@ bottom:10vh !important;
 left:0% !important;
 z-index:10 !important;
 color:white;
-font-size: 7vw !important;
+height:5.5vh;
+font-size: 3.5vh !important;
 padding: 5px;
 //box-shadow: 0px 1px 8px grey;
 }
@@ -319,10 +320,10 @@ position:fixed;
 background-color:grey;
 top:auto !important;
 left:0vh !important;
-bottom: 17vh;
+bottom: 16vh;
 z-index:72;
 color:white;
-font-size: 3vw !important;
+font-size: 2vh!important;
 padding: 5px;
 box-shadow: 0px 1px 8px grey;
 }
