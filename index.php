@@ -748,9 +748,9 @@ echo  '<div class="flat-panel" id="flat-panel">
 <div class="panel-flip" id="panel-flip" onclick="flipview()"><img src="/pictures/flip.png" alt="logo" height="90%" width="auto"></div>
 <div class="panel-menu" onclick="poppanel()" >menu</div>
 
-<div class="panel-option" style="margin-top:10vh;"> ONE </div>
-<div class="panel-option"> TWO </div>
-<div class="panel-option"> THREE </div>
+<div class="panel-option" style="margin-top:10vh;">Log In</div>
+<div class="panel-option">Sign Up</div>
+<div class="panel-option">About Us</div>
 
 
   </div> ';
