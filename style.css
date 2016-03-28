@@ -366,7 +366,20 @@ z-index: 75;
 background-color: #FEFEFE;
 }
 
-
+.signup-square{
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0px 1px 8px grey;
+display: none;
+max-height: auto;
+position: fixed;
+margin-top: 2vw !important;
+left: 2vw !important;
+width: 95vw !important;
+margin-left:auto !important;
+z-index: 75;
+background-color: #FEFEFE;
+}
 
 
 }
