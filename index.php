@@ -236,11 +236,15 @@ echo '<div class="signin-square" id="transparent-signin">';
     <div class="form-group">
 
       <label >Username </label>
+          <span class="input-zoom">
       <input  class="form-control" type="text"      name="user" id="loginusername"   placeholder=" Username">
+          </span>
     </div>
     <div class="form-group">
       <label >Password </label>
+          <span class="input-zoom">
       <input  class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
+          </span>
       <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
       <br>
       <input style="width:100%;" type="submit" id="submit" class="btn btn-default btn-sm" value="Log In" > 
