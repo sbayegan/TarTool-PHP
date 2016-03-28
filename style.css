@@ -434,6 +434,16 @@ font-size:2.4vw;
 border: 5px dashed orange;
 }
 
+.latest-mini-cards{
+display:none;
+}
+.latest-mini-cards-title{
+    display:none;
+}
+.update-status{
+    display:none;
+}
+
 }
 ///////////////////////////////////////////////////
 .curator{
