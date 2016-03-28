@@ -1768,3 +1768,15 @@ font-size:4vh;
 padding:2vh;
 }
 
+.comment-container{
+    position:absolute;
+    top:6vh;
+    bottom:15vh;
+    overflow:scroll;
+}
+.comment-title{
+    position:absolute;
+    top:20px;
+    left:20px;
+    font-size:160%;
+}

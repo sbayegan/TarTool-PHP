@@ -15,7 +15,7 @@ $comments = $conn->query("SELECT * FROM COMMENTS WHERE RESOURCEID=".$id." ORDER 
 $row = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$id);
 $row = mysqli_fetch_assoc($row);
 $title = $row['TITLE'];
-echo '<div style="position:absolute;top:20px;left:20px;font-size:160%;">';
+echo '<div class="comment-title" >';
 if($row['MEDIUM']!='Broadcast'){echo $title;}
 else{
 	$name = $conn->query("SELECT * FROM USERS WHERE USERID=".$row['SUBMITTER']);
@@ -24,7 +24,7 @@ else{
 }
 echo '</div>';
 // create a while loop
-echo '<div id="commentAppend" style="position:absolute;top:6vh;bottom:15vh;overflow:scroll;">';
+echo '<div  class="comment-container" id="commentAppend" >';
 //if ($comments->num_rows == 0){echo '<div style="color:red;"> No comment has been submitted for this card yet! Go ahead and tell us what you think about this card :-)</div>';}
 while($outComment = mysqli_fetch_assoc($comments)){
 echo '<div class="singular-comment" id="single-comment-';echo $outComment['COMMENTID'];echo '">';
