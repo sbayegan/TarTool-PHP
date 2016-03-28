@@ -242,9 +242,8 @@ echo '<div class="signin-square" id="transparent-signin">';
     </div>
     <div class="form-group">
       <label >Password </label>
-          <span class="input-zoom">
-      <input  class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
-          </span>
+          
+      <input class="input-zoom" class="form-control" type="password"  name="pass"  id="login-password" placeholder=" Password">
       <span id="condition" style="display:inline-block;margin:5px;color:red;"></span>
       <br>
       <input style="width:100%;" type="submit" id="submit" class="btn btn-default btn-sm" value="Log In" > 
