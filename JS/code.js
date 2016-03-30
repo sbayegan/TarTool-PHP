@@ -26,6 +26,7 @@ $(document).ready(function(){
 function poppanel(){
 $("#transparent").fadeIn();
 $(".flat-panel").animate({"margin-bottom": "0vh"});
+//$("#panel-flip").attr("onclick", "resetview()");
 return;
 }
 
