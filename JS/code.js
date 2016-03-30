@@ -433,6 +433,7 @@ $("#change-password").fadeOut();
 }
 
 function showsignup(){
+$("#transparent-signin").fadeOut();
 $("#transparent").fadeIn();
 $("#transparent-signup").fadeIn();
 //document.getElementById("transparent").style.display = 'block';
@@ -440,6 +441,7 @@ $("#transparent-signup").fadeIn();
 }
 
 function showsignin(){
+$("#transparent-signup").fadeOut();
 $("#transparent").fadeIn();
 $("#transparent-signin").fadeIn();
 //document.getElementById("transparent").style.display = 'block';
@@ -478,7 +480,7 @@ $(".flat-panel").animate({"margin-bottom": "-30vh"});
 
 
 function numloader(last,string){
-if(Ended == 0){	
+if(Ended == 0){ 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -505,25 +507,25 @@ function loader(last,string){
                 // are no more cards to be displayed
                 Ended = 1;
                 var node = document.createElement("DIV");
-		        node.setAttribute("id", "Frame"+Frame);
-		        document.getElementById("feed").appendChild(node);
+                node.setAttribute("id", "Frame"+Frame);
+                document.getElementById("feed").appendChild(node);
                 document.getElementById("Frame"+Frame).innerHTML = "<div class='end-of-feed'> End of Stack!</div>";
-		          if(Load==1){loader.parentNode.removeChild(loader);Load=0;}	
+                  if(Load==1){loader.parentNode.removeChild(loader);Load=0;}    
 
 
                 }
             else{// Append the content to the feed
-		        var node = document.createElement("DIV");
-		        node.setAttribute("id", "Frame"+Frame);
-		        document.getElementById("feed").appendChild(node);
-		        document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
-		        if(Load == 1){loader.parentNode.removeChild(loader);Load=0;}
+                var node = document.createElement("DIV");
+                node.setAttribute("id", "Frame"+Frame);
+                document.getElementById("feed").appendChild(node);
+                document.getElementById("Frame"+Frame).innerHTML = xmlhttp.responseText;
+                if(Load == 1){loader.parentNode.removeChild(loader);Load=0;}
                 }
             }// if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
         }// xmlhttp.onreadystatechange
 
         if(Load == 0){
-	        Load = 1;
+            Load = 1;
             loader = document.createElement("DIV");
             loader.setAttribute('id', 'loader');
             loader.innerHTML = "<img style='position:relative;padding-bottom:100px;left:50%;margin-left:-30px;margin-top:10px;'  src='/logo/loading.gif' title='Loading, please wait..'>";
@@ -537,14 +539,14 @@ function loader(last,string){
 
 function favorite(cardid) {
    var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-	              id = "save-";
-	              id += cardid;
-	              //document.getElementById("XXX").innerHTML = id;
-	              output = "<span onclick=\'unfavorite(";
-	              output += cardid;
+                  id = "save-";
+                  id += cardid;
+                  //document.getElementById("XXX").innerHTML = id;
+                  output = "<span onclick=\'unfavorite(";
+                  output += cardid;
                       if(flipped == 0){output += ")\'  > <img class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>";}
                         else{output += ")\'  > <img  style ='left:78vw;' class='saving-icon' src=\'/pictures/cross-red.png\'  width=\'auto\' height=\'100%\' ></span>";}
                       document.getElementById(id).innerHTML= output;
@@ -554,45 +556,45 @@ function favorite(cardid) {
 
         if(flipped == 0){document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
         else{document.getElementById("save-"+cardid).innerHTML="<img style ='left:78vw;' class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
-	xmlhttp.open("POST", "/PHP/account/favorite.php", true);
+    xmlhttp.open("POST", "/PHP/account/favorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
 }
 
 function approve(cardid) {
    var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-	              id = "approve-";
-	              id += cardid;
+                  id = "approve-";
+                  id += cardid;
                       document.getElementById(id).innerHTML= "";
                     }
      }
    }    
  
-	document.getElementById("approve-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='/pictures/ajax_loader.gif' width='55' height='55' >";    
+    document.getElementById("approve-"+cardid).innerHTML="<img style='position:relative;top:10px;' src='/pictures/ajax_loader.gif' width='55' height='55' >";    
         xmlhttp.open("POST", "approve.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlhttp.send("id="+cardid);
 }
 function unfavorite(cardid) {
   var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 if(xmlhttp.responseText == 1){
-    			id = "save-";
-			id += cardid;
-    			//document.getElementById("XXX").innerHTML = id;
-        		output = "<span onclick=\'favorite(";
-        		output += cardid ;
-        		if(flipped == 0){output += ")\'    > <img class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";}
+                id = "save-";
+            id += cardid;
+                //document.getElementById("XXX").innerHTML = id;
+                output = "<span onclick=\'favorite(";
+                output += cardid ;
+                if(flipped == 0){output += ")\'    > <img class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";}
                 else{output += ")\'    > <img style ='left:78vw;' class='saving-icon' src=\'/pictures/save.png\'  width=\'auto\' height=\'100%\' ></span>";}
-        		document.getElementById(id).innerHTML= output;
-                			}
-     								}
-   					        }         
-	   if(flipped == 0){document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
+                document.getElementById(id).innerHTML= output;
+                            }
+                                    }
+                            }         
+       if(flipped == 0){document.getElementById("save-"+cardid).innerHTML="<img class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
         else{document.getElementById("save-"+cardid).innerHTML="<img style ='left:78vw;' class='saving-icon' src='/pictures/ajax_loader.gif' width='auto' height='100%' >";}
         xmlhttp.open("POST", "/PHP/account/unfavorite.php", true);
         xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -627,7 +629,7 @@ currentcat = str;
 if(str == "FE"){
     document.getElementById("samplecard-category").innerHTML="Front-End Development";
     document.getElementById("D1").innerHTML = 
-	'<option value="">Choose One</option>'+
+    '<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
         '<option value="MockupsAndWireframing">Mockups & Wireframing</option>'+
@@ -640,66 +642,66 @@ if(str == "FE"){
         '<option value="FrontEndAndroid">Android</option>'+
         '<option value="Bootstrap">Bootstrap</option>'+
         '<option value="XML">XML</option>'+
-	'<option value="JQuery">jQuery</option>'+
-	'<option value="Angular">Angular</option>'+
-	'<option value="Canvas">Canvas</option>'+
-	'<option value="SVG">Scalable Vector Graphics</option>'+
-	'<option value="JSON">JSON</option>'+
+    '<option value="JQuery">jQuery</option>'+
+    '<option value="Angular">Angular</option>'+
+    '<option value="Canvas">Canvas</option>'+
+    '<option value="SVG">Scalable Vector Graphics</option>'+
+    '<option value="JSON">JSON</option>'+
         '<option value="Ajax">Ajax</option>';
 }
 if(str == "BE"){
     document.getElementById("samplecard-category").innerHTML="Back-End Development";
     document.getElementById("D1").innerHTML = 
-	'<option value="">Choose One</option>'+
+    '<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
         '<option value="Hosting">Hosting</option>'+
         '<option value="PHP">PHP</option>'+
         '<option value="Python">Python</option>'+
-	'<option value="ASPNET">ASP.NET</option>'+
-	'<option value="VBScript">Visual Basic Script</option>'+
-	'<option value="SQL">SQL</option>'+
-	'<option value="C">C</option>'+
-	'<option value="C++">C++</option>'+
-	'<option value="Shell">Shell</option>'+
-	'<option value="Java">Java</option>'+
-	'<option value="Ruby">Ruby</option>'+
-	'<option value="Objective-C">Objective-C</option>'+
-	'<option value="Swift">Swift</option>'+
+    '<option value="ASPNET">ASP.NET</option>'+
+    '<option value="VBScript">Visual Basic Script</option>'+
+    '<option value="SQL">SQL</option>'+
+    '<option value="C">C</option>'+
+    '<option value="C++">C++</option>'+
+    '<option value="Shell">Shell</option>'+
+    '<option value="Java">Java</option>'+
+    '<option value="Ruby">Ruby</option>'+
+    '<option value="Objective-C">Objective-C</option>'+
+    '<option value="Swift">Swift</option>'+
         '<option value="C#">C#</option>'+
         '<option value="Debugging">Debugging</option>';
 }
 if(str == "BD"){
     document.getElementById("samplecard-category").innerHTML="Business Development";
     document.getElementById("D1").innerHTML = 
-	'<option value="">Choose One</option>'+
-	'<option value="LeanStartup">Lean Startup</option>'+
+    '<option value="">Choose One</option>'+
+    '<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
         '<option value="Naming">Naming</option>'+
         '<option value="CopyWriting">Copywriting</option>'+
         '<option value="Analytics">Analytics</option> '+
         '<option value="Launching">Launching</option>'+
-	'<option value="UserFeedback">User Feedback</option>'+        
+    '<option value="UserFeedback">User Feedback</option>'+        
         '<option value="SEO">SEO</option>'+
         '<option value="SocialMediaCommunity">Social Media & Community</option>'+
         '<option value="ProjectManagement">Project Management</option>'+
         '<option value="CustomerService">Customer Service</option>'+
         '<option value="InventoryManagement">Inventory Management</option>'+
         '<option value="Sales">Sales</option>'+
-	'<option value="Funding">Funding</option>'+
-	'<option value="Administration">Administration</option>'+
-	'<option value="Productivity">Productivity</option>'+
+    '<option value="Funding">Funding</option>'+
+    '<option value="Administration">Administration</option>'+
+    '<option value="Productivity">Productivity</option>'+
         '<option value="Outsourcing">Outsourcing</option>'+
         '<option value="E-commerce">E-commerce</option>'+
-	'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>'+
-	'<option value="Events">Events</option>';
+    '<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>'+
+    '<option value="Events">Events</option>';
 }
 }
 
 function add() {
 var FE = 
-	'<select name="subcat' + lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
-	    '<option value="">Choose One</option>'+
+    '<select name="subcat' + lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
+        '<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
         '<option value="UserExperience">User Experience</option>'+
         '<option value="MockupsAndWireframing">Mockups & Wireframing</option>'+
@@ -712,57 +714,57 @@ var FE =
         '<option value="FrontEndAndroid">Android</option>'+
         '<option value="Bootstrap">Bootstrap</option>'+
         '<option value="XML">XML</option>'+
-	   '<option value="JQuery">jQuery</option>'+
-	   '<option value="Angular">Angular</option>'+
-	   '<option value="Canvas">Canvas</option>'+
-	   '<option value="SVG">Scalable Vector Graphics</option>'+
-	   '<option value="JSON">JSON</option>'+
+       '<option value="JQuery">jQuery</option>'+
+       '<option value="Angular">Angular</option>'+
+       '<option value="Canvas">Canvas</option>'+
+       '<option value="SVG">Scalable Vector Graphics</option>'+
+       '<option value="JSON">JSON</option>'+
         '<option value="Ajax">Ajax</option>'+
-	'</select>';
+    '</select>';
 var BE = 
-	'<select name="subcat'+ lastused +'"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
-	'<option value="">Choose One</option>'+
+    '<select name="subcat'+ lastused +'"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
+    '<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
         '<option value="DataManagement">Data Management</option>'+
         '<option value="Hosting">Hosting</option>'+
         '<option value="PHP">PHP</option>'+
         '<option value="Python">Python</option>'+
-	'<option value="ASPNET">ASP.NET</option>'+
-	'<option value="VBScript">Visual Basic Script</option>'+
-	'<option value="SQL">SQL</option>'+
-	'<option value="C">C</option>'+
-	'<option value="C++">C++</option>'+
-	'<option value="Shell">Shell</option>'+
-	'<option value="Java">Java</option>'+
-	'<option value="Ruby">Ruby</option>'+
-	'<option value="Objective-C">Objective-C</option>'+
-	'<option value="Swift">Swift</option>'+
+    '<option value="ASPNET">ASP.NET</option>'+
+    '<option value="VBScript">Visual Basic Script</option>'+
+    '<option value="SQL">SQL</option>'+
+    '<option value="C">C</option>'+
+    '<option value="C++">C++</option>'+
+    '<option value="Shell">Shell</option>'+
+    '<option value="Java">Java</option>'+
+    '<option value="Ruby">Ruby</option>'+
+    '<option value="Objective-C">Objective-C</option>'+
+    '<option value="Swift">Swift</option>'+
         '<option value="C#">C#</option>'+
         '<option value="Debugging Tools">Debugging</option>'+
-	'</select>';
+    '</select>';
 var BD = 
- 	'<select name="subcat'+ lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
- 	'<option value="">Choose One</option>'+
+    '<select name="subcat'+ lastused + '"  class="form-control" id=lastused onchange="submissionupdatelabels('+lastused+',this.options[this.selectedIndex].innerHTML)">'+
+    '<option value="">Choose One</option>'+
         '<option value="LeanStartup">Lean Startup</option>'+
         '<option value="MarketingAndResearch">Marketing & Research</option>'+
         '<option value="Naming">Naming</option>'+
         '<option value="CopyWriting">Copywriting</option>'+
         '<option value="Analytics">Analytics</option> '+
         '<option value="Launching">Launching</option>'+
-	'<option value="UserFeedback">User Feedback</option>'+        
+    '<option value="UserFeedback">User Feedback</option>'+        
         '<option value="SEO">SEO</option>'+
         '<option value="SocialMediaCommunity">Social Media & Community</option>'+
         '<option value="ProjectManagement">Project Management</option>'+
         '<option value="CustomerService">Customer Service</option>'+
         '<option value="InventoryManagement">Inventory Management</option>'+
         '<option value="Sales">Sales</option>'+
-	'<option value="Funding">Funding</option>'+
-	'<option value="Administration">Administration</option>'+
-	'<option value="Productivity">Productivity</option>'+
+    '<option value="Funding">Funding</option>'+
+    '<option value="Administration">Administration</option>'+
+    '<option value="Productivity">Productivity</option>'+
         '<option value="Outsourcing">Outsourcing</option>'+
         '<option value="E-commerce">E-commerce</option>'+
-	'<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>'+
-	'<option value="Events">Events</option>'+
+    '<option value="AcceleratorsAndIncubators">Accelerators & Incubators</option>'+
+    '<option value="Events">Events</option>'+
         '</select>' ;
 var node = document.createElement("DIV");
 node.setAttribute("id", "D"+lastused);
@@ -850,7 +852,7 @@ function valid(str) {
                   email = 0;
                   {document.getElementById("submit_btn").disabled = true;}
                 }
-		if(xmlhttp.responseText == 2){
+        if(xmlhttp.responseText == 2){
                   document.getElementById("email-status").innerHTML = "already registered";
                   email = 0;
                   {document.getElementById("submit_btn").disabled = true;}
@@ -1030,18 +1032,18 @@ login();
  });});
 
 function passmatch(){
-			if(document.getElementById("password").value == document.getElementById("password1").value){
-				document.getElementById("pass1-status").innerHTML = "matched";
-				repass = 1;
-                  		if(username ==1 && email ==1 && pass == 1 && repass ==1)
-        			{document.getElementById("submit_btn").disabled = false;}
-							}
-			if(document.getElementById("password").value != document.getElementById("password1").value){
-				document.getElementById("pass1-status").innerHTML = "not mached";
-				repass = 0;
-				{document.getElementById("submit_btn").disabled = true;}
-							}
-			}		
+            if(document.getElementById("password").value == document.getElementById("password1").value){
+                document.getElementById("pass1-status").innerHTML = "matched";
+                repass = 1;
+                        if(username ==1 && email ==1 && pass == 1 && repass ==1)
+                    {document.getElementById("submit_btn").disabled = false;}
+                            }
+            if(document.getElementById("password").value != document.getElementById("password1").value){
+                document.getElementById("pass1-status").innerHTML = "not mached";
+                repass = 0;
+                {document.getElementById("submit_btn").disabled = true;}
+                            }
+            }       
 function passmatchrec(){ //for password recovery
             if(document.getElementById("password").value == document.getElementById("password1").value){
                 document.getElementById("pass1-status").innerHTML = "matched";
@@ -1054,5 +1056,5 @@ function passmatchrec(){ //for password recovery
                 repass = 0;
                 {document.getElementById("submit_btn").disabled = true;}
                             }
-            }   				
+            }                   
 
