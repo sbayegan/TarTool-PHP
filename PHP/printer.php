@@ -277,7 +277,7 @@ echo '<div class="minicard-profile">';
 //	echo '<span onclick="removemini(';echo$i;echo ')">';
 		echo ' <img src="';   
 		echo $result['PROFILEPICTURE'];
-		echo '" width="auto" height="auto" > ';
+		echo '" width="100%" height="auto" > ';
 //	echo '</span>';
 echo '</div>';
 echo '<div class="minicard-delete">';
