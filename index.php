@@ -111,26 +111,26 @@ Sign Up
       <form action="PHP/account/registeration.php" method="post" id="form" autocomplete="off">
        <div class="form-group">
        <label >Name</label>
-       <input type="text" name="full_name" placeholder="your name" id="full_name" class="form-control"/>
+       <input type="text" name="full_name" placeholder="your name" id="full_name" />
        </div>
        <div class="form-group">
        <label >Email</label>
-       <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" class="form-control"/>
+       <input type="text" name="email" placeholder="your email address" id="email" onkeyup="valid(this.value)" />
        <span id="email-status"></span>
        </div>
        <div class="form-group">
       <label >Username</label>
-      <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" class="form-control"/>
+      <input type="text" name="username" id="username" placeholder="at least four characters" onkeyup="available(this.value)" />
       <span id="user-status"> </span> 
       </div>
        <div class="form-group">
       <label >Password</label>
-      <input type="password" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)" class="form-control" />
+      <input type="password" name="password" id="password" placeholder="at least 8 characters" onkeyup="passcheck(this.value)"  />
       <span id="pass-status"> </span> 
       </div>
       <div class="form-group">
       <label >Retype Password</label>
-       <input type="password"  name="retype password" id="password1" onkeyup="passmatch()" class="form-control" />
+       <input type="password"  name="retype password" id="password1" onkeyup="passmatch()"  />
        <span id="pass1-status"> </span> 
       </div>
         <div class="form-group">
