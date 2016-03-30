@@ -350,14 +350,13 @@ left:1vw !important;
 }
 
 .signin-square{
+font-size:5vh !important;
 border-radius: 10px;
 padding: 20px;
 //padding-bottom: 10px;
-box-shadow: 0px 1px 8px grey;
-display: none;
+
 height: auto !important;
-position: fixed;
-margin-top: 4vh !important;
+margin-top: 2vh !important;
 left: 1vw !important;
 right: 1vw !important;
 width: auto !important;
@@ -367,12 +366,14 @@ background-color: #FEFEFE;
 }
 
 .signup-square{
+font-size:5vh !important;
 border-radius: 10px;
 padding: 20px;
 box-shadow: 0px 1px 8px grey;
 display: none;
-max-height: auto;
+max-height: 50vh !important;
 position: fixed;
+overflow:scroll;
 margin-top: 2vw !important;
 left: 2vw !important;
 width: 95vw !important;
