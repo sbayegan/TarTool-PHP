@@ -457,6 +457,106 @@ overflow: auto !important;
 //border: 10px solid red; 
 }
 
+.library{
+//display: block;
+position:fixed;
+left:0px !important;
+margin-bottom:185px;
+top:8vh !important;
+width:114vw !important;
+height:90vh !important;
+margin-right:0px !important;
+overflow:scroll;
+background-color: white
+}
+
+.shelveStats{
+text-align:center;
+padding-top:3.5vh !important;
+font-size:7vh !important;
+position: relative;
+float:left;
+width:16vw !important;
+height: 18vh !important;
+background: whitesmoke;  
+}
+
+.shelve{
+position: relative;
+left:0px;
+width: 98vw !important;
+height: 18vh !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: whitesmoke;
+    white-space: nowrap;
+    float: left;
+}
+
+
+.shelve-title{
+text-align:center;
+width: 100vw !important;
+    height: 3vh !important;
+    font-size: 2vh !important;
+}
+
+
+.minicard{
+margin:10px;
+margin-top:0 !important;
+    width: 18vh !important;
+    height: 18vh !important;
+}
+.minicard-delete{
+position:absolute;
+right:1vw !important;
+top:1vw !important;
+}
+
+.minicard-profile{
+height:18vh !important;
+width:18vh !important;
+opacity: 0.3;
+}
+
+.minicard-tags{
+
+font-size:2.5vw !important;
+padding-left:0 !important;
+right:0vw !important;
+width:18vh !important;
+height:11vh !important;
+//border: 3px dashed red;
+
+}
+
+
+.minicard-title{
+padding:0px !important;
+font-size:2.3vw !important;
+left:1vw !important;
+right:10px;
+width:17vh !important;
+height:4.5vh !important;
+display:inline block;
+top:40px;
+//border: 3px dashed blue;
+}
+
+.minicard-sticker{
+position:absolute;
+background-color:#FF6666;
+left:0px;
+top:0px !important;
+height: auto !important;
+width: auto !important;
+color:white;
+font-size: 3vw !important;
+padding-left: 0px !important;
+}
+
+
 }
 ///////////////////////////////////////////////////
 .curator{
