@@ -387,7 +387,7 @@ background-color: #FEFEFE;
  width: 100% !important;
  height: auto;
  left: auto !important;
- border: 5px solid red;
+ //border: 5px solid red;
 }
 
 
@@ -400,7 +400,7 @@ background-color:white;
 height: auto !important;
 width: 35vw !important;
 left:10px;
-border: 1px dashed blue !important;
+//border: 1px dashed blue !important;
 }
 
 .user-name{
@@ -408,30 +408,30 @@ cursor: pointer;
 position: fixed !important ;
 margin-bottom: 3px;
 top: 10px;
-left:50%;
+left:37vw !important;
 //padding-left:5px;
 text-align:left;
-font-size:4vw !important;
+font-size:6vw !important;
 z-index:7;
 background-color:white;
-height: auto;
+display:inline;
 width: auto !important;
-border: 6px dashed grey;
+//border: 6px dashed grey;
 }
 
 .user-occupation{
 cursor: pointer;
 position: fixed !important;
 top: 7vh !important;
-left:40vw;
+left:37vw;
 z-index:1;
 background-color:white;
 max-height:16vh !important;
-height: auto !important;
-width: 50vw !important;
+
+width: 60vw !important;
 padding:5px;
-font-size:2.4vw;
-border: 5px dashed orange;
+font-size:3.5vw;
+//border: 5px dashed orange;
 }
 
 .latest-mini-cards{
@@ -453,7 +453,7 @@ width:100vw !important;
 left:0px !important;
 top: 30vh !important;
 overflow: auto !important;
-border: 10px solid red; 
+//border: 10px solid red; 
 }
 
 }
