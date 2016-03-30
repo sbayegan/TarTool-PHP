@@ -444,6 +444,18 @@ display:none;
     display:none;
 }
 
+
+.user-blogging{
+
+position: !relative !important;
+height: 100vw !important;
+width:100vw !important;
+left:0px !important;
+top: 30vh !important;
+overflow: auto !important;
+border: 10px solid red; 
+}
+
 }
 ///////////////////////////////////////////////////
 .curator{
