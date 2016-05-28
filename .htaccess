@@ -1,0 +1,39 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^techie/(.*)$ /profile/profile.php?u=$1 [L]
+
+RewriteCond %{THE_REQUEST} ^.*\/index\.php\ HTTP/
+RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tartool.com [NC]
+RewriteRule ^(.*)$ http://www.tartool.com/$1 [L,R=301,NC]
+
+RewriteCond %{HTTP_HOST} ^52\.25\.63\.38
+RewriteRule (.*) http://www.tartool.com/$1 [R=301,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^business index.php?cat=BD [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^frontend index.php?cat=FE [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^backend index.php?cat=BE [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^library library.php 
+                                    
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?subcat=$1 [L]
+
+
