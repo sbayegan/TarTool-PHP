@@ -110,23 +110,13 @@ echo '
     <div class="title" id="samplecard-title"></div>
     <div class="description" id="samplecard-description"></div>
   </a>
-  <div class="score">
+  <div class="linkedin-icon"><img src="/pictures/linkedin.png" width="100%" height="auto" style="top:0px;" alt="facebook"><div class="score-all" id="samplecard-linkedin">0</div></div>
+<div class="facebook-icon"><img src="/pictures/facebook.png" width="100%" height="auto" style="top:0px;" alt="facebook"><div class="score-all" id="samplecard-facebook">0</div></div>
 
-      <img src="/pictures/facebook.png" width="30" height="30" class="facebook-icon" alt="facebook">
-';
- //echo '     <img src="/pictures/google.png" width="30" height="30" class="twitter-icon" alt="google">';
-  echo'    <img src="/pictures/linkedin.png" width="30" height="30" class="linkedin-icon" alt="linkedin">
-
-  </div>
-  <div class="numbers">
-    <div class="linkedin-score" id="samplecard-linkedin">0</div>';
-// echo '   <div class="twitter-score" id="samplecard-google">0</div>';
- echo '   <div class="facebook-score" id="samplecard-facebook">0</div>
-  </div>
   <div class="box-stats" style="background-color:#ecf0f1;" id="samplecard-boxstats">
     <div style="border:0px dashed red;width:200px;position:absolute;right:20px;font-size:130%;text-align:center;margin-top:8px;color:#ecf0f1">
     </div>
-      <div  id="samplecard-medium" style="position:absolute;left:10px;font-size:130%;margin-top:3px;color:#ecf0f1;">Website</div>
+      <div  id="samplecard-medium" style="position:absolute;left:10px;margin-top:3px;color:#ecf0f1;">Website</div>
   </div>
 </div>
 ';

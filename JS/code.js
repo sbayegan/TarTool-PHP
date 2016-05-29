@@ -628,7 +628,8 @@ if (document.getElementById("D3")){var element = document.getElementById("D3");e
 if (document.getElementById("D2")){var element = document.getElementById("D2");element.parentNode.removeChild(element);}
 currentcat = str;
 if(str == "FE"){
-    document.getElementById("samplecard-category").innerHTML="Front-End Development";
+    document.getElementById("samplecard-category").innerHTML="Front-End";
+    document.getElementById("samplecard-category").style.backgroundColor = "blue";
     document.getElementById("D1").innerHTML = 
     '<option value="">Choose One</option>'+
         '<option value="UserInterface">User Interface</option>'+
@@ -651,7 +652,8 @@ if(str == "FE"){
         '<option value="Ajax">Ajax</option>';
 }
 if(str == "BE"){
-    document.getElementById("samplecard-category").innerHTML="Back-End Development";
+    document.getElementById("samplecard-category").innerHTML="Back-End";
+    document.getElementById("samplecard-category").style.backgroundColor = "#32cd32";
     document.getElementById("D1").innerHTML = 
     '<option value="">Choose One</option>'+
         '<option value="Security">Security</option>'+
@@ -673,7 +675,8 @@ if(str == "BE"){
         '<option value="Debugging">Debugging</option>';
 }
 if(str == "BD"){
-    document.getElementById("samplecard-category").innerHTML="Business Development";
+    document.getElementById("samplecard-category").innerHTML="Business";
+    document.getElementById("samplecard-category").style.backgroundColor = "red";
     document.getElementById("D1").innerHTML = 
     '<option value="">Choose One</option>'+
     '<option value="LeanStartup">Lean Startup</option>'+
