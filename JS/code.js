@@ -1062,3 +1062,7 @@ function passmatchrec(){ //for password recovery
                             }
             }                   
 
+function deleteResource(id){
+
+    return;
+}
