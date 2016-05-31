@@ -1887,11 +1887,8 @@ float:bottom;
 position:absolute;
 overflow-x:scroll;
 display:inline-block;
-
 white-space:normal;
 word-wrap:break-word;
-
-
 padding-left:10px;
 left:0px;
 right:0px;
@@ -1953,4 +1950,14 @@ padding:2vh;
 
 .comment-title{
     font-size:4vh;
+}
+
+.delete-button{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    background-color: red;
+    z-index: 200;
+    top:0px;
+    left: -20px;
 }

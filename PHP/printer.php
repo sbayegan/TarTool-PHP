@@ -117,6 +117,11 @@ if($input == 'Swift'){echo 						'<a href="/Swift"><span style="display:inline-b
 if($input == 'C#'){echo 						'<a href="/C#"><span style="display:inline-block;" class="label label-default">C#</span></a>';}
 if($input == 'Debugging'){echo 					'<a href="/Debugging"><span style="display:inline-block;" class="label label-default">Debugging Tools</span></a>';}
 }
+
+
+// This function prints cards, regardless of its nature(broadcast/resource)
+
+
 function card($i){
 include('../datalogin.php');
 $result = $conn->query("SELECT * FROM RESOURCES WHERE RESOURCEID=".$i);
@@ -125,6 +130,13 @@ $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 if ($medium == 'Broadcast'){
 echo '<div class="broadcast-box">';
+			// Here I will print a class. This class will call a javaScript function upon click
+			// and that function will remove the card from both the database and the client
+			// Check and see if the following card was posted by this user!
+			if(isset($_COOKIE['junto']) && ($result['SUBMITTER'] == $_COOKIE['junto'])){
+			// The following line has to appreat twice in this function as it needs to be printed
+			// once for each broadcast and resource.
+			echo '<div class="delete-button" onclick="delete-resource('.$i.')"></div>';}
 			$poster = $result['SUBMITTER'];
 			$poster = $conn->query('SELECT * FROM USERS WHERE USERID='.$poster);
 			$poster = mysqli_fetch_assoc($poster);
@@ -165,6 +177,12 @@ return;
 }
 $firsttag = mysqli_fetch_assoc($tags);
 echo '<div class="box" style="background-color:#FCFCFC;">';
+
+	if(isset($_COOKIE['junto']) && ($result['SUBMITTER'] == $_COOKIE['junto'])){
+	// The following line has to appreat twice in this function as it needs to be printed
+	// once for each broadcast and resource. [This is the second time!]
+	echo '<div class="delete-button" onclick="delete-resource('.$i.')"></div>';}
+
     echo '<a href="';
     
     if ($firsttag['CAT'] == 'BD') {echo '/business';}
