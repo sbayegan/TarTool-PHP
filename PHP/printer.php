@@ -129,7 +129,7 @@ $tags = $conn->query("SELECT * FROM CATEGORIES WHERE RESOURCEID=".$i);
 $result = mysqli_fetch_assoc($result);
 $medium = $result['MEDIUM'];
 if ($medium == 'Broadcast'){
-echo '<div class="broadcast-box">';
+echo '<div class="broadcast-box" id="resource-card-'.$i.'">';
 			// Here I will print a class. This class will call a javaScript function upon click
 			// and that function will remove the card from both the database and the client
 			// Check and see if the following card was posted by this user!
@@ -176,7 +176,7 @@ echo '</div>';
 return;
 }
 $firsttag = mysqli_fetch_assoc($tags);
-echo '<div class="box" style="background-color:#FCFCFC;">';
+echo '<div class="box" style="background-color:#FCFCFC;" id="resource-card-'.$i.'">';
 
 	if(isset($_COOKIE['junto']) && ($result['SUBMITTER'] == $_COOKIE['junto'])){
 	// The following line has to appreat twice in this function as it needs to be printed

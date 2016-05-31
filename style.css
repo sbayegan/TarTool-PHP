@@ -1956,8 +1956,11 @@ padding:2vh;
     position: absolute;
     width: 20px;
     height:20px;
-    background-color: red;
+    //background-color: red;
     z-index: 200;
-    top:0px;
-    left: -20px;
+    top:-10px;
+    right: -10px;
+    cursor:pointer;
+    background-image:url(/pictures/cross-red.png);
+    background-size: contain;
 }
