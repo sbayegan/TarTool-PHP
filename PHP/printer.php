@@ -136,7 +136,7 @@ echo '<div class="broadcast-box" id="resource-card-'.$i.'">';
 			if(isset($_COOKIE['junto']) && ($result['SUBMITTER'] == $_COOKIE['junto'])){
 			// The following line has to appreat twice in this function as it needs to be printed
 			// once for each broadcast and resource.
-			echo '<div class="delete-button" onclick="delete-resource('.$i.')"></div>';}
+			echo '<div class="delete-button" onclick="deleteResource('.$i.')"></div>';}
 			$poster = $result['SUBMITTER'];
 			$poster = $conn->query('SELECT * FROM USERS WHERE USERID='.$poster);
 			$poster = mysqli_fetch_assoc($poster);
@@ -181,7 +181,7 @@ echo '<div class="box" style="background-color:#FCFCFC;" id="resource-card-'.$i.
 	if(isset($_COOKIE['junto']) && ($result['SUBMITTER'] == $_COOKIE['junto'])){
 	// The following line has to appreat twice in this function as it needs to be printed
 	// once for each broadcast and resource. [This is the second time!]
-	echo '<div class="delete-button" onclick="delete-resource('.$i.')"></div>';}
+	echo '<div class="delete-button" onclick="deleteResource('.$i.')"></div>';}
 
     echo '<a href="';
     
