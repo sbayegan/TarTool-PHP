@@ -1062,7 +1062,23 @@ function passmatchrec(){ //for password recovery
                             }
             }                   
 
-function deleteResource(id){
 
-    return;
+// This function is used to deleted resources. Only the ownsers can remove the resources.
+function deleteResource(id){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                if(xmlhttp.responseText == 1){
+                
+                } // if clause
+                if(xmlhttp.responseText == 0){
+                  document.getElementById("condition").innerHTML = "The username and password do not match!";
+                } // if clause
+            }// if clause
+    
+        } // onreadystatechange
+        xmlhttp.open("POST", "deleteResource.php", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("id="+one);
 }
