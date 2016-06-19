@@ -810,7 +810,7 @@ function available(str) {
                 }
             }
         }
-        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.open("GET", "PHP/usernamecheck.php?username=" + str, true);
         xmlhttp.send();
     }
 }
@@ -836,7 +836,7 @@ function userlogin(str) {
                 }
             }
         }
-        xmlhttp.open("GET", "usernamecheck.php?username=" + str, true);
+        xmlhttp.open("GET", "PHP/usernamecheck.php?username=" + str, true);
         xmlhttp.send();
     }
 }
