@@ -31,7 +31,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^library library.php 
                                     
 
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?subcat=$1 [L]
