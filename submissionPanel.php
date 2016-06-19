@@ -7,7 +7,7 @@ echo '
 Submit a Card
 </h3>
 <hr>
-<form  class="form-asd"  action="/submit.php" method="post" enctype="multipart/form-data" autocomplete="off">
+<form  class="form-asd"  action="PHP/submit.php" method="post" enctype="multipart/form-data" autocomplete="off">
    <div class="form-group">
    <label  >Title</label>
    <input type="text" name="title" id="title"  size="30" class="form-control" onkeyup="submissionsample()"/>
