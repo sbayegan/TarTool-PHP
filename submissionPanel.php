@@ -1,5 +1,5 @@
 <?php
-
+echo '<script src="/JS/submission.js"></script>';
 echo '<div class="submit-square" id="transparent-square">';
 echo '
 <a href="#" onclick="closeall()"><img class="closing-cross" src=/pictures/cross-red.png width="18" height="18" alt="closing cross"></a>
